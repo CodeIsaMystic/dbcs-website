@@ -1,0 +1,321 @@
+/***************/
+/*  CONTAINER */
+/*************/
+.container {
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+.container--xs {
+  max-width: 60rem;
+}
+.container--sm {
+  max-width: 100rem;
+}
+.container--md {
+  max-width: 120rem;
+}
+.container--lg {
+  max-width: 140rem;
+}
+
+/**************/
+/*  HEADING  */
+/************/
+.heading-primary {
+  font-size: 5rem;
+  line-height: 1.05;
+}
+
+.heading-secondary {
+  font-size: 4.4rem;
+  line-height: 1.2;
+}
+
+.heading-tertiary {
+  font-size: 3rem;
+  line-height: 1.2;
+}
+.subheading {
+  font-size: 1.6rem;
+  letter-spacing: 0.75px;
+}
+.heading-post {
+  font-size: 4.4rem;
+  line-height: 1.2;
+}
+.heading-footer {
+  font-size: 1.8rem;
+}
+/**************/
+/*   ICONS   */
+/************/
+.icon-xs {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+.icon-sm {
+  height: 3.2rem;
+  width: 3.2rem;
+}
+.icon-md {
+  height: 4.8rem;
+  width: 4.8rem;
+}
+
+.icon-blue {
+  color: #46a1c9;
+}
+.icon-darkGray {
+  color: #333;
+}
+.icon-dark {
+  color: #232323;
+}
+/***************/
+/*   IMAGES   */
+/*************/
+.img-30 {
+  width: 30%;
+}
+.img-38 {
+  width: 38%;
+}
+.img-80 {
+  width: 80%;
+}
+
+/**************/
+/*  BUTTONS  */
+/************/
+.btn,
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  font-size: 1.8rem;
+  padding: 1.2rem;
+  border-radius: 25px;
+
+  /* Only necessary for .btn */
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.5s;
+}
+.btn--blue,
+.btn--blue:link,
+.btn--blue:visited,
+.btn--blue:active {
+  background-color: #46a1c9;
+  color: #fff;
+}
+.btn--blue:hover {
+  background: #fff;
+  color: #333;
+}
+
+.btn--dark,
+.btn--dark:link,
+.btn--dark:visited {
+  background-color: #232323;
+  color: #fdf2e9;
+}
+.btn--dark:hover,
+.btn--dark:active {
+  background-color: #fff;
+  color: #555;
+}
+.btn--form {
+  width: 40%;
+}
+.btn--baseline {
+  align-self: end;
+}
+
+/**************/
+/*    TAGS   */
+/************/
+.tag {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  font-size: 1.2rem;
+}
+/**************/
+/*   LINKS   */
+/************/
+.link:link,
+.link-dark:link,
+.link:visited,
+.link-dark:visited,
+.link-light:link,
+.link-light:visited {
+  display: inline-block;
+  font-size: 1.8rem;
+  transition: all 0.5s;
+}
+.link-light {
+  color: #fff;
+}
+.col-nav li .link-sm {
+  font-size: 1.6rem;
+}
+
+.link:hover,
+.link:active,
+.link-light:hover,
+.link-light:active {
+  color: #46a1c9;
+}
+.link-dark:hover,
+.link-dark:active {
+  color: #232323;
+}
+
+.link--underline {
+  border-bottom: 1px solid currentColor;
+}
+.link--underline:hover,
+.link--underline:active {
+  border-bottom: 1px solid transparent;
+}
+
+/**************/
+/*   LISTS   */
+/************/
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  font-size: 1.8rem;
+  line-height: 1.2;
+}
+
+/*****************/
+/*     LOGO     */
+/***************/
+.logo {
+  height: 4.8rem;
+}
+
+.logo--footer {
+  height: 10rem;
+  width: auto;
+}
+
+/*****************/
+/*   MENU ICON  */
+/***************/
+.menu-icon {
+  display: none;
+}
+
+/**************************/
+/* NAVIGATION */
+/**************************/
+.primary-nav-list {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+/**************************/
+/*    DASHBOARD NAVS  */
+/**************************/
+/* Dashboard-login  */
+.dashboard-login {
+  display: none;
+}
+.dashboard-login-is-visible {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #232323;
+  height: 4.8rem;
+  padding: 0 6.4rem;
+}
+
+/*  Dashboard-login-nav  */
+.dashboard-login-list {
+  display: none;
+}
+.dashboard-login-list-is-visible {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.dashboard-login-nav .dashboard-login-list li a,
+.dashboard-login-nav .dashboard-login-list li p {
+  display: flex;
+  align-items: center;
+}
+.dashboard-login-nav .dashboard-login-list li ion-icon {
+  padding-right: 0.4rem;
+}
+/* Dashboard Navs  */
+.dashboard-navs {
+  display: block;
+}
+.dashboard-navs .dashboard-logged-list a {
+  font-size: 1.4rem;
+}
+/* Dashboard Logged  */
+.dashboard-logged {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4.8rem;
+  padding: 0 6.4rem;
+}
+
+/*  Nav  */
+.dashboard-logged-list {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.dashboard-logged-nav .dashboard-logged-list li a,
+.dashboard-logged-nav .dashboard-logged-list li p {
+  display: flex;
+  align-items: center;
+}
+.dashboard-logged-nav .dashboard-logged-list li ion-icon {
+  padding-right: 0.4rem;
+}
+
+/*********************/
+/*  VERTICAL NAV    */
+/*******************/
+.vertical-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+/***************/
+/*  ALERTS    */
+/*************/
+.alert {
+  display: block;
+  margin: 0 auto 0.8rem;
+  padding: 0.4rem 0;
+  // background-color: transparent;
+  background-color: white;
+}
+.alert p {
+  text-indent: 2.4rem;
+}
+.alert-success {
+  border: 1px solid #058f1a;
+  color: #058f1a;
+}
+.alert-danger {
+  border: 1px solid #f84f4f;
+  color: #f84f4f;
+}

@@ -1,0 +1,65 @@
+/* Customers profiles  */
+.customers-profiles {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.customers-profiles-imgs {
+  display: flex;
+}
+
+.customers-profiles-imgs img {
+  height: 4.8rem;
+  width: 4.8rem;
+  margin-right: -1.6rem;
+  border: 3px solid #e8f8ff;
+}
+
+.customers-profiles-imgs img:last-child {
+  margin: 0;
+}
+
+/*  Plan  */
+
+.plan-name {
+  font-size: 2rem;
+  letter-spacing: 0.75;
+}
+
+.plan-price {
+  font-size: 4.8rem;
+}
+
+.plan-price span {
+  font-size: 3rem;
+  margin-right: 0.8rem;
+}
+
+.plan-text {
+  color: #6f6f6f;
+}
+
+/*  Feature  */
+.feature ion-icon {
+  background-color: #e8f8ff;
+  padding: 1.6rem;
+}
+
+.feature-title {
+  font-size: 2.4rem;
+}
+
+/* post  */
+.post {
+  width: 100%;
+}
+/*  Img-box Post  */
+.img-box--post img {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+/*  Text-box Post  */
+.text-box--post {
+  padding: 0 6.4rem 6.4rem 6.4rem;
+}

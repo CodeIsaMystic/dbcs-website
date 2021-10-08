@@ -1,0 +1,11 @@
+# CHANGE EVERYTHING FROM PUBLIC TO THE ROOT URL
+# Checking up for the Mode Rewrite Module
+# That make sure it's enabled
+# That make sure the engine is ON
+# Rewrite from public to the Root URL
+
+<IfModule mod_rewrite.c>
+  RewriteEngine on
+  RewriteRule ^$ public/ [L]
+  RewriteRule (.*) public/$1 [L]
+</IfModule>

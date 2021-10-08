@@ -1,0 +1,22 @@
+
+# FILES REQUESTS AND LOAD OR REDIRECT TO index.php
+# Checking up for the Mode Rewrite Module
+# That make sure it's enabled
+# The "minus" sign will disable the Multiviews
+# Turned ON the Rewrite Engine
+# The Base URL of the project: "/dbcs/public"
+# It looks at the files in the public folder, then
+# redirect to index.php as entry point if not found
+# otherwise redirect to the file if found
+# The Rule where redirect 
+# ?url=$1 set the Url param to a variable 
+# to possibly customize the URL
+
+<IfModule mod_rewrite.c>
+  Options -Multiviews
+  RewriteEngine On
+  RewriteBase /dbcs/public
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule  ^(.+)$ index.php?url=$1 [QSA,L]
+</IfModule>
