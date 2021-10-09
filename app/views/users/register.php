@@ -2,12 +2,7 @@
   
 <!-- REGISTER SECTION -->
 <section class="bg-white pb-md pt-lg">
-  <!--  Alert Messages  -->
-  <div class="container container--xs">
-    <!-- <div class="alert alert-success b-radius4">
-      <p class="txt-content--small">Vous avez bien été connecté.</p>
-    </div> -->
-  </div>
+
   <!--  Container  register  -->
   <div class="container container--xs">
     <div

@@ -5,12 +5,16 @@
 
 <!-- ADD POST SECTION -->
 <section class="linear-grad-lightBlue pb-lg pt-xl">
+  
   <!--  Alert Messages  -->
   <div class="container container--sm">
-    <div class="alert alert-success b-radius4">
+    <!-- <div class="alert alert-success b-radius4">
       <p class="txt-content--small">Votre article a bien été publié.</p>
-    </div>
+    </div> 
+     
+      => handling flash messages with modal !??? -->
   </div>
+
   <!--  Container add post  -->
   <div class="container container--sm">
     <div class="grid--1-col linear-grad-lightBlue b-radius4 box-shad1">
@@ -29,7 +33,7 @@
             <label class="fontW700 mt-xxs" for="title">Titre de l'article</label>
             <input type="text" name="title" class="b-radius4 bg-white mb-xxs" value="<?php echo $data['title']; ?>">
             <!-- <span class="b-radius4">
-              <p class="txt-content--xsmall txt-danger"><?= $data['title_err']; ?></p>
+              <p class="txt-content--xsmall txt-danger"><?//=  $data['title_err']; ?></p>
             </span> -->
           </div>
           <div>
@@ -42,23 +46,29 @@
             </p>
           </div>
           <!-- <div>
+            <?php
+            // if(isset($data['source_link'])) {
+            //   => input  echo $data['source_link']
+            // } else {
+            //   => null ????     
+            // }  
+            ?>
             <label class="fontW700 mt-xxs" for="sourceLink"
               >Lien vers l'article</label
             >
-            <input class="b-radius4 bg-white mb-xxs" type="text" name="sourceLink" value="<?php echo $data['source_link']; ?>"/>
-            <span class="b-radius4">
-              <p class="txt-content--xsmall txt-danger"><?= $data['source_link_err']; ?></p>
-            </span>
-          </div>
-          <div> -->
+            <input class="b-radius4 bg-white mb-xxs" type="text" name="sourceLink" value="<?php // echo $data['source_link']; ?>"/>
+          </div> -->
+          
+          <!-- replaced "content" by "editor1"  --> 
+          <div>
             <label class="fontW700 mt-xxs" for="body"
               >Textes & Paragraphes</label
             >
-            <textarea class="b-radius4 bg-white mb-xxs" type="text" name="body" rows="10" cols="33" >
+            <textarea class="b-radius4 bg-white mb-xxs" type="text" name="body" rows="10" cols="33">
               <?php echo $data['body']; ?>
             </textarea>
             <!-- <span class="b-radius4">
-              <p class="txt-content--xsmall txt-danger"><?= $data['body_err']; ?></p>
+              <p class="txt-content--xsmall txt-danger"><?//= $data['body_err']; ?></p>
             </span> -->
           </div>
           <div class="txt-center">

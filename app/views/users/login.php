@@ -2,10 +2,11 @@
   
 <!-- LOGIN SECTION -->
 <section class="bg-white pb-md pt-lg mt-sm">
-  <!--  Alert Messages  -->
-  <div class="container container--xs">
-    <?php flash('register_success'); ?>
-  </div>
+    <!--  Alert Messages  -->
+    <div class="container container--xs">
+      <?php flash('register_success'); ?>
+    </div>
+
   <!--  Container  login  -->
   <div class="container container--xs">
     <div

@@ -46,12 +46,16 @@
         if(empty($data['body'])){
           $data['body_err'] = "Ajoutez le contenu de l'article";
         }
+        // Handling the Source_link use case
+        // if(empty($data['source_link'])){
+        //   $data['source_link_err'] = null;
+        // }
 
         // Make sure no errors
         if(empty($data['title_err']) && empty($data['body_err'])){
           // Validated
           if($this->postModel->addPost($data)){
-            flash('post_message', 'Post Added');
+            flash('post_message', 'Post ajouté');
             redirect('posts');
           } else {
             die('Something went wrong');
