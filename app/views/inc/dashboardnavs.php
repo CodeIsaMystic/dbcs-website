@@ -3,7 +3,13 @@
 <div class="dashboard-logged bg-dark">
   <h4 class="subheading">Dashboard</h4>
   <nav class="dashboard-logged-nav">
-    <ul class="dashboard-logged-list">
+    <ul class="dashboard-logged-list">      
+      <li>
+        <a class="link txt-light" href="#">
+          <ion-icon class="icon-xs" name="add-outline"> </ion-icon>
+          Contact
+        </a>
+      </li>
       <li>
         <a class="link txt-light" href="<?php echo URL_ROOT; ?>/posts">
           <ion-icon class="icon-xs" name="list-circle-outline">
@@ -34,21 +40,7 @@
   <p class="txt-content--small">Welcome 
     <?php echo $_SESSION['user_name']; ?>
   </p>
-  <nav class="dashboard-logged-nav">
-    <ul class="dashboard-logged-list">
-      <li>
-        <a class="link txt-light" href="#">
-          <ion-icon class="icon-xs" name="add-outline"> </ion-icon>
-          Post
-        </a>
-      </li>
-      <li>
-        <a class="link txt-light" href="#">
-          <ion-icon class="icon-xs" name="add-outline"> </ion-icon>
-          Contact
-        </a>
-      </li>
-
-    </ul>
-  </nav>
+  <p class="txt-content--small">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quis ab laudantium, vel voluptatum vitae? Expedita possimus.
+  </p>
 </div>
