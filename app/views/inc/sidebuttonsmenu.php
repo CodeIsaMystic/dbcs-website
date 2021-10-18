@@ -44,7 +44,7 @@
         <ion-icon class="icon-xs" name="chevron-forward-outline"></ion-icon>
       </li>
       <li class="move-ico ico02">
-        <a href="#" class="link link01">
+        <a href="<?php echo URL_ROOT; ?>/posts/add" class="link link01">
           <ion-icon class="icon-xs" name="add-outline"></ion-icon>
         </a>
       </li>

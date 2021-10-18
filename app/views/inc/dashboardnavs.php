@@ -37,7 +37,7 @@
   <nav class="dashboard-logged-nav">
     <ul class="dashboard-logged-list">
       <li>
-        <a class="link txt-light" href="<?php echo URL_ROOT; ?>/posts/add">
+        <a class="link txt-light" href="#">
           <ion-icon class="icon-xs" name="add-outline"> </ion-icon>
           Post
         </a>
