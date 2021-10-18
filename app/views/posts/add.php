@@ -7,7 +7,7 @@
 <section class="linear-grad-lightBlue pb-lg pt-xl">
   
   <!--  Alert Messages  -->
-  <div class="container container--sm">
+  <div class="container container--xs">
     <!-- <div class="alert alert-success b-radius4">
       <p class="txt-content--small">Votre article a bien été publié.</p>
     </div> 
@@ -16,7 +16,7 @@
   </div>
 
   <!--  Container add post  -->
-  <div class="container container--sm">
+  <div class="container container--xs">
     <div class="grid--1-col linear-grad-lightBlue b-radius4 box-shad1">
       <div class="text-box--add-post txt-dark txt-content">
         <h3 class="heading-tertiary txt-dark-gray mt-xs mb-sm">
@@ -72,7 +72,7 @@
             </span> -->
           </div>
           <div class="txt-center">
-            <input type="submit" class="btn btn--dark btn--form b-radius25 mt-xs" value="Publiez le Post">
+            <input type="submit" class="btn btn--dark btn--form b-radius25 mt-xs mb-xs" value="Publiez le Post">
           </div>
 
         </form>

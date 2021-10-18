@@ -176,7 +176,7 @@
         </div>
       </section>
 
-      <!-- MEALS SECTION -->
+      <!-- MEALS SECTION
       <section class="bg-white pt-lg pb-lg">
         <div class="container container--md">
           <h4 class="subheading fontW700 txt-upp txt-blue mb-xs">Repas</h4>
@@ -359,7 +359,7 @@
             </ul>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <!-- TESTIMONIALS SECTION -->
       <section
