@@ -23,9 +23,7 @@
     />
     <!-- LINKS CSS -->
     <link rel="stylesheet" href="<?= URL_ROOT; ?>/css/general.css" />
-    <link rel="stylesheet" href="<?= URL_ROOT; ?>/css/layout.css" />
     <link rel="stylesheet" href="<?= URL_ROOT; ?>/css/modules.css" />
-    <link rel="stylesheet" href="<?= URL_ROOT; ?>/css/sidemenu.css" />
     <link rel="stylesheet" href="<?= URL_ROOT; ?>/css/style.css" />
     <link rel="stylesheet" href="<?= URL_ROOT; ?>/css/queries.css" />
 
