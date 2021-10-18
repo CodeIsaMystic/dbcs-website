@@ -3,7 +3,7 @@
   <br>
   <br>
   
-  <img src="./app/img/logo-square-dark-1200.png" width="500">
+  <img src="../public/img/logos/logo-square-dark-1200.png" width="500">
 
 <h2>
 "Le sport selon une méthode simple"

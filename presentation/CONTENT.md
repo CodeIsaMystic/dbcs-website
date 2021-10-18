@@ -3,7 +3,7 @@
   <br>
   <br>
   
-  <img src="./public/img/logos/logo-square-dark-1200.png" width="500">
+  <img src="../public/img/logos/logo-square-dark-1200.png" width="500">
 
 </div>
 
@@ -173,9 +173,9 @@ A 4 columns layout with the Logo/Copyright, Contact & Social Media Info, an Ente
 [Ajouter les images `/app-mockups`]
 
 <div align="center">
-<img src="public/img/app-mockups/mockup-call.png" width="150">
-<img src="public/img/app-mockups/organisation-mockup.png" width="150">
-<img src="public/img/app-mockups/mockup-contact.png" width="150">
+<img src="../public/img/app-mockups/mockup-call.png" width="150">
+<img src="../public/img/app-mockups/organisation-mockup.png" width="150">
+<img src="../public/img/app-mockups/mockup-contact.png" width="150">
 </div>
 
 **"Votre coaching personnalisé en 3 étapes"**
@@ -365,7 +365,7 @@ No designer were contracted for this project.
 #### Main logo
 
 <div align="center">
-<img src="public/img/logos/logo-square-dark-1200.png" width="250">
+<img src="../public/img/logos/logo-square-dark-1200.png" width="250">
 </div>
 
 Variants: [logo-1200 / logo-square-1200 / logo-square-light-1200 / logo-square-dark-1200]
@@ -376,13 +376,13 @@ Variants: [logo-1200 / logo-square-1200 / logo-square-light-1200 / logo-square-d
 #### Logos-partners
 
 <div align="center">
-<img src="public/img/logos-partners/cep-gilles-cometti.png" width="150">
-<img src="public/img/logos-partners/decathlon.png" width="150">
-<img src="public/img/logos-partners/hbx-noir.png" width="150">
+<img src="../public/img/logos-partners/cep-gilles-cometti.png" width="150">
+<img src="../public/img/logos-partners/decathlon.png" width="150">
+<img src="../public/img/logos-partners/hbx-noir.png" width="150">
 </div>
 <div align="center">
-<img src="public/img/logos-partners/lappart.png" width="150">
-<img src="public/img/logos-partners/naturacademy.png" width="150">
+<img src="../public/img/logos-partners/lappart.png" width="150">
+<img src="../public/img/logos-partners/naturacademy.png" width="150">
 </div>
 
 All logos are temporary, made for "filling the blank" in order to move forward building that template and trying to keep a kind of "Style Guide" for that same purpose.
