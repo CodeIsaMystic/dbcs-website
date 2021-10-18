@@ -98,6 +98,7 @@
       </div>
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
       referrerpolicy="no-referrer"

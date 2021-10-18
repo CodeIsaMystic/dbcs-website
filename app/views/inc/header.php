@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="<?= URL_ROOT; ?>/css/general.css" />
     <link rel="stylesheet" href="<?= URL_ROOT; ?>/css/layout.css" />
     <link rel="stylesheet" href="<?= URL_ROOT; ?>/css/modules.css" />
+    <link rel="stylesheet" href="<?= URL_ROOT; ?>/css/sidemenu.css" />
     <link rel="stylesheet" href="<?= URL_ROOT; ?>/css/style.css" />
     <link rel="stylesheet" href="<?= URL_ROOT; ?>/css/queries.css" />
 
@@ -49,7 +50,12 @@
 
   <?php require APP_ROOT . '/views/inc/navbar.php'; ?>
   
-    <!-- MAIN -->
-    <main>
+  <!-- MAIN -->
+  <main class="mainWrapper">
+    
+  
+    <?php if(isset($_SESSION['user_id'])) : ?>
+      <?php require APP_ROOT . '/views/inc/sidebuttonsmenu.php'; ?>
+    <?php endif; ?>
 
-
+    

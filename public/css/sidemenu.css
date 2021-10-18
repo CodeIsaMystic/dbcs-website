@@ -1,0 +1,134 @@
+/*************/
+/*   MENU   */
+/***********/
+.side-menu-wrapper {
+  position: fixed;
+  top: 400px;
+  left: 25px;
+  bottom: 0;
+  width: 80px;
+  height: 60px;
+  z-index: 5500;
+  transition: all 0.75s ease-in-out;
+}
+.active .side-menu-wrapper {
+  width: 145px;
+  height: 244px;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.menu,
+.menu-object {
+  height: 54px;
+  margin: 95px auto;
+  width: 145px;
+  position: fixed;
+  top: 400px;
+  left: 25px;
+  bottom: 0;
+  z-index: 5500;
+}
+
+.menu {
+  -webkit-filter: url("#goo");
+  filter: url("#goo");
+}
+.menu ul,
+.menu-object ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.menu ul li,
+.menu-object ul li {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.menu svg {
+  overflow: hidden;
+}
+
+/***************/
+/* MENU ICONS */
+/*************/
+.ico01 {
+  background-color: #232323;
+  color: #fff;
+  border: 1.5px solid rgba(255, 255, 255, 0.85);
+  position: relative;
+  z-index: 5;
+}
+.ico02 {
+  background-color: #232323;
+  transition: transform 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.25s;
+  z-index: 4;
+}
+.ico03 {
+  background-color: #232323;
+  transition: transform 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.2s;
+  z-index: 3;
+}
+.ico04 {
+  background-color: #888;
+  transition: transform 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.15s;
+  z-index: 2;
+}
+.ico05 {
+  background-color: #232323;
+  transition: transform 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+  z-index: 1;
+}
+.move-ico {
+  position: absolute;
+  top: 0;
+}
+
+.active .ico02 {
+  transform: translate(25px, -90px);
+  transition: transform 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+}
+.active .ico03 {
+  transform: translate(85px, -39px);
+  transition: transform 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.15s;
+}
+.active .ico04 {
+  transform: translate(85px, 39px);
+  transition: transform 0.3s cubic-bezier(0.77, 0, 0.175, 0.8) 0.2s;
+}
+.active .ico05 {
+  transform: translate(25px, 90px);
+  transition: transform 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.25s;
+}
+
+.menu-object .ico01 ion-icon {
+  margin: auto;
+  color: #fff;
+  transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+}
+.menu-object .link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  line-height: 1;
+}
+
+.menu-object .link ion-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+.menu-object .ico01 ion-icon {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+}
+
+.active .menu-object .ico01 ion-icon {
+  transform: rotate(90deg);
+}
