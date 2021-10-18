@@ -91,7 +91,7 @@
 .btn:link,
 .btn:visited {
   display: inline-block;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   padding: 1.2rem;
   border-radius: 25px;
 
@@ -149,14 +149,14 @@
 .link-light:link,
 .link-light:visited {
   display: inline-block;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   transition: all 0.5s;
 }
 .link-light {
   color: #fff;
 }
 .col-nav li .link-sm {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 
 .link:hover,
@@ -191,7 +191,7 @@
   display: flex;
   align-items: center;
   gap: 1.6rem;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   line-height: 1.2;
 }
 
