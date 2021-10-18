@@ -37,4 +37,13 @@ class Pages extends Controller {
     $this->view('pages/blog', $data);
   }
 
+  public function contact() {
+    
+      $data = [
+        'title' => 'Vous voulez garder le contact?',
+        'description' => "Nous vous aidons à construire votre santé. Nous soutenons vos objectifs. Nous prenons en compte vos contraintes et difficultés."
+    ];
+    $this->view('pages/contact', $data);
+  }
+
 }
