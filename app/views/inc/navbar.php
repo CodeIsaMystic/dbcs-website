@@ -3,7 +3,6 @@
       <div class="header">
         <a href="<?= URL_ROOT; ?>">
           <svg
-            width="auto"
             height="448"
             viewBox="0 0 1200 480"
             fill="none"
