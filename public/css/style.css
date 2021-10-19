@@ -48,6 +48,10 @@
   background-repeat: no-repeat;
   background-position: 50% 20%;
 }
+.img-box--hero {
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /*  Contact hero bg  */
 .contact-hero-bg {

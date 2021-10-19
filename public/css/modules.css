@@ -93,7 +93,7 @@
 .btn:visited {
   display: inline-block;
   font-size: 1.6rem;
-  padding: 1.2rem;
+  padding: 1.2rem 1.6rem;
   border-radius: 25px;
 
   /* Only necessary for .btn */
