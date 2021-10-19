@@ -100,10 +100,6 @@
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
-      referrerpolicy="no-referrer"
-    ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/ScrollTrigger.min.js"></script>
     <script type="module" src="<?= URL_ROOT; ?>/js/script.js"></script>

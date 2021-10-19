@@ -94,7 +94,7 @@
           </svg>
         </a>
 
-        <!-- BURGER BTN -->
+        <!-- MENU ICON -->
         <div class="menu-icon">
           <div class="menu-icon__middle"></div>
         </div>

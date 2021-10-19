@@ -41,6 +41,6 @@
     <?php echo $_SESSION['user_name']; ?>
   </p>
   <p class="txt-content--small">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quis ab laudantium, vel voluptatum vitae? Expedita possimus.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus Expedita possimus.
   </p>
 </div>

@@ -218,9 +218,16 @@
   gap: 4rem;
 }
 
-/**************************/
-/*    DASHBOARD NAVS  */
-/**************************/
+/**********************/
+/*   DASHBOARD NAVS  */
+/********************/
+/* Dashboard Navs  */
+.dashboard-navs {
+  display: block;
+}
+.dashboard-navs .dashboard-logged-list a {
+  font-size: 1.4rem;
+}
 /* Dashboard-login  */
 .dashboard-login {
   display: none;
@@ -252,14 +259,7 @@
 .dashboard-login-nav .dashboard-login-list li ion-icon {
   padding-right: 0.4rem;
 }
-/* Dashboard Navs  */
-.dashboard-navs {
-  display: block;
-}
-.dashboard-navs .dashboard-logged-list a {
-  font-size: 1.4rem;
-}
-/* Dashboard Logged  */
+/* Dashboard Logged nav */
 .dashboard-logged {
   display: flex;
   align-items: center;
@@ -267,8 +267,11 @@
   height: 4rem;
   padding: 0 1.2rem;
 }
+.dashboard-logged h4,
+.dashboard-login h4 {
+  padding-left: 4.8rem;
+}
 
-/*  Nav  */
 .dashboard-logged-list {
   display: flex;
   align-items: center;

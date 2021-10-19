@@ -166,9 +166,7 @@
     opacity: 1;
   }
 
-  /*****************/
   /*   MENU ICON  */
-  /***************/
   .menu-icon {
     position: absolute;
     width: 32px;
@@ -248,6 +246,12 @@
   .primary-nav .link:visited {
     font-size: 3rem;
   }
+  .dashboard-logged p:last-child {
+    display: none;
+  }
+  .dashboard-logged p:first-child {
+    padding-left: 4.8rem;
+  }
 
   .grid--footer {
     grid-template-columns: repeat(6, 1fr);
@@ -294,10 +298,6 @@
   .pricing-plan {
     width: 85%;
     margin: 0 auto;
-  }
-
-  .dashboard-logged {
-    padding: 0 3.2rem 0 3.2rem;
   }
 
   .dashboard-logged-list {
