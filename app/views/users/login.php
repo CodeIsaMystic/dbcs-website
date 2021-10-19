@@ -1,7 +1,7 @@
 <?php require APP_ROOT . '/views/inc/header.php'; ?>
   
 <!-- LOGIN SECTION -->
-<section class="bg-white pb-md pt-lg mt-sm">
+<section class="bg-white pb-xl pt-lg mt-sm">
     <!--  Alert Messages  -->
     <div class="container container--xs">
       <?php flash('register_success'); ?>
