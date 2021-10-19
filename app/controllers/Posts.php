@@ -32,8 +32,8 @@
 
         $data = [
           'title' => trim($_POST['title']),
-          'body' => trim($_POST['body']),
-          'source_link' => trim($_POST['source_link']),
+          'body' => trim($_POST['editor1']),
+          // 'source_link' => trim($_POST['source_link']),
           'user_id' => $_SESSION['user_id'],
           'title_err' => '',
           'body_err' => ''

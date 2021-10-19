@@ -59,7 +59,6 @@
             <input class="b-radius4 bg-white mb-xxs" type="text" name="sourceLink" value="<?php // echo $data['source_link']; ?>"/>
           </div> -->
           
-          <!-- replaced "content" by "editor1"  --> 
           <div>
             <label class="fontW700 mt-xxs" for="body"
               >Textes & Paragraphes</label
@@ -74,6 +73,7 @@
           <div class="txt-center">
             <input type="submit" class="btn btn--dark btn--form b-radius25 mt-xs mb-xs" value="Publiez le Post">
           </div>
+
 
         </form>
 
