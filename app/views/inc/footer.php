@@ -3,8 +3,8 @@
     <!-- FOOTER -->
     <footer class="footer bg-dark">
       <div class="container container--md grid grid--footer">
-        <div class="col-logo mt">
-          <span class="footer-logo mt-xs mb">
+        <div class="col-logo">
+          <span class="footer-logo">
             <img
               class="logo--footer"
               alt="DBCS logo company"
@@ -22,9 +22,9 @@
         </div>
 
         <div class="col-address txt-light">
-          <p class="heading-footer fontW700 mb">Contact</p>
-          <address class="contacts txt-content mt pb-xs">
-            <p class="address mb-sm">
+          <h4 class="heading-footer fontW700 mb-sm">Contact</h4>
+          <address class="contacts txt-content--small pb-xs">
+            <p class="address pb-xs">
               Adresse: <br />
               Rue Louis Pasteur, Loire s/Rhône 69700
             </p>
@@ -37,7 +37,7 @@
             
           </address>
           
-          <ul class="social-links txt-light mt-xs">
+          <ul class="social-links txt-light">
             <li>
               <a class="link-light link-sm" href="#"
                 ><ion-icon class="icon-xs" name="logo-instagram"></ion-icon
@@ -57,8 +57,8 @@
         </div>
 
         <nav class="col-nav">
-          <p class="heading-footer txt-light fontW700 mb">Entreprise</p>
-          <ul class="vertical-nav">
+          <h4 class="heading-footer txt-light fontW700 mb-sm">Entreprise</h4>
+          <ul class="vertical-nav vertical-gap--sm">
             <li>
               <a class="link-light link-sm not-allowed" href="#">A propos</a>
             </li>
@@ -80,8 +80,8 @@
         </nav>
 
         <nav class="col-nav">
-          <p class="heading-footer txt-light fontW700 mb">Ressources</p>
-          <ul class="vertical-nav">
+          <h4 class="heading-footer txt-light fontW700 mb-sm">Ressources</h4>
+          <ul class="vertical-nav vertical-gap--sm">
             <li>
               <a class="link-light link-sm not-allowed" href="#">Road map</a>
             </li>

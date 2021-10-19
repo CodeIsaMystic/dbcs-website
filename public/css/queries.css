@@ -261,6 +261,8 @@
 
   .grid--footer {
     grid-template-columns: repeat(6, 1fr);
+    row-gap: 3.2rem;
+    margin-left: 5%;
   }
   .copyright {
     margin: 0 auto;
@@ -280,7 +282,7 @@
   .col-address {
     grid-row: 1;
     grid-column: span 2;
-    margin-left: 25%;
+    margin-left: 33%;
   }
 }
 
@@ -327,9 +329,15 @@
     background-position: 50% 40%;
     grid-row: 1;
   }
-  .col-nav,
+  .grid--footer {
+    margin-left: 0%;
+  }
   .col-address {
-    margin-left: 13%;
+    margin-left: 0;
+    padding-left: 20%;
+  }
+  .col-nav {
+    margin-left: 15%;
   }
 }
 
@@ -377,6 +385,9 @@
 
   .gallery {
     grid-template-columns: repeat(4, 1fr);
+  }
+  .col-address {
+    padding-left: 8%;
   }
 }
 

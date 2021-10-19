@@ -285,16 +285,30 @@
 .dashboard-logged-nav .dashboard-logged-list li ion-icon {
   padding-right: 0.4rem;
 }
-
+/********************/
+/********************/
+/********************/
+/********************/
 /*********************/
 /*  VERTICAL NAV    */
 /*******************/
 .vertical-nav {
   display: flex;
   flex-direction: column;
+}
+.vertical--sm {
+  gap: 1.6rem;
+}
+.vertical-gap--sm {
+  gap: 1.6rem;
+}
+.vertical--med {
   gap: 2.4rem;
 }
 
+/********************/
+/********************/
+/********************/
 /***************/
 /*  ALERTS    */
 /*************/
