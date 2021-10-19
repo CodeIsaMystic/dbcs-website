@@ -6,7 +6,6 @@ import { parallaxEffect } from "./modules/parallaxEffect.js"
 import { toggle } from "./modules/toggle.js"
 import { showDashboardLogin } from "./modules/showDashboardLogin.js"
 
-/*  prettier-ignore  */
 function init() {
   stickyHeader()
   mobileMenu()

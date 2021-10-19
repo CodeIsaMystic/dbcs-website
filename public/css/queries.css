@@ -199,7 +199,7 @@
     background-color: #232323;
     opacity: 0.85;
 
-    transition: transform 0.3s ease-out;
+    transition: transform 0.1s linear;
   }
 
   .menu-icon__middle {
@@ -213,7 +213,7 @@
     height: 2px;
     background-color: #232323;
 
-    transition: all 0.3s ease-out;
+    transition: all 0.1s linear;
   }
 
   .menu-icon::after {
@@ -228,7 +228,7 @@
     background-color: #232323;
     opacity: 0.85;
 
-    transition: transform 0.3s ease-out;
+    transition: transform 0.1s linear;
   }
 
   .menu-icon--close-x::before {
