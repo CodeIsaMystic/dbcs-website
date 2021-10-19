@@ -5,42 +5,35 @@
 .site-header {
   position: fixed;
   width: 100%;
-  background-color: #fff;
+  background-color: #232323;
   z-index: 5000;
   display: block;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
-
-.site-header--dark {
-  background-color: #232323;
-}
-.site-header--dark .header a svg path {
+.site-header .header a svg path {
   fill: #fff;
 }
-.site-header--dark .header {
+.site-header .header {
   border-bottom: 1px solid #333;
-}
-.site-header--dark .header .primary-nav a {
-  color: #fff;
-}
-.site-header--dark .header .primary-nav .btn--blue {
-  color: #333;
-}
-.site-header--dark .menu-icon__middle,
-.site-header--dark .menu-icon::before,
-.site-header--dark .menu-icon::after {
-  background-color: #ffffff;
-}
-
-.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /*height: 6.4rem;*/
   padding: 0 4.8rem;
-  /*transition: all 0.5s ease-in;*/
+  transition: all 0.3s ease-in;
   position: relative;
 }
+.site-header .header .primary-nav a {
+  color: #fff;
+}
+.site-header .header .primary-nav .btn--blue {
+  color: #333;
+}
+
+/*   MENU ICON  */
+.menu-icon {
+  display: none;
+}
+
 /**********/
 /* HERO  */
 /********/
