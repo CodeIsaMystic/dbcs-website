@@ -336,7 +336,7 @@
 /*************************/
 .side-menu-wrapper {
   position: fixed;
-  top: 400px;
+  top: 190px;
   left: 25px;
   bottom: 0;
   width: 80px;
@@ -356,7 +356,7 @@
   margin: 95px auto;
   width: 145px;
   position: fixed;
-  top: 400px;
+  top: 190px;
   left: 25px;
   bottom: 0;
   z-index: 5500;
@@ -406,7 +406,7 @@
   z-index: 3;
 }
 .ico04 {
-  background-color: #888;
+  background-color: #46a1c9;
   transition: transform 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.15s;
   z-index: 2;
 }
@@ -448,6 +448,9 @@
   height: 100%;
   color: #fff;
   line-height: 1;
+}
+.menu-object .ico04 .link {
+  color: #232323;
 }
 
 .menu-object .link ion-icon {
