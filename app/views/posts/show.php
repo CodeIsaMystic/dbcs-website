@@ -48,10 +48,10 @@
 
 <?php // if($data['post']->user_id == $_SESSION['user_id']) : ?>
 <!-- 
-  <a href="<?php echo URL_ROOT; ?>/posts/edit/<?php echo $data['post']->id; ?>" class="btn btn--dark">Edit</a>
+  <a href="<?php echo URL_ROOT; ?>/posts/edit/<?php echo $data['post']->id; ?>" class="btn btn-hover">Edit</a>
 
   <form class="pull-right" action="<?php // echo URL_ROOT; ?>/posts/delete/<?php // echo $data['post']->id; ?>" method="post">
-    <input type="submit" value="Delete" class="btn btn--danger">
+    <input type="submit" value="Delete" class="btn btn-hover">
   </form> -->
 
 <?php // endif; ?>

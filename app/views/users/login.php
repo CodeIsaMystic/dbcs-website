@@ -51,7 +51,7 @@
             </span>
           </div>
           <div class="txt-center mt-xs">
-            <button type="submit" class="btn btn--dark btn--form b-radius25">
+            <button type="submit" class="btn btn-hover btn--form b-radius25">
               Se connecter
             </button>
           </div>

@@ -71,7 +71,7 @@
             </span> -->
           </div>
           <div class="txt-center">
-            <input type="submit" class="btn btn--dark btn--form b-radius25 mt-xs mb-xs" value="Publiez le Post">
+            <input type="submit" class="btn btn-hover btn--form b-radius25 mt-xs mb-xs" value="Publiez le Post">
           </div>
 
 

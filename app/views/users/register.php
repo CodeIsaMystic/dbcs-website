@@ -78,7 +78,7 @@
             <!-- <button type="submit" class="btn btn--dark btn--form b-radius25 mb-xs">
               S'enregistrer
             </button> -->
-            <input type="submit" name="submit" value="S'enregistrer" class="btn btn--dark btn--form b-radius25 mt-xs">
+            <input type="submit" name="submit" value="S'enregistrer" class="btn btn-hover btn--form b-radius25 mt-xs">
           </div>
         </form>
       </div>
