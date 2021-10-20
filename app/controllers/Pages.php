@@ -25,14 +25,11 @@ class Pages extends Controller {
   public function blog() {
     $posts = $this->postModel->getPosts();
   
-    // var_dump($posts);
-    // exit();
-    
-      $data = [
-        'title' => 'Bienvenue dans notre blog',
-        'description' => "Nous vous partageons de temps à autre quelques articles de blog pour vous donner
-        accès à plus d'informations.",
-        'posts' => $posts
+    $data = [
+      'title' => 'Bienvenue dans notre blog',
+      'description' => "Nous vous partageons de temps à autre quelques articles de blog pour vous donner
+      accès à plus d'informations.",
+      'posts' => $posts
     ];
     $this->view('pages/blog', $data);
   }

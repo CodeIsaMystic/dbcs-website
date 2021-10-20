@@ -74,7 +74,7 @@
               >
             </li>
             <li>
-              <button class="link-light link-sm" id="adminLink">Admin</button>
+              <button class="link-light link-sm <?php if(isset($_SESSION['user_id'])) {echo "not-allowed";} ?>" id="adminLink">Admin</button>
             </li>
           </ul>
         </nav>
@@ -99,6 +99,20 @@
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+
+    <script>
+      $(document).ready(function() {
+          $('#myTable').DataTable({
+            // "dom": '<"top"if>rt<"bottom"lp><"clear">'
+            "lengthMenu": [[5, 15, 25, -1], [5, 15, 25, "All"]],
+            "language": {
+                "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/French.json"
+            },
+
+          });
+      } );
+    </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/ScrollTrigger.min.js"></script>

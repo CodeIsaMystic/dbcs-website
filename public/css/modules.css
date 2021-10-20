@@ -91,39 +91,17 @@
 .btn,
 .btn:link,
 .btn:visited {
-  display: inline-block;
+  // display: inline-block;
+  display: block;
   font-size: 1.6rem;
   padding: 1.2rem 1.6rem;
-  border-radius: 25px;
+  border-radius: 50px;
 
   /* Only necessary for .btn */
   border: none;
   cursor: pointer;
   font-family: inherit;
   transition: all 0.5s;
-}
-.btn--blue,
-.btn--blue:link,
-.btn--blue:visited,
-.btn--blue:active {
-  background-color: #46a1c9;
-  color: #fff;
-}
-.btn--blue:hover {
-  background: #fff;
-  color: #333;
-}
-
-.btn--dark,
-.btn--dark:link,
-.btn--dark:visited {
-  background-color: #232323;
-  color: #fdf2e9;
-}
-.btn--dark:hover,
-.btn--dark:active {
-  background-color: #fff;
-  color: #555;
 }
 .btn--form {
   width: 40%;
@@ -132,6 +110,37 @@
   align-self: end;
 }
 
+/*************************/
+/*  BUTTONS ANIMATION   */
+/***********************/
+.btn-hover {
+  color: #fff;
+  background-size: 300% 100%;
+
+  moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  background-image: linear-gradient(
+    to right,
+    #29323c,
+    #2b5876,
+    #46a1c9,
+    #46a1c9
+  );
+  box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+}
+.btn-hover:hover {
+  color: #fff;
+  background-position: 100% 0;
+  moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.btn-hover:focus {
+  outline: none;
+}
 /**************/
 /*    TAGS   */
 /************/

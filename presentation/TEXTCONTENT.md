@@ -153,6 +153,20 @@ Pour les efforts supérieurs à 1h30, un eau riche en électrolytes et minéraux
 
 ---
 
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
 ## La nutrition est un facteur-clé pour bien préparer son marathon.
 
 Voici donc les principaux conseils&nbsp;:

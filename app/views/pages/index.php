@@ -11,11 +11,10 @@
               <?php echo $data['description']; ?>
             </p>
             <div>
-              <a href="#cta" class="btn btn--blue mr b-radius25"
+              <a href="#cta" class="btn btn-hover b-radius4 mr"
                 >Votre premier essai gratuit</a
               >
             </div>
-
             <div class="customers-profiles mt">
               <div class="customers-profiles-imgs">
                 <img
@@ -593,7 +592,7 @@
               </li>
             </ul>
             <div class="txt-center mt">
-              <a href="#cta" class="btn btn--blue b-radius25"
+              <a href="#cta" class="btn btn-hover b-radius25"
                 >Commencer votre entrainement</a
               >
             </div>
@@ -668,7 +667,7 @@
               </li>
             </ul>
             <div class="txt-center mt">
-              <a href="#cta" class="btn btn--blue b-radius25"
+              <a href="#cta" class="btn btn-hover b-radius25"
                 >Commencer votre entrainement</a
               >
             </div>
@@ -752,7 +751,7 @@
               </li>
             </ul>
             <div class="txt-center mt">
-              <a href="#cta" class="btn btn--blue b-radius25"
+              <a href="#cta" class="btn btn-hover b-radius25"
                 >Commencer votre entrainement</a
               >
             </div>
@@ -822,7 +821,7 @@
         </div>
 
         <div class="container container--md txt-center">
-          <a href="coaching.html" class="link link--underline"
+          <a href="coaching.html" class="link link--underline "
             >Rendez-vous à la page Coaching &rarr;</a
           >
         </div>
@@ -894,7 +893,7 @@
                   </select>
                 </div>
 
-                <button class="btn btn--baseline btn--dark b-radius25 mt-xxs">
+                <button class="btn btn--baseline btn-hover t-xxs">
                   Essai gratuit
                 </button>
               </form>

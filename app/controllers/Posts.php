@@ -20,6 +20,21 @@
       $this->view('posts/index', $data);
     }
 
+    public function list(){
+      if(!isLoggedIn()){
+        redirect('users/login');
+      }
+
+      $posts = $this->postModel->getPosts();
+
+      $data = [
+        'title' => 'Listes des articles',
+        'description' => "Vous trouverez ici la liste de tout vos articles...",
+        'posts' => $posts
+    ];
+    $this->view('posts/list', $data);
+    }
+
     public function add(){
       if(!isLoggedIn()){
         redirect('users/login');
@@ -32,7 +47,7 @@
 
         $data = [
           'title' => trim($_POST['title']),
-          'body' => trim($_POST['editor1']),
+          'body' => trim($_POST['body']),
           // 'source_link' => trim($_POST['source_link']),
           'user_id' => $_SESSION['user_id'],
           'title_err' => '',
@@ -62,7 +77,7 @@
           }
         } else {
           // Load view with errors
-          $this->view('posts/add', $data);
+          $this->view('pages/blog', $data);
         }
 
       } else {

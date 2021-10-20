@@ -54,7 +54,7 @@
         </a>
       </li>
       <li class="move-ico ico04">
-        <a href="#" class="link link03">
+        <a href="<?php echo URL_ROOT; ?>/posts/list" class="link link03">
           <ion-icon class="icon-xs" name="list-outline"></ion-icon>
         </a>
       </li>

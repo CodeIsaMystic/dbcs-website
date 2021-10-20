@@ -11,7 +11,7 @@
         </a>
       </li>
       <li>
-        <a class="link txt-light" href="<?php echo URL_ROOT; ?>/posts">
+        <a class="link txt-light" href="<?php echo URL_ROOT; ?>/posts/list">
           <ion-icon class="icon-xs" name="list-circle-outline">
           </ion-icon>
           Posts
