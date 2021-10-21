@@ -11,6 +11,14 @@
 <section class="bg-white pb-md">
   <div class="container container--md">
     <article class="post grid--1-col b-radius4 box-shad1">
+      <div class="img-box--post b-radius4 with-parallax">
+        <img
+          class="b-radius4"
+          src="<?= URL_ROOT; ?>/img/posts/thumb/meal-fruit-min.png"
+          alt=""
+          srcset=""
+        />
+      </div>
       
       <div class="text-box--post txt-dark">
         <h3 class="heading-post txt-dark-gray font-garamond mb-sm">
