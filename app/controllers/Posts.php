@@ -46,6 +46,7 @@
         $_POST = filter_input_array(INPUT_POST);
         // $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 
+        
         $data = [
           'title' => trim($_POST['title']),
           // 'body' => trim($_POST['body']),
@@ -54,13 +55,14 @@
           'user_id' => $_SESSION['user_id'],
           'title_err' => '',
           'body_err' => '',
-          'source_link_err' => '',
         ];
+        
+        
 
         // Validate data
         if(empty($data['title'])){
           $data['title_err'] = 'Veuillez ajoutez un titre';
-          echo $data['title_err'];
+          // echo $data['title_err'];
         }
         if(empty($data['body'])){
           $data['body_err'] = "Ajoutez le contenu de l'article";
@@ -88,7 +90,9 @@
         $data = [
           'title' => '',
           'body' => '',
-          'source_link' => ''
+          'source_link' => '',
+          'title_err' => '',
+          'body_err' => '',
         ];
   
         $this->view('posts/add', $data);

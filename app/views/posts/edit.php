@@ -1,7 +1,34 @@
 <?php require APP_ROOT . '/views/inc/header.php'; ?>
 
 
-<div class="">
+
+
+
+<?php require APP_ROOT . '/views/inc/footer.php'; ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="">
 
   <h2>Edit Post</h2>
   <p>Create a post with this form</p>
@@ -21,8 +48,4 @@
     <input type="submit" class="btn" value="Submit">
   </form>
   
-</div>
-
-
-
-<?php require APP_ROOT . '/views/inc/footer.php'; ?>
+</div> -->

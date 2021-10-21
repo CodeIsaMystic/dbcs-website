@@ -24,7 +24,7 @@
             <label class="fontW700 mt-sm mb-xs" for="title">Titre de l'article</label>
             
             <span class="b-radius4">
-              <p class="txt-content--xsmall txt-danger"><?php  echo $data['title_err'];?></p>
+              <p class="txt-content--xsmall txt-danger"><?php echo $data['title_err'];?></p>
             </span>
             
             <input type="text" name="title" class="bg-white mb-xxs" value="<?php echo $data['title']; ?>">
@@ -61,15 +61,18 @@
           
           <!-- SOURCE LINK ARTICLE -->
           <div>
-            <label class="fontW700 mt-sm mb-xxs" for="source_link">Lien vers l'article</label>
+            <label class="fontW700 mt mb-xxs" for="source_link">Lien vers l'article</label>
             
-            <p class="txt-content--small">
+            <p class="txt-content--small mb-xxs">
               Ajoutez le lien vers l'article source de votre site
-              "partenaire". 
+              "partenaire".
+            </p>
+            <p class="txt-content--small">
+              <span class="fontW700">Copiez directement l'url</span> de la page contenant l'article. 
             </p>
             <p class="txt-content--small mb-xs"> 
-              <span class="fontW700">Copiez directement l'url de la page contenant l'article.</span>
-              Le lien doit contenir <span class="fontW700">"https://"</span> ou bien <span class="fontW700">"http://"</span>suivi du reste de l'url.         
+              
+              Le lien doit contenir <span class="fontW700">"https://www"</span> ou bien <span class="fontW700">"http://www"</span>suivi du reste de l'url.         
             </p>
             
             <input class="bg-white mb-xxs" type="text" name="source_link" value="
