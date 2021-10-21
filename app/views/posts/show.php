@@ -23,9 +23,12 @@
 <!-- POST CONTENT SECTION -->
 <section class="post-content bg-white mt-md">
   <div class="container container--md">
-    <div class="text-box--post txt-dark mb">
-        <?php echo $data['post']->body; ?>
+    <div class="text-box--post txt-dark mb-xs">
+      <?php // var_dump($data); die(); ?>
+      <?php echo $data['post']->body; ?>
+    </div>
 
+    <div class="text-box--post txt-dark mb">
       <a href="<?php echo $data['post']->source_link; ?>" target="_blank" class="link link-dark link--underline">
         <?php 
         if($data['post']->source_link != null) {

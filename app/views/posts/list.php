@@ -1,5 +1,7 @@
 
+<!-- HEADER --->
 <?php require APP_ROOT . '/views/inc/header.php'; ?>
+
 
 <!-- HERO SECTION --->
 <section class="contact-hero-bg hero-bg-img">
@@ -15,26 +17,22 @@
     </div>
   </div>
 </section>
-
-<section>
-  <div class="container container-- mbsm-md">
-    <h4 class="heading-secondary txt-center txt-dark mt-lg mb-sm">Détails</h4>
-  </div>
-</section>
-
-
+  
+  
 <!--  TABLE LIST POSTS -->
 <section>
-  <div class="container container--sm">
+  <div class="container container--mb sm-md">
+    <h4 class="heading-secondary txt-center txt-dark mt-lg mb-sm">Détails</h4>
+  </div>
+
+  <div class="container container--md">
     <div class="grid--1-col mb-md">
 
-     
       <!-- TABLE -->
-      <table id="myTable" class=" hover box-shad1 mt mb-md pb-sm">
-        <!-- <caption class="heading-secondary font-garamond fontW500 txt-dark  pb-sm pt-sm">Liste des articles</caption> -->
+      <table id="myTable" class="hover box-shad1 mt mb-md pb-sm">
         <thead class="mb-xs">
           <th class="heading-tertiary font-garamond fontW500 txt-dark pb-xs pt-xs">Titre</th>
-          <th class="heading-tertiary font-garamond fontW500 txt-dark pb-xs pt-xs">Lien de l'article</th>
+          <th class="heading-tertiary font-garamond fontW500 txt-dark pb-xs pt-xs">Liens</th>
         </thead>
 
 
@@ -47,24 +45,33 @@
                 <?php echo $post->title; ?>
               </a>
             </td> 
-            <td>
-              <a class="link mb-xs"
+            <td class="td-links">
+              <a class="td-link-blue txt-center"
                 href="#">
-                Clickez &rarr;
+                Editer
               </a>
+              <a class="td-link-yellow txt-center"
+                href="#">
+                Effacer
+              </a>
+              <!-- <a class="tag tag--blue fontW700     b-radius25 txt-center"
+                href="#">
+                Editer
+              </a>
+              
+              <a href="#" class="">
+                Effacer
+                <ion-icon class="icon-xs" name="trash-outline"></ion-icon>
+              </a> -->
             </td>          
           </tr>
           <?php endforeach ?>
         </tbody>
       </table>
-
-      
+  
     </div>
-
-  </div>
-
-
   </div>
 </section>
 
+<!-- FOOTER -->
 <?php require APP_ROOT . '/views/inc/footer.php'; ?>

@@ -4,7 +4,7 @@
   // Flash message helper
   // EXAMPLE - flash('register_success', 'You are now registered');
   // DISPLAY IN VIEW - echo flash('register_success');
-  function flash($name = '', $message = '', $class = 'alert alert-success'){
+  function flash($name = '', $message = '', $class = 'txt-content alert alert-success'){
     if(!empty($name)){
       if(!empty($message) && empty($_SESSION[$name])){
         if(!empty($_SESSION[$name])){
@@ -23,10 +23,10 @@
 
 
         echo 
-          '<div class="container container--md b-radius4'
+          '<div class="b-radius4 '
           .$class
           .'" id="msg-flash">'
-            .'<p class="txt-content--xsmall">'
+            .'<p class="txt-content">'
               .$_SESSION[$name]
             .'</p>'
           .'</div>';

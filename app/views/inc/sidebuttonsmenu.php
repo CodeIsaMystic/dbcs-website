@@ -38,9 +38,6 @@
   <div class="menu-object">
     <ul class="toggle">
       <li class="ico01">
-        <!-- <ion-icon class="icon-xs" name="grid-outline"></ion-icon> -->
-        <!-- <ion-icon class="icon-xs" name="menu-outline"></ion-icon> -->
-        <!-- <ion-icon class="icon-xs" name="play-outline"></ion-icon> -->
         <ion-icon class="icon-xs" name="chevron-forward-outline"></ion-icon>
       </li>
       <li class="move-ico ico02">

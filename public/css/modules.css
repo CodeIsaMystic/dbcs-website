@@ -325,31 +325,6 @@
   gap: 2.4rem;
 }
 
-/********************/
-/********************/
-/********************/
-/***************/
-/*  ALERTS    */
-/*************/
-.alert {
-  display: block;
-  margin: 0 auto 0.8rem;
-  padding: 0.4rem 0;
-  // background-color: transparent;
-  background-color: white;
-}
-.alert p {
-  text-indent: 2.4rem;
-}
-.alert-success {
-  border: 1px solid #058f1a;
-  color: #058f1a;
-}
-.alert-danger {
-  border: 1px solid #f84f4f;
-  color: #f84f4f;
-}
-
 /***************************/
 /*   SIDE BUTTONS  MENU   */
 /*************************/

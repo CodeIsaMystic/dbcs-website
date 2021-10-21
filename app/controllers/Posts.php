@@ -34,7 +34,7 @@
     ];
     $this->view('posts/list', $data);
     }
-
+    
     public function add(){
       if(!isLoggedIn()){
         redirect('users/login');
@@ -48,30 +48,33 @@
 
         $data = [
           'title' => trim($_POST['title']),
+          // 'body' => trim($_POST['body']),
           'body' => $_POST['body'],
-          // 'source_link' => trim($_POST['source_link']),
+          'source_link' => trim($_POST['source_link']),
           'user_id' => $_SESSION['user_id'],
           'title_err' => '',
-          'body_err' => ''
+          'body_err' => '',
+          'source_link_err' => '',
         ];
 
         // Validate data
         if(empty($data['title'])){
           $data['title_err'] = 'Veuillez ajoutez un titre';
+          echo $data['title_err'];
         }
         if(empty($data['body'])){
           $data['body_err'] = "Ajoutez le contenu de l'article";
         }
         // Handling the Source_link use case
-        // if(empty($data['source_link'])){
-        //   $data['source_link_err'] = null;
-        // }
+        if(empty($data['source_link'])){
+          $data['source_link_err'] = null;
+        }
 
         // Make sure no errors
         if(empty($data['title_err']) && empty($data['body_err'])){
           // Validated
           if($this->postModel->addPost($data)){
-            flash('post_message', 'Post ajouté');
+            flash('post_message', 'Votre article a bien été ajouté et publié.');
             redirect('pages/blog');
           } else {
             die('Something went wrong');
@@ -84,7 +87,8 @@
       } else {
         $data = [
           'title' => '',
-          'body' => ''
+          'body' => '',
+          'source_link' => ''
         ];
   
         $this->view('posts/add', $data);

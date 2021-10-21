@@ -1,6 +1,7 @@
+<!-- HEADER --->
 <?php require APP_ROOT . '/views/inc/header.php'; ?>
 
-<!-- HERO SECTION --->
+<!-- HERO POST SECTION --->
 <section class="blog-hero-bg hero-bg-img">
   <div class="hero grid--hero container container--md">
     <div class="pt-md pb-lg mt-lg mb-lg">
@@ -15,7 +16,7 @@
   </div>
 </section>
 
-<!-- POST SECTION TITLE --->
+<!-- POST-TITLE SECTION --->
 <section class="bg-white pb pt-md">
   <div class="container container--md txt-center">
     <h4 class="subheading fontW700 txt-upp txt-blue mb-xs">Blog</h4>
@@ -27,9 +28,8 @@
 </div>
 </section>
 
-
+<!-- POSTS SECTION -->
 <?php require APP_ROOT . '/views/posts/index.php'; ?>
-
 
 <!-- PARTNERS SECTION -->
 <section class="bg-white mb-lg pt-lg">
@@ -85,9 +85,7 @@
 
         <form class="grid--form" name="sign-up">
           <div>
-            <label class="fontW700 mb-xxs" for="full-name"
-              >Nom Complet</label
-            >
+            <label class="fontW700 mb-xxs" for="full-name">Nom Complet</label>
             <input
               class="b-radius4 bg-white"
               id="full-name"
@@ -99,9 +97,7 @@
           </div>
 
           <div>
-            <label class="fontW700 mb-xxs" for="email"
-              >Adresse Mail</label
-            >
+            <label class="fontW700 mb-xxs" for="email">Adresse Mail</label>
             <input
               class="b-radius4 bg-white"
               id="email"
@@ -113,9 +109,7 @@
           </div>
 
           <div>
-            <label class="fontW700 mb-xxs" for="select-where"
-              >Où vous nous avez connu?</label
-            >
+            <label class="fontW700 mb-xxs" for="select-where">Où vous nous avez connu?</label>
             <select
               class="b-radius4 bg-white"
               id="select-where"
@@ -136,13 +130,10 @@
           </button>
         </form>
       </div>
-      <div
-        class="img-box--cta"
-        role="img"
-        aria-label="Bastien Desmet Coach Sportif"
-      ></div>
+      <div class="img-box--cta" role="img" aria-label="Bastien Desmet Coach Sportif"></div>
     </div>
   </div>
 </section>
 
+<!-- FOOTER --->
 <?php require APP_ROOT . '/views/inc/footer.php'; ?>

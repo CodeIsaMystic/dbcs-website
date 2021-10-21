@@ -1,6 +1,12 @@
 
-<!-- POST SECTION --->
-<?php flash('post_message'); ?>
+<!-- FLASH MESSAGE --->
+<section class="bg-white pb pt-md">
+  <div class="container container--md">
+    <?php flash('post_message'); ?>
+  </div>
+</section>
+
+<!-- POSTS SECTION --->
 <?php foreach($data['posts'] as $post) : ?>
 <section class="bg-white pb-md">
   <div class="container container--md">
