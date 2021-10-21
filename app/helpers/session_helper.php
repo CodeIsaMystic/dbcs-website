@@ -23,7 +23,7 @@
 
 
         echo 
-          '<div class="b-radius4 '
+          '<div class="container container--md b-radius4'
           .$class
           .'" id="msg-flash">'
             .'<p class="txt-content--xsmall">'

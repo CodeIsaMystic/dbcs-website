@@ -214,7 +214,7 @@
             </select>
           </div>
 
-          <button class="btn btn--baseline btn-hover b-radius25 mt-xxs">
+          <button class="btn btn--baseline btn-hover btn-hover--blue mt-xxs">
             Essai gratuit
           </button>
         </form>

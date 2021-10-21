@@ -17,7 +17,7 @@
           Enregistrez vos informations pour pouvoir vous connecter à votre
           "Dashboard".
         </p>
-        <form name="register" action="<?= URL_ROOT; ?>/users/register" method="post">
+        <form class="form-small" name="register" action="<?= URL_ROOT; ?>/users/register" method="post">
           <div>
             <label class="fontW700 mt-xxs" for="name"
               >Nom complet</label
@@ -74,11 +74,8 @@
               <p class="txt-content--xsmall txt-danger"><?= $data['confirm_password_err']; ?></p>
             </span>
           </div>
-          <div class="txt-center">
-            <!-- <button type="submit" class="btn btn--dark btn--form b-radius25 mb-xs">
-              S'enregistrer
-            </button> -->
-            <input type="submit" name="submit" value="S'enregistrer" class="btn btn-hover btn--form b-radius25 mt-xs">
+          <div class="txt-center mt-xs">
+            <button type="submit" class="btn btn-hover btn-hover--dark btn40">S'enregistrer</button>
           </div>
         </form>
       </div>

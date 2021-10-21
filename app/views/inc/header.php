@@ -29,7 +29,9 @@
     <link rel="stylesheet" href="<?= URL_ROOT; ?>/css/general.css" />
     <link rel="stylesheet" href="<?= URL_ROOT; ?>/css/modules.css" />
     <link rel="stylesheet" href="<?= URL_ROOT; ?>/css/style.css" />
+    <link rel="stylesheet" href="<?= URL_ROOT; ?>/css/style2.css" />
     <link rel="stylesheet" href="<?= URL_ROOT; ?>/css/queries.css" />
+
 
     <!-- SCRIPTS CDN -->
     <script

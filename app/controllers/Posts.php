@@ -43,11 +43,12 @@
 
       if($_SERVER['REQUEST_METHOD'] == 'POST'){
         // Sanitize POST array
-        $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+        $_POST = filter_input_array(INPUT_POST);
+        // $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 
         $data = [
           'title' => trim($_POST['title']),
-          'body' => trim($_POST['body']),
+          'body' => $_POST['body'],
           // 'source_link' => trim($_POST['source_link']),
           'user_id' => $_SESSION['user_id'],
           'title_err' => '',
@@ -71,13 +72,13 @@
           // Validated
           if($this->postModel->addPost($data)){
             flash('post_message', 'Post ajouté');
-            redirect('posts');
+            redirect('pages/blog');
           } else {
             die('Something went wrong');
           }
         } else {
           // Load view with errors
-          $this->view('pages/blog', $data);
+          $this->view('posts/add', $data);
         }
 
       } else {

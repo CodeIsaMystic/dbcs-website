@@ -91,7 +91,6 @@
 .btn,
 .btn:link,
 .btn:visited {
-  // display: inline-block;
   display: block;
   font-size: 1.6rem;
   padding: 1.2rem 1.6rem;
@@ -103,7 +102,10 @@
   font-family: inherit;
   transition: all 0.5s;
 }
-.btn--form {
+.btn25 {
+  width: 25%;
+}
+.btn40 {
   width: 40%;
 }
 .btn--baseline {
@@ -117,6 +119,9 @@
   color: #fff;
   background-size: 300% 100%;
 
+  box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+}
+.btn-hover--blue {
   moz-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
   -webkit-transition: all 0.4s ease-in-out;
@@ -128,10 +133,23 @@
     #46a1c9,
     #46a1c9
   );
-  box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
 }
-.btn-hover:hover {
+.btn-hover--dark {
+  moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  background-image: linear-gradient(to right, #333, #232323, #fff, #fff);
+}
+
+.btn-hover--dark:hover {
+  color: #232323;
+}
+.btn-hover--blue:hover {
   color: #fff;
+}
+.btn-hover--dark:hover,
+.btn-hover--blue:hover {
   background-position: 100% 0;
   moz-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
@@ -140,14 +158,6 @@
 }
 .btn-hover:focus {
   outline: none;
-}
-/**************/
-/*    TAGS   */
-/************/
-.tag {
-  display: inline-block;
-  padding: 0.4rem 0.8rem;
-  font-size: 1.2rem;
 }
 /**************/
 /*   LINKS   */
@@ -428,7 +438,6 @@
   position: absolute;
   top: 0;
 }
-
 .active .ico02 {
   transform: translate(25px, -90px);
   transition: transform 0.3s cubic-bezier(0.77, 0, 0.175, 1);

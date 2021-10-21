@@ -21,7 +21,7 @@
           Connectez-vous à votre site (seul l'administrateur peut avoir
           accès).
         </p>
-        <form name="login" action="<?= URL_ROOT; ?>/users/login" method="post">
+        <form class="form-small" name="login" action="<?= URL_ROOT; ?>/users/login" method="post">
           <div>
             <label class="fontW700 mt-xxs" for="email"
               >Adresse mail</label
@@ -51,7 +51,7 @@
             </span>
           </div>
           <div class="txt-center mt-xs">
-            <button type="submit" class="btn btn-hover btn--form b-radius25">
+            <button type="submit" class="btn btn-hover btn-hover--dark btn40">
               Se connecter
             </button>
           </div>

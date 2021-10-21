@@ -10,8 +10,8 @@
             <p class="txt-content txt-dark-gray mb">
               <?php echo $data['description']; ?>
             </p>
-            <div>
-              <a href="#cta" class="btn btn-hover b-radius4 mr"
+            <div class="btn-wrapper">
+              <a href="#cta" class="btn btn-hover btn-hover--blue txt-center mr"
                 >Votre premier essai gratuit</a
               >
             </div>
@@ -174,191 +174,6 @@
           </div>
         </div>
       </section>
-
-      <!-- MEALS SECTION
-      <section class="bg-white pt-lg pb-lg">
-        <div class="container container--md">
-          <h4 class="subheading fontW700 txt-upp txt-blue mb-xs">Repas</h4>
-          <h2 class="heading-secondary txt-dark-gray mb-md">
-            Bien manger est la première chose à faire
-          </h2>
-        </div>
-
-        <div
-          class="container container--md grid grid--3-cols grid-gap--medium mb"
-        >
-          <div class="meal b-radius4 box-shad1">
-            <img
-              src="<?= URL_ROOT; ?>/img/meals/meal-1.jpg"
-              class="meal-img"
-              alt="Japanese Gyozas recipe image"
-            />
-            <div class="meal-content">
-              <div class="meal-tags mb-xxs">
-                <span
-                  class="
-                    tag
-                    bg-green1
-                    b-radius25
-                    fontW700
-                    txt-upp txt-dark-gray
-                  "
-                  >Végétarien</span
-                >
-              </div>
-              <p class="meal-title txt-dark-gray fontW700 mb-xxs">
-                Gyozas Japonais
-              </p>
-              <ul class="meal-attributes">
-                <li class="meal-attribute txt-content--large">
-                  <ion-icon
-                    class="icon-blue icon-xs"
-                    name="flame-outline"
-                  ></ion-icon>
-                  <span>Faible en calories</span>
-                </li>
-                <li class="meal-attribute txt-content--large">
-                  <ion-icon
-                    class="icon-blue icon-xs"
-                    name="restaurant-outline"
-                  ></ion-icon>
-                  <span>Gourmet</span>
-                </li>
-                <li class="meal-attribute txt-content--large">
-                  <ion-icon
-                    class="icon-blue icon-xs"
-                    name="hourglass-outline"
-                  ></ion-icon>
-                  <span>1 heure</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="meal b-radius4 box-shad1">
-            <img
-              src="<?= URL_ROOT; ?>/img/meals/meal-2.jpg"
-              class="meal-img"
-              alt="Avocado Salad image recipe"
-            />
-            <div class="meal-content">
-              <div class="meal-tags mb-xxs">
-                <span
-                  class="
-                    tag
-                    bg-green2
-                    b-radius25
-                    fontW700
-                    txt-upp txt-dark-gray
-                  "
-                  >Vegan</span
-                >
-                <span
-                  class="tag bg-blue b-radius25 fontW700 txt-upp txt-dark-gray"
-                  >Paléo</span
-                >
-              </div>
-              <p class="meal-title txt-dark-gray fontW700 mb-sm">
-                Salade aux avocats
-              </p>
-              <ul class="meal-attributes">
-                <li class="meal-attribute txt-content--large">
-                  <ion-icon
-                    class="icon-blue icon-xs"
-                    name="flame-outline"
-                  ></ion-icon>
-                  <span>Faible en calories</span>
-                </li>
-                <li class="meal-attribute txt-content--large">
-                  <ion-icon
-                    class="icon-blue icon-xs"
-                    name="restaurant-outline"
-                  ></ion-icon>
-                  <span>Crudités</span>
-                </li>
-                <li class="meal-attribute txt-content--large">
-                  <ion-icon
-                    class="icon-blue icon-xs"
-                    name="hourglass-outline"
-                  ></ion-icon>
-                  <span>20 mn</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="diets">
-            <h3 class="heading-tertiary txt-dark-gray mb-sm">
-              Bonne combinaison avec les "diets":
-            </h3>
-            <ul class="list">
-              <li class="list-item">
-                <ion-icon
-                  class="icon-blue icon-sm"
-                  name="checkmark-outline"
-                ></ion-icon>
-                <span>Régime minceur</span>
-              </li>
-              <li class="list-item">
-                <ion-icon
-                  class="icon-blue icon-sm"
-                  name="checkmark-outline"
-                ></ion-icon>
-                <span>Régime équilibré</span>
-              </li>
-              <li class="list-item">
-                <ion-icon
-                  class="icon-blue icon-sm"
-                  name="checkmark-outline"
-                ></ion-icon>
-                <span>Prise de muscle</span>
-              </li>
-              <li class="list-item">
-                <ion-icon
-                  class="icon-blue icon-sm"
-                  name="checkmark-outline"
-                ></ion-icon>
-                <span>Végétarien</span>
-              </li>
-              <li class="list-item">
-                <ion-icon
-                  class="icon-blue icon-sm"
-                  name="checkmark-outline"
-                ></ion-icon>
-                <span>Préparation physique</span>
-              </li>
-              <li class="list-item">
-                <ion-icon
-                  class="icon-blue icon-sm"
-                  name="checkmark-outline"
-                ></ion-icon>
-                <span>Vegan</span>
-              </li>
-              <li class="list-item">
-                <ion-icon
-                  class="icon-blue icon-sm"
-                  name="checkmark-outline"
-                ></ion-icon>
-                <span>Sans gluten</span>
-              </li>
-              <li class="list-item">
-                <ion-icon
-                  class="icon-blue icon-sm"
-                  name="checkmark-outline"
-                ></ion-icon>
-                <span>Sans lactose</span>
-              </li>
-              <li class="list-item">
-                <ion-icon
-                  class="icon-blue icon-sm"
-                  name="checkmark-outline"
-                ></ion-icon>
-                <span>Paléo</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section> -->
 
       <!-- TESTIMONIALS SECTION -->
       <section
@@ -592,7 +407,7 @@
               </li>
             </ul>
             <div class="txt-center mt">
-              <a href="#cta" class="btn btn-hover b-radius25"
+              <a href="#cta" class="btn btn-hover btn-hover--blue"
                 >Commencer votre entrainement</a
               >
             </div>
@@ -667,7 +482,7 @@
               </li>
             </ul>
             <div class="txt-center mt">
-              <a href="#cta" class="btn btn-hover b-radius25"
+              <a href="#cta" class="btn btn-hover btn-hover--blue"
                 >Commencer votre entrainement</a
               >
             </div>
@@ -751,7 +566,7 @@
               </li>
             </ul>
             <div class="txt-center mt">
-              <a href="#cta" class="btn btn-hover b-radius25"
+              <a href="#cta" class="btn btn-hover btn-hover--blue"
                 >Commencer votre entrainement</a
               >
             </div>
@@ -893,7 +708,7 @@
                   </select>
                 </div>
 
-                <button class="btn btn--baseline btn-hover t-xxs">
+                <button class="btn btn--baseline btn-hover btn-hover--blue">
                   Essai gratuit
                 </button>
               </form>

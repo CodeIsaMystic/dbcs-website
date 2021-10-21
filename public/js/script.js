@@ -4,6 +4,7 @@ import { mobileMenu } from "./modules/mobileMenu.js"
 import { parallaxEffect } from "./modules/parallaxEffect.js"
 import { toggle } from "./modules/toggle.js"
 import { showDashboardLogin } from "./modules/showDashboardLogin.js"
+import { setupCKEditor } from "./modules/ckeditor.js"
 
 function init() {
   mobileMenu()
@@ -11,6 +12,7 @@ function init() {
   getNewYear()
   showDashboardLogin()
   toggle()
+  setupCKEditor()
   getFlexboxGap()
 }
 

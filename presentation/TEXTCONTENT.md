@@ -82,18 +82,6 @@ Les apports en glucides doivent être constamment contrôlés dans l’alimentat
 
 Dans l’alimentation, nous avons deux types de glucides (ou hydrates de carbone) :
 
-- Les glucides non assimilables
-
-Ce sont des glucides qui ne sont pas digérés par nos enzymes digestives, mais par nos bactéries intestinales. On les appelle les fibres alimentaires. Elles sont fermentées et utilisées pour le métabolisme des bactéries du colon.
-
-- Les glucides assimilables
-
-Ce sont des glucides que nos enzymes digestives sont capable de digérer. On parle ici de glucides simples ou de glucides complexes.
-Les « glucides simples » sont des molécules de glucose rapidement assimilables.
-les « glucides complexes » sont des molécules de glucose liées entre elle et qui demandent un certain temps de digestion pour être métabolisées.
-
-- Les hydrates de carbone et la performance
-
 Faites la différence entre glucides assimilables et glucides non assimilables.
 Les glucides jouent de nombreux rôles importants dans notre organisme
 Source d’énergie principale des globules rouges et du cerveau (cellules gluco-dépendantes)

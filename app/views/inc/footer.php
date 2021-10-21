@@ -98,25 +98,30 @@
       </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    
+<script src="https://cdn.ckeditor.com/ckeditor5/30.0.0/classic/ckeditor.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
 
-    <script>
-      $(document).ready(function() {
-          $('#myTable').DataTable({
-            // "dom": '<"top"if>rt<"bottom"lp><"clear">'
-            "lengthMenu": [[5, 15, 25, -1], [5, 15, 25, "All"]],
+<script>
+  $(document).ready(function() {
+    $('#myTable').DataTable({
+      // "dom": '<"top"if>rt<"bottom"lp><"clear">'
+      "lengthMenu": [[5, 15, 25, -1], [5, 15, 25, "All"]],
             "language": {
-                "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/French.json"
+              "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/French.json"
             },
-
+            
           });
-      } );
-    </script>
+        } );
+        </script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/ScrollTrigger.min.js"></script>
-    <script type="module" src="<?= URL_ROOT; ?>/js/script.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/ScrollTrigger.min.js"></script>
+
+<!-- <script src="<?=  URL_ROOT; ?>/js/lib/ckeditor/ckeditor.js"></script> -->
+<script type="module" src="<?= URL_ROOT; ?>/js/script.js"></script>
 
   </body>
 </html>

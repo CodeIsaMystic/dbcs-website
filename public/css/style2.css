@@ -1,0 +1,135 @@
+/***************/
+/* POST PAGE  */
+/*************/
+.post-page {
+  width: 100%;
+  height: 80vh;
+  position: relative;
+  padding-bottom: 20%;
+  overflow: hidden;
+}
+.img-box--postPage picture img {
+  width: 100%;
+}
+.post-page .txt-box--postPage {
+  position: absolute;
+  top: 40%;
+  left: 15%;
+  width: 60%;
+
+  padding: 4.8rem;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+/* post  */
+.post {
+  width: 100%;
+}
+/*  Img-box Post  */
+.img-box--post img {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+/*  Text-box Post  */
+.text-box--post {
+  padding: 0 6.4rem 6.4rem 6.4rem;
+}
+
+.post-content {
+  width: 60%;
+  margin: 9.6rem auto 0;
+}
+
+/****************/
+/* FORM SMALL */
+/**************/
+.form-small input[typ="submit"],
+.form-small button[type="submit"] {
+  margin: 0 auto;
+}
+
+/****************/
+/* ADD CONTENT */
+/**************/
+.add-content {
+}
+.add-content .text-box--add-post input[type="submit"] {
+  // margin-left: auto;
+  // margin-right: auto;
+}
+.add-content {
+}
+
+/************************************************/
+/************************************************/
+/************************************************/
+/************************************************/
+/************************************************/
+/************************************************/
+/************************************************/
+/************************************************/
+
+/***************/
+/*  CKEDITOR  */
+/*************/
+
+/*Textbox*/
+.ck-editor__editable {
+  min-height: 350px;
+  max-height: 350px;
+  min-width: 100%;
+  // max-width: 450px;
+  max-width: 450px;
+  width: 100%;
+}
+/*Toolbar*/
+.ck-editor__top {
+  min-width: 100%;
+  max-width: 450px;
+  width: 100%;
+}
+
+/*******************/
+/*   CK EDITOR    */
+/*****************/
+.post-content {
+  width: 80%;
+}
+.post-content div .text-box--post {
+  display: block;
+  width: 80%;
+}
+.post-content div .text-box--post blockquote p[text] {
+  max-width: 100% !important;
+}
+.post-content .text-box--post p {
+  font-size: 1.7rem;
+  color: #232323;
+  font-family: "Montserrat", sans-serif;
+}
+
+.post-content .text-box--post h2 {
+  font-size: 3rem;
+  line-height: 1.2;
+  font-family: "EB Garamond", serif;
+}
+.post-content .text-box--post h4 {
+  font-size: 1.8rem;
+  font-family: "Montserrat", sans-serif;
+}
+.post-content .text-box--post blockquote {
+  width: 100%;
+}
+.post-content .text-box--post blockquote p {
+  font-family: "EB Garamond", serif;
+  font-size: 1.7rem;
+  font-style: italic;
+  line-height: 1.4;
+  color: #888;
+}
+.post-content .text-box--post figure.media embed {
+  display: block;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  margin: 0 auto;
+}
