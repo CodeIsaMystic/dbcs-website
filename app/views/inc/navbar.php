@@ -99,7 +99,7 @@
           <div class="menu-icon__middle"></div>
         </div>
 
-        <!-- NAVIGATION -->
+        <!-- PRIMARY NAV -->
         <nav class="primary-nav">
           <ul class="primary-nav-list">
             <li>
@@ -126,7 +126,7 @@
           <?php require APP_ROOT . '/views/inc/dashboardnavs.php'; ?>
 
         <?php else : ?>
-        <!--  Dashboard login -->
+        <!--  DASHBOARD-LOGIN -->
         <div class="dashboard-login">
           <h4 class="subheading">Dashboard</h4>
           <nav class="dashboard-login-nav dashboard-login-nav-is-visible">

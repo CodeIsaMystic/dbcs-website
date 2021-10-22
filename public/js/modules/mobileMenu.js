@@ -1,4 +1,4 @@
-const mobileMenu = function () {
+const mobileMenu = () => {
   const menuIcon = document.querySelector(".menu-icon")
   const primaryNav = document.querySelector(".header .primary-nav")
 

@@ -1,5 +1,5 @@
 
-<!-- Dashboard logged Top -->
+<!-- DASHBOARD-LOGGED TOP -->
 <div class="dashboard-logged bg-dark">
   <h4 class="subheading">Dashboard</h4>
   <nav class="dashboard-logged-nav">
@@ -35,7 +35,7 @@
     </ul>
   </nav>
 </div>
-<!-- Dashboard logged Bottom -->
+<!-- DASHBOARD-LOGGED BOTTOM -->
 <div class="dashboard-logged bg-dark">
   <p class="txt-content--small">Welcome 
     <?php echo $_SESSION['user_name']; ?>

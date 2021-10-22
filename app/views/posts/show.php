@@ -1,7 +1,7 @@
-
+<!-- HEADER -->
 <?php require APP_ROOT . '/views/inc/header.php'; ?>
 
- <!-- POST PAGE SECTION -->
+ <!-- SECTION POST-PAGE -->
 <section class="post-page bg-white">
   <div class="img-box--postPage">
     <picture>
@@ -19,8 +19,7 @@
   </div>
 </section>
 
-
-<!-- POST CONTENT SECTION -->
+<!-- SECTION POST-CONTENT -->
 <section class="post-content bg-white mt-md">
   <div class="container container--md">
     <div class="text-box--post txt-dark mb-xs">
@@ -46,7 +45,7 @@
 
 
 
-
+<!-- TO CHECKOUT AND REMOVE --> 
 <?php // if($data['post']->user_id == $_SESSION['user_id']) : ?>
 <!-- 
   <a href="<?php echo URL_ROOT; ?>/posts/edit/<?php echo $data['post']->id; ?>" class="btn btn-hover btn-hover--dark">Edit</a>
@@ -59,4 +58,5 @@
 
 
 
+<!-- FOOTER --> 
 <?php require APP_ROOT . '/views/inc/footer.php'; ?>

@@ -1,9 +1,8 @@
-
 <!-- HEADER --->
 <?php require APP_ROOT . '/views/inc/header.php'; ?>
 
 
-<!-- HERO SECTION --->
+<!-- SECTION HERO --->
 <section class="contact-hero-bg hero-bg-img">
   <div class="hero grid--hero container container--md">
     <div class="mt-md mb-lg pb-lg pt-lg">
@@ -19,7 +18,7 @@
 </section>
   
   
-<!--  TABLE LIST POSTS -->
+<!-- SECTION POSTS-LIST -->
 <section>
   <div class="container container--mb sm-md">
     <h4 class="heading-secondary txt-center txt-dark mt-lg mb-sm">Détails</h4>
@@ -54,15 +53,6 @@
                 href="#">
                 Effacer
               </a>
-              <!-- <a class="tag tag--blue fontW700     b-radius25 txt-center"
-                href="#">
-                Editer
-              </a>
-              
-              <a href="#" class="">
-                Effacer
-                <ion-icon class="icon-xs" name="trash-outline"></ion-icon>
-              </a> -->
             </td>          
           </tr>
           <?php endforeach ?>

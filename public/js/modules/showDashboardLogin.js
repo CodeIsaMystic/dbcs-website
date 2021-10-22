@@ -1,6 +1,4 @@
-//////////////////////////////////////////////
-// Show Dashboard Login
-const showDashboardLogin = function () {
+const showDashboardLogin = () => {
   const adminLink = document.querySelector("#adminLink")
 
   const dashboardLogin = document.querySelector(".dashboard-login")

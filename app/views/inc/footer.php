@@ -30,26 +30,25 @@
             </p>
             <p>
               Mail: <br />
-              <a class="link-light link-sm" href="mailto:contact@dbcs.com"
+              <a class="link-light" href="mailto:contact@dbcs.com"
                 >contact@dbcs.com</a
               >
             </p>
-            
           </address>
           
           <ul class="social-links txt-light">
             <li>
-              <a class="link-light link-sm" href="#"
+              <a class="link-light" href="#"
                 ><ion-icon class="icon-xs" name="logo-instagram"></ion-icon
               ></a>
             </li>
             <li>
-              <a class="link-light link-sm" href="#"
+              <a class="link-light" href="#"
                 ><ion-icon class="icon-xs" name="logo-facebook"></ion-icon
               ></a>
             </li>
             <li>
-              <a class="link-light link-sm" href="#"
+              <a class="link-light" href="#"
                 ><ion-icon class="icon-xs" name="logo-snapchat"></ion-icon
               ></a>
             </li>
@@ -60,21 +59,21 @@
           <h4 class="heading-footer txt-light fontW700 mb-sm">Entreprise</h4>
           <ul class="vertical-nav vertical-gap--sm">
             <li>
-              <a class="link-light link-sm not-allowed" href="#">A propos</a>
+              <a class="link-light not-allowed" href="#">A propos</a>
             </li>
             <li>
-              <a class="link-light link-sm not-allowed" href="#">Partenariat</a>
+              <a class="link-light not-allowed" href="#">Partenariat</a>
             </li>
             <li>
-              <a class="link-light link-sm not-allowed" href="#">Pour les entreprises</a>
+              <a class="link-light not-allowed" href="#">Pour les entreprises</a>
             </li>
             <li>
-              <a class="link-light link-sm not-allowed" href="#"
+              <a class="link-light not-allowed" href="#"
                 >Termes et conditions</a
               >
             </li>
             <li>
-              <button class="link-light link-sm <?php if(isset($_SESSION['user_id'])) {echo "not-allowed";} ?>" id="adminLink">Admin</button>
+              <button class="link-light <?php if(isset($_SESSION['user_id'])) {echo "not-allowed";} ?>" id="adminLink">Admin</button>
             </li>
           </ul>
         </nav>
@@ -83,13 +82,13 @@
           <h4 class="heading-footer txt-light fontW700 mb-sm">Ressources</h4>
           <ul class="vertical-nav vertical-gap--sm">
             <li>
-              <a class="link-light link-sm not-allowed" href="#">Road map</a>
+              <a class="link-light not-allowed" href="#">Road map</a>
             </li>
             <li>
-              <a class="link-light link-sm not-allowed" href="#">Plan d'exercices</a>
+              <a class="link-light not-allowed" href="#">Plan d'exercices</a>
             </li>
             <li>
-              <a class="link-light link-sm not-allowed" href="#"
+              <a class="link-light not-allowed" href="#"
                 >Préparation Physique</a
               >
             </li>
@@ -99,29 +98,24 @@
     </footer>
 
     
-<script src="https://cdn.ckeditor.com/ckeditor5/30.0.0/classic/ckeditor.js"></script>
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
-
-<script>
-  $(document).ready(function() {
-    $('#myTable').DataTable({
-      // "dom": '<"top"if>rt<"bottom"lp><"clear">'
-      "lengthMenu": [[10, 15, 25, -1], [10, 15, 25, "All"]],
-            "language": {
-              "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/French.json"
-            },
-            
-          });
-        } );
-        </script>
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/ScrollTrigger.min.js"></script>
-
-<!-- <script src="<?=  URL_ROOT; ?>/js/lib/ckeditor/ckeditor.js"></script> -->
-<script type="module" src="<?= URL_ROOT; ?>/js/script.js"></script>
+  
+  <!-- SCRIPTS CDN -->
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule=""
+    src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+  ></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/ScrollTrigger.min.js"></script>
+  
+  <!-- SCRIPT -->
+  <script src="<?= URL_ROOT; ?>/js/lib/ckeditor/build/ckeditor.js"></script>
+  <script type="module" src="<?= URL_ROOT; ?>/js/script.js"></script>
 
   </body>
 </html>

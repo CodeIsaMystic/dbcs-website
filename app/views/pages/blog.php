@@ -1,7 +1,7 @@
 <!-- HEADER --->
 <?php require APP_ROOT . '/views/inc/header.php'; ?>
 
-<!-- HERO POST SECTION --->
+<!-- SECTION HERO-POST --->
 <section class="blog-hero-bg hero-bg-img">
   <div class="hero grid--hero container container--md">
     <div class="pt-md pb-lg mt-lg mb-lg">
@@ -16,7 +16,7 @@
   </div>
 </section>
 
-<!-- POST-TITLE SECTION --->
+<!-- SECTION POST-TITLE --->
 <section class="bg-white pb pt-md">
   <div class="container container--md txt-center">
     <h4 class="subheading fontW700 txt-upp txt-blue mb-xs">Blog</h4>
@@ -28,10 +28,10 @@
 </div>
 </section>
 
-<!-- POSTS SECTION -->
+<!-- SECTION POSTS -->
 <?php require APP_ROOT . '/views/posts/index.php'; ?>
 
-<!-- PARTNERS SECTION -->
+<!-- SECTION PARTNERS -->
 <section class="bg-white mb-lg pt-lg">
   <div class="container container--lg">
     <h2 class="subheading txt-upp txt-center fontW500 mb-sm">
@@ -56,7 +56,7 @@
   </div>
 </section>
 
-<!-- CTA SECTION --->
+<!-- SECTION CTA --->
 <section class="linear-grad-lightBlue pb-lg pt-lg">
   <div class="container container--md with-parallax" id="cta">
     <div

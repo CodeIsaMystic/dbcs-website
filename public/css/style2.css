@@ -1,3 +1,28 @@
+/********************/
+/* CONTACT-DETAILS */
+/******************/
+.contact-details__div:first-child .col-address h4,
+.contact-details__div:nth-child(2) .col-nav h4 {
+  margin-bottom: 9.8rem;
+}
+.contact-details__div:first-child .col-address p:first-of-type {
+  margin-bottom: 6.4rem;
+}
+.contact-details__div:nth-child(2) .col-nav p,
+.contact-details__div:last-child .col-nav p {
+  margin-bottom: 6.4rem;
+}
+.contact-details__div:last-child .col-nav h4 {
+  margin-bottom: 4.8rem;
+}
+
+.contact-details__div:first-child .contacts p:first-of-type,
+.contact-details__div:first-child .col-address .social-links {
+  margin-bottom: 3.2rem;
+}
+.contact-details__div .col-nav li .link {
+  font-size: 1.8rem;
+}
 /***************/
 /*  ALERTS    */
 /*************/
@@ -42,28 +67,25 @@
   padding: 4.8rem;
   background-color: rgba(255, 255, 255, 0.85);
 }
-/* post  */
+/*************/
+/*   POST   */
+/*************/
 .post {
   width: 100%;
 }
-/*  Img-box Post  */
 .img-box--post img {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
-/*  Text-box Post  */
 .text-box--post {
   padding: 0 6.4rem 6.4rem 6.4rem;
 }
-
 .post-content {
   width: 60%;
   margin: 9.6rem auto 0;
 }
 
-/****************/
-/* FORM SMALL */
-/**************/
+/* form-small */
 .form-small input[typ="submit"],
 .form-small button[type="submit"] {
   margin: 0 auto;
@@ -90,7 +112,6 @@
 /***************/
 /*  CKEDITOR  */
 /*************/
-
 /*Textbox*/
 .ck-editor__editable {
   min-height: 350px;
@@ -108,7 +129,7 @@
 }
 
 /*******************/
-/*   CK EDITOR    */
+/*  POST CONTENT  */
 /*****************/
 .post-content {
   width: 80%;
@@ -152,6 +173,20 @@
   text-align: center;
   margin: 0 auto;
 }
+/****************/
+/*  BLOG-POSTS  */
+/**************/
+article.post .text-box--post {
+  // max-width: 100%;
+  // display: block;
+}
+article.post .text-box--post p:not(p.text-content) {
+  // font-size: 100%;
+  // font-size: 16px;
+  // max-width: 80%;
+  // display: block;
+  // margin: 0 auto;
+}
 
 /****************/
 /*  DATATABLE  */
@@ -179,10 +214,7 @@
   line-height: 1.2;
 }
 
-/**************/
-/*    TABLES   */
-/************/
-
+/*  tables  */
 #myTable_wrapper.dataTables_wrapper {
   width: 85%;
   margin: 0 auto;
@@ -204,6 +236,7 @@ table#myTable {
 /* LINKS ANIM */
 /*************/
 /*  Animation is shaking !! */
+/*      to fix   !!!!!     */
 .td-links a {
   display: inline-block;
   font-size: 1.6rem;
@@ -219,7 +252,6 @@ table#myTable {
   padding: 0.2rem;
   margin-bottom: 0.3rem;
 }
-
 /*  Third variants black  */
 .td-link-yellow {
   background-color: #fffae0;

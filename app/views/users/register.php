@@ -1,13 +1,11 @@
+<!-- HEADER -->
 <?php require APP_ROOT . '/views/inc/header.php'; ?>
   
-<!-- REGISTER SECTION -->
+<!-- SECTION REGISTER -->
 <section class="bg-white pb-md pt-lg">
 
-  <!--  Container  register  -->
   <div class="container container--xs">
-    <div
-      class="grid--1-col b-radius4 linear-grad-lightBlue box-shad1 pt-xs"
-    >
+    <div class="grid--1-col b-radius4 linear-grad-lightBlue box-shad1 pt-xs">
       <h2 class="heading-secondary txt-center txt-dark mb-sm">
         Enregistrement
       </h2>
@@ -81,6 +79,8 @@
       </div>
     </div>
   </div>
+
 </section>
 
+<!-- FOOTER -->
 <?php require APP_ROOT . '/views/inc/footer.php'; ?>

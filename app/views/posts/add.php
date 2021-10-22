@@ -1,10 +1,9 @@
-
+<!-- HEADER -->
 <?php require APP_ROOT . '/views/inc/header.php'; ?>
 
-<!-- ADD POST -->
+<!-- SECTION ADD-POST -->
 <section class="add-content pb-lg pt-xl">
   
-  <!--  CONTAINER  -->
   <div class="container container--md">
     <div class="grid--1-col b-radius4 box-shad1">
       <div class="text-box--add-post txt-dark txt-content">
@@ -17,7 +16,7 @@
           dans la section appropiée (avec accord du site partenaire).
         </p>
         
-        <!-- FORM ADD POST -->
+        <!-- FORM ADD-POST -->
         <form action="<?php echo URL_ROOT; ?>/posts/add" method="post" enctype="multipart/form-data">
           <!-- TITLE ARTICLE -->
           <div>
@@ -55,7 +54,7 @@
             </span>
           
             <textarea id="editor" class="b-radius4 bg-white mb-xxs" type="text" name="body">
-              <?php   echo $data['body']; ?>
+              <?php   echo htmlentities($data['body']); ?>
             </textarea>
           </div>
           
@@ -96,5 +95,5 @@
   </div>
 </section>
 
-
+<!-- FOOTER -->
 <?php require APP_ROOT . '/views/inc/footer.php'; ?>

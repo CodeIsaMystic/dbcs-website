@@ -89,7 +89,7 @@ input::placeholder {
 /************************************************/
 /************************************************/
 
-/**************************/
+/****************************/
 /* For development process */
 /**************************/
 .not-allowed {
@@ -147,7 +147,7 @@ input::placeholder {
 /*******************************************/
 /*******************************************/
 
-/*  Texts Colors  */
+/* texts colors */
 .txt-light {
   color: #fff;
 }
@@ -180,6 +180,7 @@ input::placeholder {
 
 /*******************************************/
 /*******************************************/
+/* backgrounds */
 .bg-dark {
   background-color: #232323;
 }
@@ -212,27 +213,32 @@ input::placeholder {
 .grid {
   display: grid;
   row-gap: 9.6rem;
+  column-gap: 6.4rem;
 }
 .grid:not(:last-child) {
   margin-bottom: 9.6rem;
 }
 .grid--1-col {
   grid-template-columns: 1fr;
-  display: grid;
+  // display: grid;
   overflow: hidden;
 }
 .grid--2-cols {
   grid-template-columns: repeat(2, 1fr);
 }
-
 .grid--3-cols {
   grid-template-columns: repeat(3, 1fr);
 }
-
 .grid--4-cols {
   grid-template-columns: repeat(4, 1fr);
 }
-/*  Grid Gap  */
+
+/**************************/
+/**************************/
+/**************************/
+/**************************/
+/**************************/
+/*  grid gap  */
 .grid-gap--small {
   column-gap: 0.8rem;
 }
@@ -242,12 +248,17 @@ input::placeholder {
 .grid-gap--large {
   column-gap: 6.4rem;
 }
-/*  Grid utils  */
+/**************************/
+/**************************/
+/**************************/
+/**************************/
+
+/*  grid utils  */
 .grid--center-v {
   align-items: center;
 }
 
-/*  Grid Template  */
+/*  grid template  */
 .grid--hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -286,8 +297,7 @@ input::placeholder {
 /******************/
 /*   UTILITIES   */
 /****************/
-
-/*  Borders  */
+/* border-radius */
 .b-radius4 {
   border-radius: 4px;
 }
@@ -301,8 +311,8 @@ input::placeholder {
 .box-shad1 {
   box-shadow: 0 2.4rem 4.8rem #23232326;
 }
-/*  Spacing  */
-/*  MarginsY  */
+/*  spacing  */
+/*  -marginY  */
 .mb-xxs {
   margin-bottom: 1.2rem;
 }
@@ -348,7 +358,7 @@ input::placeholder {
 .mr-xs {
   margin-right: 1.6rem;
 }
-/*  PaddingsY  */
+/*  -paddingY  */
 .pb-xs {
   padding-bottom: 1.6rem;
 }

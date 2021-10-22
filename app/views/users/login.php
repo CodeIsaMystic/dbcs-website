@@ -1,13 +1,13 @@
+<!-- HEADER --> 
 <?php require APP_ROOT . '/views/inc/header.php'; ?>
   
-<!-- LOGIN SECTION -->
+<!-- SECTION LOGIN -->
 <section class="bg-white pb-xl pt-lg mt-sm">
-    <!--  Alert Messages  -->
+    <!-- ALERT MESSAGES -->
     <div class="container container--xs">
       <?php flash('register_success'); ?>
     </div>
 
-  <!--  Container  login  -->
   <div class="container container--xs">
     <div
       class="grid--1-col b-radius4 linear-grad-lightBlue box-shad1 pt-xs"
@@ -59,6 +59,8 @@
       </div>
     </div>
   </div>
+
 </section>
 
+<!-- FOOTER --> 
 <?php require APP_ROOT . '/views/inc/footer.php'; ?>

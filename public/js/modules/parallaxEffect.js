@@ -1,7 +1,7 @@
 gsap.registerPlugin(ScrollTrigger)
 
 // Parallax Images
-function parallaxEffect() {
+const parallaxEffect = () => {
   // select all sections .with-parallax
   const containers = gsap.utils.toArray(".with-parallax")
 

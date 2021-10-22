@@ -1,6 +1,7 @@
+<!-- HEADER -->
 <?php require APP_ROOT . '/views/inc/header.php'; ?>
 
-<!-- HERO SECTION --->
+<!-- SECTION CONTACT-HERO  --->
 <section class="contact-hero-bg hero-bg-img">
   <div class="hero grid--hero container container--md">
     <div class="mt-md mb-lg pb-lg pt-lg">
@@ -15,61 +16,61 @@
   </div>
 </section>
 
-<!-- DETAILS CONTACT SECTION -->
-<section class="bg pt-xl">
+<!-- SECTION CONTACT-DETAILS  -->
+<section class="contact-details bg pt-lg">
   <div class="container container--md">
     <h4 class="subheading fontW700 txt-upp txt-blue mb-xs">Détails</h4>
   </div>
 
   <div
-    class="container container--md grid grid--3-cols grid-gap--large mb"
+    class="container container--md grid grid--3-cols mb"
   >
-    <div class="contact-details">
+    <div class="contact-details__div">
       <div class="col-address">
-        <h4 class="heading-secondary font-garamond txt-dark-gray mb-md">
+        <h4 class="heading-secondary font-garamond txt-dark-gray">
           Adresses
         </h4>
-        <p class="txt-content mb-md">
+        <p class="txt-content">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea
           aliquid atque sapiente inventore dolores nam expedita ducimus
           sed, quis, neque architecto, delectus id. Harum, ipsum?
         </p>
 
-        <ul class="social-links mb-sm">
+        <ul class="social-links">
           <li>
-            <a class="link link-sm" href="#"
+            <a class="link" href="#"
               ><ion-icon class="icon-xs" name="logo-instagram"></ion-icon
             ></a>
           </li>
           <li>
-            <a class="link link-sm" href="#"
+            <a class="link" href="#"
               ><ion-icon class="icon-xs" name="logo-facebook"></ion-icon
             ></a>
           </li>
           <li>
-            <a class="link link-sm" href="#"
+            <a class="link" href="#"
               ><ion-icon class="icon-xs" name="logo-snapchat"></ion-icon
             ></a>
           </li>
         </ul>
         <address class="contacts txt-content">
-          <p class="mb-sm">
-            <a class="link link-sm" href="mailto:contact@dbcs.com"
+          <p>
+            <a class="link" href="mailto:contact@dbcs.com"
               >contact@dbcs.com</a
             >
           </p>
-          <p class="address link-sm">
+          <p class="address">
             Rue Louis Pasteur, Loire s/Rhône 69700
           </p>
         </address>
       </div>
     </div>
-    <div class="contact-details">
+    <div class="contact-details__div">
       <nav class="col-nav">
-        <h4 class="heading-secondary font-garamond txt-dark-gray mb-md">
+        <h4 class="heading-secondary font-garamond txt-dark-gray">
           Partenariats
         </h4>
-        <p class="txt-content mb-md">
+        <p class="txt-content">
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
           Voluptatum, saepe ducimus omnis rem qui, repellendus praesentium
           esse aliquam nihil obcaecati delectus excepturi nam dolor sed,
@@ -78,32 +79,32 @@
         </p>
         <ul class="vertical-nav">
           <li>
-            <a class="link link-sm link--underline" href="#"
+            <a class="link link--underline" href="#"
               >Partenariat &rarr;</a
             >
           </li>
         </ul>
       </nav>
     </div>
-    <div class="contact-details">
+    <div class="contact-details__div">
       <nav class="col-nav">
-        <h4 class="heading-secondary font-garamond txt-dark-gray mb-md">
+        <h4 class="heading-secondary font-garamond txt-dark-gray">
           Préparation physique<br />
           & Entreprises
         </h4>
-        <p class="txt-content mb-md">
+        <p class="txt-content">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. In qui
           nostrum culpa, id dolor ab? Lorem ipsum dolor sit amet
           consectetur adipisicing elit. In qui nostrum culpa, id dolor ab?
         </p>
         <ul class="vertical-nav">
           <li>
-            <a class="link link-sm link--underline" href="#"
+            <a class="link link--underline mb-xs" href="#"
               >Préparation Physique &rarr;</a
             >
           </li>
           <li>
-            <a class="link link-sm link--underline" href="#"
+            <a class="link link--underline" href="#"
               >Pour les entreprises &rarr;</a
             >
           </li>
@@ -114,7 +115,7 @@
 </section>
 
 
-<!-- PARTNERS SECTION -->
+<!-- SECTION PARTNERS -->
 <section class="bg-white mb-lg pt-lg">
   <div class="container container--lg">
     <h2 class="subheading txt-upp txt-center fontW500 mb-sm">
@@ -139,7 +140,7 @@
   </div>
 </section>
 
-<!-- CTA SECTION --->
+<!-- SECTION CTA --->
 <section class="linear-grad-lightBlue pb-lg pt-lg">
   <div class="container container--md with-parallax" id="cta">
     <div
@@ -228,5 +229,5 @@
   </div>
 </section>
 
-
+<!-- FOOTER -->
 <?php require APP_ROOT . '/views/inc/footer.php'; ?>

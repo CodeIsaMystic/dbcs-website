@@ -1,4 +1,3 @@
-
 <!-- FLASH MESSAGE --->
 <section class="bg-white pb pt-md">
   <div class="container container--md">
@@ -6,7 +5,7 @@
   </div>
 </section>
 
-<!-- POSTS SECTION --->
+<!-- SECTION POSTS --->
 <?php foreach($data['posts'] as $post) : ?>
 <section class="bg-white pb-md">
   <div class="container container--md">
@@ -25,7 +24,11 @@
           <?php echo $post->title; ?>
         </h3>
         <p class="txt-content mb">
-          <?php echo $post->body; ?> ...
+          <?php 
+            // $postBody = $post->body;
+            // echo html_entity_decode($postBody);
+            echo $post->body;
+          ?> ...
         </p>
         
         <a href="<?php echo URL_ROOT; ?>/posts/show/<?php echo $post->postId; ?>" class="link link--underline">

@@ -1,9 +1,11 @@
+<!-- HEADER -->
 <?php require APP_ROOT . '/views/inc/header.php'; ?>
 
 
 
 
 
+<!-- FOOTER -->
 <?php require APP_ROOT . '/views/inc/footer.php'; ?>
 
 
@@ -11,24 +13,8 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <div class="">
+<!--  CODE BASE TO ADJUST AND REMOVE
+  <div class="">
 
   <h2>Edit Post</h2>
   <p>Create a post with this form</p>
@@ -49,3 +35,4 @@
   </form>
   
 </div> -->
+

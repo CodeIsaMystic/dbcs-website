@@ -1,7 +1,7 @@
+/*****************/
 /*  COMPONENTS  */
 /***************/
-/*  CONTAINER */
-/*************/
+/*  container */
 .container {
   padding: 0 3.2rem;
   margin: 0 auto;
@@ -18,20 +18,15 @@
 .container--lg {
   max-width: 140rem;
 }
-
-/**************/
-/*  HEADING  */
-/************/
+/*  headings  */
 .heading-primary {
   font-size: 5rem;
   line-height: 1.05;
 }
-
 .heading-secondary {
   font-size: 4.4rem;
   line-height: 1.2;
 }
-
 .heading-tertiary {
   font-size: 3rem;
   line-height: 1.2;
@@ -47,9 +42,7 @@
 .heading-footer {
   font-size: 1.8rem;
 }
-/**************/
-/*   ICONS   */
-/************/
+/*   icons   */
 .icon-xs {
   height: 2.4rem;
   width: 2.4rem;
@@ -62,7 +55,6 @@
   height: 4.8rem;
   width: 4.8rem;
 }
-
 .icon-blue {
   color: #46a1c9;
 }
@@ -72,9 +64,7 @@
 .icon-dark {
   color: #232323;
 }
-/***************/
-/*   IMAGES   */
-/*************/
+/*   images   */
 .img-30 {
   width: 30%;
 }
@@ -85,9 +75,7 @@
   width: 80%;
 }
 
-/**************/
-/*  BUTTONS  */
-/************/
+/*  buttons  */
 .btn,
 .btn:link,
 .btn:visited {
@@ -95,37 +83,31 @@
   font-size: 1.6rem;
   padding: 1.2rem 1.6rem;
   border-radius: 50px;
-
-  /* Only necessary for .btn */
   border: none;
   cursor: pointer;
   font-family: inherit;
   transition: all 0.5s;
 }
-.btn25 {
-  width: 25%;
-}
-.btn40 {
-  width: 40%;
-}
 .btn--baseline {
   align-self: end;
 }
-
-/*************************/
-/*  BUTTONS ANIMATION   */
-/***********************/
 .btn-hover {
   color: #fff;
   background-size: 300% 100%;
 
   box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
 }
-.btn-hover--blue {
+.btn-hover:focus {
+  outline: none;
+}
+.btn-hover--blue,
+.btn-hover--dark {
   moz-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
+}
+.btn-hover--blue {
   background-image: linear-gradient(
     to right,
     #29323c,
@@ -135,13 +117,8 @@
   );
 }
 .btn-hover--dark {
-  moz-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
   background-image: linear-gradient(to right, #333, #232323, #fff, #fff);
 }
-
 .btn-hover--dark:hover {
   color: #232323;
 }
@@ -156,12 +133,13 @@
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
-.btn-hover:focus {
-  outline: none;
+.btn25 {
+  width: 25%;
 }
-/**************/
-/*   LINKS   */
-/************/
+.btn40 {
+  width: 40%;
+}
+/*   links   */
 .link:link,
 .link-dark:link,
 .link:visited,
@@ -175,10 +153,6 @@
 .link-light {
   color: #fff;
 }
-.col-nav li .link-sm {
-  font-size: 1.4rem;
-}
-
 .link:hover,
 .link:active,
 .link-light:hover,
@@ -189,7 +163,6 @@
 .link-dark:active {
   color: #232323;
 }
-
 .link--underline {
   border-bottom: 1px solid currentColor;
 }
@@ -198,15 +171,12 @@
   border-bottom: 1px solid transparent;
 }
 
-/**************/
-/*   LISTS   */
-/************/
+/*   lists   */
 .list {
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
 }
-
 .list-item {
   display: flex;
   align-items: center;
@@ -215,39 +185,32 @@
   line-height: 1.2;
 }
 
-/*****************/
-/*     LOGO     */
-/***************/
+/*     logo     */
 .logo {
   height: 4.8rem;
 }
-
 .logo--footer {
   height: 10rem;
   width: auto;
 }
 
-/*  MODULES  */
-/**************************/
-/* NAVIGATION */
-/**************************/
+/******************/
+/*    MODULES    */
+/****************/
+/* primary-nav */
 .primary-nav-list {
   display: flex;
   align-items: center;
   gap: 4rem;
 }
-
-/**********************/
-/*   DASHBOARD NAVS  */
-/********************/
-/* Dashboard Navs  */
+/* dashboard Navs  */
 .dashboard-navs {
   display: block;
 }
 .dashboard-navs .dashboard-logged-list a {
   font-size: 1.4rem;
 }
-/* Dashboard-login  */
+/* dashboard-login  */
 .dashboard-login {
   display: none;
 }
@@ -259,8 +222,6 @@
   height: 4rem;
   padding: 0 1.2rem;
 }
-
-/*  Dashboard-login-nav  */
 .dashboard-login-list {
   display: none;
 }
@@ -269,7 +230,7 @@
   align-items: center;
   gap: 4rem;
 }
-
+/* dashboard-login-nav */
 .dashboard-login-nav .dashboard-login-list li a,
 .dashboard-login-nav .dashboard-login-list li p {
   display: flex;
@@ -278,7 +239,7 @@
 .dashboard-login-nav .dashboard-login-list li ion-icon {
   padding-right: 0.4rem;
 }
-/* Dashboard Logged nav */
+/* dashboard-logged */
 .dashboard-logged {
   display: flex;
   align-items: center;
@@ -290,13 +251,12 @@
 .dashboard-login h4 {
   padding-left: 4.8rem;
 }
-
 .dashboard-logged-list {
   display: flex;
   align-items: center;
   gap: 4rem;
 }
-
+/* dashboard-logged nav */
 .dashboard-logged-nav .dashboard-logged-list li a {
   display: flex;
   align-items: center;
@@ -304,13 +264,15 @@
 .dashboard-logged-nav .dashboard-logged-list li ion-icon {
   padding-right: 0.4rem;
 }
-/********************/
-/********************/
-/********************/
-/********************/
-/*********************/
-/*  VERTICAL NAV    */
+
 /*******************/
+/*******************/
+/*******************/
+/*******************/
+/*******************/
+/*******************/
+
+/* vertical-nav */
 .vertical-nav {
   display: flex;
   flex-direction: column;
@@ -325,9 +287,7 @@
   gap: 2.4rem;
 }
 
-/***************************/
-/*   SIDE BUTTONS  MENU   */
-/*************************/
+/*   side-menu   */
 .side-menu-wrapper {
   position: fixed;
   top: 190px;
@@ -343,7 +303,6 @@
   height: 244px;
   background-color: rgba(255, 255, 255, 0.25);
 }
-
 .menu,
 .menu-object {
   height: 54px;
@@ -355,7 +314,6 @@
   bottom: 0;
   z-index: 5500;
 }
-
 .menu {
   -webkit-filter: url("#goo");
   filter: url("#goo");
@@ -374,14 +332,11 @@
   border-radius: 50%;
   cursor: pointer;
 }
-
 .menu svg {
   overflow: hidden;
 }
 
-/***************/
-/* MENU ICONS */
-/*************/
+/* side-menu icons */
 .ico01 {
   background-color: #232323;
   color: #fff;
@@ -429,7 +384,6 @@
   transform: translate(25px, 90px);
   transition: transform 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.25s;
 }
-
 .menu-object .ico01 ion-icon {
   margin: auto;
   color: #fff;
@@ -445,7 +399,6 @@
 .menu-object .ico04 .link {
   color: #232323;
 }
-
 .menu-object .link ion-icon {
   position: absolute;
   top: 50%;
@@ -457,7 +410,6 @@
   top: 30%;
   left: 30%;
 }
-
 .active .menu-object .ico01 ion-icon {
   transform: rotate(90deg);
 }
