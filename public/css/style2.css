@@ -1,26 +1,29 @@
 /********************/
 /* CONTACT-DETAILS */
 /******************/
-.contact-details__div:first-child .col-address h4,
-.contact-details__div:nth-child(2) .col-nav h4 {
+.contact-details .contact-details__div:first-child .col-address h4,
+.contact-details .contact-details__div:nth-child(2) .col-nav h4 {
   margin-bottom: 9.8rem;
 }
-.contact-details__div:first-child .col-address p:first-of-type {
+.contact-details
+  .contact-details__div:first-child
+  .col-address
+  p:first-of-type {
   margin-bottom: 6.4rem;
 }
-.contact-details__div:nth-child(2) .col-nav p,
-.contact-details__div:last-child .col-nav p {
+.contact-details .contact-details__div:nth-child(2) .col-nav p,
+.contact-details .contact-details__div:last-child .col-nav p {
   margin-bottom: 6.4rem;
 }
-.contact-details__div:last-child .col-nav h4 {
+.contact-details .contact-details__div:last-child .col-nav h4 {
   margin-bottom: 4.8rem;
 }
 
-.contact-details__div:first-child .contacts p:first-of-type,
-.contact-details__div:first-child .col-address .social-links {
+.contact-details .contact-details__div:first-child .contacts p:first-of-type,
+.contact-details .contact-details__div:first-child .col-address .social-links {
   margin-bottom: 3.2rem;
 }
-.contact-details__div .col-nav li .link {
+.contact-details .contact-details__div .col-nav li .link {
   font-size: 1.8rem;
 }
 /***************/

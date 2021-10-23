@@ -19,7 +19,7 @@
 <!-- SECTION CONTACT-DETAILS  -->
 <section class="contact-details bg pt-lg">
   <div class="container container--md">
-    <h4 class="subheading fontW700 txt-upp txt-blue mb-xs">Détails</h4>
+    <h4 class="subheading fontW700 txt-upp txt-blue mb-sm">Détails</h4>
   </div>
 
   <div
@@ -116,7 +116,7 @@
 
 
 <!-- SECTION PARTNERS -->
-<section class="bg-white mb-lg pt-lg">
+<section class="bg-white mb-lg pt-xl">
   <div class="container container--lg">
     <h2 class="subheading txt-upp txt-center fontW500 mb-sm">
       Nos partenaires
