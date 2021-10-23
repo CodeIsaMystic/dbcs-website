@@ -4,7 +4,7 @@
     <footer class="footer bg-dark">
       <div class="container container--md grid grid--footer">
         <div class="col-logo">
-          <span class="footer-logo">
+          <span>
             <img
               class="logo--footer"
               alt="DBCS logo company"
@@ -23,6 +23,7 @@
 
         <div class="col-address txt-light">
           <h4 class="heading-footer fontW700 mb-sm">Contact</h4>
+          <!-- TO CHECKOUT -->
           <address class="contacts txt-content--small pb-xs">
             <p class="address pb-xs">
               Adresse: <br />

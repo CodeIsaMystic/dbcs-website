@@ -274,7 +274,7 @@
   display: flex;
   flex-direction: column;
 }
-.footer-logo {
+.col-logo span {
   display: block;
 }
 /* social-links */

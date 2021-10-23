@@ -10,9 +10,9 @@
   // .grid--3-cols {
   //   grid-template-columns: repeat(2, 1fr);
   // }
-  .grid--contact-details {
-    column-gap: 4.8rem;
-  }
+  // .grid--contact-details {
+  //   column-gap: 4.8rem;
+  // }
   /* hero */
   .hero {
     max-width: 120rem;
@@ -30,19 +30,17 @@
 /*************************************/
 /* BELOW 1200px (Landscape Tablets) */
 /***********************************/
-
 @media (max-width: 75em) {
   /* global */
   html {
     font-size: 56.25%;
   }
   /* grid */
-  /* grid--contact-details__div */
-  /* to checkout on each section => pricing!...*/
   .grid {
-    // row-gap: 6.4rem;
     column-gap: 3.2rem;
   }
+  /* grid--contact-details__div */
+  /* to checkout on each section => pricing!...*/
   // .grid--3-cols {
   //   grid-template-columns: repeat(3, 1fr);
   // }
@@ -51,6 +49,9 @@
   }
   .grid--testimonial-section {
     grid-template-columns: 1fr;
+  }
+  .grid--footer {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
   }
   /* heading */
   .heading-secondary {
@@ -109,11 +110,6 @@
     text-indent: -60px;
   }
   /* grid */
-  /*  grid--contact-details__div  */
-  /* checkout pricing... */
-  .grid {
-    row-gap: 12.8rem;
-  }
   .grid--3-cols {
     grid-template-columns: 1fr;
   }
@@ -121,26 +117,23 @@
     grid-template-columns: 1fr;
     padding: 0 8rem;
   }
-  .grid--footer {
-    grid-template-columns: repeat(6, 1fr);
-    row-gap: 3.2rem;
-    margin-left: 5%;
+  /*  grid--contact-details__div  */
+  /* checkout pricing... */
+  .contact-details .grid {
+    row-gap: 12.8rem;
   }
-
-  /************************************/
-  /************************************/
-  /************************************/
-  /************************************/
-  /************************************/
-  /************************************/
-  /************************************/
-  /************************************/
-  /************************************/
-  /************************************/
-  /************************************/
-  /************************************/
-  /************************************/
-  /************************************/
+  /* grid footer */
+  .footer .grid--footer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .footer .grid {
+    row-gap: 6.4rem;
+    column-gap: 0;
+  }
+  .footer .grid .col-address,
+  .footer .grid .col-nav {
+    margin-left: 33%;
+  }
   /* header */
   .site-header .header {
     padding: 0 2.4rem;
@@ -202,29 +195,9 @@
     width: 40%;
     margin: 0 auto;
   }
-
-  /************************************/
-  /************************************/
-  /************************************/
-  /************************************/
-  /************************************/
-  /************************************/
-  /************************************/
-  /************************************/
-  /************************************/
-  /************************************/
-  /************************************/
-  /************************************/
-  /************************************/
-  /************************************/
-  /************************************/
-  /************************************/
-  /************************************/
   .hero .txt-box--hero .btn--blue {
-    // margin-top: 4.8rem;
     margin-top: 6.4rem;
   }
-
   .customers-profiles {
     justify-content: center;
     flex-direction: column;
@@ -314,18 +287,18 @@
   }
 
   /* footer */
-  .copyright {
+  .footer .grid--footer .col-logo .copyright {
     margin: 0 auto;
   }
-  .col-logo {
+  .footer .grid--footer .col-logo {
     grid-row: 2;
     grid-column: span 6;
   }
-  .col-logo span img {
+  .footer .grid--footer .col-logo span img {
     display: block;
     margin: 0 auto;
   }
-  .logo--footer {
+  .footer .grid--footer .col-logo .logo--footer {
     height: 20rem;
   }
 
@@ -367,18 +340,45 @@
 /********************************/
 @media (max-width: 44em) {
   /* grid */
-  /*  grid--contact-details__div  */
-  /* checkout pricing... */
-  .grid {
-    row-gap: 12.8rem;
-  }
   .grid--4-cols {
     grid-template-columns: repeat(2, 1fr);
   }
-  .grid--footer {
-    margin-left: 0%;
+  /* checkout pricing... */
+  // .grid {
+  //   row-gap: 12.8rem;
+  // }
+  /*  grid--contact-details__div  */
+  .contact-details .grid {
+    row-gap: 12.8rem;
   }
-
+  /*  grid footer  */
+  .footer {
+    display: block;
+    padding-bottom: 0;
+  }
+  .footer .grid--footer {
+    height: 690px;
+    grid-template-columns: auto;
+    row-gap: 6.4rem;
+    grid-template-rows: 22% 25% 16% 16%;
+    grid-template-areas:
+      "col-address"
+      "col-nav1"
+      "col-nav2"
+      "col-logo";
+  }
+  .footer .grid--footer .col-address {
+    grid-area: col-address;
+  }
+  .footer .grid--footer:nth-child(2) {
+    grid-area: col-nav1;
+  }
+  .footer .grid--footer:nth-child(3) {
+    grid-area: col-nav2;
+  }
+  .footer .grid--footer .col-logo {
+    grid-area: col-logo;
+  }
   /* hero */
   .hero .txt-box--hero .btn-wrapper {
     width: 50%;
@@ -407,29 +407,17 @@
     background-position: 50% 40%;
     grid-row: 1;
   }
-
-  /**************************/
-  /**************************/
-
-  /* contact-details__div COPY */
-  // .contact-details .contact-details__div:nth-child(2) .col-nav h4,
-  // .contact-details .contact-details__div:first-child .col-address h4 {
-  //   margin-bottom: 4.8rem;
-  // }
-
-  // .contact-details .contact-details__div:first-child .col-address p:first-of-type,
-  // .contact-details .contact-details__div:last-child .col-nav p,
-  // .contact-details .contact-details__div:nth-child(2) .col-nav p {
-  //   margin-bottom: 3.2rem;
-  // }
-
-  // .contact-details .contact-details__div:first-child .contacts p:first-of-type,
-  // .contact-details .contact-details__div:first-child .social-links {
-  //   margin-bottom: 1.8rem;
-  // }
-  /**************************/
-  /**************************/
-
+  /*  footer  */
+  .footer .grid--footer .col-logo .logo--footer {
+    height: 5rem;
+  }
+  .footer .grid--footer .col-logo .copyright {
+    text-align: center;
+  }
+  .footer .grid .col-address,
+  .footer .grid .col-nav {
+    margin-left: 10%;
+  }
   /* contact-details */
   .contact-details div .subheading {
     padding-left: 10%;
