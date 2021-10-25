@@ -28,7 +28,7 @@
 }
 
 /*************************************/
-/* BELOW 1200px (Landscape Tablets) */
+/* BELOW 1185px (Landscape Tablets) */
 /***********************************/
 @media (max-width: 75em) {
   /* global */
@@ -67,6 +67,10 @@
   .primary-nav-list {
     gap: 3.2rem;
   }
+  /* container */
+  .container--md {
+    max-width: 100%;
+  }
   /* partners */
   .partners-logo {
     gap: 1.6rem;
@@ -87,19 +91,40 @@
     grid-template-columns: repeat(6, 1fr);
   }
 
-  /* contact-details */
-  // .contact-details__div {
-  //   grid-row: 1;
-  //   grid-column: span 2;
-  //   margin-left: 33%;
-  //   padding-left: 5%;
-  //   margin: 0 auto;
-  //   width: 20%;
-  // }
+  /*  pricing-plan  */
+  .pricing-plan .pricing-plan__card--complete::after {
+    right: -24%;
+  }
+  .pricing-plan .plan .plan__name {
+    font-size: 1.8rem;
+  }
+  .pricing-plan .plan .plan__price {
+    font-size: 3rem;
+  }
+  .pricing-plan .plan .plan__price span {
+    font-size: 2.2rem;
+  }
+  .pricing-plan .plan .plan__text {
+    font-size: 1.5rem;
+  }
+  .pricing-plan .plan .plan__list .list-item {
+    font-size: 1.4rem;
+  }
+  .pricing-plan .plan .plan__list .icon-sm {
+    width: 3rem;
+    height: 3rem;
+  }
+  .pricing-plan .plan .plan__btn {
+    margin: 3.2rem auto 0;
+  }
+  .pricing-plan .plan .plan__btn a {
+    font-size: 1.4rem;
+    padding: 1.2rem;
+  }
 }
 
 /****************************/
-/* BELOW 944px (Tablets)   */
+/* BELOW 928px (Tablets)   */
 /**************************/
 @media (max-width: 59em) {
   /* global */
@@ -118,7 +143,6 @@
     padding: 0 8rem;
   }
   /*  grid--contact-details__div  */
-  /* checkout pricing... */
   .contact-details .grid {
     row-gap: 12.8rem;
   }
@@ -288,6 +312,56 @@
     display: none;
   }
 
+  /*  pricing-plan  */
+  .pricing-plan .pricing-plan__card {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .pricing-plan .pricing-plan__card--starter,
+  .pricing-plan .pricing-plan__card--intermediate,
+  .pricing-plan .pricing-plan__card--complete {
+    justify-self: center;
+  }
+  .pricing-plan .pricing-plan__card--complete::after {
+    right: -12%;
+  }
+  .pricing-plan .plan .plan__name {
+    font-size: 2.4rem;
+  }
+  .pricing-plan .plan .plan__price {
+    font-size: 4.8rem;
+  }
+  .pricing-plan .plan .plan__price span {
+    font-size: 3rem;
+  }
+  .pricing-plan .plan .plan__text {
+    font-size: 1.7rem;
+  }
+  .pricing-plan .plan .plan__list .list-item {
+    font-size: 1.6rem;
+  }
+  .pricing-plan .plan .plan__list .icon-sm {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+  .pricing-plan .plan .plan__btn {
+    width: 70%;
+    margin: 4.8rem auto 0;
+  }
+  .pricing-plan .plan .plan__btn a {
+    font-size: 1.6rem;
+    padding: 1.2rem 1.6rem;
+  }
+
+  /*  Feature  */
+  // maybe a tac / tal pattern
+  // to apply on testimonial ??
+  // or to simplify on both patterns
+  // removing CSS classes
+  .feature {
+    text-align: center;
+  }
+
   /* footer */
   .footer .grid--footer .col-logo {
     grid-row: 2;
@@ -336,7 +410,7 @@
 }
 
 /**********************************/
-/* BELOW 704px (Smaller tablets) */
+/* BELOW 690px (Smaller tablets) */
 /********************************/
 @media (max-width: 44em) {
   /*  global  */
@@ -352,9 +426,10 @@
   //   row-gap: 12.8rem;
   // }
   /*  grid--contact-details__div  */
-  .contact-details .grid {
-    row-gap: 12.8rem;
-  }
+  // setup on large device 944px
+  // .contact-details .grid {
+  //   row-gap: 12.8rem;
+  // }
   /*  grid footer  */
   .footer {
     display: block;
@@ -388,9 +463,12 @@
     width: 50%;
   }
   /* pricing-plan */
-  .pricing-plan {
-    width: 85%;
-    margin: 0 auto;
+  .pricing-plan .pricing-plan__card {
+    width: 70%;
+  }
+  .pricing-plan .pricing-plan__card--complete::after {
+    right: -16%;
+    top: 8%;
   }
   /* dashboard */
   .dashboard-logged-list {
@@ -433,13 +511,12 @@
   .contact-details div .subheading,
   .contact-details .contact-details__div .col-nav,
   .contact-details .contact-details__div .col-address {
-    // margin-left: 10%;
     width: 80%;
   }
 }
 
 /**************************/
-/* BELOW 544px (Phones) */
+/* BELOW 529px (Phones) */
 /**************************/
 
 @media (max-width: 34em) {
@@ -474,9 +551,12 @@
     grid-template-columns: 1fr;
   }
   /* pricing-plan */
-  .pricing-plan {
-    width: 95%;
-    margin: 0 auto;
+  .pricing-plan .pricing-plan__card {
+    width: 100%;
+  }
+  .pricing-plan .pricing-plan__card--complete::after {
+    top: 7%;
+    right: -14%;
   }
   /* gallery */
   .gallery {
@@ -492,6 +572,13 @@
     width: 90%;
   }
 }
+
+/*******************************/
+/* BELOW 460px (Small Phones) */
+/*****************************/
+
+// @media (max-width: 30em) {
+// }
 
 /******************************/
 /* Fixing Safari flexbox gap */

@@ -184,33 +184,33 @@
   transform: scale(1.1);
 }
 
-/****************/
-/*   PRICING   */
-/**************/
+/*********************/
+/*   PRICING-PLAN   */
+/*******************/
 /*  Pricing  */
-.pricing-plan {
+.pricing-plan .pricing-plan__card {
   width: 100%;
   transition: all 0.4s ease-in-out;
 }
-.pricing-plan:hover {
+.pricing-plan .pricing-plan__card:hover {
   transform: translateY(-1.2rem);
   box-shadow: 0 3.2rem 6.4rem #2323230f;
 }
-.pricing-plan--starter,
-.pricing-plan--intermediate {
+.pricing-plan .pricing-plan__card--starter,
+.pricing-plan .pricing-plan__card--intermediate {
   justify-self: end;
   padding: 3.5rem 2rem;
 }
-.pricing-plan--complete {
+.pricing-plan .pricing-plan__card--complete {
   padding: 3.5rem 2rem;
   position: relative;
   overflow: hidden;
 }
-.pricing-plan--complete::after {
+.pricing-plan .pricing-plan__card--complete::after {
   content: "Meilleur Prix";
   position: absolute;
   top: 6%;
-  right: -18%;
+  right: -24%;
   text-transform: uppercase;
   font-size: 1.4rem;
   font-weight: 700;
@@ -219,28 +219,35 @@
   padding: 0.8rem 8rem;
   transform: rotate(45deg);
 }
-/*  Plan  */
-.plan-name {
-  font-size: 2rem;
-  letter-spacing: 0.75;
+.pricing-plan .plan .plan__btn {
+  width: 90%;
+  margin: 4.8rem auto 0;
 }
-.plan-price {
+/*  Plan  */
+.plan .plan__name {
+  font-size: 2rem;
+}
+.plan .plan__price {
   font-size: 4.8rem;
 }
-.plan-price span {
+.plan .plan__price span {
   font-size: 3rem;
   margin-right: 0.8rem;
 }
-.plan-text {
+.plan .plan__text {
   color: #6f6f6f;
 }
+
 /*  Feature  */
+.feature {
+  text-align: left;
+}
 .feature ion-icon {
   background-color: #e8f8ff;
   padding: 1.6rem;
 }
-.feature-title {
-  font-size: 2.4rem;
+.feature h3 {
+  font-size: 2rem;
 }
 
 /**********/

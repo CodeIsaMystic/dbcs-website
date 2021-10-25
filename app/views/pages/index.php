@@ -335,7 +335,7 @@
 </section>
 
 <!-- SECTION PRICING -->
-<section class="bg-white pt-lg pb-md">
+<section class="pricing-plan bg-white pt-lg pb-md">
   <div class="container container--md">
     <h4 class="subheading fontW700 txt-blue txt-upp mb-xs">
       Prix & Abonnements
@@ -348,20 +348,20 @@
   <div
     class="container container--md grid grid--3-cols grid-gap--medium mb"
   >
-    <div class="pricing-plan pricing-plan--starter b-radius4 box-shad1">
+    <div class="pricing-plan__card pricing-plan__card--starter plan b-radius4 box-shad1">
       <header class="mb txt-center">
-        <p class="plan-name mb-sm fontW700 txt-upp txt-blue">
+        <p class="plan__name mb-sm fontW700 txt-upp txt-blue">
           Cours <br />
           à l'unité
         </p>
-        <p class="plan-price mb-xs txt-dark fontW700">
+        <p class="plan__price mb-xs txt-dark fontW700">
           59,90<span class="fontW500">€/cours</span>
         </p>
-        <p class="plan-text txt-content">
+        <p class="plan__text txt-content">
           revient à un budget de 240€/mois, pour 4 cours sans engagement.
         </p>
       </header>
-      <ul class="list txt-dark">
+      <ul class="plan__list txt-dark">
         <li class="list-item">
           <ion-icon
             class="icon-blue icon-sm"
@@ -407,7 +407,7 @@
           ></ion-icon>
         </li>
       </ul>
-      <div class="txt-center mt">
+      <div class="plan__btn txt-center">
         <a href="#cta" class="btn btn-hover btn-hover--blue"
           >Commencer votre entrainement</a
         >
@@ -415,21 +415,21 @@
     </div>
 
     <div
-      class="pricing-plan pricing-plan--intermediate b-radius4 box-shad1"
+      class="pricing-plan__card pricing-plan__card--intermediate plan b-radius4 box-shad1"
     >
       <header class="mb txt-center">
-        <p class="plan-name mb-sm fontW700 txt-upp txt-blue">
+        <p class="plan__name mb-sm fontW700 txt-upp txt-blue">
           Pack de 4 <br />
           cours
         </p>
-        <p class="plan-price mb-xs txt-dark fontW700">
+        <p class="plan__price mb-xs txt-dark fontW700">
           49,90<span class="fontW500">€/cours</span>
         </p>
-        <p class="plan-text txt-content">
+        <p class="plan__text txt-content">
           revient à un budget de 200€/mois pour un engagement d'1 mois.
         </p>
       </header>
-      <ul class="list txt-dark">
+      <ul class="plan__list txt-dark">
         <li class="list-item">
           <ion-icon
             class="icon-blue icon-sm"
@@ -482,7 +482,7 @@
           ></ion-icon>
         </li>
       </ul>
-      <div class="txt-center mt">
+      <div class="plan__btn txt-center">
         <a href="#cta" class="btn btn-hover btn-hover--blue"
           >Commencer votre entrainement</a
         >
@@ -491,25 +491,25 @@
 
     <div
       class="
-        pricing-plan pricing-plan--complete
-        b-radius4
+        pricing-plan__card pricing-plan__card--complete
+        plan b-radius4
         box-shad1
         linear-grad-lightBlue
       "
     >
       <header class="mb txt-center">
-        <p class="plan-name mb-sm fontW700 txt-upp txt-dark-gray">
+        <p class="plan__name mb-sm fontW700 txt-upp txt-dark-gray">
           Pack de 8 <br />
           cours
         </p>
-        <p class="plan-price mb-xs txt-dark fontW700">
+        <p class="plan__price mb-xs txt-dark fontW700">
           29,90<span class="fontW500">€/cours</span>
         </p>
-        <p class="plan-text txt-content">
+        <p class="plan__text txt-content">
           revient à un budget de 120€/mois avec un engagement sur 2mois.
         </p>
       </header>
-      <ul class="list txt-dark">
+      <ul class="plan__list txt-dark">
         <li class="list-item">
           <ion-icon
             class="icon-blue icon-sm"
@@ -566,7 +566,7 @@
           <p><span class="fontW700">10ème séance</span> gratuite</p>
         </li>
       </ul>
-      <div class="txt-center mt">
+      <div class="plan__btn txt-center">
         <a href="#cta" class="btn btn-hover btn-hover--blue"
           >Commencer votre entrainement</a
         >
@@ -587,10 +587,10 @@
         class="icon-blue icon-sm b-radius50 mb-sm"
         name="calendar-outline"
       ></ion-icon>
-      <h3 class="feature-title mb-xs txt-dark-gray fontW700">
+      <h3 class=" mb-xs txt-dark-gray fontW700">
         Programmez vos objectifs
       </h3>
-      <p class="txt-content--large">
+      <p class="txt-content">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
         Consectetur alias quaerat velit tenetur fugiat eos!
       </p>
@@ -600,10 +600,10 @@
         class="icon-blue icon-sm b-radius50 mb-sm"
         name="pulse-outline"
       ></ion-icon>
-      <h3 class="feature-title mb-xs txt-dark-gray fontW700">
+      <h3 class=" mb-xs txt-dark-gray fontW700">
         Travailler sur le cardio
       </h3>
-      <p class="txt-content--large">
+      <p class="txt-content">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui alias
         repellendus aperiam.
       </p>
@@ -613,10 +613,10 @@
         class="icon-blue icon-sm b-radius50 mb-sm"
         name="barbell-outline"
       ></ion-icon>
-      <h3 class="feature-title mb-xs txt-dark-gray fontW700">
+      <h3 class=" mb-xs txt-dark-gray fontW700">
         Muscler votre corps
       </h3>
-      <p class="txt-content--large">
+      <p class="txt-content">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
         impedit aliquam consequatur.
       </p>
@@ -626,10 +626,10 @@
         class="icon-blue icon-sm b-radius50 mb-sm"
         name="bar-chart-outline"
       ></ion-icon>
-      <h3 class="feature-title mb-xs txt-dark-gray fontW700">
+      <h3 class=" mb-xs txt-dark-gray fontW700">
         Analyser votre évolution
       </h3>
-      <p class="txt-content--large">
+      <p class="txt-content">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
         Provident, optio quasi? Laboriosam.
       </p>
