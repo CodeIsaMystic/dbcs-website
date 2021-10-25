@@ -81,7 +81,6 @@
               echo '';
             }
             ?>"/>
-            lorem80
           </div>
           
           <!-- INPUT SUBMIT -->

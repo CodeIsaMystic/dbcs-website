@@ -27,8 +27,8 @@
           <?php 
             // $postBody = $post->body;
             // echo html_entity_decode($postBody);
-            echo $post->body;
-          ?> ...
+            echo getExcerpt($post->body, 800);
+          ?>
         </p>
         
         <a href="<?php echo URL_ROOT; ?>/posts/show/<?php echo $post->postId; ?>" class="link link--underline">
