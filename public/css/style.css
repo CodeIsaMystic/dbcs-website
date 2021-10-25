@@ -5,6 +5,7 @@
 .site-header {
   position: fixed;
   width: 100%;
+  top: 0;
   background-color: #232323;
   z-index: 5000;
   display: block;
@@ -51,10 +52,14 @@
 .hero .txt-box--hero .btn-wrapper {
   width: 60%;
 }
+.hero .txt-box--hero {
+  padding-top: 4.8rem;
+}
 
-.img-box--hero {
+.hero .img-box--hero {
   margin-left: auto;
   margin-right: auto;
+  padding-top: 4.8rem;
 }
 
 /*  Contact hero bg  */
@@ -162,7 +167,7 @@
 /* TESTIMONIALS  */
 /****************/
 .testimonials {
-  padding: 4.8rem 9.6rem 9.6rem;
+  padding: 1.8rem 9.6rem 4.8rem;
 }
 .testimonials img {
   width: 6.4rem;
@@ -174,7 +179,7 @@
 /* GALLERY */
 /**********/
 .gallery {
-  padding: 1.6rem;
+  padding: 1.8rem;
 }
 .gallery-item {
   overflow: hidden;
@@ -274,7 +279,7 @@
   display: flex;
   flex-direction: column;
 }
-.col-logo span {
+.col-logo:first-child {
   display: block;
 }
 /* social-links */

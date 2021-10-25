@@ -71,16 +71,17 @@
             </p>
             <p class="txt-content--small mb-xs"> 
               
-              Le lien doit contenir <span class="fontW700">"https://www"</span> ou bien <span class="fontW700">"http://www"</span>suivi du reste de l'url.         
+              Le lien doit contenir <span class="fontW700">"https://www"</span> ou bien <span class="fontW700">"http://www"</span> suivi du reste de l'url.         
             </p>
             
             <input class="bg-white mb-xxs" type="text" name="source_link" value="
-            <?php if($data['source_link'] !== null) {
+            <?php  if($data['source_link'] !== null) {
               echo $data['source_link']; 
             } else {
               echo '';
             }
             ?>"/>
+            lorem80
           </div>
           
           <!-- INPUT SUBMIT -->

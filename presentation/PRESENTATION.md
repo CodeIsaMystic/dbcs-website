@@ -5,7 +5,7 @@
   
 <h1>Julien Orjollet wd</h1>
 
-  <img src="./img/favicon-black-260x260.png" width="500">
+  <img src="./img/favicon-black-260x260.png" width="300">
 
 <h3>
 "Développeur Frontend"

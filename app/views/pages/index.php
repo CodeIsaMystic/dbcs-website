@@ -4,7 +4,7 @@
 <!-- SECTION HERO -->
 <section class="bg-white pb-lg">
   <div class="hero grid--hero container container--md">
-    <div class="txt-box--hero pt-md mt-lg">
+    <div class="txt-box--hero mt-lg">
       <h1 class="heading-primary txt-dark-gray fontW700 mb-sm">
         <?php echo $data['title']; ?>
       </h1>
@@ -55,7 +55,7 @@
         </p>
       </div>
     </div>
-    <div class="img-box--hero img-80 pt-md mt-lg">
+    <div class="img-box--hero img-80 pt mt-lg">
       <picture>
         <source srcset="<?= URL_ROOT; ?>/img/mockups-hero/hero.png" type="image/webp" />
         <source srcset="<?= URL_ROOT; ?>/img/mockups-hero/hero.png" type="image/png" />
@@ -100,14 +100,14 @@
     <h4 class="subheading fontW700 txt-upp txt-blue mb-xs">
       Comment ça marche
     </h4>
-    <h2 class="heading-secondary txt-dark-gray mb-md">
+    <h2 class="heading-secondary txt-dark-gray mb-lg pb">
       Ton coaching personnalisé en 3 étapes
     </h2>
   </div>
 
   <div
     class="
-      container container--md
+      container container--sm
       grid grid--2-cols
       grid-gap--large
       grid--center-v
@@ -335,7 +335,7 @@
 </section>
 
 <!-- SECTION PRICING -->
-<section class="bg-white pt-lg pb-lg">
+<section class="bg-white pt-lg pb-md">
   <div class="container container--md">
     <h4 class="subheading fontW700 txt-blue txt-upp mb-xs">
       Prix & Abonnements
@@ -346,7 +346,7 @@
   </div>
 
   <div
-    class="container container--lg grid grid--3-cols grid-gap--medium mb"
+    class="container container--md grid grid--3-cols grid-gap--medium mb"
   >
     <div class="pricing-plan pricing-plan--starter b-radius4 box-shad1">
       <header class="mb txt-center">
@@ -575,7 +575,7 @@
   </div>
 
   <div class="container container--md grid grid-gap--large">
-    <aside class="txt-content txt-center pt">
+    <aside class="txt-content txt-center">
       Nos prix comprennent la TVA & tout nos cours/abonnements inclus les
       services suivants:
     </aside>

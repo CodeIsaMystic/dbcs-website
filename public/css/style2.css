@@ -130,6 +130,11 @@
   max-width: 450px;
   width: 100%;
 }
+/*  TEST FOR CKEDITOR LISTS DISPLAY ISSUE */
+// #editor ul li,
+// #editor ol li {
+//   list-style-type: circle !important;
+// }
 
 /*******************/
 /*  POST CONTENT  */
@@ -169,13 +174,13 @@
   line-height: 1.4;
   color: #888;
 }
-.post-content .text-box--post figure.media embed {
-  display: block;
-  width: 100%;
-  height: auto;
-  text-align: center;
-  margin: 0 auto;
-}
+// .post-content .text-box--post figure.media embed {
+//   display: block;
+//   width: 100%;
+//   height: auto;
+//   text-align: center;
+//   margin: 0 auto;
+// }
 /****************/
 /*  BLOG-POSTS  */
 /**************/

@@ -6,46 +6,37 @@
   margin: 0;
   box-sizing: border-box;
 }
-
 html {
   font-size: 62.5%;
   overflow-x: hidden;
 }
-
 body {
   font-family: "Montserrat", sans-serif;
   line-height: 1;
   font-weight: 400;
   color: #888;
-
-  // overflow-x: hidden;
+  overflow-x: hidden;
 }
-
 li {
   list-style: none;
 }
-
 a,
 button {
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
   color: #333;
 }
-
 a:hover,
 a:active {
   color: #46a1c9;
 }
-
 img {
   width: 100%;
 }
-
 label {
   display: block;
   font-size: 1.6rem;
 }
-
 textarea {
   text-indent: -80px;
 }
@@ -292,6 +283,7 @@ input::placeholder {
 }
 .grid--footer {
   grid-template-columns: 2fr 2fr 1fr 1fr;
+  column-gap: 2.4rem;
 }
 
 /******************/
@@ -365,6 +357,9 @@ input::placeholder {
 .pb-sm {
   padding-bottom: 3.2rem;
 }
+.pb {
+  padding-bottom: 4.8rem;
+}
 .pb-md {
   padding-bottom: 9.6rem;
 }
@@ -374,14 +369,14 @@ input::placeholder {
 .pb-xl {
   padding-bottom: 25.6rem;
 }
+.pt-xs {
+  padding-top: 1.6rem;
+}
 .pt-sm {
   padding-top: 3.2rem;
 }
 .pt {
   padding-top: 4.8rem;
-}
-.pt-xs {
-  padding-top: 1.6rem;
 }
 .pt-md {
   padding-top: 9.6rem;

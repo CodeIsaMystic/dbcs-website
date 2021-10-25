@@ -4,8 +4,9 @@ import { mobileMenu } from "./modules/mobileMenu.js"
 import { parallaxEffect } from "./modules/parallaxEffect.js"
 import { toggleSideMenu } from "./modules/toggle.js"
 import { showDashboardLogin } from "./modules/showDashboardLogin.js"
-import { setupCKEditor } from "./modules/ckeditor.js"
 import { datatablesInit } from "./modules/datatablesInit.js"
+
+import "./modules/ckeditor.js"
 
 function init() {
   mobileMenu()
@@ -14,7 +15,6 @@ function init() {
   showDashboardLogin()
   toggleSideMenu()
   datatablesInit()
-  setupCKEditor()
   getFlexboxGap()
 }
 

@@ -115,7 +115,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/ScrollTrigger.min.js"></script>
   
   <!-- SCRIPT -->
-  <script src="<?= URL_ROOT; ?>/js/lib/ckeditor/build/ckeditor.js"></script>
   <script type="module" src="<?= URL_ROOT; ?>/js/script.js"></script>
 
   </body>

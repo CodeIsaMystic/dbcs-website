@@ -1,56 +1,46 @@
-const setupCKEditor = () => {
-  const editorHTMLEl = document.querySelector("#editor")
-  let editorInstance
+import "../lib/ckeditor/build/ckeditor.js"
 
-  if (document.querySelector("#editor")) {
-    editorInstance = ClassicEditor.create(editorHTMLEl, {
-      toolbar: [
-        "heading",
-        "|",
-        "bold",
-        "italic",
-        "link",
-        "bulletedList",
-        "numberedList",
-        "blockQuote",
-        "undo",
-        "redo",
-      ],
-      heading: {
-        options: [
-          {
-            model: "paragraph",
-            title: "Texte",
-            class: "ck-heading_paragraph",
-          },
-          {
-            model: "heading1",
-            view: "Titre 1",
-            title: "Heading 1",
-            class: "ck-heading_heading1",
-          },
-          {
-            model: "heading2",
-            view: "Titre 2",
-            title: "Heading 2",
-            class: "ck-heading_heading2",
-          },
-        ],
+ClassicEditor.create(document.querySelector("#editor"), {
+  toolbar: [
+    "heading",
+    "|",
+    "bold",
+    "italic",
+    "link",
+    "bulletedList",
+    "numberedList",
+    "blockQuote",
+  ],
+  heading: {
+    options: [
+      {
+        model: "paragraph",
+        title: "Paragraph",
+        class: "ck-heading_paragraph",
       },
-    })
-      .then((editor) => {
-        console.log("Is initialized!!", editor)
-        console.log("let editorInstance = ", editorInstance)
-      })
-      .catch((error) => {
-        console.error(error.stack)
-      })
-    return editorInstance
-  } else {
-    editorInstance = null
+      {
+        model: "heading1",
+        view: "h1",
+        title: "Heading 1",
+        class: "ck-heading_heading1",
+      },
+      {
+        model: "heading2",
+        view: "h2",
+        title: "Heading 2",
+        class: "ck-heading_heading2",
+      },
+    ],
+  },
+}).catch((error) => {
+  console.log(error)
+})
 
-    return console.log("const editorInstance = null")
-  }
-}
-
-export { setupCKEditor }
+//   shouldNotGroupWhenFull: true
+// },
+// link: {
+// 	addTargetToExternalLinks: false
+// },
+// ui: {
+//   viewportOffset: { top: 10, right: 10, bottom: 10, left: 10 }
+// }
