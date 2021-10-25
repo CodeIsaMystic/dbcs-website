@@ -27,11 +27,11 @@
           <?php 
             // $postBody = $post->body;
             // echo html_entity_decode($postBody);
-            echo getExcerpt($post->body, 800);
+            echo getExcerpt($post->body, 1200);
           ?>
         </p>
         
-        <a href="<?php echo URL_ROOT; ?>/posts/show/<?php echo $post->postId; ?>" class="link link--underline">
+        <a href="<?php echo URL_ROOT; ?>/posts/show/<?php echo $post->postId; ?>" class="link link--underline mt-sm">
           Lire l'article &rarr;
         </a>
       </div>

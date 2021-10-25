@@ -2,7 +2,7 @@
 <?php require APP_ROOT . '/views/inc/header.php'; ?>
 
  <!-- SECTION POST-PAGE -->
-<section class="post-page bg-white">
+<section class="post-page-hero bg-white">
   <div class="img-box--postPage">
     <picture>
       <source srcset="<?php echo URL_ROOT; ?>/img/posts/pages/meal-fruit.png" type="image/webp" />
@@ -19,11 +19,10 @@
   </div>
 </section>
 
-<!-- SECTION POST-CONTENT -->
-<section class="post-content bg-white mt-md">
-  <div class="container container--md">
+<!-- SECTION post-page-content -->
+<section class="post-page-content bg-white mt-md">
+  <div class="container container--lgs">
     <div class="text-box--post txt-dark mb-xs">
-      <?php // var_dump($data); die(); ?>
       <?php echo $data['post']->body; ?>
     </div>
 
