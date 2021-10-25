@@ -2,16 +2,23 @@
 <?php require APP_ROOT . '/views/inc/header.php'; ?>
 
 
+<?php if(isset($_SESSION['user_id'])) : ?>
+  <?php require APP_ROOT . '/views/inc/sidebuttonsmenu.php'; ?>
+<?php endif; ?>
+
+
+<?//= $data['posts']->id; ?>
+
 <!-- SECTION HERO --->
 <section class="contact-hero-bg hero-bg-img">
   <div class="hero grid--hero container container--md">
     <div class="mt-md mb-lg pb-lg pt-lg">
       <h4 class="subheading fontW700 txt-upp txt-blue mb-xs">Liste</h4>
       <h1 class="heading-primary txt-light mb-sm">
-        Listes des articles
+          <?= $data['title']; ?>
       </h1>
       <p class="txt-content txt-light">
-        Vous trouverez ic la liste de tout vos articles...
+          <?= $data['description']; ?>
       </p>
     </div>
   </div>
@@ -46,7 +53,7 @@
             </td> 
             <td class="td-links">
               <a class="td-link-blue txt-center"
-                href="#">
+                href="<?php echo URL_ROOT; ?>/posts/edit/<?php echo $post->postId; ?>">
                 Editer
               </a>
               <a class="td-link-yellow txt-center"

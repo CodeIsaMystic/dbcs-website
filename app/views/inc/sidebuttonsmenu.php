@@ -46,7 +46,14 @@
         </a>
       </li>
       <li class="move-ico ico03">
-        <a href="#" class="link link02">
+        <a href="
+          <?php 
+            echo URL_ROOT; ?>
+            /posts/edit/
+          <?php 
+            // var_dump($data); 
+            //echo $data['post']->id; 
+          ?>" class="link link02">
           <ion-icon class="icon-xs" name="pencil-outline"></ion-icon>
         </a>
       </li>

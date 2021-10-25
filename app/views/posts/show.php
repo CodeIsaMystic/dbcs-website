@@ -1,7 +1,7 @@
 <!-- HEADER -->
 <?php require APP_ROOT . '/views/inc/header.php'; ?>
 
- <!-- SECTION POST-PAGE -->
+ <!-- SECTION POST PAGE HERO -->
 <section class="post-page-hero bg-white">
   <div class="img-box--postPage">
     <picture>
@@ -19,7 +19,7 @@
   </div>
 </section>
 
-<!-- SECTION post-page-content -->
+<!-- SECTION POST PAGE CONTENT -->
 <section class="post-page-content bg-white mt-md">
   <div class="container container--lgs">
     <div class="text-box--post txt-dark mb-xs">

@@ -1,9 +1,6 @@
 <?php
   class Posts extends Controller {
     public function __construct(){
-      // if(!isLoggedIn()){
-      //   redirect('users/login');
-      // }
 
       $this->postModel = $this->model('Post');
       $this->userModel = $this->model('User');
@@ -18,21 +15,6 @@
       ];
 
       $this->view('posts/index', $data);
-    }
-
-    public function list(){
-      if(!isLoggedIn()){
-        redirect('users/login');
-      }
-
-      $posts = $this->postModel->getPosts();
-
-      $data = [
-        'title' => 'Listes des articles',
-        'description' => "Vous trouverez ici la liste de tout vos articles...",
-        'posts' => $posts
-    ];
-    $this->view('posts/list', $data);
     }
     
     public function add(){
@@ -98,24 +80,65 @@
         $this->view('posts/add', $data);
       }
     }
+    
+    public function list(){
+      if(!isLoggedIn()){
+        redirect('users/login');
+      }
+
+      $posts = $this->postModel->getPosts();
+      // $post = $this->postModel->getPostById($id);
+  
+
+      $data = [
+        'title' => 'Liste des articles',
+        'description' => "Vous trouverez ici la liste de tout vos articles...",
+        'posts' => $posts,
+    ];
+    $this->view('posts/list', $data);
+    }
 
     public function edit($id){
       if(!isLoggedIn()){
         redirect('users/login');
       }
 
+      // Test following show()logic      
+      $post = $this->postModel->getPostById($id);
+      $user = $this->userModel->getUserById($post->user_id);
+      
+
+      $data = [
+          'id' => $id,
+          'title' => $post->title,
+          'body' => $post->body,
+          'source_link' => $post->source_link,
+          'user_id' => $_SESSION['user_id'],
+          'title_err' => '',
+          'body_err' => '',
+          'post' => $post,
+          'user' => $user
+        ];
+
+      
       if($_SERVER['REQUEST_METHOD'] == 'POST'){
         // Sanitize POST array
         $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
-
+        
         $data = [
           'id' => $id,
           'title' => trim($_POST['title']),
           'body' => trim($_POST['body']),
+          'source_link' => trim($_POST['source_link']),
           'user_id' => $_SESSION['user_id'],
           'title_err' => '',
-          'body_err' => ''
+          'body_err' => '',
+          'post' => $post,
+          'user' => $user
         ];
+
+        $this->view('posts/edit', $data);
+
 
         // Validate data
         if(empty($data['title'])){
@@ -129,8 +152,8 @@
         if(empty($data['title_err']) && empty($data['body_err'])){
           // Validated
           if($this->postModel->updatePost($data)){
-            flash('post_message', 'Post Updated');
-            redirect('posts');
+            flash('post_message', 'L\'article a bien été mis à jour');
+            redirect('pages/blog');
           } else {
             die('Something went wrong');
           }
@@ -138,6 +161,10 @@
           // Load view with errors
           $this->view('posts/edit', $data);
         }
+
+
+
+
 
       } else {
         // Get existing post from model
@@ -151,11 +178,108 @@
         $data = [
           'id' => $id,
           'title' => $post->title,
-          'body' => $post->body
+          'body' => $post->body,
+          'source_link' => $post->source_link,
+          'title_err' => '',
+          'body_err' => '',
+          'post' => $post,
+          'user' => $user
         ];
-  
+        
+        // echo('if 0 test');
         $this->view('posts/edit', $data);
       }
+      
+    
+
+
+
+
+
+
+
+
+
+
+      
+
+      // Get existing post from model
+      // $post = $this->postModel->getPostById($id);
+
+
+      // if($_SERVER['REQUEST_METHOD'] == 'POST'){
+      //   // Sanitize POST array
+      //   $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+
+      //   $data = [
+      //     'id' => $id,
+      //     'title' => trim($_POST['title']),
+      //     'body' => trim($_POST['body']),
+      //     'source_link' => trim($_POST['source_link']),
+      //     'user_id' => $_SESSION['user_id'],
+      //     'title_err' => '',
+      //     'body_err' => '',
+      //     'post' => $post,
+      //     'user' => $user
+      //   ];
+
+      //   // Validate data
+      //   if(empty($data['title'])){
+      //     $data['title_err'] = 'Veuillez ajoutez un titre';
+      //   }
+      //   if(empty($data['body'])){
+      //     $data['body_err'] = "Ajoutez le contenu de l'article";
+      //   }
+
+
+      //   // Make sure no errors
+      //   if(empty($data['title_err']) && empty($data['body_err'])){
+      //     // Validated
+      //     if($this->postModel->updatePost($data)){
+      //       flash('post_message', 'L\'article a bien été mis à jour');
+      //       redirect('posts/show');
+      //     } else {
+      //       die('Something went wrong');
+      //     }
+      //   } else {
+      //     // Load view with errors
+      //     $this->view('posts/edit', $data);
+      //   }
+
+
+
+
+
+
+
+
+
+      // } else {
+      //   // Get existing post from model
+      //   $post = $this->postModel->getPostById($id);
+
+      //   // Check for owner
+      //   if($post->user_id != $_SESSION['user_id']){
+      //     redirect('posts');
+      //   }
+        
+      //   // duplicated ofr testing
+      //   redirect('posts/edit', $data);
+
+
+      //   $data = [
+      //     'id' => $id,
+      //     'title' => $post->title,
+      //     'body' => $post->body,
+      //     'source_link' => $post->source_link,
+      //     'title_err' => '',
+      //     'body_err' => '',
+      //     'post' => $post,
+      //     'user' => $user
+      //   ];
+  
+      //   $this->view('posts/edit', $data);
+      // }
     }
 
     public function show($id){
