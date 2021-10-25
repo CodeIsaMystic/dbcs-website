@@ -17,11 +17,11 @@
 </section>
 
 <!-- SECTION POST-TITLE --->
-<section class="bg-white pb pt-md">
+<section class="bg-white pt-md">
   <div class="container container--md txt-center">
     <h4 class="subheading fontW700 txt-upp txt-blue mb-xs">Blog</h4>
     <h2
-    class="heading-secondary txt-dark-gray font-garamond fontW500 mb"
+    class="heading-secondary txt-dark-gray font-garamond fontW500"
     >
     Nos derniers articles en date..
   </h2>
