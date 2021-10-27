@@ -4,11 +4,6 @@
 <!-- FLASH  MESSAGES -->
 <?php require APP_ROOT . '/views/inc/flashmessages.php'; ?>
 
-
-<!-- ALERT MESSAGES -->
-    <!-- <div class="container container--xs">
-      <?php //flash('register_success'); ?>
-    </div> -->
   
 <!-- SECTION LOGIN -->
 <section class="bg-white pb-xl pt-lg mt-sm">
