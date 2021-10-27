@@ -45,29 +45,56 @@
           <ion-icon class="icon-xs" name="add-outline"></ion-icon>
         </a>
       </li>
-      <li class="move-ico ico03">
-        <a href="
-          <?php echo URL_ROOT; ?>/posts/edit/<?php 
-            echo $data['post']->id; 
-          ?>" class="link link02">
+      
+      <?php 
+        // Allows display and func for side menu btn
+        $query_string = $_SERVER['QUERY_STRING'];
+        $str_matcher   = 'show';
+
+        $result = strpos($query_string, $str_matcher);
+      ?>
+
+      <li class="move-ico ico03 
+        <?php if ($result === false) {
+          echo 'move-ico--is-not-active'; 
+        } else {
+          echo '';
+        }
+        ?>">    
+        <a href='
+          <?php if ($result === false) {
+            echo "#"; 
+          } else {
+            echo URL_ROOT . "/posts/edit/" . $data["post"]->id;  
+          }
+          ?>' 
+          class="link link02">
           <ion-icon class="icon-xs" name="pencil-outline"></ion-icon>
         </a>
-      </li>
+      </li> 
+
       <li class="move-ico ico04">
         <a href="<?php echo URL_ROOT; ?>/posts/list" class="link link03">
           <ion-icon class="icon-xs" name="list-outline"></ion-icon>
         </a>
       </li>
-      <li class="move-ico ico05">
-        <form class="link link03" action="<?php echo URL_ROOT . '/posts/delete/' . $data['post']->id; ?>" method="POST">
-          <button type="submit">
-            <ion-icon class="icon-xs" name="trash-outline"></ion-icon>
-          </button>
+      <li class="move-ico ico05
+        <?php if ($result === false) {
+          echo 'move-ico--is-not-active'; 
+        } else {
+          echo '';
+        }
+        ?>">
+        <form class="link link03" action="
+          <?php if ($result === false) {
+            echo '#'; 
+          } else {
+            echo URL_ROOT . '/posts/delete/' . $data['post']->id;  
+          }?>" method="POST">
+            <button type="submit">
+              <ion-icon class="icon-xs" name="trash-outline"></ion-icon>
+            </button>
         </form>
-
-
-        <a href="#" class="">
-        </a>
       </li>
     </ul>
   </div>

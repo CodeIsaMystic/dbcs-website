@@ -4,6 +4,10 @@
 <!-- FLASH  MESSAGES -->
 <?php require APP_ROOT . '/views/inc/flashmessages.php'; ?>
 
+<!-- SIDE BUTTONS MENU --> 
+<?php if(isset($_SESSION['user_id'])) : ?>
+  <?php require APP_ROOT . '/views/inc/sidebuttonsmenu.php'; ?>
+<?php endif; ?>
 
 <!-- SECTION HERO -->
 <section class="bg-white pb-lg">

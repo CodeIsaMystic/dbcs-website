@@ -422,3 +422,20 @@
 .active .menu-object .ico01 ion-icon {
   transform: rotate(90deg);
 }
+
+.move-ico--is-not-active {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.move-ico--is-not-active .link,
+.move-ico--is-not-active .link button {
+  cursor: not-allowed;
+}
+
+.move-ico--is-not-active .link ion-icon,
+.move-ico--is-not-active .link button ion-icon {
+  color: rgb(84, 84, 84);
+}
+.move-ico--is-active {
+  border: 2px solid #fff;
+}

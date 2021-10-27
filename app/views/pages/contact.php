@@ -1,6 +1,11 @@
 <!-- HEADER -->
 <?php require APP_ROOT . '/views/inc/header.php'; ?>
 
+<!-- SIDE BUTTONS MENU --> 
+<?php if(isset($_SESSION['user_id'])) : ?>
+  <?php require APP_ROOT . '/views/inc/sidebuttonsmenu.php'; ?>
+<?php endif; ?>
+
 <!-- SECTION CONTACT-HERO  --->
 <section class="contact-hero-bg hero-bg-img">
   <div class="hero grid--hero container container--md">
