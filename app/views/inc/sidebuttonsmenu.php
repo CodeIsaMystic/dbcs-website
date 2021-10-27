@@ -59,12 +59,10 @@
         </a>
       </li>
       <li class="move-ico ico05">
-        <form class="link link03" action="<?php echo URL_ROOT . '/posts/edit/' . $data['id']; ?>" method="POST">
-          <button>
+        <form class="link link03" action="<?php echo URL_ROOT . '/posts/delete/' . $data['post']->id; ?>" method="POST">
+          <button type="submit">
             <ion-icon class="icon-xs" name="trash-outline"></ion-icon>
-
           </button>
-          <!-- <input type="submit" class="txt-center" name="delete" value="Effacer"/> -->
         </form>
 
 

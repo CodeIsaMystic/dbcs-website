@@ -1,9 +1,3 @@
-<!-- FLASH MESSAGE --->
-<!-- <section class="bg-white pb pt-md">
-  <div class="container container--md">
-    <?php // flash('post_message'); ?>
-  </div>
-</section> -->
 
 <!-- SECTION POSTS --->
 <?php foreach($data['posts'] as $post) : ?>
