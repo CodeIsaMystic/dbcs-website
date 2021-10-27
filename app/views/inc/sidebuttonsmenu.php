@@ -47,12 +47,8 @@
       </li>
       <li class="move-ico ico03">
         <a href="
-          <?php 
-            echo URL_ROOT; ?>
-            /posts/edit/
-          <?php 
-            // var_dump($data); 
-            //echo $data['post']->id; 
+          <?php echo URL_ROOT; ?>/posts/edit/<?php 
+            echo $data['post']->id; 
           ?>" class="link link02">
           <ion-icon class="icon-xs" name="pencil-outline"></ion-icon>
         </a>
@@ -63,8 +59,16 @@
         </a>
       </li>
       <li class="move-ico ico05">
-        <a href="#" class="link link03">
-          <ion-icon class="icon-xs" name="trash-outline"></ion-icon>
+        <form class="link link03" action="<?php echo URL_ROOT . '/posts/edit/' . $data['id']; ?>" method="POST">
+          <button>
+            <ion-icon class="icon-xs" name="trash-outline"></ion-icon>
+
+          </button>
+          <!-- <input type="submit" class="txt-center" name="delete" value="Effacer"/> -->
+        </form>
+
+
+        <a href="#" class="">
         </a>
       </li>
     </ul>

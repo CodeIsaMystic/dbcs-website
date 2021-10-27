@@ -1,6 +1,15 @@
 <!-- HEADER --->
 <?php require APP_ROOT . '/views/inc/header.php'; ?>
 
+<!-- FLASH  MESSAGES -->
+<?php require APP_ROOT . '/views/inc/flashmessages.php'; ?>
+
+
+<!-- SIDE BUTTONS MENU --> 
+<?php if(isset($_SESSION['user_id'])) : ?>
+  <?php require APP_ROOT . '/views/inc/sidebuttonsmenu.php'; ?>
+<?php endif; ?>
+
 <!-- SECTION HERO-POST --->
 <section class="blog-hero-bg hero-bg-img">
   <div class="hero grid--hero container container--md">

@@ -166,6 +166,7 @@
       $_SESSION['user_id'] = $user->id;
       $_SESSION['user_email'] = $user->email;
       $_SESSION['user_name'] = $user->name;
+      flash('login_success', 'Vous êtes maintenant connecté.');
       redirect('pages/index');
     }
 

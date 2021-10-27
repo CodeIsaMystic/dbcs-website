@@ -1,9 +1,9 @@
 <!-- FLASH MESSAGE --->
-<section class="bg-white pb pt-md">
+<!-- <section class="bg-white pb pt-md">
   <div class="container container--md">
-    <?php flash('post_message'); ?>
+    <?php // flash('post_message'); ?>
   </div>
-</section>
+</section> -->
 
 <!-- SECTION POSTS --->
 <?php foreach($data['posts'] as $post) : ?>
@@ -24,11 +24,7 @@
           <?php echo $post->title; ?>
         </h3>
         <p class="txt-content mb">
-          <?php 
-            // $postBody = $post->body;
-            // echo html_entity_decode($postBody);
-            echo getExcerpt($post->body, 1200);
-          ?>
+          <?php  echo getExcerpt($post->body, 1200); ?>
         </p>
         
         <a href="<?php echo URL_ROOT; ?>/posts/show/<?php echo $post->postId; ?>" class="link link--underline mt-sm">

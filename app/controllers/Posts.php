@@ -7,67 +7,56 @@
     }
 
     public function index(){
-      // Get posts
+      // Get All Posts
       $posts = $this->postModel->getPosts();
       
       $data = [
         'posts' => $posts
       ];
-
+      // Load The View With All Posts
       $this->view('posts/index', $data);
     }
     
     public function add(){
-      if(!isLoggedIn()){
-        redirect('users/login');
-      }
-
 
       if($_SERVER['REQUEST_METHOD'] == 'POST'){
-        // Sanitize POST array
-        $_POST = filter_input_array(INPUT_POST);
-        // $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+        // Sanitize Post Array
+        $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 
-        
         $data = [
-          'title' => trim($_POST['title']),
-          // 'body' => trim($_POST['body']),
-          'body' => $_POST['body'],
-          'source_link' => trim($_POST['source_link']),
           'user_id' => $_SESSION['user_id'],
+          'title' => trim($_POST['title']),
+          'body' => trim($_POST['body']),
+          'source_link' => trim($_POST['source_link']),
           'title_err' => '',
           'body_err' => '',
         ];
         
-        
-
-        // Validate data
+        // Validate The Data
         if(empty($data['title'])){
           $data['title_err'] = 'Veuillez ajoutez un titre';
-          // echo $data['title_err'];
         }
         if(empty($data['body'])){
           $data['body_err'] = "Ajoutez le contenu de l'article";
         }
-        // Handling the Source_link use case
+        // Being Sure Source_link Is Set To Null
         if(empty($data['source_link'])){
-          $data['source_link_err'] = null;
+          $sourceLinkError = $data->source_link_err; 
+          $sourceLinkError = null;
         }
+        // Make Sure There Are No Errors
+        if(empty($data['title_err']) && empty($data['body_err'])) {
 
-        // Make sure no errors
-        if(empty($data['title_err']) && empty($data['body_err'])){
-          // Validated
           if($this->postModel->addPost($data)){
-            flash('post_message', 'Votre article a bien été ajouté et publié.');
+            flash('post_message', 'Votre article a bien été ajouté et publié');
             redirect('pages/blog');
           } else {
             die('Something went wrong');
           }
         } else {
-          // Load view with errors
+          //Load The View With Errors
           $this->view('posts/add', $data);
         }
-
       } else {
         $data = [
           'title' => '',
@@ -76,212 +65,12 @@
           'title_err' => '',
           'body_err' => '',
         ];
-  
+        // Load The View Add Post
         $this->view('posts/add', $data);
+        
       }
-    }
+    }   
     
-    public function list(){
-      if(!isLoggedIn()){
-        redirect('users/login');
-      }
-
-      $posts = $this->postModel->getPosts();
-      // $post = $this->postModel->getPostById($id);
-  
-
-      $data = [
-        'title' => 'Liste des articles',
-        'description' => "Vous trouverez ici la liste de tout vos articles...",
-        'posts' => $posts,
-    ];
-    $this->view('posts/list', $data);
-    }
-
-    public function edit($id){
-      if(!isLoggedIn()){
-        redirect('users/login');
-      }
-
-      // Test following show()logic      
-      $post = $this->postModel->getPostById($id);
-      $user = $this->userModel->getUserById($post->user_id);
-      
-
-      $data = [
-          'id' => $id,
-          'title' => $post->title,
-          'body' => $post->body,
-          'source_link' => $post->source_link,
-          'user_id' => $_SESSION['user_id'],
-          'title_err' => '',
-          'body_err' => '',
-          'post' => $post,
-          'user' => $user
-        ];
-
-      
-      if($_SERVER['REQUEST_METHOD'] == 'POST'){
-        // Sanitize POST array
-        $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
-        
-        $data = [
-          'id' => $id,
-          'title' => trim($_POST['title']),
-          'body' => trim($_POST['body']),
-          'source_link' => trim($_POST['source_link']),
-          'user_id' => $_SESSION['user_id'],
-          'title_err' => '',
-          'body_err' => '',
-          'post' => $post,
-          'user' => $user
-        ];
-
-        $this->view('posts/edit', $data);
-
-
-        // Validate data
-        if(empty($data['title'])){
-          $data['title_err'] = 'Veuillez ajoutez un titre';
-        }
-        if(empty($data['body'])){
-          $data['body_err'] = "Ajoutez le contenu de l'article";
-        }
-
-        // Make sure no errors
-        if(empty($data['title_err']) && empty($data['body_err'])){
-          // Validated
-          if($this->postModel->updatePost($data)){
-            flash('post_message', 'L\'article a bien été mis à jour');
-            redirect('pages/blog');
-          } else {
-            die('Something went wrong');
-          }
-        } else {
-          // Load view with errors
-          $this->view('posts/edit', $data);
-        }
-
-
-
-
-
-      } else {
-        // Get existing post from model
-        $post = $this->postModel->getPostById($id);
-
-        // Check for owner
-        if($post->user_id != $_SESSION['user_id']){
-          redirect('posts');
-        }
-
-        $data = [
-          'id' => $id,
-          'title' => $post->title,
-          'body' => $post->body,
-          'source_link' => $post->source_link,
-          'title_err' => '',
-          'body_err' => '',
-          'post' => $post,
-          'user' => $user
-        ];
-        
-        // echo('if 0 test');
-        $this->view('posts/edit', $data);
-      }
-      
-    
-
-
-
-
-
-
-
-
-
-
-      
-
-      // Get existing post from model
-      // $post = $this->postModel->getPostById($id);
-
-
-      // if($_SERVER['REQUEST_METHOD'] == 'POST'){
-      //   // Sanitize POST array
-      //   $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
-
-      //   $data = [
-      //     'id' => $id,
-      //     'title' => trim($_POST['title']),
-      //     'body' => trim($_POST['body']),
-      //     'source_link' => trim($_POST['source_link']),
-      //     'user_id' => $_SESSION['user_id'],
-      //     'title_err' => '',
-      //     'body_err' => '',
-      //     'post' => $post,
-      //     'user' => $user
-      //   ];
-
-      //   // Validate data
-      //   if(empty($data['title'])){
-      //     $data['title_err'] = 'Veuillez ajoutez un titre';
-      //   }
-      //   if(empty($data['body'])){
-      //     $data['body_err'] = "Ajoutez le contenu de l'article";
-      //   }
-
-
-      //   // Make sure no errors
-      //   if(empty($data['title_err']) && empty($data['body_err'])){
-      //     // Validated
-      //     if($this->postModel->updatePost($data)){
-      //       flash('post_message', 'L\'article a bien été mis à jour');
-      //       redirect('posts/show');
-      //     } else {
-      //       die('Something went wrong');
-      //     }
-      //   } else {
-      //     // Load view with errors
-      //     $this->view('posts/edit', $data);
-      //   }
-
-
-
-
-
-
-
-
-
-      // } else {
-      //   // Get existing post from model
-      //   $post = $this->postModel->getPostById($id);
-
-      //   // Check for owner
-      //   if($post->user_id != $_SESSION['user_id']){
-      //     redirect('posts');
-      //   }
-        
-      //   // duplicated ofr testing
-      //   redirect('posts/edit', $data);
-
-
-      //   $data = [
-      //     'id' => $id,
-      //     'title' => $post->title,
-      //     'body' => $post->body,
-      //     'source_link' => $post->source_link,
-      //     'title_err' => '',
-      //     'body_err' => '',
-      //     'post' => $post,
-      //     'user' => $user
-      //   ];
-  
-      //   $this->view('posts/edit', $data);
-      // }
-    }
-
     public function show($id){
       $post = $this->postModel->getPostById($id);
       $user = $this->userModel->getUserById($post->user_id);
@@ -290,32 +79,123 @@
         'post' => $post,
         'user' => $user
       ];
-
+      // Load The View Show A Post
       $this->view('posts/show', $data);
     }
-
-    public function delete($id){
+    
+    public function list(){
+      // If Not Logged In Redirect
       if(!isLoggedIn()){
         redirect('users/login');
       }
+      // Get All Posts
+      $posts = $this->postModel->getPosts();
+      
+      $data = [
+        'title' => 'Liste des articles',
+        'description' => "Vous trouverez ici la liste de tout vos articles...",
+        'posts' => $posts
+      ];
+      // Load The View Posts List
+      $this->view('posts/list', $data);
+    }
+    
+    public function edit($id) {
+      // If Not Logged In Redirect
+      if(!isLoggedIn()){
+        redirect('users/login');
+      }
+         
+      $post = $this->postModel->getPostById($id);
 
+      $data = [
+        'post' => $post,
+        'title' => '',
+        'body' => '',
+        'source_link' => '',
+        'title_err' => '',
+        'body_err' => '',
+        ];
+
+      
       if($_SERVER['REQUEST_METHOD'] == 'POST'){
-        // Get existing post from model
-        $post = $this->postModel->getPostById($id);
-        
-        // Check for owner
-        if($post->user_id != $_SESSION['user_id']){
-          redirect('posts');
+        // Sanitize POST array
+        $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+
+        $data = [
+          'id' => $id,
+          'post' => $post,
+          'user_id' => $_SESSION['user_id'],
+          'title' => trim($_POST['title']),
+          'body' => trim($_POST['body']),
+          'source_link' => trim($_POST['source_link']),
+          'title_err' => '',
+          'body_err' => '',
+        ];
+
+        // Validate data
+        if(empty($data['title'])){
+          $data['title_err'] = 'Veuillez ajoutez un titre';
+        }
+        if(empty($data['body'])){
+          $data['body_err'] = "Ajoutez le contenu de l'article";
+        }
+        // Avoid Useless Request
+        if($data['title'] == $this->postModel->getPostById($id)->title && $data['body'] == $this->postModel->getPostById($id)->body) {
+          $data['title_err'] = "Vous devez au moins changer un des éléments suivants: titre, image, texte, lien.";
         }
 
-        if($this->postModel->deletePost($id)){
-          flash('post_message', 'Post Removed');
-          redirect('posts');
+        // Make sure no errors
+        if(empty($data['title_err']) && empty($data['body_err'])) {
+          // Validated Form
+          if($this->postModel->updatePost($data)){
+            flash('post_message', 'L\'article a bien été mis à jour');
+            redirect("posts/list");
+          } else {
+            die('Something went wrong');
+          }
+        } else {
+          // Load View With Errors
+          $this->view('posts/edit', $data);
+        }
+      } else {
+
+        // Load the View Edit A Post
+        $this->view('posts/edit', $data);
+      }
+    }
+
+    public function delete($id) {
+      // If Not Logged In Redirect
+      if(!isLoggedIn()){
+        redirect('users/login');
+      }
+         
+      $post = $this->postModel->getPostById($id);
+
+      $data = [
+        'post' => $post,
+        'title' => '',
+        'body' => '',
+        'source_link' => '',
+        'title_err' => '',
+        'body_err' => '',
+        ];
+
+      
+      
+      if($_SERVER['REQUEST_METHOD'] == 'POST'){
+        // Sanitize POST array
+        $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+
+        if($this->postModel->deletePost($id)) {
+          flash('post_message', 'L\'article a bien été supprimé');
+          redirect("posts/list");
         } else {
           die('Something went wrong');
         }
-      } else {
-        redirect('posts');
       }
     }
   }
+
+        

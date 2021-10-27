@@ -1,6 +1,13 @@
 <!-- HEADER -->
 <?php require APP_ROOT . '/views/inc/header.php'; ?>
 
+
+<!-- SIDE BUTTONS MENU --> 
+<?php if(isset($_SESSION['user_id'])) : ?>
+  <?php require APP_ROOT . '/views/inc/sidebuttonsmenu.php'; ?>
+<?php endif; ?>
+
+
  <!-- SECTION POST PAGE HERO -->
 <section class="post-page-hero bg-white">
   <div class="img-box--postPage">

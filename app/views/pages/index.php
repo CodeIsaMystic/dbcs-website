@@ -1,6 +1,15 @@
 <!-- HEADER -->
 <?php require APP_ROOT . '/views/inc/header.php'; ?>
 
+<!-- FLASH  MESSAGES -->
+<?php require APP_ROOT . '/views/inc/flashmessages.php'; ?>
+
+
+<!-- ALERT MESSAGES -->
+<!-- <div class="flash-messages">
+  <?php //flash('register_success'); ?>
+</div> -->
+
 <!-- SECTION HERO -->
 <section class="bg-white pb-lg">
   <div class="hero grid--hero container container--md">

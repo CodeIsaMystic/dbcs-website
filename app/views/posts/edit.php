@@ -1,6 +1,7 @@
 <!-- HEADER -->
 <?php require APP_ROOT . '/views/inc/header.php'; ?>
 
+
 <!-- SECTION EDIT POST -->
 <section class="add-content pb-lg pt-xl">
   
@@ -15,7 +16,10 @@
         </p> 
         
         <!-- FORM EDIT POST -->
-        <form action="<?php echo URL_ROOT; ?>/posts/edit/<?php echo ($data['id']); ?>" method="post" enctype="multipart/form-data">
+        <form 
+        action="<?php echo URL_ROOT; ?>/posts/edit/<?php echo ($data['post']->id); ?>" method="post" 
+        enctype="multipart/form-data">
+
           <!-- TITLE ARTICLE -->
           <div>
             <label class="fontW700 mt-sm mb-xs" for="title">Titre de l'article</label>
@@ -24,7 +28,11 @@
               <p class="txt-content--xsmall txt-danger"><?php echo ($data['title_err']);?></p>
             </span>
             
-            <input type="text" name="title" class="bg-white mb-xxs" value="<?php echo ($data['title']); ?>">
+            <input 
+              type="text" 
+              name="title" 
+              class="bg-white mb-xxs" 
+              value="<?php echo ($data['post']->title); ?>">
           </div>
           
           <!-- IMAGE ARTICLE -->
@@ -52,7 +60,7 @@
             </span>
           
             <textarea id="editor" class="b-radius4 bg-white mb-xxs" type="text" name="body">
-              <?php  echo ($data['body']); ?>
+              <?php  echo ($data['post']->body); ?>
             </textarea>
           </div>
           
@@ -74,8 +82,8 @@
             
             <input class="bg-white mb-xxs" type="text" name="source_link" value="
             <?php 
-             if($data['source_link'] !== null) {
-              echo ($data['source_link']); 
+             if($data['post']->source_link !== null) {
+              echo ($data['post']->source_link); 
             } else {
               echo ('');
             }
@@ -98,32 +106,4 @@
 
 <!-- FOOTER -->
 <?php require APP_ROOT . '/views/inc/footer.php'; ?>
-
-
-
-
-
-
-<!--  CODE BASE TO ADJUST AND REMOVE
-  <div class="">
-
-  <h2>Edit Post</h2>
-  <p>Create a post with this form</p>
-
-
-  <form action="<?php// echo URL_ROOT; ?>/posts/edit/<?php //echo $data['id']; ?>" method="post">
-    <div class="">
-      <label for="title">Title: <sup>*</sup></label>
-      <input type="text" name="title" class="" value="<?php //echo $data['title']; ?>">
-      <span class=""><?php //echo $data['title_err']; ?></span>
-    </div>
-    <div class="">
-      <label for="body">Body: </label>
-      <textarea name="body" class=""><?php// echo $data['body']; ?></textarea>
-      <span class=""><?php// echo $data['body_err']; ?></span>
-    </div>
-    <input type="submit" class="btn" value="Submit">
-  </form>
-  
-</div> -->
 

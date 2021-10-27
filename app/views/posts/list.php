@@ -1,13 +1,13 @@
 <!-- HEADER --->
 <?php require APP_ROOT . '/views/inc/header.php'; ?>
 
+<!-- FLASH  MESSAGES -->
+<?php require APP_ROOT . '/views/inc/flashmessages.php'; ?>
 
+<!-- SIDE BUTTONS MENU --> 
 <?php if(isset($_SESSION['user_id'])) : ?>
   <?php require APP_ROOT . '/views/inc/sidebuttonsmenu.php'; ?>
 <?php endif; ?>
-
-
-<?//= $data['posts']->id; ?>
 
 <!-- SECTION HERO --->
 <section class="contact-hero-bg hero-bg-img">
@@ -43,6 +43,7 @@
 
 
         <tbody>  
+
           <?php foreach($data['posts'] as $post) : ?>
           <tr>
             <td class="">
@@ -53,13 +54,12 @@
             </td> 
             <td class="td-links">
               <a class="td-link-blue txt-center"
-                href="<?php echo URL_ROOT; ?>/posts/edit/<?php echo $post->postId; ?>">
+                href="<?php echo URL_ROOT . '/posts/edit/' . $post->postId; ?>"> 
                 Editer
               </a>
-              <a class="td-link-yellow txt-center"
-                href="#">
-                Effacer
-              </a>
+              <form action="<?php echo URL_ROOT . '/posts/delete/' . $post->postId; ?>" method="POST">
+                <input type="submit" class="td-link-yellow txt-center" name="delete" value="Effacer"/>
+              </form>
             </td>          
           </tr>
           <?php endforeach ?>

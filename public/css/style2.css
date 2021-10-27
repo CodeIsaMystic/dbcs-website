@@ -40,18 +40,24 @@
   text-indent: 2.4rem;
 }
 .alert-success {
-  border: 1px solid #42ba96;
   color: #42ba96;
-}
-.alert-danger {
-  border: 1px solid #f84f4f;
-  color: #f84f4f;
 }
 
 /* form-small */
 .form-small input[typ="submit"],
 .form-small button[type="submit"] {
   margin: 0 auto;
+}
+/*******************/
+/* FLASH MESSAGES */
+/*****************/
+.flash-messages {
+  background-color: transparent;
+  position: fixed;
+  width: 40%;
+  top: 9.6rem;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /************************************************/
@@ -265,25 +271,23 @@ table#myTable {
 }
 
 /***************/
-/* LINKS ANIM */
+/* LINKS TABLE */
 /*************/
-/*  Animation is shaking !! */
-/*      to fix   !!!!!     */
-.td-links a {
+.td-links a,
+.td-links form {
   display: inline-block;
-  font-size: 1.6rem;
-  line-height: 0.5;
-  padding: 0 0.2rem 0.2rem;
   margin-bottom: 0.1rem;
-  transition: all 0.3s ease-in-out;
   border-bottom: 1px solid #232323;
 }
-.td-links a:hover {
+.td-links a,
+.td-links form input {
+  font-size: 1.6rem;
+  padding: 0.8rem;
   color: #232323c9;
-  line-height: 0.75;
-  padding: 0.2rem;
-  margin-bottom: 0.3rem;
 }
+// .td-links a:hover {
+// }
+
 /*  Third variants black  */
 .td-link-yellow {
   background-color: #fffae0;

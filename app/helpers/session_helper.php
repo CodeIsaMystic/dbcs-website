@@ -20,12 +20,10 @@
       } elseif(empty($message) && !empty($_SESSION[$name])){
         $class = !empty($_SESSION[$name. '_class']) ? $_SESSION[$name. '_class'] : '';
 
-
-
         echo 
-          '<div class="b-radius4 '
+          '<div class="'
           .$class
-          .'" id="msg-flash">'
+          .'">'
             .'<p class="txt-content">'
               .$_SESSION[$name]
             .'</p>'
