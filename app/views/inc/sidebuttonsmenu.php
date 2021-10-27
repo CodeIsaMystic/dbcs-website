@@ -69,6 +69,7 @@
           }
           ?>' 
           class="link link02">
+
           <ion-icon class="icon-xs" name="pencil-outline"></ion-icon>
         </a>
       </li> 
@@ -78,6 +79,7 @@
           <ion-icon class="icon-xs" name="list-outline"></ion-icon>
         </a>
       </li>
+      
       <li class="move-ico ico05
         <?php if ($result === false) {
           echo 'move-ico--is-not-active'; 

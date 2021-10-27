@@ -78,9 +78,17 @@
       rgba(0, 17, 34, 0.85),
       rgba(0, 17, 34, 0.05)
     ),
-    url("../img/full-w-hero/blog-hero.png");
+    url("../img/full-w-hero/gym2-hero.png");
 }
-
+/*  List hero bg  */
+.list-hero-bg {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(0, 6, 12, 0.891),
+      rgba(0, 17, 34, 0.35)
+    ),
+    url("../img/full-w-hero/gym.png");
+}
 /* Customers profiles  */
 .customers-profiles {
   display: flex;

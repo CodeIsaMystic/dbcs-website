@@ -349,13 +349,13 @@
   transition: transform 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.25s;
   z-index: 4;
 }
-.ico03 {
-  background-color: #232323;
+.ico04 {
+  background-color: #46a1c9;
   transition: transform 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.2s;
   z-index: 3;
 }
-.ico04 {
-  background-color: #46a1c9;
+.ico03 {
+  background-color: #232323;
   transition: transform 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.15s;
   z-index: 2;
 }
@@ -372,11 +372,11 @@
   transform: translate(25px, -90px);
   transition: transform 0.3s cubic-bezier(0.77, 0, 0.175, 1);
 }
-.active .ico03 {
+.active .ico04 {
   transform: translate(85px, -39px);
   transition: transform 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.15s;
 }
-.active .ico04 {
+.active .ico03 {
   transform: translate(85px, 39px);
   transition: transform 0.3s cubic-bezier(0.77, 0, 0.175, 0.8) 0.2s;
 }

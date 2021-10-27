@@ -12,7 +12,7 @@
 
 
 <!-- SECTION HERO --->
-<section class="contact-hero-bg hero-bg-img">
+<section class="list-hero-bg hero-bg-img">
   <div class="hero grid--hero container container--md">
     <div class="mt-md mb-lg pb-lg pt-lg">
       <h4 class="subheading fontW700 txt-upp txt-blue mb-xs">Liste</h4>
