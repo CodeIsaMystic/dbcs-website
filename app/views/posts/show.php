@@ -27,13 +27,13 @@
 </section>
 
 <!-- SECTION POST PAGE CONTENT -->
-<section class="post-page-content bg-white mt-md">
+<section class="post-page bg-white mt-md">
   <div class="container container--lgs">
-    <div class="post-page-content__text txt-dark mb-xs">
+    <div class="post-content txt-dark mb-xs">
       <?php echo $data['post']->body; ?>
     </div>
 
-    <div class="post-page-content__text txt-dark mb">
+    <div class="post-content txt-dark mb">
       <a href="<?php echo $data['post']->source_link; ?>" target="_blank" class="link link-dark link--underline">
         <?php 
         if($data['post']->source_link != null) {

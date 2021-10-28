@@ -13,7 +13,7 @@
         />
       </div>
       
-      <div class="text-box--post txt-dark">
+      <div class="post-content txt-dark">
         <h3 class="heading-post txt-dark-gray font-garamond mb-sm">
           <?php echo $post->title; ?>
         </h3>
