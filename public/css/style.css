@@ -307,6 +307,12 @@
 .contacts {
   font-style: normal;
 }
+.col-nav ul li a,
+.col-address address p,
+.col-logo .copyright {
+  font-weight: 200;
+}
+
 .col-nav button {
   border: none;
   background-color: transparent;
