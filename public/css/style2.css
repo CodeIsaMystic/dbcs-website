@@ -123,51 +123,48 @@
 .text-box--post {
   padding: 0 6.4rem 6.4rem 6.4rem;
 }
-.post-page-content {
-  width: 60%;
-  margin: 9.6rem auto 0;
-}
 
-/***************/
-/* POST PAGE  */
-/*************/
+/*******************/
+/* POST PAGE HERO  */
+/******************/
 .post-page-hero {
   width: 100%;
-  height: 80vh;
+  height: 90vh;
   position: relative;
   padding-bottom: 20%;
   overflow: hidden;
 }
-.img-box--postPage picture img {
+.post-page-hero div picture img {
   width: 100%;
 }
-.post-page-hero .txt-box--postPage {
+.post-page-hero__heading {
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translateX(-50%);
   width: 60%;
-
   padding: 4.8rem;
   background-color: rgba(255, 255, 255, 0.85);
 }
 
-/*******************/
-/*  POST CONTENT  */
-/*****************/
+/**********************/
+/* POST-PAGE-CONTENT */
+/* POSTS POST  */
+/********************/
 .post-page-content {
-  width: 80%;
+  width: 75%;
+  // width: 60%;
+  margin: 9.6rem auto 0;
 }
-.post-page-content div .text-box--post {
-  // display: block;
+.post-page-content div .post-page-content__text {
   margin-left: auto;
   margin-right: auto;
 }
-.post-page-content div .text-box--post blockquote p[text] {
+.post-page-content div .post-page-content__text blockquote p[text] {
   max-width: 100% !important;
 }
 
-.post-page-content .text-box--post h2 {
+.post-page-content .post-page-content__text h1 {
   font-size: 3rem;
   line-height: 1.5;
   margin-top: 3.2rem;
@@ -175,55 +172,82 @@
   color: #46a1c9;
   font-family: "EB Garamond", serif;
 }
-.post-page-content .text-box--post h4 {
+.post-page-content .post-page-content__text h2 {
   font-size: 1.8rem;
   margin-top: 2.4rem;
   font-family: "Montserrat", sans-serif;
 }
-.post-page-content .text-box--post p,
-.post-page-content .text-box--post ol li,
-.post-page-content .text-box--post ul li {
+.posts .post .post-page-content__text h2,
+.posts .post .post-page-content__text h1 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-top: 1.6rem;
+  margin-bottom: 1.6rem;
+}
+.posts .post .post-page-content__text h1 {
+  font-size: 2.4rem;
+  font-weight: 400;
+  margin-top: 2.4rem;
+  margin-bottom: 2.4rem;
+}
+.posts .post .post-page-content__text ol li,
+.posts .post .post-page-content__text ul li {
+  font-size: 1.7rem;
+  font-weight: 100;
+  margin-top: 0.8rem;
+  margin-bottom: 1.6rem;
+}
+
+.post-page-content .post-page-content__text p,
+.posts .post .post-page-content__text p,
+.posts .post .post-page-content__text p strong,
+.post-page-content .post-page-content__text ol li,
+.post-page-content .post-page-content__text ul li {
   font-size: 1.7rem;
   font-weight: 200;
   line-height: 1.4;
   color: #232323;
   font-family: "Montserrat", sans-serif;
 }
-.post-page-content .text-box--post blockquote {
+
+/* blockquote */
+.post-page-content .post-page-content__text blockquote {
   width: 100%;
 }
-.post-page-content .text-box--post blockquote p {
+.post-page-content .post-page-content__text blockquote p {
   font-family: "EB Garamond", serif;
   font-size: 1.7rem;
   font-style: italic;
   line-height: 1.4;
   color: #888;
 }
-.post-page-content .text-box--post ul {
+/* paragraph */
+.post-page-content .post-page-content__text p {
+  padding: 0 0 1.4rem 0;
 }
-.post-page-content .text-box--post ul li {
+/* lists */
+.post-page-content .post-page-content__text ol li,
+.post-page-content .post-page-content__text ul li {
+  padding: 0 0 0.8rem 0;
 }
-// .post-page-content .text-box--post figure.media embed {
-//   display: block;
-//   width: 100%;
-//   height: auto;
-//   text-align: center;
-//   margin: 0 auto;
-// }
-
-/****************/
-/*  BLOG-POSTS  */
-/**************/
-article.post .text-box--post {
-  // max-width: 100%;
-  // display: block;
+.posts .post .post-page-content__text ol,
+.posts .post .post-page-content__text ul,
+.post-page-content .post-page-content__text ul,
+.post-page-content .post-page-content__text ol {
+  padding-left: 3.2rem;
 }
-article.post .text-box--post p:not(p.text-content) {
-  // font-size: 100%;
-  // font-size: 16px;
-  // max-width: 80%;
-  // display: block;
-  // margin: 0 auto;
+.posts .post .post-page-content__text ul li ul,
+.post-page-content .post-page-content__text ul li ul {
+  padding-left: 0;
+  padding-top: 0.8rem;
+}
+.posts .post .post-page-content__text ul li,
+.post-page-content .post-page-content__text ul li {
+  list-style-type: disc;
+}
+.posts .post .post-page-content__text ol li,
+.post-page-content .post-page-content__text ol li {
+  list-style-type: decimal;
 }
 
 /****************/

@@ -26,7 +26,7 @@
 </section>
 
 <!-- SECTION POST-TITLE --->
-<section class="bg-white pt-md">
+<section class="bg-white pb-md pt-md">
   <div class="container container--md txt-center">
     <h4 class="subheading fontW700 txt-upp txt-blue mb-xs">Blog</h4>
     <h2

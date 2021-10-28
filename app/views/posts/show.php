@@ -10,16 +10,16 @@
 
  <!-- SECTION POST PAGE HERO -->
 <section class="post-page-hero bg-white">
-  <div class="img-box--postPage">
+  <div class="">
     <picture>
-      <source srcset="<?php echo URL_ROOT; ?>/img/posts/pages/meal-fruit.png" type="image/webp" />
-      <source srcset="<?php echo URL_ROOT; ?>/img/posts/pages/meal-fruit.png" type="image/png" />
+      <source srcset="<?php echo URL_ROOT; ?>/img/posts/pages/physio.png" type="image/webp" />
+      <source srcset="<?php echo URL_ROOT; ?>/img/posts/pages/physio.png" type="image/png" />
 
-      <img src="<?php echo URL_ROOT; ?>/img/posts/pages/meal-fruit.png" alt="photo on table with a meal of fruits"/>
+      <img src="<?php echo URL_ROOT; ?>/img/posts/pages/physio.png" alt="photo on table with a meal of fruits"/>
     </picture>
   </div>
-  <div class="txt-box--postPage">
-    <h4 class="subheading fontW700 txt-upp txt-blue mb-xs">Article</h4>
+  <div class="post-page-hero__heading">
+    <h4 class="subheading fontW700 txt-upp txt-blue">Article</h4>
     <h1 class="heading-primary txt-dark-gray txt-center fontW500 font-garamond">
       <?php echo $data['post']->title; ?>
     </h1>
@@ -29,11 +29,11 @@
 <!-- SECTION POST PAGE CONTENT -->
 <section class="post-page-content bg-white mt-md">
   <div class="container container--lgs">
-    <div class="text-box--post txt-dark mb-xs">
+    <div class="post-page-content__text txt-dark mb-xs">
       <?php echo $data['post']->body; ?>
     </div>
 
-    <div class="text-box--post txt-dark mb">
+    <div class="post-page-content__text txt-dark mb">
       <a href="<?php echo $data['post']->source_link; ?>" target="_blank" class="link link-dark link--underline">
         <?php 
         if($data['post']->source_link != null) {
@@ -46,21 +46,6 @@
     </div>
   </div>
 </section>
-
-
-
-
-
-<!-- TO CHECKOUT AND REMOVE --> 
-<?php // if($data['post']->user_id == $_SESSION['user_id']) : ?>
-<!-- 
-  <a href="<?php echo URL_ROOT; ?>/posts/edit/<?php echo $data['post']->id; ?>" class="btn btn-hover btn-hover--dark">Edit</a>
-
-  <form class="pull-right" action="<?php // echo URL_ROOT; ?>/posts/delete/<?php // echo $data['post']->id; ?>" method="post">
-    <input type="submit" value="Delete" class="btn btn-hover btn-hover--dark">
-  </form> -->
-
-<?php // endif; ?>
 
 
 

@@ -47,7 +47,7 @@
 .hero-bg-img {
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 50% 20%;
+  background-position: 50% 40%;
 }
 .hero .txt-box--hero .btn-wrapper {
   width: 60%;
@@ -66,8 +66,8 @@
 .contact-hero-bg {
   background-image: linear-gradient(
       to right bottom,
-      rgba(0, 17, 34, 0.4),
-      rgba(0, 17, 34, 0.05)
+      rgba(0, 3, 7, 0.5),
+      rgba(0, 17, 34, 0.16)
     ),
     url("../img/full-w-hero/contact2-hero.png");
 }
@@ -75,8 +75,8 @@
 .blog-hero-bg {
   background-image: linear-gradient(
       to right bottom,
-      rgba(0, 17, 34, 0.85),
-      rgba(0, 17, 34, 0.05)
+      rgba(0, 0, 0, 0.5),
+      rgba(9, 12, 15, 0.16)
     ),
     url("../img/full-w-hero/gym2-hero.png");
 }
@@ -84,8 +84,8 @@
 .list-hero-bg {
   background-image: linear-gradient(
       to right bottom,
-      rgba(0, 6, 12, 0.891),
-      rgba(0, 17, 34, 0.35)
+      rgba(0, 0, 0, 0.5),
+      rgba(9, 12, 15, 0.16)
     ),
     url("../img/full-w-hero/gym.png");
 }

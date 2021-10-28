@@ -21,12 +21,12 @@
 
       if($_SERVER['REQUEST_METHOD'] == 'POST'){
         // Sanitize Post Array
-        $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+        $_POST = filter_input_array(INPUT_POST);
 
         $data = [
           'user_id' => $_SESSION['user_id'],
           'title' => trim($_POST['title']),
-          'body' => trim($_POST['body']),
+          'body' => $_POST['body'],
           'source_link' => trim($_POST['source_link']),
           'title_err' => '',
           'body_err' => '',
@@ -120,14 +120,14 @@
       
       if($_SERVER['REQUEST_METHOD'] == 'POST'){
         // Sanitize POST array
-        $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+        $_POST = filter_input_array(INPUT_POST);
 
         $data = [
           'id' => $id,
           'post' => $post,
           'user_id' => $_SESSION['user_id'],
           'title' => trim($_POST['title']),
-          'body' => trim($_POST['body']),
+          'body' => $_POST['body'],
           'source_link' => trim($_POST['source_link']),
           'title_err' => '',
           'body_err' => '',
