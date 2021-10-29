@@ -6,7 +6,7 @@
 
   
 <!-- SECTION LOGIN -->
-<section class="bg-white pb-xl pt-lg mt-sm">
+<section class="login bg-white pb-xl pt-lg mt-sm">
 
   <div class="container container--xs">
     <div
@@ -16,7 +16,7 @@
         Connexion
       </h2>
 
-      <div class="text-box--login txt-dark txt-content mb-xs">
+      <div class="login--text txt-dark txt-content mb-xs">
         <p class="mb-xs">
           Connectez-vous à votre site (seul l'administrateur peut avoir
           accès).

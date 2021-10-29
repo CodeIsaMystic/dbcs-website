@@ -2,11 +2,11 @@
 <?php require APP_ROOT . '/views/inc/header.php'; ?>
 
 <!-- SECTION ADD-POST -->
-<section class="add-content pb-lg pt-xl">
+<section class="add-post pb-lg pt-xl">
   
   <div class="container container--md">
     <div class="grid--1-col b-radius4 box-shad1">
-      <div class="text-box--add-post txt-dark txt-content">
+      <div class="post-content txt-dark txt-content">
         <h3 class="heading-secondary txt-dark-gray font-garamond pt-sm mt-xs mb-sm">
           Ajoutez un article
         </h3>

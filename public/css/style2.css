@@ -42,12 +42,6 @@
 .alert-success {
   color: #42ba96;
 }
-
-/* form-small */
-.form-small input[typ="submit"],
-.form-small button[type="submit"] {
-  margin: 0 auto;
-}
 /*******************/
 /* FLASH MESSAGES */
 /*****************/
@@ -60,32 +54,32 @@
   transform: translateX(-50%);
 }
 
-/************************************************/
-/************************************************/
-/************************************************/
-
+/***************/
+/* FORM SMALL */
+/*************/
+.form-small input[typ="submit"],
+.form-small button[type="submit"] {
+  margin: 0 auto;
+}
 /********************/
-/* LOGIN & ADDPOST */
+/* LOGIN  */
 /******************/
-.text-box--login,
-.text-box--add-post {
+.login .login--text {
   padding: 0 3.2rem;
 }
 /****************/
-/* ADD CONTENT */
+/* EDIT POST */
 /**************/
-.add-content {
+/* style all section */
+.edit-post {
 }
-.add-content .text-box--add-post input[type="submit"] {
+.edit-post .post-content {
+  padding: 0 3.2rem;
 }
-.add-content {
+/* input source_link indentation issue */
+.add-post .source-link input,
+.edit-post .source-link input {
 }
-/************************************************/
-/************************************************/
-/************************************************/
-/************************************************/
-/************************************************/
-
 /***************/
 /*  CKEDITOR  */
 /*************/
@@ -104,7 +98,23 @@
   max-width: 450px;
   width: 100%;
 }
-/*  TEST FOR CKEDITOR LISTS DISPLAY ISSUE */
+/*Scrollbar*/
+.ck-editor ::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #fff;
+}
+.ck-editor ::-webkit-scrollbar {
+  width: 14px;
+  background-color: #fff;
+}
+.ck-editor ::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: rgb(115, 115, 115);
+}
+
+/*  Lists issue on add & edit post within editor func */
 // #editor ul li,
 // #editor ol li {
 //   list-style-type: circle !important;
@@ -153,10 +163,11 @@
   width: 75%;
   margin: 9.6rem auto 0;
 }
-. div .post-content {
+.post-page div .post-content {
   margin-left: auto;
   margin-right: auto;
 }
+/* to check it out */
 .post-page div .post-content blockquote p[text] {
   max-width: 100% !important;
 }
@@ -219,8 +230,10 @@
   color: #888;
 }
 /* paragraph */
-.post-page .post-content p {
-  padding: 0 0 1.4rem 0;
+.post-page .post-content p,
+/* to check it out */
+.posts .post .post-content p {
+  padding: 0 0 1.4rem 0 !important;
 }
 /* lists */
 .post-page .post-content ol li,
@@ -246,6 +259,15 @@
 .post-page .post-content ol li {
   list-style-type: decimal;
 }
+// .posts .post .post-content a,
+// .post-page .container .post-content:first-of-type a {
+//   color: #46a1c9 !important;
+//   transition: color 0.3s linear;
+// }
+// .posts .post .post-content a:hover,
+// .post-page .container .post-content:first-of-type a:hover {
+//   color: #232323 !important;
+// }
 
 /****************/
 /*  DATATABLE  */
@@ -272,7 +294,6 @@
   font-size: 1.4rem;
   line-height: 1.2;
 }
-
 /*  tables  */
 #myTable_wrapper.dataTables_wrapper {
   width: 85%;
@@ -282,15 +303,12 @@
 table#myTable {
   border-bottom-color: #23232366;
 }
-
 #myTable .td-links {
   width: 20%;
 }
-
 .td-links a:first-child {
   margin-right: 2.4rem;
 }
-
 /***************/
 /* LINKS TABLE */
 /*************/
@@ -306,8 +324,8 @@ table#myTable {
   padding: 0.8rem;
   color: #232323c9;
 }
-// .td-links a:hover {
-// }
+
+/* Links on hover */
 
 /*  Third variants black  */
 .td-link-yellow {

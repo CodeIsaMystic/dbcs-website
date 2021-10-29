@@ -127,24 +127,21 @@
 
         <?php else : ?>
         <!--  DASHBOARD-LOGIN -->
-        <div class="dashboard-login">
-          <h4 class="subheading">Dashboard</h4>
-          <nav class="dashboard-login-nav dashboard-login-nav-is-visible">
-            <ul class="dashboard-login-list dashboard-login-list--is-visible">
-              <li>
-                <p class="txt-content">Connectez-vous...</p>
-              </li>
+        <div class="dashboard--login">
+          <p class="txt-content">Connectez-vous...</p>
+          <nav class="dashboard--login__nav">
+            <ul class="dashboard--login__list">
               <li>
                 <a class="link txt-light" href="<?= URL_ROOT; ?>/users/login">
                   <ion-icon class="icon-xs" name="log-in-outline"></ion-icon>
                   Login</a
                 >
               </li>
-              <li>
+              <!-- <li>
                 <a class="link txt-light" href="<?= URL_ROOT; ?>/users/register">
                   Register</a
                 >
-              </li>
+              </li> -->
             </ul>
           </nav>
         </div>

@@ -1,11 +1,11 @@
 
-<!-- DASHBOARD-LOGGED TOP -->
-<div class="dashboard-logged bg-dark">
-  <p class="txt-content--small">Welcome 
+<!-- DASHBOARD LOGGED -->
+<div class="dashboard--logged bg-dark">
+  <p class="txt-content--small">Bienvenu 
     <?php echo $_SESSION['user_name']; ?>
   </p>
-  <nav class="dashboard-logged-nav">
-    <ul class="dashboard-logged-list">      
+  <nav class="dashboard--logged__nav">
+    <ul class="dashboard--logged__list">      
       <li>
         <a class="link txt-light" href="<?php echo URL_ROOT; ?>/posts/list">
           <ion-icon class="icon-xs" name="list-circle-outline">
