@@ -2,17 +2,6 @@
 /* BELOW 1344px (Smaller desktops) */
 /**********************************/
 @media (max-width: 84em) {
-  /* grid */
-  // .grid {
-  //   row-gap: 6.4rem;
-  //   column-gap: 4.8rem;
-  // }
-  // .grid--3-cols {
-  //   grid-template-columns: repeat(2, 1fr);
-  // }
-  // .grid--contact-details {
-  //   column-gap: 4.8rem;
-  // }
   /* hero */
   .hero {
     max-width: 120rem;
@@ -39,11 +28,6 @@
   .grid {
     column-gap: 3.2rem;
   }
-  /* grid--contact-details__div */
-  /* to checkout on each section => pricing!...*/
-  // .grid--3-cols {
-  //   grid-template-columns: repeat(3, 1fr);
-  // }
   .grid--hero {
     gap: 4.8rem;
   }
@@ -64,6 +48,7 @@
   .header {
     padding: 0 3.2rem;
   }
+  /* primary nav */
   .primary-nav-list {
     gap: 3.2rem;
   }
@@ -174,28 +159,24 @@
   .site-header .header {
     padding: 0 2.4rem;
   }
+  /* primary nav */
   .primary-nav {
     display: flex;
     align-items: center;
     justify-content: center;
-
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
     pointer-events: none;
-
     transform: translateX(100%);
     transition: all 0.45s ease-in-out;
-
     opacity: 0;
   }
-
   .primary-nav-list {
     opacity: 0;
   }
-
   .primary-nav--is-visible {
     transform: translateX(0);
     background-color: #232323;
@@ -247,7 +228,6 @@
     top: 30%;
   }
   .hero--fullW__heading--left {
-    // top: 30%;
     width: 85%;
     left: 5%;
   }
@@ -435,15 +415,6 @@
   .grid--4-cols {
     grid-template-columns: repeat(2, 1fr);
   }
-  /* checkout pricing... */
-  // .grid {
-  //   row-gap: 12.8rem;
-  // }
-  /*  grid--contact-details__div  */
-  // setup on large device 944px
-  // .contact-details .grid {
-  //   row-gap: 12.8rem;
-  // }
   /*  grid footer  */
   .footer {
     display: block;
@@ -508,16 +479,15 @@
     top: 8%;
   }
   /* dashboard */
-  .dashboard--logged__list {
-    gap: 1.6rem;
+  .dashboard-navs .dashboard--login--is-visible,
+  .dashboard-navs .dashboard--logged {
+    padding: 0 0.8rem;
   }
   .dashboard--logged__nav .dashboard--logged__list li ion-icon {
     padding-right: 0.2rem;
   }
-  /* dashboard */
-  .dashboard-navs .dashboard--login--is-visible,
-  .dashboard-navs .dashboard--logged {
-    padding: 0 0.8rem;
+  .dashboard--logged__list {
+    gap: 1.6rem;
   }
   /* cta */
   .cta {
@@ -628,6 +598,7 @@
     padding-left: 0;
     width: 90%;
   }
+  /* dashboard */
   .dashboard-navs .dashboard--logged {
     flex-direction: column;
     justify-content: center;

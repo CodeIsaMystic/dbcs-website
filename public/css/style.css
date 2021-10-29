@@ -1,7 +1,8 @@
+/*******************/
 /***   LAYOUT  ****/
-/*************/
-/*  HEADER  */
-/***********/
+/*****************/
+/*    HEADER    */
+/***************/
 .site-header {
   position: fixed;
   width: 100%;
@@ -29,8 +30,7 @@
 .site-header .header .primary-nav .btn--blue {
   color: #333;
 }
-
-/*   MENU ICON  */
+/*   menu icon  */
 .menu-icon {
   display: none;
 }
@@ -83,7 +83,7 @@
   width: 75%;
   transform: translateX(0);
 }
-/* Customers profiles  */
+/* customers profiles  */
 .customers-profiles {
   display: flex;
   align-items: center;
@@ -124,7 +124,6 @@
   font-size: 8.6rem;
   color: #888888a9;
 }
-/*  Img-box Step  */
 .img-box--step {
   position: relative;
 
@@ -169,9 +168,7 @@
 .testimonial-name {
   color: #6f6f6f;
 }
-/************/
-/* GALLERY */
-/**********/
+/* gallery */
 .gallery {
   padding: 1.8rem;
 }
@@ -189,7 +186,7 @@
 /*********************/
 /*   PRICING-PLAN   */
 /*******************/
-/*  Pricing  */
+/*  pricing plan  */
 .pricing-plan .pricing-plan__card {
   width: 100%;
   transition: all 0.4s ease-in-out;
@@ -225,7 +222,7 @@
   width: 90%;
   margin: 4.8rem auto 0;
 }
-/*  Plan  */
+/*  plan  */
 .plan .plan__name {
   font-size: 2rem;
 }
@@ -240,7 +237,7 @@
   color: #6f6f6f;
 }
 
-/*  Feature  */
+/*  feature  */
 .feature {
   text-align: left;
 }
@@ -261,7 +258,6 @@
 .cta-text-box {
   padding: 4.8rem 6.4rem 6.4rem 6.4rem;
 }
-/*  Img-box Cta  */
 .img-box--cta {
   background-image: linear-gradient(to right bottom, #ffffff0d, #ffffff0d),
     url("../img/coach/coach-bd-hbx2.png");
@@ -305,12 +301,14 @@
 .col-address address p,
 .col-logo .copyright {
   font-weight: 200;
+  padding: 0.8rem 0;
 }
-
+/* admin */
 .col-nav button {
   border: none;
   background-color: transparent;
   transition: all 0.5s;
+  padding: 0.8rem 0 0;
 }
 .col-nav button:active,
 .col-nav button:focus {

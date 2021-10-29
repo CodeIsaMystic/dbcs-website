@@ -230,7 +230,6 @@
   gap: 4rem;
   margin-left: auto;
 }
-/* dashboard--login */
 .dashboard-navs .dashboard--login__nav .dashboard--login__list li a,
 .dashboard-navs .dashboard--login__nav .dashboard--login__list li a ion-icon,
 .dashboard-navs .dashboard--login__nav .dashboard--login__list li p {
@@ -256,36 +255,6 @@
 .dashboard--logged__nav .dashboard--logged__list li:not(:last-child) {
   padding-right: 3.2rem;
 }
-
-/*******************/
-/*******************/
-/*******************/
-/*******************/
-/*******************/
-/*******************/
-
-/* vertical-nav */
-.vertical-nav {
-  display: flex;
-  flex-direction: column;
-}
-.vertical--sm {
-  gap: 1.6rem;
-}
-.vertical-gap--sm {
-  gap: 1.6rem;
-}
-.vertical--med {
-  gap: 2.4rem;
-}
-
-/*******************/
-/*******************/
-/*******************/
-/*******************/
-/*******************/
-/*******************/
-
 /*   side-menu   */
 .side-menu-wrapper {
   position: fixed;

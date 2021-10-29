@@ -89,7 +89,7 @@
           earum dolorem possimus aliquid? Fuga reprehenderit sint corrupti
           nulla! Autem.
         </p>
-        <ul class="vertical-nav">
+        <ul>
           <li>
             <a class="link link--underline" href="#"
               >Partenariat &rarr;</a
@@ -109,7 +109,7 @@
           nostrum culpa, id dolor ab? Lorem ipsum dolor sit amet
           consectetur adipisicing elit. In qui nostrum culpa, id dolor ab?
         </p>
-        <ul class="vertical-nav">
+        <ul>
           <li>
             <a class="link link--underline mb-xs" href="#"
               >Préparation Physique &rarr;</a

@@ -23,7 +23,6 @@
 
         <div class="col-address txt-light">
           <h4 class="heading-footer fontW700 mb-sm">Contact</h4>
-          <!-- TO CHECKOUT -->
           <address class="contacts txt-content--small pb-xs">
             <p class="address pb-xs">
               Adresse: <br />
@@ -58,7 +57,7 @@
 
         <nav class="col-nav">
           <h4 class="heading-footer txt-light fontW700 mb-sm">Entreprise</h4>
-          <ul class="vertical-nav vertical-gap--sm">
+          <ul>
             <li>
               <a class="link-light not-allowed" href="#">A propos</a>
             </li>
@@ -81,7 +80,7 @@
 
         <nav class="col-nav">
           <h4 class="heading-footer txt-light fontW700 mb-sm">Ressources</h4>
-          <ul class="vertical-nav vertical-gap--sm">
+          <ul>
             <li>
               <a class="link-light not-allowed" href="#">Road map</a>
             </li>

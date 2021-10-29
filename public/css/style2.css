@@ -23,6 +23,11 @@
 .contact-details .contact-details__div:first-child .col-address .social-links {
   margin-bottom: 3.2rem;
 }
+.contact-details .contact-details__div .col-nav ul {
+  display: flex;
+  flex-direction: column;
+}
+
 .contact-details .contact-details__div .col-nav li .link {
   font-size: 1.8rem;
 }

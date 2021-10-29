@@ -1,24 +1,21 @@
-/******************/
-/*    GLOBAL     */
-/****************/
-/*  custom text selection  */
+/**********************/
+/*       GLOBAL      */
+/********************/
+/* text selection  */
 ::selection {
   background-color: #46a1c9;
   color: #232323;
 }
-
 /* custom scrollbar  */
 ::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   background-color: #fff;
 }
-
 ::-webkit-scrollbar {
   width: 15px;
   background-color: #232323;
 }
-
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
@@ -91,15 +88,12 @@ select {
   font-family: inherit;
   color: inherit;
   border: none;
-  // border-radius: 4px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
-
 input:focus {
   border-radius: none !important;
   border: 0.5px solid #333;
 }
-
 input::placeholder {
   color: #888888;
 }
@@ -107,9 +101,7 @@ input::placeholder {
 /************************************************/
 /************************************************/
 
-/****************************/
-/* For development process */
-/**************************/
+/* not allowed */
 .not-allowed {
   cursor: not-allowed !important;
 }
@@ -117,13 +109,7 @@ input::placeholder {
   opacity: 0.5;
   color: #333 !important;
 }
-/************************************************/
-/************************************************/
-/************************************************/
-/************************************************/
-/************************************************/
-
-/* Font  */
+/* font-weight  */
 .fontW700 {
   font-weight: 700;
 }
@@ -133,7 +119,6 @@ input::placeholder {
 .font-garamond {
   font-family: "EB Garamond", serif;
 }
-
 /* Texts */
 .txt-content--small {
   font-size: 1.4rem;
@@ -163,13 +148,6 @@ input::placeholder {
 .txt-center {
   text-align: center;
 }
-
-/*******************************************/
-/*******************************************/
-/*******************************************/
-/*******************************************/
-/*******************************************/
-
 /* texts colors */
 .txt-light {
   color: #fff;
@@ -189,6 +167,10 @@ input::placeholder {
 
 /*******************************************/
 /*******************************************/
+/*******************************************/
+/*******************************************/
+/*******************************************/
+/*******************************************/
 /* Linear-gradient  */
 .linear-grad-blue {
   background-image: linear-gradient(to right bottom, #5db8df73, #46a1c90d);
@@ -200,18 +182,10 @@ input::placeholder {
 .bg-white {
   background-color: #fff;
 }
-
-/*******************************************/
-/*******************************************/
 /* backgrounds */
 .bg-dark {
   background-color: #232323;
 }
-/*******************************************/
-/*******************************************/
-/*******************************************/
-/*******************************************/
-/*******************************************/
 .bg-blue {
   background-color: #46a1c9;
 }
@@ -225,6 +199,10 @@ input::placeholder {
 //   background-color: #f84f4f;
 // }
 
+/*******************************************/
+/*******************************************/
+/*******************************************/
+/*******************************************/
 /*******************************************/
 /*******************************************/
 /*******************************************/
@@ -242,7 +220,6 @@ input::placeholder {
 }
 .grid--1-col {
   grid-template-columns: 1fr;
-  // display: grid;
   overflow: hidden;
 }
 .grid--2-cols {
@@ -270,15 +247,14 @@ input::placeholder {
 .grid-gap--large {
   column-gap: 6.4rem;
 }
-/**************************/
-/**************************/
-/**************************/
-/**************************/
-
 /*  grid utils  */
 .grid--center-v {
   align-items: center;
 }
+/**************************/
+/**************************/
+/**************************/
+/**************************/
 
 /*  grid template  */
 .grid--hero {
@@ -334,8 +310,7 @@ input::placeholder {
 .box-shad1 {
   box-shadow: 0 2.4rem 4.8rem #23232326;
 }
-/*  spacing  */
-/*  -marginY  */
+/*  marginY  */
 .mb-xxs {
   margin-bottom: 1.2rem;
 }
@@ -381,7 +356,7 @@ input::placeholder {
 .mr-xs {
   margin-right: 1.6rem;
 }
-/*  -paddingY  */
+/*  paddingY  */
 .pb-xxs {
   padding-bottom: 0.8rem;
 }
