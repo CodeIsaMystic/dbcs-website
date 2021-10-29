@@ -11,18 +11,26 @@
 ::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
-  background-color: #232323;
+  background-color: #fff;
 }
 
 ::-webkit-scrollbar {
-  width: 14px;
+  width: 15px;
   background-color: #232323;
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: rgb(115, 115, 115);
+  min-height: 150px;
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.44, rgb(82, 82, 82)),
+    color-stop(0.72, rgb(72, 72, 72)),
+    color-stop(0.86, rgb(61, 61, 61))
+  );
 }
 /* global settings */
 * {

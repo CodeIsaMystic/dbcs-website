@@ -9,7 +9,6 @@
       if($_SERVER['REQUEST_METHOD'] == 'POST'){
         // Process form
 
-        // die('Submitted');
   
         // Sanitize POST data
         $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
