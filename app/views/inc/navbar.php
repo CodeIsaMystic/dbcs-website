@@ -106,7 +106,7 @@
               <a class="link" href="<?= URL_ROOT; ?>">Accueil</a>
             </li>
             <li>
-              <a class="link not-allowed" href="<?= URL_ROOT; ?>/pages/coaching">Coaching</a>
+              <a class="link" href="<?= URL_ROOT; ?>/pages/coaching">Coaching</a>
             </li>
             <li><a class="link" href="<?= URL_ROOT; ?>/pages/blog">Blog</a></li>
             <li>
