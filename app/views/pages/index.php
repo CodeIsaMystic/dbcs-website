@@ -699,7 +699,7 @@
           </div>
 
           <div>
-            <label class="fontW700 mb-xxs" for="select-where"
+            <label class="fontW700 mb-xxs" for="freeCourse"
               >Demandez votre essai gratuit</label
             >
             <input class="b-radius4 bg-white" type="checkbox" id="freeCourse" name="freeCourse">

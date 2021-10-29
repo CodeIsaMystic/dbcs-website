@@ -268,3 +268,11 @@ table#myTable {
 .td-link-blue {
   background-color: #46a1c9;
 }
+
+/********************/
+/*   CONTACT FORM  */
+/******************/
+.contact-form .contact-form__content {
+  padding: 4.8rem;
+  background-color: rgba(255, 255, 255, 0.5);
+}

@@ -128,7 +128,7 @@
 
 
 <!-- SECTION PARTNERS -->
-<section class="bg-white mb-lg pt-xl">
+<section class="bg-white mb-xl mt-xl">
   <div class="container container--lg">
     <h2 class="subheading txt-upp txt-center fontW500 mb-sm">
       Nos partenaires
@@ -152,80 +152,85 @@
   </div>
 </section>
 
-<!-- SECTION CTA --->
-<section class="linear-grad-lightBlue pb-lg pt-lg">
-  <div class="container container--md with-parallax" id="cta">
-    <div
-      class="
-        cta
-        grid--cta
-        b-radius4
-        box-shad1
-        linear-grad-blue
-        box-parallax
-      "
-    >
-      <div class="cta-text-box txt-dark">
+<!-- SECTION CONTACT FORM --->
+<section class="contact-form mb-lg">
+  <div class="container container--md">
+    <div class="contact-form__content b-radius4 box-shad1">
+      <div class="txt-dark">
         <h2 class="heading-secondary txt-dark-gray mb">
-          Contactez le coach
+          Contactez-nous pour un partenariat
         </h2>
-        <p class="txt-content--large mb">
-          Amateurs, Sportifs ou bien semi-professionnels, tentez votre
-          chance, le coach vous recontactera pour commencer à vous aider
-          dans vos objectifs. Il pourra alors, vous faire profiter de
-          votre premier cours gratuit. (pour établir un partenariat vous
-          pouvez nous contactez via la rubrique de
-          <a class="link link-dark" href="#">"partenariat"</a> en bas de
-          page)
+        <p class="txt-content--large mb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur provident in rem praesentium laudantium, harum saepe recusandae repudiandae nemo dignissimos nihil vel dolorum nostrum aperiam molestiae fugiat dolorem iste reprehenderit quibusdam obcaecati consequuntur perspiciatis! Corporis fugiat sapiente autem vel dolore.
         </p>
 
+      </div>
+      <div>
+        
         <form class="grid--form" name="sign-up">
+          <!-- name -->
           <div>
-            <label class="fontW700 mb-xxs" for="full-name"
-              >Nom Complet</label
+            <label class="mb-xxs" for="full-name"
+              >Nom de l'entreprise</label
             >
             <input
               class="b-radius4 bg-white"
               id="full-name"
               type="text"
-              placeholder="Votre nom"
+              placeholder="Nom..."
               name="full-name"
               required
             />
           </div>
 
+          <!-- email -->
           <div>
-            <label class="fontW700 mb-xxs" for="email"
+            <label class="mb-xxs" for="email"
               >Adresse Mail</label
             >
             <input
               class="b-radius4 bg-white"
               id="email"
               type="email"
-              placeholder="votreMail@example.com"
+              placeholder="Email..."
               name="email"
               required
             />
           </div>
-
           
+          <!-- partnership -->
           <div>
-            <label class="fontW700 mb-xxs" for="select-where"
-              >Demandez votre essai gratuit</label
+            <label class="mb-xxs" for="select-partnership"
+              >Type de partenariat?</label
             >
-            <input class="b-radius4 bg-white" type="checkbox" id="freeCourse" name="freeCourse">
+            <select
+              class="b-radius4 bg-white"
+              id="select-partnership"
+              name="select-partnership"
+              required
+            >
+              <option value=""></option>
+              <option value="blogging">Blogging</option>
+              <option value="nutrition">Nutrition</option>
+              <option value="preps">Préparation physique</option>
+              <option value="entreprise">Entreprise</option>
+              <option value="internet">Internet</option>
+            </select>
           </div>
 
-          <button class="btn btn--baseline btn-hover btn-hover--blue mt-xxs">
-            Essai gratuit
+          <!-- message -->
+          <div>
+            <label class="mb-xxs"
+            >Envoyez nous un message</label
+            >
+            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+          </div>
+          
+          <!-- submit -->
+          <button type="submit" class="btn btn--baseline btn-hover btn-hover--blue mt-xxs">
+            Envoyez
           </button>
         </form>
       </div>
-      <div
-        class="img-box--cta"
-        role="img"
-        aria-label="Bastien Desmet Coach Sportif"
-      ></div>
     </div>
   </div>
 </section>
