@@ -8,9 +8,9 @@
 <?php endif; ?>
 
 
- <!-- SECTION POST PAGE HERO -->
-<section class="post-page-hero bg-white">
-  <div class="">
+ <!-- SECTION HERO POST PAGE -->
+<section class="hero--fullW bg-white">
+  <div>
     <picture>
       <source srcset="<?php echo URL_ROOT; ?>/img/posts/pages/physio.png" type="image/webp" />
       <source srcset="<?php echo URL_ROOT; ?>/img/posts/pages/physio.png" type="image/png" />
@@ -18,7 +18,7 @@
       <img src="<?php echo URL_ROOT; ?>/img/posts/pages/physio.png" alt="photo on table with a meal of fruits"/>
     </picture>
   </div>
-  <div class="post-page-hero__heading">
+  <div class="hero--fullW__heading">
     <h4 class="subheading fontW700 txt-upp txt-blue">Article</h4>
     <h1 class="heading-primary txt-dark-gray txt-center fontW500 font-garamond">
       <?php echo $data['post']->title; ?>

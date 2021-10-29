@@ -71,6 +71,15 @@
   .container--md {
     max-width: 100%;
   }
+
+  /* hero fullW */
+  .hero--fullW {
+    height: 60vh;
+  }
+  .hero--fullW__heading {
+    top: 35%;
+  }
+
   /* partners */
   .partners-logo {
     gap: 1.6rem;
@@ -206,6 +215,13 @@
   .primary-nav .btn:visited {
     font-size: 2.4rem;
   }
+  /* hero fullW */
+  .hero--fullW {
+    height: 50vh;
+  }
+  .hero--fullW__heading {
+    top: 30%;
+  }
   /* hero */
   .hero .txt-box--hero {
     width: 100%;
@@ -228,6 +244,7 @@
     justify-content: center;
     flex-direction: column;
   }
+
   /* how */
   .step-number {
     font-size: 7.4rem;
@@ -448,10 +465,26 @@
   .footer .grid--footer .col-logo {
     grid-area: col-logo;
   }
+
+  /* headings */
+  .heading-primary {
+    font-size: 4.4rem;
+  }
+  /* hero fullW */
+  .hero--fullW {
+    height: 44vh;
+  }
+  .hero--fullW__heading {
+    top: 40%;
+    width: 75%;
+    padding: 1.6rem 0.8rem;
+  }
+
   /* hero */
   .hero .txt-box--hero .btn-wrapper {
     width: 50%;
   }
+
   /* pricing-plan */
   .pricing-plan .pricing-plan__card {
     width: 70%;
@@ -529,7 +562,15 @@
   }
   /* headings */
   .heading-primary {
-    font-size: 4.4rem;
+    font-size: 3.8rem;
+  }
+  /* hero fullW */
+  .hero--fullW {
+    height: 38vh;
+  }
+  .hero--fullW__heading {
+    top: 30%;
+    width: 90%;
   }
   /* hero */
   .hero .txt-box--hero .btn-wrapper {
@@ -591,11 +632,26 @@
 }
 
 /*******************************/
-/* BELOW 460px (Small Phones) */
+/* BELOW 400px (Small Phones) */
 /*****************************/
 
-// @media (max-width: 30em) {
-// }
+@media (max-width: 25em) {
+  /* headings */
+  .heading-primary {
+    font-size: 2.4rem;
+  }
+  .subheading {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  /* hero fullW */
+  .hero--fullW {
+    height: 28vh;
+  }
+  .hero--fullW__heading {
+    top: 40%;
+  }
+}
 
 /******************************/
 /* Fixing Safari flexbox gap */
