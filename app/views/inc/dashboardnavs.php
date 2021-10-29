@@ -1,7 +1,7 @@
 
 <!-- DASHBOARD LOGGED -->
 <div class="dashboard--logged bg-dark">
-  <p class="txt-content--small">Bienvenu 
+  <p class="txt-content--small">Bienvenue 
     <?php echo $_SESSION['user_name']; ?>
   </p>
   <nav class="dashboard--logged__nav">
@@ -27,7 +27,7 @@
           Prospects
         </a>
       </li>
-      <li><a class="link txt-light" href="<?php echo URL_ROOT; ?>/users/logout">Logout</a></li>
+      <li><a class="link txt-light" href="<?php echo URL_ROOT; ?>/users/logout">Déconnexion</a></li>
     </ul>
   </nav>
 </div>
