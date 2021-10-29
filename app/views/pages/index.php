@@ -700,21 +700,9 @@
 
           <div>
             <label class="fontW700 mb-xxs" for="select-where"
-              >Où vous nous avez connu?</label
+              >Demandez votre essai gratuit</label
             >
-            <select
-              class="b-radius4 bg-white"
-              id="select-where"
-              name="select-where"
-              required
-            >
-              <option value=""></option>
-              <option value="facebook">Facebook</option>
-              <option value="instagram">Instagram</option>
-              <option value="recommandated">Le bouche à oreille</option>
-              <option value="friends">Recommandation d'un ami</option>
-              <option value="others">Autre</option>
-            </select>
+            <input class="b-radius4 bg-white" type="checkbox" id="freeCourse" name="freeCourse">
           </div>
 
           <button class="btn btn--baseline btn-hover btn-hover--blue">

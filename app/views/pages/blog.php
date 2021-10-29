@@ -122,21 +122,12 @@
             />
           </div>
 
+          
           <div>
-            <label class="fontW700 mb-xxs" for="select-where">Où vous nous avez connu?</label>
-            <select
-              class="b-radius4 bg-white"
-              id="select-where"
-              name="select-where"
-              required
+            <label class="fontW700 mb-xxs" for="select-where"
+              >Demandez votre essai gratuit</label
             >
-              <option value=""></option>
-              <option value="facebook">Facebook</option>
-              <option value="instagram">Instagram</option>
-              <option value="recommandated">Le bouche à oreille</option>
-              <option value="firend">Recommandation d'un ami</option>
-              <option value="others">Autre</option>
-            </select>
+            <input class="b-radius4 bg-white" type="checkbox" id="freeCourse" name="freeCourse">
           </div>
 
           <button class="btn btn--baseline btn-hover btn-hover--blue mt-xxs">

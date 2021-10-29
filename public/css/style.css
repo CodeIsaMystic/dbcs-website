@@ -301,6 +301,11 @@
   outline: none;
   box-shadow: 0 0 0 0.2rem #23232380;
 }
+.cta input[type="checkbox"] {
+  width: 14px;
+  margin: 0 auto 0 15px;
+  display: block;
+}
 /********************/
 /* LOGIN & REGISTER  */
 /******************/
