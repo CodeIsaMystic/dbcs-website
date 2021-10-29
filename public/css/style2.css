@@ -62,8 +62,9 @@
   margin: 0 auto;
 }
 /********************/
-/* LOGIN  */
+/* LOGIN & REGISTER  */
 /******************/
+.register .register--text,
 .login .login--text {
   padding: 0 3.2rem;
 }

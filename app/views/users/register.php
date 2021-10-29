@@ -2,7 +2,7 @@
 <?php require APP_ROOT . '/views/inc/header.php'; ?>
   
 <!-- SECTION REGISTER -->
-<section class="bg-white pb-md pt-lg">
+<section class="register bg-white pb-md pt-lg">
 
   <div class="container container--xs">
     <div class="grid--1-col b-radius4 linear-grad-lightBlue box-shad1 pt-xs">
@@ -10,7 +10,7 @@
         Enregistrement
       </h2>
 
-      <div class="text-box--login txt-dark txt-content mb-xs">
+      <div class="register--text txt-dark txt-content mb-xs">
         <p class="mb-xs">
           Enregistrez vos informations pour pouvoir vous connecter à votre
           "Dashboard".
