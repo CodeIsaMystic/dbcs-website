@@ -148,14 +148,14 @@
 /* POST-PAGE-CONTENT */
 /* POSTS POST  */
 /********************/
+/* posts post */
+.posts .post {
+  width: 100%;
+}
 .post-content {
   padding: 0 6.4rem 6.4rem 6.4rem;
 }
-/* posts post */
-.post {
-  width: 100%;
-}
-.posts .post .img-box--post img {
+.posts .post .img img {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
@@ -168,11 +168,6 @@
   margin-left: auto;
   margin-right: auto;
 }
-/* to check it out */
-.post-page div .post-content blockquote p[text] {
-  max-width: 100% !important;
-}
-
 .post-page .post-content h1 {
   font-size: 3rem;
   line-height: 1.5;
@@ -184,6 +179,7 @@
 .post-page .post-content h2 {
   font-size: 1.8rem;
   margin-top: 2.4rem;
+  margin-bottom: 1.2rem;
   font-family: "Montserrat", sans-serif;
 }
 .posts .post .post-content h2,
@@ -202,7 +198,7 @@
 .posts .post .post-content ol li,
 .posts .post .post-content ul li {
   font-size: 1.7rem;
-  font-weight: 100;
+  font-weight: 400;
   margin-top: 0.8rem;
   margin-bottom: 1.6rem;
 }
@@ -213,7 +209,7 @@
 .post-page .post-content ol li,
 .post-page .post-content ul li {
   font-size: 1.7rem;
-  font-weight: 200;
+  font-weight: 400;
   line-height: 1.4;
   color: #232323;
   font-family: "Montserrat", sans-serif;
@@ -222,10 +218,13 @@
 /* blockquote */
 .post-page .post-content blockquote {
   width: 100%;
+  padding-left: 1.8rem;
+  margin: 4.8rem 0;
 }
 .post-page .post-content blockquote p {
   font-family: "EB Garamond", serif;
   font-size: 1.7rem;
+  font-weight: 100;
   font-style: italic;
   line-height: 1.4;
   color: #888;
@@ -236,6 +235,10 @@
 .posts .post .post-content p {
   padding: 0 0 1.4rem 0 !important;
 }
+.post-page .post-content p strong {
+  color: #46a1c9;
+}
+
 /* lists */
 .post-page .post-content ol li,
 .post-page .post-content ul li {
@@ -251,6 +254,7 @@
 .post-page .post-content ul li ul {
   padding-left: 0;
   padding-top: 0.8rem;
+  font-weight: 400;
 }
 .posts .post .post-content ul li,
 .post-page .post-content ul li {
@@ -260,15 +264,6 @@
 .post-page .post-content ol li {
   list-style-type: decimal;
 }
-// .posts .post .post-content a,
-// .post-page .container .post-content:first-of-type a {
-//   color: #46a1c9 !important;
-//   transition: color 0.3s linear;
-// }
-// .posts .post .post-content a:hover,
-// .post-page .container .post-content:first-of-type a:hover {
-//   color: #232323 !important;
-// }
 
 /****************/
 /*  DATATABLE  */
