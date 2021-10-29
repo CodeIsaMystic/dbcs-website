@@ -248,6 +248,39 @@
 .feature h3 {
   font-size: 2rem;
 }
+/********************/
+/* CONTACT-DETAILS */
+/******************/
+.contact-details .contact-details__div:first-child .col-address h4,
+.contact-details .contact-details__div:nth-child(2) .col-nav h4 {
+  margin-bottom: 9.8rem;
+}
+.contact-details
+  .contact-details__div:first-child
+  .col-address
+  p:first-of-type {
+  margin-bottom: 6.4rem;
+}
+.contact-details .contact-details__div:nth-child(2) .col-nav p,
+.contact-details .contact-details__div:last-child .col-nav p {
+  margin-bottom: 6.4rem;
+}
+.contact-details .contact-details__div:last-child .col-nav h4 {
+  margin-bottom: 4.8rem;
+}
+
+.contact-details .contact-details__div:first-child .contacts p:first-of-type,
+.contact-details .contact-details__div:first-child .col-address .social-links {
+  margin-bottom: 3.2rem;
+}
+.contact-details .contact-details__div .col-nav ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-details .contact-details__div .col-nav li .link {
+  font-size: 1.8rem;
+}
 
 /**********/
 /*  CTA  */
@@ -268,7 +301,13 @@
   outline: none;
   box-shadow: 0 0 0 0.2rem #23232380;
 }
-
+/********************/
+/* LOGIN & REGISTER  */
+/******************/
+.register .register--text,
+.login .login--text {
+  padding: 0 3.2rem;
+}
 /***********/
 /* FOOTER */
 /*********/
