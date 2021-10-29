@@ -28,7 +28,17 @@
 
 <!-- SECTION POST PAGE CONTENT -->
 <section class="post-page bg-white mt-md">
-  <div class="container container--lgs">
+  <!-- BACK BTN -->
+  <div class="container container--lg">
+
+    <div class="txt-dark mb">
+      <a href="<?php echo URL_ROOT; ?>/pages/blog" class="link link-dark link--underline">
+        &larr;Retour
+      </a>
+    </div>
+
+  </div>
+  <div class="container container--lg">
     <div class="post-content txt-dark mb-xs">
       <?php echo $data['post']->body; ?>
     </div>

@@ -3,6 +3,16 @@
 
 <!-- SECTION ADD-POST -->
 <section class="add-post pb-lg pt-xl">
+  <!-- BACK BTN -->
+  <div class="container container--lg">
+
+    <div class="txt-dark mb">
+      <a href="<?php echo URL_ROOT; ?>/posts/list" class="link link-dark link--underline">
+        &larr;Retour
+      </a>
+    </div>
+
+  </div>
   
   <div class="container container--md">
     <div class="grid--1-col b-radius4 box-shad1">
