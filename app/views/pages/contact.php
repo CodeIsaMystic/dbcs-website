@@ -6,18 +6,25 @@
   <?php require APP_ROOT . '/views/inc/sidebuttonsmenu.php'; ?>
 <?php endif; ?>
 
-<!-- SECTION CONTACT-HERO  --->
-<section class="contact-hero-bg hero-bg-img">
-  <div class="hero grid--hero container container--md">
-    <div class="mt-md mb-lg pb-lg pt-lg">
-      <h4 class="subheading fontW700 txt-upp txt-blue mb-xs">Contact</h4>
-      <h1 class="heading-primary txt-light mb-sm">
+
+ <!-- SECTION HERO CONTACT -->
+<section class="hero--fullW bg-white">
+  <div>
+    <picture>
+      <source srcset="<?php echo URL_ROOT; ?>/img/full-w-hero/contact2-hero.png" type="image/webp" />
+      <source srcset="<?php echo URL_ROOT; ?>/img/full-w-hero/contact2-hero.png" type="image/png" />
+
+      <img src="<?php echo URL_ROOT; ?>/img/full-w-hero/contact2-hero.png" alt="#"/>
+    </picture>
+  </div>
+  <div class="hero--fullW__heading hero--fullW__heading--left">
+    <h4 class="subheading fontW700 txt-upp txt-blue pb-xxs">Article</h4>
+    <h1 class="heading-primary txt-dark-gray fontW500 font-garamond pb-xs">
         <?= $data['title']; ?>
-      </h1>
-      <p class="txt-content txt-light">
+    </h1>
+    <p class="txt-content txt-dark">
         <?= $data['description']; ?>
       </p>
-    </div>
   </div>
 </section>
 

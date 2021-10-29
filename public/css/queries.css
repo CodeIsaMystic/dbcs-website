@@ -76,8 +76,11 @@
   .hero--fullW {
     height: 60vh;
   }
-  .hero--fullW__heading {
+  .hero--fullW__heading--center {
     top: 35%;
+  }
+  .hero--fullW__heading--left {
+    top: 25%;
   }
 
   /* partners */
@@ -215,34 +218,38 @@
   .primary-nav .btn:visited {
     font-size: 2.4rem;
   }
-  /* hero fullW */
-  .hero--fullW {
-    height: 50vh;
-  }
-  .hero--fullW__heading {
-    top: 30%;
-  }
-  /* hero */
-  .hero .txt-box--hero {
+  /* main-hero */
+  .hero .hero--txt {
     width: 100%;
     text-align: center;
     padding-top: 12.8rem;
   }
-  .hero .txt-box--hero .btn-wrapper {
+  .hero .hero--txt .btn-wrapper {
     width: 40%;
     margin: 0 auto;
   }
-  .hero .txt-box--hero .btn--blue {
+  .hero .hero--txt .btn--blue {
     margin-top: 6.4rem;
   }
-  .hero .img-box--hero picture,
-  .hero .img-box--hero {
+  .hero .hero--img picture,
+  .hero .hero--img {
     display: none;
   }
-
   .hero .customers-profiles {
     justify-content: center;
     flex-direction: column;
+  }
+  /* hero fullW */
+  .hero--fullW {
+    height: 50vh;
+  }
+  .hero--fullW__heading--center {
+    top: 30%;
+  }
+  .hero--fullW__heading--left {
+    // top: 30%;
+    width: 85%;
+    left: 5%;
   }
 
   /* how */
@@ -470,19 +477,26 @@
   .heading-primary {
     font-size: 4.4rem;
   }
+  /* main-hero */
+  .hero .hero--txt .btn-wrapper {
+    width: 50%;
+  }
   /* hero fullW */
   .hero--fullW {
     height: 44vh;
   }
   .hero--fullW__heading {
     top: 40%;
-    width: 75%;
     padding: 1.6rem 0.8rem;
   }
-
-  /* hero */
-  .hero .txt-box--hero .btn-wrapper {
-    width: 50%;
+  .her--fullW__heading--center {
+    width: 75%;
+  }
+  .hero--fullW__heading--left {
+    left: 50%;
+    text-align: center;
+    top: 25%;
+    transform: translateX(-50%);
   }
 
   /* pricing-plan */
@@ -564,17 +578,20 @@
   .heading-primary {
     font-size: 3.8rem;
   }
+  /* main-hero */
+  .hero .hero--txt .btn-wrapper {
+    width: 80%;
+  }
   /* hero fullW */
   .hero--fullW {
     height: 38vh;
   }
-  .hero--fullW__heading {
+  .hero--fullW__heading--center {
     top: 30%;
     width: 90%;
   }
-  /* hero */
-  .hero .txt-box--hero .btn-wrapper {
-    width: 80%;
+  .hero--fullW__heading--left {
+    top: 25%;
   }
   /* how */
   .img-box--step:nth-child(2) {

@@ -10,29 +10,34 @@
   <?php require APP_ROOT . '/views/inc/sidebuttonsmenu.php'; ?>
 <?php endif; ?>
 
-<!-- SECTION HERO-POST --->
-<section class="blog-hero-bg hero-bg-img">
-  <div class="hero grid--hero container container--md">
-    <div class="pt-md pb-lg mt-lg mb-lg">
-      <h4 class="subheading fontW700 txt-upp txt-blue mb-xs">Blog</h4>
-      <h1 class="heading-primary txt-light mb-xs">
+ <!-- SECTION HERO BLOG -->
+<section class="hero--fullW bg-white">
+  <div>
+    <picture>
+      <source srcset="<?php echo URL_ROOT; ?>/img/full-w-hero/gym2-hero.png" type="image/webp" />
+      <source srcset="<?php echo URL_ROOT; ?>/img/full-w-hero/gym2-hero.png" type="image/png" />
+
+      <img src="<?php echo URL_ROOT; ?>/img/full-w-hero/gym2-hero.png" alt="#"/>
+    </picture>
+  </div>
+  <div class="hero--fullW__heading hero--fullW__heading--left">
+    <h4 class="subheading fontW700 txt-upp txt-blue pb-xxs">Article</h4>
+    <h1 class="heading-primary txt-dark-gray fontW500 font-garamond pb-xs">
         <?= $data['title']; ?>
-      </h1>
-      <p class="txt-content txt-light pb-md">
+    </h1>
+    <p class="txt-content txt-dark">
         <?= $data['description']; ?>
       </p>
-    </div>
   </div>
 </section>
 
 <!-- SECTION POST-TITLE --->
 <section class="bg-white pb-md pt-md">
   <div class="container container--md txt-center">
-    <h4 class="subheading fontW700 txt-upp txt-blue mb-xs">Blog</h4>
     <h2
     class="heading-secondary txt-dark-gray font-garamond fontW500"
     >
-    Nos derniers articles en date..
+    Nos derniers articles en date...
   </h2>
 </div>
 </section>

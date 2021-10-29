@@ -1,4 +1,3 @@
-<?php// var_dump($post); die(); ?>
 <!-- HEADER --->
 <?php require APP_ROOT . '/views/inc/header.php'; ?>
 
@@ -11,21 +10,27 @@
 <?php endif; ?>
 
 
-<!-- SECTION HERO --->
-<section class="list-hero-bg hero-bg-img">
-  <div class="hero grid--hero container container--md">
-    <div class="mt-md mb-lg pb-lg pt-lg">
-      <h4 class="subheading fontW700 txt-upp txt-blue mb-xs">Liste</h4>
-      <h1 class="heading-primary txt-light mb-sm">
-          <?= $data['title']; ?>
-      </h1>
-      <p class="txt-content txt-light">
-          <?= $data['description']; ?>
-      </p>
-    </div>
+
+ <!-- SECTION HERO POSTS LIST -->
+<section class="hero--fullW bg-white">
+  <div>
+    <picture>
+      <source srcset="<?php echo URL_ROOT; ?>/img/full-w-hero/gym.png" type="image/webp" />
+      <source srcset="<?php echo URL_ROOT; ?>/img/full-w-hero/gym.png" type="image/png" />
+
+      <img src="<?php echo URL_ROOT; ?>/img/full-w-hero/gym.png" alt="#"/>
+    </picture>
+  </div>
+  <div class="hero--fullW__heading hero--fullW__heading--left">
+    <h4 class="subheading fontW700 txt-upp txt-blue">Listes</h4>
+    <h1 class="heading-primary txt-dark-gray fontW500 font-garamond">
+      <?= $data['title']; ?>
+    </h1>
+    <p class="txt-content txt-dark">
+      <?= $data['description']; ?>
+    </p>
   </div>
 </section>
-  
   
 <!-- SECTION POSTS-LIST -->
 <section>

@@ -15,10 +15,10 @@
       <source srcset="<?php echo URL_ROOT; ?>/img/posts/pages/physio.png" type="image/webp" />
       <source srcset="<?php echo URL_ROOT; ?>/img/posts/pages/physio.png" type="image/png" />
 
-      <img src="<?php echo URL_ROOT; ?>/img/posts/pages/physio.png" alt="photo on table with a meal of fruits"/>
+      <img src="<?php echo URL_ROOT; ?>/img/posts/pages/physio.png" alt="#"/>
     </picture>
   </div>
-  <div class="hero--fullW__heading">
+  <div class="hero--fullW__heading hero--fullW__heading--center">
     <h4 class="subheading fontW700 txt-upp txt-blue">Article</h4>
     <h1 class="heading-primary txt-dark-gray txt-center fontW500 font-garamond">
       <?php echo $data['post']->title; ?>
