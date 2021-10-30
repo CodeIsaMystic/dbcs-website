@@ -65,7 +65,7 @@
               <a class="link-light not-allowed" href="#">Partenariat</a>
             </li>
             <li>
-              <a class="link-light not-allowed" href="#">Pour les entreprises</a>
+              <a class="link-light not-allowed" href="#">Entreprises & Associations</a>
             </li>
             <li>
               <a class="link-light not-allowed" href="#"
