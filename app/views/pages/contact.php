@@ -157,7 +157,7 @@
   <div class="container container--md">
     <div class="contact-form__content b-radius4 box-shad1">
       <div class="txt-dark">
-        <h2 class="heading-secondary txt-dark-gray mb">
+        <h2 class="heading-secondary font-garamond txt-dark-gray mb">
           Contactez-nous pour un partenariat
         </h2>
         <p class="txt-content--large mb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur provident in rem praesentium laudantium, harum saepe recusandae repudiandae nemo dignissimos nihil vel dolorum nostrum aperiam molestiae fugiat dolorem iste reprehenderit quibusdam obcaecati consequuntur perspiciatis! Corporis fugiat sapiente autem vel dolore.
@@ -167,54 +167,56 @@
       <div>
         
         <form class="grid--form" name="sign-up">
-          <!-- name -->
-          <div>
-            <label class="mb-xxs" for="full-name"
-              >Nom de l'entreprise</label
-            >
-            <input
-              class="b-radius4 bg-white"
-              id="full-name"
-              type="text"
-              placeholder="Nom..."
-              name="full-name"
-              required
-            />
-          </div>
-
-          <!-- email -->
-          <div>
-            <label class="mb-xxs" for="email"
-              >Adresse Mail</label
-            >
-            <input
-              class="b-radius4 bg-white"
-              id="email"
-              type="email"
-              placeholder="Email..."
-              name="email"
-              required
-            />
-          </div>
-          
-          <!-- partnership -->
-          <div>
-            <label class="mb-xxs" for="select-partnership"
-              >Type de partenariat?</label
-            >
-            <select
-              class="b-radius4 bg-white"
-              id="select-partnership"
-              name="select-partnership"
-              required
-            >
-              <option value=""></option>
-              <option value="blogging">Blogging</option>
-              <option value="nutrition">Nutrition</option>
-              <option value="preps">Préparation physique</option>
-              <option value="entreprise">Entreprise</option>
-              <option value="internet">Internet</option>
-            </select>
+          <div class="">
+            <!-- name -->
+            <div>
+              <label class="mb-xxs" for="full-name"
+                >Nom de l'entreprise</label
+              >
+              <input
+                class="b-radius4 bg-white"
+                id="full-name"
+                type="text"
+                placeholder="Nom..."
+                name="full-name"
+                required
+              />
+            </div>
+  
+            <!-- email -->
+            <div class="mt-xs">
+              <label class="mb-xxs" for="email"
+                >Adresse Mail</label
+              >
+              <input
+                class="b-radius4 bg-white"
+                id="email"
+                type="email"
+                placeholder="Email..."
+                name="email"
+                required
+              />
+            </div>
+            
+            <!-- partnership -->
+            <div class="mt-sm">
+              <label class="mb-xxs" for="select-partnership"
+                >Type de partenariat?</label
+              >
+              <select
+                class="b-radius4 bg-white"
+                id="select-partnership"
+                name="select-partnership"
+                required
+              >
+                <option value=""></option>
+                <option value="blogging">Blogging</option>
+                <option value="nutrition">Nutrition</option>
+                <option value="preps">Préparation physique</option>
+                <option value="entreprise">Entreprise</option>
+                <option value="internet">Internet</option>
+              </select>
+            </div>            
           </div>
 
           <!-- message -->
