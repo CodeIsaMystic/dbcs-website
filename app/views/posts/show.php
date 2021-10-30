@@ -12,10 +12,10 @@
 <section class="hero--fullW bg-white">
   <div>
     <picture>
-      <source srcset="<?php echo URL_ROOT; ?>/img/posts/pages/physio.png" type="image/webp" />
-      <source srcset="<?php echo URL_ROOT; ?>/img/posts/pages/physio.png" type="image/png" />
+      <source srcset="<?php echo URL_ROOT; ?>/img/uploads/posts/hero/physio.png" type="image/webp" />
+      <source srcset="<?php echo URL_ROOT; ?>/img/uploads/posts/hero/physio.png" type="image/png" />
 
-      <img src="<?php echo URL_ROOT; ?>/img/posts/pages/physio.png" alt="#"/>
+      <img src="<?php echo URL_ROOT; ?>/img/uploads/posts/hero/physio.png" alt="close up of two hands doing massage"/>
     </picture>
   </div>
   <div class="hero--fullW__heading hero--fullW__heading--center">

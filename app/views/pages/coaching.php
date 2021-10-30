@@ -6,10 +6,10 @@
 <section class="hero--fullW bg-white">
   <div>
     <picture>
-      <source srcset="<?php echo URL_ROOT; ?>/img/full-w-hero/coaching.png" type="image/webp" />
-      <source srcset="<?php echo URL_ROOT; ?>/img/full-w-hero/coaching.png" type="image/png" />
+      <source srcset="<?php echo URL_ROOT; ?>/img/site/full-width/coaching.png" type="image/webp" />
+      <source srcset="<?php echo URL_ROOT; ?>/img/site/full-width/coaching.png" type="image/png" />
 
-      <img src="<?php echo URL_ROOT; ?>/img/full-w-hero/coaching.png" alt="#"/>
+      <img src="<?php echo URL_ROOT; ?>/img/site/full-width/coaching.png" alt="Two womens doing sport in a gym"/>
     </picture>
   </div>
   <div class="hero--fullW__heading hero--fullW__heading--left">
@@ -44,18 +44,18 @@
       Nos partenaires
     </h2>
     <div class="partners-logo">
-      <img src="<?= URL_ROOT; ?>/img/logos-partners/decathlon.png" alt="Decathlon logo" />
+      <img src="<?= URL_ROOT; ?>/img/site/logos/logos-partners/decathlon.png" alt="Decathlon logo" />
       <img
-        src="<?= URL_ROOT; ?>/img/logos-partners/cep-gilles-cometti.png"
+        src="<?= URL_ROOT; ?>/img/site/logos/logos-partners/cep-gilles-cometti.png"
         alt="CEP Gilles Cometti logo"
       />
-      <img src="<?= URL_ROOT; ?>/img/logos-partners/hbx-noir.png" alt="HBX logo" />
+      <img src="<?= URL_ROOT; ?>/img/site/logos/logos-partners/hbx-noir.png" alt="HBX logo" />
       <img
-        src="<?= URL_ROOT; ?>/img/logos-partners/naturacademy.png"
+        src="<?= URL_ROOT; ?>/img/site/logos/logos-partners/naturacademy.png"
         alt="Naturacademy logo"
       />
       <img
-        src="<?= URL_ROOT; ?>/img/logos-partners/lappart.png"
+        src="<?= URL_ROOT; ?>/img/site/logos/logos-partners/lappart.png"
         alt="L'Appart Fitness logo"
       />
     </div>
@@ -96,7 +96,7 @@
 
     <div class="img-box--step">
       <img
-        src="<?= URL_ROOT; ?>/img/app-mockups/mockup-contact.png"
+        src="<?= URL_ROOT; ?>/img/site/mockups/mockups-step/mockup-contact.png"
         class="step-img img-30"
         alt="iPhone with contact section on screen"
       />
@@ -105,7 +105,7 @@
     <!-- STEP 02 -->
     <div class="img-box--step">
       <img
-        src="<?= URL_ROOT; ?>/img/app-mockups/mockup-call.png"
+        src="<?= URL_ROOT; ?>/img/site/mockups/mockups-step/mockup-call.png"
         class="step-img img-30"
         alt="iPhone with view when calling a client"
       />
@@ -136,7 +136,7 @@
     </div>
     <div class="img-box--step">
       <img
-        src="<?= URL_ROOT; ?>/img/app-mockups/organisation-mockup.png"
+        src="<?= URL_ROOT; ?>/img/site/mockups/mockups-step/organisation-mockup.png"
         class="step-img img-38"
         alt="mockup of a note and a calendar scheduling tasks"
       />

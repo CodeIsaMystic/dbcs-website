@@ -11,10 +11,10 @@
 <section class="hero--fullW bg-white">
   <div>
     <picture>
-      <source srcset="<?php echo URL_ROOT; ?>/img/full-w-hero/contact2-hero.png" type="image/webp" />
-      <source srcset="<?php echo URL_ROOT; ?>/img/full-w-hero/contact2-hero.png" type="image/png" />
+      <source srcset="<?php echo URL_ROOT; ?>/img/site/full-width/contact.png" type="image/webp" />
+      <source srcset="<?php echo URL_ROOT; ?>/img/site/full-width/contact.png" type="image/png" />
 
-      <img src="<?php echo URL_ROOT; ?>/img/full-w-hero/contact2-hero.png" alt="#"/>
+      <img src="<?php echo URL_ROOT; ?>/img/site/full-width/contact.png" alt="woman sitting on a car and boxing"/>
     </picture>
   </div>
   <div class="hero--fullW__heading hero--fullW__heading--left">
@@ -134,18 +134,18 @@
       Nos partenaires
     </h2>
     <div class="partners-logo">
-      <img src="<?= URL_ROOT; ?>/img/logos-partners/decathlon.png" alt="Decathlon logo" />
+      <img src="<?= URL_ROOT; ?>/img/site/logos/logos-partners/decathlon.png" alt="Decathlon logo" />
       <img
-      src="<?= URL_ROOT; ?>/img/logos-partners/cep-gilles-cometti.png"
+      src="<?= URL_ROOT; ?>/img/site/logos/logos-partners/cep-gilles-cometti.png"
         alt="CEP Gilles Cometti logo"
       />
-      <img src="<?= URL_ROOT; ?>/img/logos-partners/hbx-noir.png" alt="HBX logo" />
+      <img src="<?= URL_ROOT; ?>/img/site/logos/logos-partners/hbx-noir.png" alt="HBX logo" />
       <img
-        src="<?= URL_ROOT; ?>/img/logos-partners/naturacademy.png"
+        src="<?= URL_ROOT; ?>/img/site/logos/logos-partners/naturacademy.png"
         alt="Naturacademy logo"
       />
       <img
-        src="<?= URL_ROOT; ?>/img/logos-partners/lappart.png"
+        src="<?= URL_ROOT; ?>/img/site/logos/logos-partners/lappart.png"
         alt="L'Apprt Fitness logo"
       />
     </div>

@@ -7,8 +7,8 @@
       <div class="img b-radius4 with-parallax">
         <img
           class="b-radius4"
-          src="<?= URL_ROOT; ?>/img/posts/thumb/meal-fruit-min.png"
-          alt=""
+          src="<?= URL_ROOT; ?>/img/uploads/posts/thumb/natural-oil-min.png"
+          alt="Post thumb photo uploaded"
           srcset=""
         />
       </div>

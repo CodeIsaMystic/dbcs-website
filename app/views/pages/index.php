@@ -28,33 +28,33 @@
         <div class="customers-profiles-imgs">
           <img
             class="b-radius50"
-            src="<?= URL_ROOT; ?>/img/customers/customer-1.jpg"
-            alt="Customer photo"
+            src="<?= URL_ROOT; ?>/img/site/customers/customer-1.jpg"
+            alt="Customer photo 1"
           />
           <img
             class="b-radius50"
-            src="<?= URL_ROOT; ?>/img/customers/customer-2.jpg"
-            alt="Customer photo"
+            src="<?= URL_ROOT; ?>/img/site/customers/customer-2.jpg"
+            alt="Customer photo 2"
           />
           <img
             class="b-radius50"
-            src="<?= URL_ROOT; ?>/img/customers/customer-3.jpg"
-            alt="Customer photo"
+            src="<?= URL_ROOT; ?>/img/site/customers/customer-3.jpg"
+            alt="Customer photo 3"
           />
           <img
             class="b-radius50"
-            src="<?= URL_ROOT; ?>/img/customers/customer-4.jpg"
-            alt="Customer photo"
+            src="<?= URL_ROOT; ?>/img/site/customers/customer-4.jpg"
+            alt="Customer photo 4"
           />
           <img
             class="b-radius50"
-            src="<?= URL_ROOT; ?>/img/customers/customer-5.jpg"
-            alt="Customer photo"
+            src="<?= URL_ROOT; ?>/img/site/customers/customer-5.jpg"
+            alt="Customer photo 5"
           />
           <img
             class="b-radius50"
-            src="<?= URL_ROOT; ?>/img/customers/customer-6.jpg"
-            alt="Customer photo"
+            src="<?= URL_ROOT; ?>/img/site/customers/customer-6.jpg"
+            alt="Customer photo 6"
           />
         </div>
         <p class="txt-content fontW500">
@@ -65,11 +65,11 @@
     </div>
     <div class="hero--img img-80 pt mt-lg">
       <picture>
-        <source srcset="<?= URL_ROOT; ?>/img/mockups-hero/hero.png" type="image/webp" />
-        <source srcset="<?= URL_ROOT; ?>/img/mockups-hero/hero.png" type="image/png" />
+        <source srcset="<?= URL_ROOT; ?>/img/site/mockups//mockups-hero/hero.png" type="image/webp" />
+        <source srcset="<?= URL_ROOT; ?>/img/site/mockups//mockups-hero/hero.png" type="image/png" />
 
         <img
-          src="<?= URL_ROOT; ?>/img/mockups-hero/hero.png"
+          src="<?= URL_ROOT; ?>/img/site/mockups/mockups-hero/hero.png"
           alt="A mockup with 3 images about gym, fitness & sport with man and woman"
         />
       </picture>
@@ -84,18 +84,18 @@
       Nos partenaires
     </h2>
     <div class="partners-logo">
-      <img src="<?= URL_ROOT; ?>/img/logos-partners/decathlon.png" alt="Decathlon logo" />
+      <img src="<?= URL_ROOT; ?>/img/site/logos/logos-partners/decathlon.png" alt="Decathlon logo" />
       <img
-        src="<?= URL_ROOT; ?>/img/logos-partners/cep-gilles-cometti.png"
+        src="<?= URL_ROOT; ?>/img/site/logos/logos-partners/cep-gilles-cometti.png"
         alt="CEP Gilles Cometti logo"
       />
-      <img src="<?= URL_ROOT; ?>/img/logos-partners/hbx-noir.png" alt="HBX logo" />
+      <img src="<?= URL_ROOT; ?>/img/site/logos/logos-partners/hbx-noir.png" alt="HBX logo" />
       <img
-        src="<?= URL_ROOT; ?>/img/logos-partners/naturacademy.png"
+        src="<?= URL_ROOT; ?>/img/site/logos/logos-partners/naturacademy.png"
         alt="Naturacademy logo"
       />
       <img
-        src="<?= URL_ROOT; ?>/img/logos-partners/lappart.png"
+        src="<?= URL_ROOT; ?>/img/site/logos/logos-partners/lappart.png"
         alt="L'Appart Fitness logo"
       />
     </div>
@@ -136,7 +136,7 @@
 
     <div class="img-box--step">
       <img
-        src="<?= URL_ROOT; ?>/img/app-mockups/mockup-contact.png"
+        src="<?= URL_ROOT; ?>/img/site/mockups/mockups-step/mockup-contact.png"
         class="step-img img-30"
         alt="iPhone with contact section on screen"
       />
@@ -145,7 +145,7 @@
     <!-- STEP 02 -->
     <div class="img-box--step">
       <img
-        src="<?= URL_ROOT; ?>/img/app-mockups/mockup-call.png"
+        src="<?= URL_ROOT; ?>/img/site/mockups/mockups-step/mockup-call.png"
         class="step-img img-30"
         alt="iPhone with view when calling a client"
       />
@@ -176,7 +176,7 @@
     </div>
     <div class="img-box--step">
       <img
-        src="<?= URL_ROOT; ?>/img/app-mockups/organisation-mockup.png"
+        src="<?= URL_ROOT; ?>/img/site/mockups/mockups-step/organisation-mockup.png"
         class="step-img img-38"
         alt="mockup of a note and a calendar scheduling tasks"
       />
@@ -201,7 +201,7 @@
         <img
           class="b-radius50 mb-xxs"
           alt="Photo of customer Dave Bryson"
-          src="<?= URL_ROOT; ?>/img/customers/dave.jpg"
+          src="<?= URL_ROOT; ?>/img/site/customers/dave.jpg"
         />
         <blockquote class="txt-content--narrow font-garamond mb-xs">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime
@@ -215,7 +215,7 @@
         <img
           class="b-radius50 mb-xxs"
           alt="Photo of customer Ben Hadley"
-          src="<?= URL_ROOT; ?>/img/customers/ben.jpg"
+          src="<?= URL_ROOT; ?>/img/site/customers/ben.jpg"
         />
         <blockquote class="txt-content--narrow font-garamond mb-xs">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos
@@ -228,7 +228,7 @@
         <img
           class="b-radius50 mb-xxs"
           alt="Photo of customer Joe"
-          src="<?= URL_ROOT; ?>/img/customers/steve.jpg"
+          src="<?= URL_ROOT; ?>/img/site/customers/steve.jpg"
         />
         <blockquote class="txt-content--narrow font-garamond mb-xs">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint
@@ -242,7 +242,7 @@
         <img
           class="b-radius50 mb-xxs"
           alt="Photo of customer Hannah Smith"
-          src="<?= URL_ROOT; ?>/img/customers/hannah.jpg"
+          src="<?= URL_ROOT; ?>/img/site/customers/hannah.jpg"
         />
         <blockquote class="txt-content--narrow font-garamond mb-xs">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -257,86 +257,74 @@
   <div class="gallery grid--gallery">
     <figure class="gallery-item">
       <img
-        src="<?= URL_ROOT; ?>/img/gallery/gallery-1.png"
-        alt="Photo of beautifully
-      arranged food"
+        src="<?= URL_ROOT; ?>/img/site/gallery/gallery-1.png"
+        alt="Gallery photo of gym men and women doing sport"
       />
     </figure>
     <figure class="gallery-item">
       <img
-        src="<?= URL_ROOT; ?>/img/gallery/gallery-2.png"
-        alt="Photo of beautifully
-      arranged food"
+        src="<?= URL_ROOT; ?>/img/site/gallery/gallery-2.png"
+        alt="Gallery photo of gym men and women doing sport"
       />
     </figure>
     <figure class="gallery-item">
       <img
-        src="<?= URL_ROOT; ?>/img/gallery/gallery-3.png"
-        alt="Photo of beautifully
-      arranged food"
+        src="<?= URL_ROOT; ?>/img/site/gallery/gallery-3.png"
+        alt="Gallery photo of gym men and women doing sport"
       />
     </figure>
     <figure class="gallery-item">
       <img
-        src="<?= URL_ROOT; ?>/img/gallery/gallery-4.png"
-        alt="Photo of beautifully
-      arranged food"
+        src="<?= URL_ROOT; ?>/img/site/gallery/gallery-4.png"
+        alt="Gallery photo of gym men and women doing sport"
       />
     </figure>
     <figure class="gallery-item">
       <img
-        src="<?= URL_ROOT; ?>/img/gallery/gallery-5.png"
-        alt="Photo of beautifully
-      arranged food"
+        src="<?= URL_ROOT; ?>/img/site/gallery/gallery-5.png"
+        alt="Gallery photo of gym men and women doing sport"
       />
     </figure>
     <figure class="gallery-item">
       <img
-        src="<?= URL_ROOT; ?>/img/gallery/gallery-6.png"
-        alt="Photo of beautifully
-      arranged food"
+        src="<?= URL_ROOT; ?>/img/site/gallery/gallery-6.png"
+        alt="Gallery photo of gym men and women doing sport"
       />
     </figure>
     <figure class="gallery-item">
       <img
-        src="<?= URL_ROOT; ?>/img/gallery/gallery-7.png"
-        alt="Photo of beautifully
-      arranged food"
+        src="<?= URL_ROOT; ?>/img/site/gallery/gallery-7.png"
+        alt="Gallery photo of gym men and women doing sport"
       />
     </figure>
     <figure class="gallery-item">
       <img
-        src="<?= URL_ROOT; ?>/img/gallery/gallery-8.png"
-        alt="Photo of beautifully
-      arranged food"
+        src="<?= URL_ROOT; ?>/img/site/gallery/gallery-8.png"
+        alt="Gallery photo of gym men and women doing sport"
       />
     </figure>
     <figure class="gallery-item">
       <img
-        src="<?= URL_ROOT; ?>/img/gallery/gallery-9.png"
-        alt="Photo of beautifully
-      arranged food"
+        src="<?= URL_ROOT; ?>/img/site/gallery/gallery-9.png"
+        alt="Gallery photo of gym men and women doing sport"
       />
     </figure>
     <figure class="gallery-item">
       <img
-        src="<?= URL_ROOT; ?>/img/gallery/gallery-10.png"
-        alt="Photo of beautifully
-      arranged food"
+        src="<?= URL_ROOT; ?>/img/site/gallery/gallery-10.png"
+        alt="Gallery photo of gym men and women doing sport"
       />
     </figure>
     <figure class="gallery-item">
       <img
-        src="<?= URL_ROOT; ?>/img/gallery/gallery-11.png"
-        alt="Photo of beautifully
-      arranged food"
+        src="<?= URL_ROOT; ?>/img/site/gallery/gallery-11.png"
+        alt="Gallery photo of gym men and women doing sport"
       />
     </figure>
     <figure class="gallery-item">
       <img
-        src="<?= URL_ROOT; ?>/img/gallery/gallery-12.png"
-        alt="Photo of beautifully
-      arranged food"
+        src="<?= URL_ROOT; ?>/img/site/gallery/gallery-12.png"
+        alt="Gallery photo of gym men and women doing sport"
       />
     </figure>
   </div>

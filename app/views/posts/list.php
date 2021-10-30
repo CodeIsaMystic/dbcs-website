@@ -15,10 +15,10 @@
 <section class="hero--fullW bg-white">
   <div>
     <picture>
-      <source srcset="<?php echo URL_ROOT; ?>/img/full-w-hero/gym.png" type="image/webp" />
-      <source srcset="<?php echo URL_ROOT; ?>/img/full-w-hero/gym.png" type="image/png" />
+      <source srcset="<?php echo URL_ROOT; ?>/img/site/full-width/dumbbells.png" type="image/webp" />
+      <source srcset="<?php echo URL_ROOT; ?>/img/site/full-width/dumbbells.png" type="image/png" />
 
-      <img src="<?php echo URL_ROOT; ?>/img/full-w-hero/gym.png" alt="#"/>
+      <img src="<?php echo URL_ROOT; ?>/img/site/full-width/dumbbells.png" alt="Set of dumbbells in various colors"/>
     </picture>
   </div>
   <div class="hero--fullW__heading hero--fullW__heading--left">
