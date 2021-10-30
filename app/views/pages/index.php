@@ -108,7 +108,7 @@
     <h4 class="subheading fontW700 txt-upp txt-blue mb-xs">
       Comment ça marche
     </h4>
-    <h2 class="heading-secondary txt-dark-gray mb-lg pb">
+    <h2 class="heading-secondary txt-dark-gray mb pb">
       Ton coaching personnalisé en 3 étapes
     </h2>
   </div>
