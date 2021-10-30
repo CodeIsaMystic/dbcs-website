@@ -118,6 +118,11 @@
     font-size: 1.4rem;
     padding: 1.2rem;
   }
+  /* post-page */
+  .post-page {
+    width: 100%;
+    // margin: 9.6rem auto 0;
+  }
 }
 
 /****************************/
@@ -130,6 +135,10 @@
   }
   textarea {
     text-indent: -60px;
+  }
+  /*  container */
+  .container {
+    padding: 0 2.4rem;
   }
   /* grid */
   .grid--3-cols {
@@ -410,6 +419,10 @@
   /*  global  */
   body {
     overflow-x: visible;
+  }
+  /*  container */
+  .container {
+    padding: 0 1.6rem;
   }
   /* grid */
   .grid--4-cols {

@@ -91,7 +91,7 @@
   width: 100%;
 }
 .post-content {
-  padding: 0 6.4rem 6.4rem 6.4rem;
+  // padding: 0 6.4rem 6.4rem 6.4rem;
 }
 .posts .post .img img {
   border-bottom-left-radius: 0;
