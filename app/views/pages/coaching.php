@@ -23,7 +23,7 @@
   </div>
 </section>
 
-<!-- SECTION COACHING-TITLE --->
+<!-- SECTION TITLE CENTER --->
 <section class="bg-white pb-md pt-md">
   <div class="container container--md txt-center">
     <h2
