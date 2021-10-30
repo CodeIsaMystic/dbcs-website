@@ -46,8 +46,10 @@
     <div class="post-content txt-dark mb">
       <a href="<?php echo $data['post']->source_link; ?>" target="_blank" class="link link-dark link--underline">
         <?php 
-        if($data['post']->source_link != null) {
-          echo $data['post']->source_link;  
+        // var_dump($source_explode[2]); die();
+
+        if( $data['post']->source_link != null) {
+          echo getSourceLinkFormatted($data['post']->source_link);  
         } else {
           echo '';
         }

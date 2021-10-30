@@ -11,3 +11,11 @@ function getExcerpt($content, $limit = 120) {
     return mb_substr($content, 0, $lastSpace) . ' ...';
   
 } 
+
+// Get Url source link formatted
+function getSourceLinkFormatted($url) {
+  $source_link = explode("/", $url);
+  $source_link_formatted = "www." . $source_link[2];
+  
+  return $source_link_formatted;
+}

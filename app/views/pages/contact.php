@@ -128,7 +128,7 @@
 
 
 <!-- SECTION PARTNERS -->
-<section class="bg-white mb-xl mt-xl">
+<section class="bg-white mt-xl">
   <div class="container container--lg">
     <h2 class="subheading txt-upp txt-center fontW500 mb-sm">
       Nos partenaires
@@ -153,7 +153,7 @@
 </section>
 
 <!-- SECTION CONTACT FORM --->
-<section class="contact-form mb-lg">
+<section class="contact-form mt-xl mb-lg">
   <div class="container container--md">
     <div class="contact-form__content b-radius4 box-shad1">
       <div class="txt-dark">
@@ -166,8 +166,8 @@
       </div>
       <div>
         
-        <form class="grid--form" name="sign-up">
-          <div class="">
+        <form class="" name="sign-up">
+          <div class="grid--form">
             <!-- name -->
             <div>
               <label class="mb-xxs" for="full-name"
@@ -184,7 +184,7 @@
             </div>
   
             <!-- email -->
-            <div class="mt-xs">
+            <div class="">
               <label class="mb-xxs" for="email"
                 >Adresse Mail</label
               >
@@ -199,7 +199,7 @@
             </div>
             
             <!-- partnership -->
-            <div class="mt-sm">
+            <div class="mt-xs">
               <label class="mb-xxs" for="select-partnership"
                 >Type de partenariat?</label
               >
@@ -209,7 +209,7 @@
                 name="select-partnership"
                 required
               >
-                <option value=""></option>
+                <option value="">Choisir...</option>
                 <option value="blogging">Blogging</option>
                 <option value="nutrition">Nutrition</option>
                 <option value="preps">Préparation physique</option>
@@ -221,14 +221,14 @@
 
           <!-- message -->
           <div>
-            <label class="mb-xxs"
+            <label class="mb-xxs mt-xs" for="message"
             >Envoyez nous un message</label
             >
             <textarea name="message" id="message" cols="30" rows="10"></textarea>
           </div>
           
           <!-- submit -->
-          <button type="submit" class="btn btn--baseline btn-hover btn-hover--blue mt-xxs">
+          <button type="submit" class="btn btn--baseline btn-hover btn-hover--blue mt-sm">
             Envoyez
           </button>
         </form>

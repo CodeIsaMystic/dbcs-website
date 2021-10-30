@@ -271,7 +271,11 @@ table#myTable {
 /********************/
 /*   CONTACT FORM  */
 /******************/
-.contact-form .contact-form__content {
+.contact-form div picture {
+}
+.contact-form div picture img {
+}
+.contact-form .container .contact-form__content {
   padding: 4.8rem;
   background-color: rgba(255, 255, 255, 0.5);
 }

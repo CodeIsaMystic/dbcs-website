@@ -97,6 +97,14 @@ input:focus {
 input::placeholder {
   color: #888888;
 }
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: #46a1c9 auto 1px;
+  outline-color: #46a1c9;
+  outline-style: auto;
+  outline-width: 0.5px;
+}
 /************************************************/
 /************************************************/
 /************************************************/
