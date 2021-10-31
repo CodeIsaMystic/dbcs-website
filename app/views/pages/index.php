@@ -633,7 +633,7 @@
   </div>
 
   <div class="container container--md txt-center">
-    <a href="coaching.html" class="link link--underline "
+    <a href="<?= URL_ROOT; ?>/pages/coaching" class="link link--underline "
       >Rendez-vous à la page Coaching &rarr;</a
     >
   </div>

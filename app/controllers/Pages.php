@@ -46,7 +46,7 @@ class Pages extends Controller {
   public function coaching() {
     
       $data = [
-        'title' => 'Notre Coaching en détails',
+        'title' => 'Tout les détails pour commencer votre coaching',
         'description' => "Lorem ipsum dolor sit amet consectetur adipisicing elit."
     ];
     $this->view('pages/coaching', $data);

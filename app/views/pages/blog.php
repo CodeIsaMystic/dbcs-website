@@ -35,10 +35,14 @@
 <section class="bg-white pb-md pt-md">
   <div class="container container--md txt-center">
     <h2
-    class="heading-secondary txt-dark-gray font-garamond fontW500"
+    class="heading-secondary txt-dark-gray font-garamond fontW500 pb"
     >
     Nos derniers articles en date...
   </h2>
+
+  <p class="txt-content txt-dark">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam reprehenderit excepturi veritatis eligendi culpa quam, fugiat quia tenetur saepe explicabo rem, libero voluptatem id neque! Deleniti quasi soluta porro, vel facilis atque quaerat cumque ipsam tempora similique, ea exercitationem tenetur sed. Cumque nostrum, ipsum dolorum sit eos eveniet exercitationem? Eveniet asperiores minima eius nesciunt tempora eum tenetur.
+  </p>
 </div>
 </section>
 

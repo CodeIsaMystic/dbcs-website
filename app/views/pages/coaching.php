@@ -13,7 +13,7 @@
     </picture>
   </div>
   <div class="hero--fullW__heading hero--fullW__heading--left">
-    <h4 class="subheading fontW700 txt-upp txt-blue pb-xxs">Article</h4>
+    <h4 class="subheading fontW700 txt-upp txt-blue pb-xxs">Coaching</h4>
     <h1 class="heading-primary txt-dark-gray fontW500 font-garamond pb-xs">
         <?= $data['title']; ?>
     </h1>
@@ -32,7 +32,7 @@
     Lorem ipsum, dolor sit amet consectetur adipisicing elit.
   </h2>
   <p class="txt-content txt-dark">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid illo quia placeat voluptatem dignissimos, dolores dolor nesciunt ab similique accusantium beatae velit delectus magni debitis?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam reprehenderit excepturi veritatis eligendi culpa quam, fugiat quia tenetur saepe explicabo rem, libero voluptatem id neque! Deleniti quasi soluta porro, vel facilis atque quaerat cumque ipsam tempora similique, ea exercitationem tenetur sed. Cumque nostrum, ipsum dolorum sit eos eveniet exercitationem? Eveniet asperiores minima eius nesciunt tempora eum tenetur. Unde omnis quasi earum, cumque saepe enim repellat nesciunt possimus nulla blanditiis facilis esse repudiandae temporibus eveniet aliquid exercitationem eum tempora. Ad recusandae cupiditate tempore accusantium, obcaecati saepe harum beatae pariatur. Fuga delectus animi perspiciatis eius itaque, sed repellendus sit maiores dolor, molestiae, qui incidunt dolore nesciunt consequatur. Suscipit nulla labore eum consectetur illum quisquam iure facilis alias provident voluptas.
   </p>
 </div>
 </section>
@@ -60,6 +60,93 @@
       />
     </div>
   </div>
+</section>
+
+<!-- SECTION COACHING DETAILS -->
+<section class="coaching-details bg-white pt-md">
+  <div class="container container--md">
+    <h4 class="subheading fontW700 txt-blue txt-upp mb-xs">
+      Coaching
+    </h4>
+    <h2 class="heading-secondary txt-dark-gray mb-md">
+      Le coaching, plus en détails...
+    </h2>
+  </div>
+
+  <div class="container container--md">
+  <p class="txt-content txt-dark mb-md">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam reprehenderit excepturi veritatis eligendi culpa quam, fugiat quia tenetur saepe explicabo rem, libero voluptatem id neque! Deleniti quasi soluta porro, vel facilis atque quaerat cumque ipsam tempora similique, ea exercitationem tenetur sed. Cumque nostrum, ipsum dolorum sit eos eveniet exercitationem? Eveniet asperiores minima eius nesciunt tempora eum tenetur.
+  </p>
+</div>
+  
+  <div class="container container--md grid grid-gap--medium grid--4-cols mt-md">
+    <div class="feature">
+      <ion-icon
+        class="icon-blue icon-sm b-radius50 mb-sm"
+        name="calendar-outline"
+      ></ion-icon>
+      <h3 class=" mb-xs txt-dark-gray fontW700">
+        Programmez vos objectifs
+      </h3>
+      <p class="txt-content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Consectetur alias quaerat velit tenetur fugiat eos!
+      </p>
+    </div>
+    <div class="feature">
+      <ion-icon
+        class="icon-blue icon-sm b-radius50 mb-sm"
+        name="pulse-outline"
+      ></ion-icon>
+      <h3 class=" mb-xs txt-dark-gray fontW700">
+        Travailler sur le cardio
+      </h3>
+      <p class="txt-content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui alias
+        repellendus aperiam.
+      </p>
+    </div>
+    <div class="feature">
+      <ion-icon
+        class="icon-blue icon-sm b-radius50 mb-sm"
+        name="barbell-outline"
+      ></ion-icon>
+      <h3 class=" mb-xs txt-dark-gray fontW700">
+        Muscler votre corps
+      </h3>
+      <p class="txt-content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+        impedit aliquam consequatur.
+      </p>
+    </div>
+    <div class="feature">
+      <ion-icon
+        class="icon-blue icon-sm b-radius50 mb-sm"
+        name="bar-chart-outline"
+      ></ion-icon>
+      <h3 class=" mb-xs txt-dark-gray fontW700">
+        Analyser votre évolution
+      </h3>
+      <p class="txt-content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Provident, optio quasi? Laboriosam.
+      </p>
+    </div>
+  </div>
+
+  
+  <div class="container container--md">
+  <p class="txt-content txt-dark mt-md">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam reprehenderit excepturi veritatis eligendi culpa quam, fugiat quia tenetur saepe explicabo rem, libero voluptatem id neque! Deleniti quasi soluta porro, vel facilis atque quaerat cumque ipsam tempora similique, ea exercitationem tenetur sed. Cumque nostrum, ipsum dolorum sit eos eveniet exercitationem? Eveniet asperiores minima eius nesciunt tempora eum tenetur.
+  </p>
+</div>
+
+<div class="container container--md txt-center">
+  <a href="coaching.html" class="link link--underline mt-md mb-md"
+    >En direct ou bien avec le formulaire ci-dessous, le coach vous contactera</a
+  >
+</div>
+
 </section>
 
 <!-- SECTION HOW IT WORKS -->
@@ -144,6 +231,74 @@
   </div>
 </section>
 
+
+<!-- SECTION CTA -->
+<section class="linear-grad-lightBlue pb-lg pt-lg">
+  <div class="container container--md with-parallax" id="cta">
+    <div class="cta grid--cta b-radius4 box-shad1 box-parallax">
+      <div class="cta-text-box txt-dark linear-grad-blue">
+        <h2 class="heading-secondary txt-dark-gray mb">
+          Contactez le coach
+        </h2>
+        <p class="txt-content--large mb">
+          Amateurs, Sportifs ou bien semi-professionnels, tentez votre
+          chance, le coach vous recontactera pour commencer à vous aider
+          dans vos objectifs. Il pourra alors, vous faire profiter de
+          votre premier cours gratuit. (pour établir un partenariat vous
+          pouvez nous contactez via la rubrique de
+          <a class="link link-dark" href="#">"partenariat"</a> en bas de
+          page)
+        </p>
+
+        <form class="grid--form" name="sign-up">
+          <div>
+            <label class="fontW700 mb-xxs" for="full-name"
+              >Nom Complet</label
+            >
+            <input
+              class="b-radius4 bg-white"
+              id="full-name"
+              type="text"
+              placeholder="Votre nom"
+              name="full-name"
+              required
+            />
+          </div>
+
+          <div>
+            <label class="fontW700 mb-xxs" for="email"
+              >Adresse Mail</label
+            >
+            <input
+              class="b-radius4 bg-white"
+              id="email"
+              type="email"
+              placeholder="votreMail@example.com"
+              name="email"
+              required
+            />
+          </div>
+
+          <div>
+            <label class="fontW700 mb-xxs" for="freeCourse"
+              >Demandez votre essai gratuit</label
+            >
+            <input class="b-radius4 bg-white" type="checkbox" id="freeCourse" name="freeCourse">
+          </div>
+
+          <button class="btn btn--baseline btn-hover btn-hover--blue">
+            Essai gratuit
+          </button>
+        </form>
+      </div>
+      <div
+        class="img-box--cta"
+        role="img"
+        aria-label="Bastien Desmet Coach Sportif"
+      ></div>
+    </div>
+  </div>
+</section>
 
 <!-- SECTION PRICING -->
 <section class="pricing-plan bg-white pt-lg pb-md">
@@ -390,135 +545,6 @@
       Nos prix comprennent la TVA & tout nos cours/abonnements inclus les
       services suivants:
     </aside>
-  </div>
-
-  <div class="container container--md grid grid-gap--medium grid--4-cols">
-    <div class="feature">
-      <ion-icon
-        class="icon-blue icon-sm b-radius50 mb-sm"
-        name="calendar-outline"
-      ></ion-icon>
-      <h3 class=" mb-xs txt-dark-gray fontW700">
-        Programmez vos objectifs
-      </h3>
-      <p class="txt-content">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Consectetur alias quaerat velit tenetur fugiat eos!
-      </p>
-    </div>
-    <div class="feature">
-      <ion-icon
-        class="icon-blue icon-sm b-radius50 mb-sm"
-        name="pulse-outline"
-      ></ion-icon>
-      <h3 class=" mb-xs txt-dark-gray fontW700">
-        Travailler sur le cardio
-      </h3>
-      <p class="txt-content">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui alias
-        repellendus aperiam.
-      </p>
-    </div>
-    <div class="feature">
-      <ion-icon
-        class="icon-blue icon-sm b-radius50 mb-sm"
-        name="barbell-outline"
-      ></ion-icon>
-      <h3 class=" mb-xs txt-dark-gray fontW700">
-        Muscler votre corps
-      </h3>
-      <p class="txt-content">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-        impedit aliquam consequatur.
-      </p>
-    </div>
-    <div class="feature">
-      <ion-icon
-        class="icon-blue icon-sm b-radius50 mb-sm"
-        name="bar-chart-outline"
-      ></ion-icon>
-      <h3 class=" mb-xs txt-dark-gray fontW700">
-        Analyser votre évolution
-      </h3>
-      <p class="txt-content">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Provident, optio quasi? Laboriosam.
-      </p>
-    </div>
-  </div>
-
-  <div class="container container--md txt-center">
-    <a href="coaching.html" class="link link--underline "
-      >Rendez-vous à la page Coaching &rarr;</a
-    >
-  </div>
-</section>
-
-<!-- SECTION CTA -->
-<section class="linear-grad-lightBlue pb-lg pt-lg">
-  <div class="container container--md with-parallax" id="cta">
-    <div class="cta grid--cta b-radius4 box-shad1 box-parallax">
-      <div class="cta-text-box txt-dark linear-grad-blue">
-        <h2 class="heading-secondary txt-dark-gray mb">
-          Contactez le coach
-        </h2>
-        <p class="txt-content--large mb">
-          Amateurs, Sportifs ou bien semi-professionnels, tentez votre
-          chance, le coach vous recontactera pour commencer à vous aider
-          dans vos objectifs. Il pourra alors, vous faire profiter de
-          votre premier cours gratuit. (pour établir un partenariat vous
-          pouvez nous contactez via la rubrique de
-          <a class="link link-dark" href="#">"partenariat"</a> en bas de
-          page)
-        </p>
-
-        <form class="grid--form" name="sign-up">
-          <div>
-            <label class="fontW700 mb-xxs" for="full-name"
-              >Nom Complet</label
-            >
-            <input
-              class="b-radius4 bg-white"
-              id="full-name"
-              type="text"
-              placeholder="Votre nom"
-              name="full-name"
-              required
-            />
-          </div>
-
-          <div>
-            <label class="fontW700 mb-xxs" for="email"
-              >Adresse Mail</label
-            >
-            <input
-              class="b-radius4 bg-white"
-              id="email"
-              type="email"
-              placeholder="votreMail@example.com"
-              name="email"
-              required
-            />
-          </div>
-
-          <div>
-            <label class="fontW700 mb-xxs" for="freeCourse"
-              >Demandez votre essai gratuit</label
-            >
-            <input class="b-radius4 bg-white" type="checkbox" id="freeCourse" name="freeCourse">
-          </div>
-
-          <button class="btn btn--baseline btn-hover btn-hover--blue">
-            Essai gratuit
-          </button>
-        </form>
-      </div>
-      <div
-        class="img-box--cta"
-        role="img"
-        aria-label="Bastien Desmet Coach Sportif"
-      ></div>
-    </div>
   </div>
 </section>
 
