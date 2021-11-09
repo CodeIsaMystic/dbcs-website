@@ -138,7 +138,7 @@
                 >
               </li>
               <!-- <li>
-                <a class="link txt-light" href="<?= URL_ROOT; ?>/users/register">
+                <a class="link txt-light" href="<?= //URL_ROOT; ?>/users/register">
                   Register</a
                 >
               </li> -->
