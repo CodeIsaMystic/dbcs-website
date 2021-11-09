@@ -119,13 +119,17 @@
 .btn-hover--dark {
   background-image: linear-gradient(to right, #333, #232323, #fff, #fff);
 }
+.btn-hover--dark:focus,
 .btn-hover--dark:hover {
   color: #232323;
 }
+.btn-hover--blue:focus,
 .btn-hover--blue:hover {
   color: #fff;
 }
 .btn-hover--dark:hover,
+.btn-hover--dark:focus,
+.btn-hover--blue:focus,
 .btn-hover--blue:hover {
   background-position: 100% 0;
   -moz-transition: all 0.4s ease-in-out;
