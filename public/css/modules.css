@@ -416,6 +416,7 @@
   padding: 0.4rem 0;
   background-color: whitesmoke;
   box-shadow: 0 4px 5px 0 rgba(45, 54, 65, 0.75);
+  z-index: 5001;
 }
 .alert p {
   text-indent: 2.4rem;

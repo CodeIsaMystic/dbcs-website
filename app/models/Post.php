@@ -24,12 +24,13 @@
     }
 
     public function addPost($data){
-      $this->db->query('INSERT INTO posts (title, user_id, body, source_link) VALUES(:title, :user_id, :body, :source_link)');
+      $this->db->query('INSERT INTO posts (title, user_id, body, source_link, image) VALUES(:title, :user_id, :body, :source_link, :image)');
       // Bind values
       $this->db->bind(':title', $data['title']);
       $this->db->bind(':user_id', $data['user_id']);
       $this->db->bind(':body', $data['body']);
       $this->db->bind(':source_link', $data['source_link']);
+      $this->db->bind(':image', $data['image']);
 
       // Execute
       if($this->db->execute()){
@@ -40,12 +41,14 @@
     }
 
     public function updatePost($data){
-      $this->db->query('UPDATE posts SET title = :title, body = :body, source_link = :source_link WHERE id = :id');
+      $this->db->query('UPDATE posts SET title = :title, body = :body, source_link = :source_link, image = :image WHERE id = :id');
       // Bind values
       $this->db->bind(':id', $data['id']);
       $this->db->bind(':title', $data['title']);
       $this->db->bind(':body', $data['body']);
       $this->db->bind(':source_link', $data['source_link']);
+      $this->db->bind(':image', $data['image']);
+
 
       // Execute
       if($this->db->execute()){

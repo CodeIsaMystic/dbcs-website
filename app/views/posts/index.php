@@ -7,7 +7,7 @@
       <div class="img b-radius4 with-parallax">
         <img
           class="b-radius4"
-          src="<?= URL_ROOT; ?>/img/uploads/posts/thumb/natural-oil-min.png"
+          src="<?= URL_ROOT . '/img/uploads/' . $post->image; ?>"
           alt="Post thumb photo uploaded"
           srcset=""
         />

@@ -17,3 +17,7 @@ define('SITE_NAME', 'DBCS &mdash; La santé avant tout!');
 
 // App Version
 define('APP_VERSION', '1.0.0');
+
+
+// Upload Folder
+define('UPLOADS_FOLDER', './img/uploads/');

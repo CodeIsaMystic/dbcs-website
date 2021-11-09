@@ -3,7 +3,7 @@
   <br>
   <br>
   
-  <img src="../public/img/logos/logo-square-dark-1200.png" width="500">
+  <img src="../public/img/site/logos/logo-dbcs/logo-square-dark-1200.png" width="500">
 
 <h2>
 "Le sport selon une méthode simple"
@@ -38,13 +38,13 @@
 
 DBCS est **un site vitrine mulitpage dédié à la promotion de Coach Sportif** cherchant à acquérir de nouveaux clients, de les fidéliser et d'initier cette activité en essayant d'être proche de la demande des clients potentiels. Il tente de répondre à un ensemble de besoins, tout comme, **le domaine sportif, le soutien moral, la mise en place d'une routine saine, la planification de programmes et objectifs personnels, l'alimentation & le repos**...
 
-Cette activité s'adresse à différents profils et types de prospects tels que **le sportif amateur/débutant, l'habitué/confirmé et le semi-professionnel**. D'autres sujets plus particulier ont des attentes plus particulière et le coach tente d'y répondre également (reprise de l'activité sportive, la rééducation, la préparation physique).
+Cette activité s'adresse à différents profils et types de prospects tels que **le sportif amateur/débutant, l'habitué/confirmé et le semi-professionnel**. Sur d'autres sujets plus particuliers qui ont certaines attentes, le coach tentera également d'y répondre (reprise de l'activité sportive, la rééducation, la préparation physique...).
 
-Le professionnel tente de répondre à des problématiques qui reste certes en dehors de son champs d'action ou de sa spécialité telles que la nutrition, les blessures et le côté psychologique car elles représentent des facteurs clés dans le processus sportif sur lesquels, on ne peux ignorer leurs effets. Mais, **en aucun cas le coach sportif tente de convaincre ou bien de conseiller le client sur cet aspect technique dont il ne peut faire part d'une quelqucnque exertise**. C'est pour cela que **des partenariats sont établis** afin de rediriger le client vers un professionnel du métier proposant une approche intéressante sur le problème en particulier.
+Le professionnel tente de répondre à des problématiques qui restent certes en dehors de son champs d'action ou de sa spécialité telles que la nutrition, les blessures et le côté psychologique car elles représentent des facteurs clés dans le processus sportif sur lesquels, on ne peux ignorer leurs effets. Mais, **en aucun cas le coach sportif tente de convaincre ou bien de conseiller le client sur cet aspect technique dont il ne peut faire part d'une quelquonque expertise**. C'est pour cela que **des partenariats sont établis** afin de rediriger le client vers un professionnel du métier proposant une approche intéressante sur ces problèmes en particulier.
 
 <br>
 
-> **NOTE:** En aucun cas le coach sportif s'engage et se permet de conseiller sur ces cas particulier dont il ne fait bénéficier son expertise. Il ne se permet de proposer une quelqueconque conclusion en la matière...
+> **NOTE:** En aucun cas le coach sportif s'engage et se permet de conseiller sur ces cas particuliers dont il ne fait bénéficier son expertise. Il ne se permet de proposer une quelqueconque conclusion en la matière...
 
 <br>
 <br>
@@ -54,11 +54,11 @@ Le professionnel tente de répondre à des problématiques qui reste certes en d
 
 ## **Contenu du site**
 
-Devant la difficulté du client à dégager du temps pour se procurer et créer du contenu pour son site internet, j'ai dû improviser en créant poi-même du contenu afin de "remplir les blancs".
+Devant la difficulté du client à dégager du temps pour se procurer et créer du contenu pour son site internet, j'ai dû improviser en créant moi-même du contenu afin de "remplir les blancs".
 
 Entre la date de livraison et le début d'activité à temps plein, il sera donc le temps de finaliser tout ce genre de petits "problèmes".
 
-Le client m'a fait comprendre qu'il prendrai, en temps voulu, du temps et de l'argent afin de construire son identité visuelle. Une séance de photo sera organisée, également la sous-traitance en terme de design pour la création d'un logo, d'une marque, de flyers et maquettes de prospectus ainsi que la commande de matériel dédié à son image de marque, tout cela sera mis en place courant 2022 afin de finaliserce travail
+Le client m'a fait comprendre qu'il prendrai, en temps voulu, le temps et le budget nécessaire afin de construire son identité visuelle. Une séance de photo sera organisée, également la sous-traitance en terme de design pour la création d'un logo, d'une marque, de flyers et maquettes de prospectus ainsi que la commande de matériel dédié à son image de marque. Tout cela sera mis en place courant 2022 afin de finaliser ce travail.
 
 <br>
 <br>
@@ -101,14 +101,14 @@ De mon côté je suis resté tout à fait transparent exprimant mon souhait de l
 
 ### **Fonctionnalités de base**
 
-Pour le moment l'accord a été de livré un produit standard et efficace remplissant des tàches très simple.
+Pour le moment l'accord a été de livrer un produit standard et efficace remplissant des tàches très simple.
 
 Le projet proposera une fonctionnalilté de base qu'est le "Blog" afin de proposer des "backlinks" au partenaires potentiels et augmentez sa quantité de contenu.
 Il sera ainsi possible de "poster", mettre à jour, et effacer des articles de blog.
 
-**La fonctionnalité première est de plus simple** puisqu'elle se limite à pouvoir **se donner les moyens de récupérer des emails**. Pour cela de simples formulaires seront implémentés sur le site web afin de pouvoir dans un preier temps, stocker en base de données les futures listes du client.
+**La fonctionnalité première est de plus simple** puisqu'elle se limite à pouvoir **se donner les moyens de récupérer des emails**. Pour cela de simples formulaires seront implémentés sur le site web afin de pouvoir dans un premier temps, stocker en base de données les futures listes de clients.
 
-Il aura très certainement au début trois types de formulaire:
+Il aura très certainement au début trois types de formulaires:
 
 - un **formulaire ou input de contact** (partenaires, entreprises, autres)
 - un **formulaire pour sa clientèle principale**
@@ -116,7 +116,7 @@ Il aura très certainement au début trois types de formulaire:
 
 ### **Features**
 
-Certes de nouvelles "features" pourraient être prévues aux tests et à l'implémentation.
+Certes, de nouvelles "features" pourraient être prévues aux tests et à l'implémentation.
 
 Les premières au stade de réflexion sont:
 
@@ -125,6 +125,7 @@ Les premières au stade de réflexion sont:
 - ou bien d'ajouter des images...
 
 - de mettre en place un système de catégories et de "tags" pour organiser le côté blog du site...
+
 - de pouvoir ajouter / publier des recettes...
 
 <br>
@@ -144,13 +145,14 @@ Les premières au stade de réflexion sont:
 
 **Liste des objectifs pour ce projet:**
 
-- Créer une marque (pousser le client à réfléchir en ce sens)
+- Créer une marque (amener le client à réfléchir en ce sens)
 - Créer une identité visuelle
 - Peaufiner l'UI/UX petit à petit
 - Avoir un site vitrine référencé sur les moteurs de recherche
 - Pouvoir clairement exprimer son offre sur le web
 - Mettre l'accent sur son activité principale
 - Détailler ses activités secondaires (prépa physique, events, partenariats)
+- Publier de nouvelles pages sur son site, additionnellles à ce qui a été déjà mis en place
 - Construire et témoigner de son expertise en terme de sport
 - Proposer du contenu additionnel afin de compléter son offre
 - Se donner les moyens de construire son réseau professionnel

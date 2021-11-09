@@ -14,9 +14,9 @@
 <p>juleinorjollet.wd@gmail.com</p>
 
 <span>
-<a href="">website</a> |  
+<a href="#">website</a> |  
 <a href="https://github.com/CodeIsaMystic">github</a>  |  
-<a href="">linkedin</a>
+<a href="#">linkedin</a>
 </span>
 
 <br>
@@ -90,9 +90,9 @@ Et je taravaille aujourd'hui sur **le TDD, Typescript, les tests, React/Reux, le
 
 #### Conclusion
 
-Pour conclure cette section, je dirai qu'il m'est encore aujourd'hui très difficile de trouver ce tte motivation pour le PHP sachant que la pression augmente sur mes épaules concernant la montagne de travail que j'ai a réalisé sur ce profil de développeur Frontend Javascript React
+Pour conclure cette section, je dirai qu'il m'est encore aujourd'hui très difficile de trouver cette motivation pour le PHP sachant que la pression augmente sur mes épaules concernant la "montagne" de travail que j'ai a réalisé pour continuer de monter en compétences sur ce profil de développeur Frontend Javascript React.
 
-C'est également pourquoi j'ai voulu malgré tout vous proposer un projet à petite échelle, qui se veux complet, professionnel, que j'ai par conséquent simplifié car je n'étais pas très familier avec cette écosystème. J'espère ne pas m'être tromper. J'ai fait de mon mieux vu le temps que j'ai pu y accorder. J'espère également que vous apprécierez...
+C'est également pourquoi j'ai voulu malgré tout vous proposer un projet à petite échelle, qui se veux complet, que j'espère assez professionnel, que j'ai par conséquent simplifié car je n'étais pas très familier avec cette écosystème. J'espère ne pas m'être tromper. J'ai fait de mon mieux vu le temps que j'ai pu y accorder. J'espère également que vous apprécierez...
 
 <br>
 <br>
@@ -103,7 +103,9 @@ C'est également pourquoi j'ai voulu malgré tout vous proposer un projet à pet
 
 Vous trouverez à cette adresse `gh-pages` une ébauche de ce qui sera mon site à l'avenir. Cela donne une idée...
 J'y ai travaillé la maquette, le concept de présentation de quelques projets avec une explication technique détaillée ainsi qu'une façon d'en savoir un peu plus sur moi-même, avec mes liens de contact...
-Je suis en train de travailler sur la conception de ce site, je ne sais pas encore quelles techno je vai utiliser, j'y présenterai d'autres projets je pense...
+Je suis en train de travailler sur la conception de ce site, je ne sais pas encore quelles techno je vai utiliser...
+J'ai travaillé que le côté Front (HMLT / CSS) avec beaucoup de rédaction et une première expérience du logiciel Figma pour réaliser des mockups.
+Avec le recul, je pense y présenter d'autres projets...
 
 [website](https://codeisamystic.github.io/semplice-clone-portfolio/)
 
@@ -113,7 +115,6 @@ Je suis en train de travailler sur la conception de ce site, je ne sais pas enco
 ### Mail & Réseaux sociaux
 
 Je ne suis présent que sur linkedIN pour l'instant et je reste actif au sein de meetups et de communautés de développeurs sur Discord.
-Il faudra que je me mette sur Twitter.
 
 Vous pouvez me joindre donc **à cette adresse mail**:
 [julienorjollet.wd@gmail.com](julienorjollet.wd@gmail.com)

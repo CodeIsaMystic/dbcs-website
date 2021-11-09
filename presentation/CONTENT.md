@@ -3,7 +3,7 @@
   <br>
   <br>
   
-  <img src="../public/img/logos/logo-square-dark-1200.png" width="500">
+  <img src="../public/img/site/logos/logo-dbcs/logo-square-dark-1200.png" width="500">
 
 </div>
 
@@ -51,15 +51,15 @@
 
 ## About DBCS
 
-"DBCS Blog" is a **multipages website for a personal trainer**. You will find here the starting content created for this project.
+"DBCS Blog" is a **multipages website for a personal trainer**. You will find here the code's base starter created for this project.
 
-It's a **real professional project for a trainer wishing to start up his own business in September 2022.** The professional does not have any big request for his business, he's just wanted first to have a website published and starting to work with.
+A **real & volunteer professional project for a trainer wishing to start up his own business in September 2022.** It does not have any big request for his online business, but just having a website to work with.
 
-He have a tiny network and lot of experience in personal training and he would like to grow up with his own expertise as a freelance to get more independency.
+The client will start his business with a tiny network and lot of experience in personal training. He would like to grow up with his own expertise as a freelance to get more independency.
 
-**The content and the work you will find here on that repository will not be the final state of the project.** That's just a kind of demo, to approve by the client. So, with time, he totally knows that he will have to provide some real professional content and I will helping him in this strategy, trying to contract some real freelance professional on their domain.
+**The content and the work you will find here on that repository will not be the final state of the project.** That's just a kind of demo, to be approved by the client. So, with time, he totally knows that he will have to provide some real professional content and I will helping him in this strategy, trying to contract some real freelances, more professional on their domain.
 
-**The client does not have any deadline and expectation in terms of time**, so he lets me doing the job I've done and keeping me advising him for all subjects around the web activities needed for a professional.
+**The client does not have any deadline and expectation in terms of time**, so he lets me doing the job as I've done and keeping me advising him for all subjects around the web activities he will need...
 
 <br>
 <br>
@@ -77,7 +77,7 @@ He have a tiny network and lot of experience in personal training and he would l
    - "Accueil"
    - "Coaching"
    - "Blog"
-   - "contact"
+   - "Contact"
 
 #### **Primary Navigation**
 
@@ -126,7 +126,7 @@ A 4 columns layout with the Logo/Copyright, Contact & Social Media Info, an Ente
    "**COMMENT ÇA MARCHE**"
    <br>
    <br>
-3. MEAL
+3. MEAL **[THIS SECTION IS NOW OPTIONAL AND OT IMPLEMENTED YET]**
    "**Bien manger est la première chose à faire**"
    "**REPAS**"
    <br>
@@ -154,7 +154,7 @@ A 4 columns layout with the Logo/Copyright, Contact & Social Media Info, an Ente
 - Hero
 - [Partnership Enterprises logos confirmation]
 - How it works (section to help the prospect going to the Action)
-- Meals & Recipes (and list of diets )
+- Meals & Recipes (and list of diets ) **[REMOVED]**
 - Testimonials + gallery
 - Pricing + features
 - CTA
@@ -173,9 +173,9 @@ A 4 columns layout with the Logo/Copyright, Contact & Social Media Info, an Ente
 [Ajouter les images `/app-mockups`]
 
 <div align="center">
-<img src="../public/img/app-mockups/mockup-call.png" width="150">
-<img src="../public/img/app-mockups/organisation-mockup.png" width="150">
-<img src="../public/img/app-mockups/mockup-contact.png" width="150">
+<img src="../public/img/site/mockups/mockups-step/mockup-call.png" width="150">
+<img src="../public/img/site/mockups/mockups-step/organisation-mockup.png" width="150">
+<img src="../public/img/site/mockups/mockups-step/mockup-contact.png" width="150">
 </div>
 
 **"Votre coaching personnalisé en 3 étapes"**
@@ -217,6 +217,8 @@ A 4 columns layout with the Logo/Copyright, Contact & Social Media Info, an Ente
 <br>
 
 #### Diets list
+
+**[THIS SECTION IS NOW OPTIONAL AND NOT IMPLEMENTED YET]**
 
 - Régime minceur
 - Régime équilibré
@@ -324,7 +326,7 @@ A 4 columns layout with the Logo/Copyright, Contact & Social Media Info, an Ente
 
 ### CTA contact card
 
-A simple card contact with a "Free first coaching" and a Call To Action button in roder to add some email contacts in the owner's list.
+A simple card contact with a "Free first coaching" and a Call To Action button in order to add some email contacts in the owner's list.
 
 The form get the Name & Email info then contact with an email customized response.
 
@@ -365,7 +367,7 @@ No designer were contracted for this project.
 #### Main logo
 
 <div align="center">
-<img src="../public/img/logos/logo-square-dark-1200.png" width="250">
+<img src="../public/img/site/logos/logo-dbcs/logo-square-dark-1200.png" width="250">
 </div>
 
 Variants: [logo-1200 / logo-square-1200 / logo-square-light-1200 / logo-square-dark-1200]
@@ -376,14 +378,17 @@ Variants: [logo-1200 / logo-square-1200 / logo-square-light-1200 / logo-square-d
 #### Logos-partners
 
 <div align="center">
-<img src="../public/img/logos-partners/cep-gilles-cometti.png" width="150">
-<img src="../public/img/logos-partners/decathlon.png" width="150">
-<img src="../public/img/logos-partners/hbx-noir.png" width="150">
+<img src="../public/img/site/logos/logos-partners/cep-gilles-cometti.png" width="150">
+<img src="../public/img/site/logos/logos-partners/decathlon.png" width="150">
+<img src="../public/img/site/logos/logos-partners/hbx-noir.png" width="150">
 </div>
 <div align="center">
-<img src="../public/img/logos-partners/lappart.png" width="150">
-<img src="../public/img/logos-partners/naturacademy.png" width="150">
+<img src="../public/img/site/logos/logos-partners/lappart.png" width="150">
+<img src="../public/img/site/logos/logos-partners/naturacademy.png" width="150">
+
 </div>
+
+<br>
 
 All logos are temporary, made for "filling the blank" in order to move forward building that template and trying to keep a kind of "Style Guide" for that same purpose.
 

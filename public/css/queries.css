@@ -136,6 +136,10 @@
   textarea {
     text-indent: -60px;
   }
+  .add-post .post-content .source-link input,
+  .edit-post .post-content .source-link input {
+    text-indent: -40px;
+  }
   /*  container */
   .container {
     padding: 0 2.4rem;
@@ -456,6 +460,10 @@
   .footer .grid--footer .col-logo {
     grid-area: col-logo;
   }
+  /* btn */
+  .btn25 {
+    width: 40%;
+  }
 
   /* headings */
   .heading-primary {
@@ -644,6 +652,10 @@
   .subheading {
     font-size: 1.2rem;
     text-align: center;
+  }
+  /* btn */
+  .btn25 {
+    width: 60%;
   }
   /* hero fullW */
   .hero--fullW {

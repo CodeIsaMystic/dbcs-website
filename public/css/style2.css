@@ -10,14 +10,19 @@
 /* EDIT POST */
 /**************/
 /* style all section */
-.edit-post {
-}
+// .edit-post {
+// }
+.add-post .post-content,
 .edit-post .post-content {
   padding: 0 3.2rem;
 }
+// .edit-post .post-content .source-link input {
+// }
+
 /* input source_link indentation issue */
-.add-post .source-link input,
-.edit-post .source-link input {
+.add-post .post-content .source-link input,
+.edit-post .post-content .source-link input {
+  text-indent: -50px;
 }
 /***************/
 /*  CKEDITOR  */
@@ -211,7 +216,6 @@
   line-height: 1.2;
   margin-bottom: 1.2rem;
 }
-
 .dataTables_length label {
   width: 65px;
 }

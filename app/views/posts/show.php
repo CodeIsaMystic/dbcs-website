@@ -1,3 +1,8 @@
+<?php 
+// var_dump($data);
+//  die();
+?>
+
 <!-- HEADER -->
 <?php require APP_ROOT . '/views/inc/header.php'; ?>
 
@@ -12,10 +17,10 @@
 <section class="hero--fullW bg-white">
   <div>
     <picture>
-      <source srcset="<?php echo URL_ROOT; ?>/img/uploads/posts/hero/physio.png" type="image/webp" />
-      <source srcset="<?php echo URL_ROOT; ?>/img/uploads/posts/hero/physio.png" type="image/png" />
+      <source srcset="<?php echo URL_ROOT; ?>/img/uploads/<?php echo $data['post']->image ?>" type="image/webp" />
+      <source srcset="<?php echo URL_ROOT; ?>/img/uploads/<?php echo $data['post']->image ?>" type="image/png" />
 
-      <img src="<?php echo URL_ROOT; ?>/img/uploads/posts/hero/physio.png" alt="close up of two hands doing massage"/>
+      <img src="<?php echo URL_ROOT; ?>/img/uploads/<?php echo $data['post']->image ?>" alt="close up of two hands doing massage"/>
     </picture>
   </div>
   <div class="hero--fullW__heading hero--fullW__heading--center">
@@ -46,10 +51,8 @@
     <div class="post-content txt-dark mb">
       <a href="<?php echo $data['post']->source_link; ?>" target="_blank" class="link link-dark link--underline">
         <?php 
-        // var_dump($source_explode[2]); die();
-
         if( $data['post']->source_link != null) {
-          echo getSourceLinkFormatted($data['post']->source_link);  
+          echo getWebsiteSourceLinkFormatted($data['post']->source_link);  
         } else {
           echo '';
         }
@@ -58,6 +61,12 @@
     </div>
   </div>
 </section>
+
+<?php 
+// var_dump($data);
+// die();
+?>
+
 
 
 

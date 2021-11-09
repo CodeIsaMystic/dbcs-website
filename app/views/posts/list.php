@@ -1,5 +1,7 @@
 <!-- HEADER --->
-<?php require APP_ROOT . '/views/inc/header.php'; ?>
+<?php 
+require APP_ROOT . '/views/inc/header.php'; 
+?>
 
 <!-- FLASH  MESSAGES -->
 <?php require APP_ROOT . '/views/inc/flashmessages.php'; ?>
@@ -45,6 +47,7 @@
       <table id="myTable" class="hover box-shad1 mt mb-md pb-sm">
         <thead class="mb-xs">
           <th class="heading-tertiary font-garamond fontW500 txt-dark pb-xs pt-xs">Titre</th>
+          <th class="heading-tertiary font-garamond fontW500 txt-dark pb-xs pt-xs">Date</th>
           <th class="heading-tertiary font-garamond fontW500 txt-dark pb-xs pt-xs">Liens</th>
         </thead>
 
@@ -56,8 +59,13 @@
             <td class="">
               <a class="link link--underline mb-xs"
                 href="<?php echo URL_ROOT; ?>/posts/show/<?php echo $post->postId; ?>">
-                <?php echo $post->title; ?>
+                <?php echo getExcerpt($post->title, 30); ?>
               </a>
+            </td> 
+            <td class="">
+              <?php 
+              echo getDateFormatted($post->postCreated); 
+              ?>
             </td> 
             <td class="td-links">
               <a class="td-link-blue txt-center"

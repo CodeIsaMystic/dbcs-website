@@ -1,8 +1,6 @@
 <div align="center">
 
-  <p>An helper to implement the codebase of a PHP Framework following the MVC pattern</p>
-
-<img src="./public/img/logos/logo-square-dark-1200.png" width='500'></img>
+<img src="./public/img/site/logos/logo-dbcs/logo-square-dark-1200.png" width='500'></img>
 
   <h1 align="center">Aimer le sport par le coaching</h1>
   <br>
@@ -20,41 +18,45 @@
 - [Start building your project](#start-building-your-project)
 - [Branding and style guide](#branding-and-style-guide)
 - [The Project](#the-project)
-  - [javascript](#javascript)
-  - [backend](#backend)
+    - [Global scope](#global-scope)
+    - [Javascript](#javascript)
+  - [Backend](#backend)
 
 ## Getting Started
 
 1. **Download the Zip folder** and extract it on your machine.
-2. **Put the folder on the `directory/www`** of your Wamp setup.
-3. **Create a quick Database** on `phpMyAdmin`
-4. **Add your constants variables** on the `config/` folder.
-5. **Change the `.htaccess` file**: name your project and put that name to the .htaccess file in the `public/` folder
+2. **Put the folder on the `wamp64/www`** of your Wamp setup.
+3. **Create a quick Database** on `phpMyAdmin` you can use the `dbcs.sql` file on the root of the project.
+4. **Add your own constants variables** on the `app/config/config.php` file.
+5. **Change the `.htaccess` files**: name your project and put that name to the .htaccess file in the `public/` folder
 6. **Launch your localhost from WAMP**
+
+---
 
 <br>
 <br>
 
 ### Config constants to change
 
-These constants are to been update with your project.
+These constants are to update if you download the project.
 You will find them on **the `app/config/config.php` file**.
 
 ```php
-// DB Params
 define('DB_HOST', 'localhost');
 define('DB_USER', '_YOUR_USERNAME_');
 define('DB_PASS', '_YOUR_PASSWORD_');
+// Your phpMyAdmin database's username and password
 define('DB_NAME', '_YOUR_DBNAME_');
+// Your Project's database name
 
-// App root
 define('APP_ROOT',dirname(dirname(__FILE__)));
 
-// URL root
 define('URL_ROOT', '_YOUR_URL_');
+// The url you will use, like "http://localhost/NAME_FOLDER"
+// The NAME_FOLDER must be the same you use on your `wamp64/www` directory
 
-// Site name
 define('SITE_NAME', '_YOUR_SITE_NAME_');
+// The site name you want to display on the <title>
 ```
 
 <br>
@@ -71,44 +73,57 @@ You have **to switch `<YOUR_NAME_FOLDER>` by what's your app main project's name
   RewriteBase /<YOUR_NAME_FOLDER>/public
 ```
 
+> **NOTES:**
+> you may encounter an issue to setup the project. Please checkout all the .htaccess files are exactly the same as the project. You just have to do one changes for your name folder.
+
 <br>
 <br>
 <br>
 
 ## Structure
 
-This helper is implemented with this clean and simple files's architecture.
+This project is implemented with this simple files's architecture.
 
 ```sh
 app/
-├── config
+├── config/
 │   └── config.php
-├── controllers
-│   └── Pages.php
-├── helpers
-├── lib
+├── controllers/
+│   ├── Pages.php
+│   ├── Posts.php
+│   └── Users.php
+├── helpers/...
+├── lib/
 │   ├── Controller.php
 │   ├── Core.php
 │   └── Database.php
-├── models
-├── views
-│   ├── inc
-│   |   ├── footer.php
-│   |   └── header.php
-│   └── pages
-│       ├── about.php
-│       └── index.php
+├── models/
+│   ├── Post.php
+│   └── User.php
+├── views/
+│   ├── inc/
+│   ├── pages/
+│   └── posts/
 ├── .htaccess
 └── bootstrap.php
 public/
-├── css
+├── css/
 │   └── styles.css
-├── images
-├── js
-│   └── main.js
+├── img/
+│   ├── favicons/
+│   ├── site/
+│   └── uploads/
+
+├── js/
+│   ├── helper/
+│   ├── lib/
+│   ├── modules/
+│   └── script.js
 ├── .htaccess
-└── index.php
+├── index.php
+└── manifest.webmanifest
 .htacccess
+dbcs.sql
 README.md
 
 ```
@@ -119,9 +134,15 @@ README.md
 
 ## Start building your project
 
-_In this section, I will document how to create your database, the models related to your project and so on._
+_In this section, I document to create your database, the models related to your project and so on. Some basic's stuff..._
 
-To be continued...
+1.  first, create your database on your phpMyAdmin account (thinking that you don't have to forget to rename your constants and your .htaccess file)
+2.  get the `dbcs.sql` file on the root
+3.  then copy/paste the file's content into the `SQL` section
+4.  checkout every rows and columns are provided and corresponding for the project because it may have some issue if that files has not been updated on time.
+
+> **NOTES:**
+> Noticed you do have to check your constants naming variables, matching with your phpMyAdmin credentails and the project name setup you changed on the .htaccess file.
 
 <br>
 <br>
@@ -133,14 +154,16 @@ To be continued...
 
 A standard style guide is made on purpose to referr to it, the website will evolve, closed to the customer, and we will of course make some changes as long as we build that project.
 
-![DBCS Style Guide](dbcs-style-guide.jpg)
+![DBCS Style Guide](./dbcs-style-guide.jpg)
 
 > **NOTICE:**
-> We do not go in depth on that topics because of time and effort but we could definitivetly add more content, and context such as 'tags, logos, icons' or 'personas', customers potential...
+>
+> - We do not go in depth on that topics because of time and effort but we could definitivetly add more content, and context such as 'tags, logos, icons' or 'personas', customers potential...
+> - This style guide may have changed with time...
 
 ## The Project
 
-#### global scope
+#### Global scope
 
 A simple app web site for a professional personal trainer which is trying to build his own enterprise. The needs are basic and we've focused more time and effort on the way to manage customers, partners and contacts in general.
 
@@ -148,7 +171,7 @@ The blog part will be used mor as a way to make some partners, helping them to i
 
 On this way, the client do not make some big effort to publish some new contents and can like so, stay focus on his list of customers, prospects, partners or contacts...
 
-#### javascript
+#### Javascript
 
 You will find as well on the UI and "Views" side some of Javascript modules or library used to animate or some functionalities closed to the Js part of an application such as DataTables.js, scrollTrigger.js or stickyHeader.js...
 
@@ -156,7 +179,7 @@ I decide as well **in javascript to focus on a simple Modules architecture organ
 
 There's also an helper folder to add some tiny functions..
 
-### backend
+### Backend
 
 For this simplifyed project, I decide to use a MVC Architecture with PHP & MySQL as database.
 
@@ -164,3 +187,7 @@ I've simplifyied the back office for purpose.
 It's a "volunteer project" for a professional which have some simple needs and we both definitively agree that it will be not a special requirement, and need for his activity.
 
 The project will grow with time and this MVC architecture allows us to do so...
+
+> **NOTES:**
+> You possibly may encounter an issue with receiving email if you will test the forms contact and it's totally okay. You do have to setup your machine on this purpose if you are using WAMP as localhost.
+> Please get more infos on a Google search about " _"How to setup WAMP to send email in php"_
