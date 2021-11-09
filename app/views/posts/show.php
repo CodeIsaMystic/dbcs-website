@@ -1,7 +1,3 @@
-<?php 
-// var_dump($data);
-//  die();
-?>
 
 <!-- HEADER -->
 <?php require APP_ROOT . '/views/inc/header.php'; ?>
@@ -61,14 +57,6 @@
     </div>
   </div>
 </section>
-
-<?php 
-// var_dump($data);
-// die();
-?>
-
-
-
 
 <!-- FOOTER --> 
 <?php require APP_ROOT . '/views/inc/footer.php'; ?>

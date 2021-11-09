@@ -18,21 +18,18 @@
     }
     
     public function add(){
-      // $is_pending = false;
 
       if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         // Sanitizing Tests for POST array
         $_POST = filter_input_array(INPUT_POST);
   
-        // $is_pending = false;
 
         $data = [
           'user_id' => $_SESSION['user_id'],
           'title' => trim($_POST['title']),
           'body' => trim($_POST['body']),
           'source_link' => trim($_POST['source_link']),
-          // 'is_pending' => true,
           'image' => $_FILES,
           'title_err' => '',
           'body_err' => '',
@@ -64,7 +61,6 @@
           $fileType = $_FILES['image']['type'];
           $fileError = $_FILES['image']['error'];
 
-          // $is_pending = true;
           
           // get files extension
           $tempExtension = explode(".", $fileName);
@@ -73,35 +69,42 @@
           $isAllowed = array('jpg', 'png', 'jpeg');
             
           // build & move uploaded file & data
-          if(in_array($fileExtension, $isAllowed)) {
-            if($fileError !== 4) {
-              if($fileError === 0) {
-                if($fileSize < 3000000) {
+          if(in_array($fileExtension, $isAllowed)) 
+          {
+            if($fileError !== 4) 
+            {
+              if($fileError === 0) 
+              {
+                if($fileSize < 3000000) 
+                {
                   $data['image'] = uniqid('', true) . "." . $fileExtension;
       
                   $fileDestination = UPLOADS_FOLDER . $data['image'];
                   
                   move_uploaded_file($fileTmpPath, $fileDestination);
                 }
-                else {
+                else 
+                {
                   $data['image_err'] = 'Désolé le fichier est trop lourd';
                 }  
               }
-              else {
+              else 
+              {
                 $data['image_err'] = 'Il y a eu une erreur. Essayez encore une fois.';
               }
-            } else {
+            } 
+            else 
+            {
               $data['image_err'] = 'Désolé cette extension n\'est pas autorisée';
             }
-          } else {
+          } 
+          else 
+          {
             $data['image_err'] = 'Vous devez ajouter une image à votre article';           
           }
         }
-
-        // var_dump($data);
-        // die();
             
-          // Make Sure There Are No Errors
+          // make sure there are no errors
           if(
             empty($data['title_err']) && 
             empty($data['body_err']) && 
@@ -109,7 +112,6 @@
             empty($data['source_link_err']) ) {
             
             if($this->postModel->addPost($data)){
-              // $data['is_pending'] = false;
               flash('post_message', 'Votre article a bien été ajouté et publié');
               redirect('pages/blog');
             } else {
@@ -124,7 +126,6 @@
             'title' => '',
             'body' => '',
             'source_link' => '',
-            // 'is_pending' => true,
             'image' => '',
             'title_err' => '',
             'body_err' => '',
@@ -150,7 +151,6 @@
     }
     
     public function list(){
-      // If Not Logged In Redirect
       if(!isLoggedIn()){
         redirect('users/login');
       }
@@ -172,14 +172,12 @@
       }
       
       $post = $this->postModel->getPostById($id);
-      // $is_pending = false;
       
       $data = [
         'post' => $post,
         // 'title' => '',
         // 'body' => '',
         // 'source_link' => '',
-        // 'is_pending' => false,
         'image' => '', 
         'title_err' => '',
         'body_err' => '',      
@@ -188,13 +186,10 @@
       ];
 
 
-
-
       
       if($_SERVER['REQUEST_METHOD'] == 'POST'){
         // Sanitizing Tests for POST array
         $_POST = filter_input_array(INPUT_POST);
-        // $is_pending = false;
 
         $data = [
           'id' => $id,
@@ -203,7 +198,6 @@
           'title' => trim($_POST['title']),
           'body' => trim($_POST['body']),
           'source_link' => trim($_POST['source_link']),
-          // 'is_pending' => true,
           'image' => $_FILES, 
           'title_err' => '',
           'body_err' => '',          
@@ -221,66 +215,61 @@
         if(empty($data['source_link'])){
           $data['source_link_err'] = 'Ajoutez le lien vers la source de votre article';
         }
-        // if(empty($data['image'])){
-        //   $data['image_err'] = 'Vous devez ajouter une image à votre article';
-        // }
-
 
         // Avoid Useless Request
         if(
           $data['title'] == $this->postModel->getPostById($id)->title && 
           $data['source_link'] == $this->postModel->getPostById($id)->source_link && 
           $data['image'] == $this->postModel->getPostById($id)->image && 
-          $data['body'] == $this->postModel->getPostById($id)->body) {
+          $data['body'] == $this->postModel->getPostById($id)->body) 
+        {
 
           $data['title_err'] = "Vous devez au moins changer un des éléments suivants: titre, image, texte, lien.";
         }
         
-        /************************************
-        * if ..... condition changes
-        * handling previousImage / shouldUpload / isPending
-        * unlink previous && move new uploaded file  
-        * $data['post']->image   set as previous image
-        * $_FILES['image']      set as new image
-        *************************************/
-        
-
-        // if(!empty($previous_image)) {} else {}
-
-        // // if POST executed OR Method Request === 'post'
-
-        // unlink($previous_image);
-        /*************************************/
+        // Validate The Data
+        if(empty($data['title'])){
+          $data['title_err'] = 'Veuillez ajoutez un titre';
+        }
+        if(empty($data['body'])){
+          $data['body_err'] = "Ajoutez le contenu de l'article";
+        }
+        if(empty($data['source_link'])){
+          $data['source_link_err'] = 'Ajoutez le lien vers la source de votre article';
+        }
 
         if(!empty($_FILES['image'])) {
           
+          // get files data
           $file = $_FILES['image']; 
           $fileTmpPath = $_FILES['image']['tmp_name'];
           $fileName = $_FILES['image']['name'];
           $fileSize = $_FILES['image']['size'];
-          $fileType = $_FILES['image']['type'];
           $fileError = $_FILES['image']['error'];
   
+          // get file extension
           $tempExtension = explode(".", $fileName);
           $fileExtension = strtolower(end($tempExtension));
+
           $isAllowed = array('jpg', 'png', 'jpeg');
   
+          // build and move file & data
           if(in_array($fileExtension, $isAllowed)) {
-              if($fileError === 0) {
-                if($fileSize < 3000000) {
-                  $data['image'] = uniqid('', true) . "." . $fileExtension;
-                  
-                  $fileDestination = UPLOADS_FOLDER . $data['image'];
-                  
-                  move_uploaded_file($fileTmpPath, $fileDestination);
-                }
-                else {
-                  $data['image_err'] = 'Désolé le fichier est trop lourd';
-                }  
+            if($fileError === 0) {
+              if($fileSize < 3000000) {
+                $data['image'] = uniqid('', true) . "." . $fileExtension;
+                
+                $fileDestination = UPLOADS_FOLDER . $data['image'];
+                
+                move_uploaded_file($fileTmpPath, $fileDestination);
               }
               else {
-                $data['image_err'] = 'Il y a eu une erreur. Essayez encore une fois.';
-              }
+                $data['image_err'] = 'Désolé le fichier est trop lourd';
+              }  
+            }
+            else {
+              $data['image_err'] = 'Il y a eu une erreur. Essayez encore une fois.';
+            }
           } else {
             $data['image_err'] = 'Désolé cette extension n\'est pas autorisée';
           }
@@ -297,7 +286,6 @@
           empty($data['source_link_err']) ) {
           
           if($this->postModel->updatePost($data)){
-            // $data['is_pending'] = false;
             if(!empty($data['post']->image)) {
               $previous_image = UPLOADS_FOLDER . $data['post']->image;
 
@@ -327,7 +315,6 @@
          
       $post = $this->postModel->getPostById($id);
 
-
       // review the data set entirely
       $data = [
         'post' => $post,
@@ -336,8 +323,8 @@
         'source_link' => '',
         'title_err' => '',
         'body_err' => '',
+        'image_err' => '',
         ];
-
       
       
       if($_SERVER['REQUEST_METHOD'] == 'POST'){
@@ -345,13 +332,11 @@
         $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 
         if($this->postModel->deletePost($id)) {
-          /**************************************/
           if(!empty($data['post']->image)) {
             $previous_image = UPLOADS_FOLDER . $data['post']->image;
             
             unlink($previous_image);
           }
-          /**************************************/
           flash('post_message', 'L\'article a bien été supprimé');
           redirect("posts/list");
         } else {
