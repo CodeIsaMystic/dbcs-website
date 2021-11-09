@@ -411,12 +411,10 @@
 /*  ALERTS    */
 /*************/
 .alert {
-  display: block;
   margin: 0 auto 0.8rem;
   padding: 0.4rem 0;
   background-color: whitesmoke;
   box-shadow: 0 4px 5px 0 rgba(45, 54, 65, 0.75);
-  z-index: 5001;
 }
 .alert p {
   text-indent: 2.4rem;
@@ -428,10 +426,12 @@
 /* FLASH MESSAGES */
 /*****************/
 .flash-messages {
+  display: block;
   background-color: transparent;
   position: fixed;
   width: 40%;
   top: 9.6rem;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 3;
 }
