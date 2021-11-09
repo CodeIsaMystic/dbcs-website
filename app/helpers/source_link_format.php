@@ -1,8 +1,24 @@
 <?php 
+// Plan: 
+//  # error messages
+//    => "Veuillez vérifier l'adresse url du site. Cela ne doit pas être correct."
+//  # sourceLinkIsValid() function built 
+//      => use case:
+//          - "www" pattern -> checkUrlStringPattern
+//          - regex http:// or https//
+
+
 
 // Check the String source_link url pattern before formatting 
 function checkUrlStringPattern($url) {
-  
+  // Note: 
+  //  switch string's "www." pattern  to regex
+  //
+  //
+
+
+
+
   $pattern = "www.";
   $pos = strpos($url, $pattern);
 
