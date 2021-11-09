@@ -227,16 +227,6 @@
           $data['title_err'] = "Vous devez au moins changer un des éléments suivants: titre, image, texte, lien.";
         }
         
-        // Validate The Data
-        if(empty($data['title'])){
-          $data['title_err'] = 'Veuillez ajoutez un titre';
-        }
-        if(empty($data['body'])){
-          $data['body_err'] = "Ajoutez le contenu de l'article";
-        }
-        if(empty($data['source_link'])){
-          $data['source_link_err'] = 'Ajoutez le lien vers la source de votre article';
-        }
 
         if(!empty($_FILES['image'])) {
           
@@ -255,23 +245,25 @@
   
           // build and move file & data
           if(in_array($fileExtension, $isAllowed)) {
-            if($fileError === 0) {
-              if($fileSize < 3000000) {
-                $data['image'] = uniqid('', true) . "." . $fileExtension;
-                
-                $fileDestination = UPLOADS_FOLDER . $data['image'];
-                
-                move_uploaded_file($fileTmpPath, $fileDestination);
+            if($fileError === 4) {
+              if($fileError === 0) {
+                if($fileSize < 3000000) {
+                  $data['image'] = uniqid('', true) . "." . $fileExtension;
+                  
+                  $fileDestination = UPLOADS_FOLDER . $data['image'];
+                  
+                  move_uploaded_file($fileTmpPath, $fileDestination);
+                }
+                else {
+                  $data['image_err'] = 'Désolé le fichier est trop lourd';
+                }  
               }
               else {
-                $data['image_err'] = 'Désolé le fichier est trop lourd';
-              }  
+                $data['image_err'] = 'Il y a eu une erreur. Essayez encore une fois.';
+              }
+            } else {
+              $data['image_err'] = 'Désolé cette extension n\'est pas autorisée';
             }
-            else {
-              $data['image_err'] = 'Il y a eu une erreur. Essayez encore une fois.';
-            }
-          } else {
-            $data['image_err'] = 'Désolé cette extension n\'est pas autorisée';
           }
         }
         
