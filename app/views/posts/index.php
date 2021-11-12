@@ -1,10 +1,7 @@
 
 <!-- SECTION POSTS --->
 <?php foreach($data['posts'] as $post) : ?>
-<?php  
-  // var_dump($data);
-  // die();
-?>
+
 <section class="posts bg-white pb-md">
   <div class="container container--md">
     <article class="post grid--1-col b-radius4 box-shad1">
@@ -52,5 +49,6 @@
     </article>
   </div>
 </section>
+
 <?php endforeach; ?>
 

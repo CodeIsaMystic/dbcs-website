@@ -1,37 +1,6 @@
 <!-- HEADER -->
 <?php 
 require APP_ROOT . '/views/inc/header.php'; 
-  /***************************************/
-  /***************************************/
-  /***************************************/
-  // echo '$data';
-  // var_dump($data);
-  
-  // // echo '<br>';
-  // // echo '$data[IMAGE]<br>';
-  // // var_dump($data['image']);
-  
-  // echo '<br>';
-  // echo '$data[POST]<br>';
-  // var_dump($data['post']);
-  
-  // echo '<br>';
-  // echo '$data[POST][IMAGE]<br>';
-  // var_dump($data['post']->image);
-  
-  // echo '<br>';
-  // echo '$_FILES <br>';
-  // var_dump($_FILES);
-
-  
-  // echo '<br>';
-  // echo '$_FILES[IMAGE] <br>';
-  // var_dump($_FILES['image']);
-  
-  // die();
-  /***************************************/
-  /***************************************/
-  /***************************************/
 ?>
 
 

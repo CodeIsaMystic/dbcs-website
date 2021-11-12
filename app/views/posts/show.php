@@ -2,8 +2,6 @@
 <!-- HEADER -->
 <?php
 require APP_ROOT . '/views/inc/header.php';
-  // echo '$data';
-  // var_dump($data);
 ?>
 
 

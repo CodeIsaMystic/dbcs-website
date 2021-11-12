@@ -38,32 +38,6 @@
           'image_err' => '',
         ];
 
-        
-        /***************************************/
-        /***************************************/
-        /***************************************/
-        // echo 'DATA';
-        // var_dump($data);
-        
-        // echo '<br>';
-        // echo 'IMAGE<br>';
-        // var_dump($data['image']);
-        
-
-        // echo '<br>';
-        // echo 'FILES <br>';
-        // var_dump($_FILES);
-
-        
-        // echo '<br>';
-        // echo 'FILES <br>';
-        // var_dump($_FILES['image']);
-        
-        // die();
-        /***************************************/
-        /***************************************/
-        /***************************************/
-
         // validate the data
         if(empty($data['title'])){
           $data['title_err'] = 'Veuillez ajoutez un titre';
@@ -229,40 +203,6 @@
           'source_link_err' => '',
         ];
 
-        /***************************************/
-        /***************************************/
-        /***************************************/
-        // echo '$data';
-        // var_dump($data);
-        
-        // echo '<br>';
-        // echo '$data[IMAGE]<br>';
-        // var_dump($data['image']);
-        
-        // echo '<br>';
-        // echo '$data[POST]<br>';
-        // var_dump($data['post']);
-        
-        // echo '<br>';
-        // echo '$data[POST][IMAGE]<br>';
-        // var_dump($data['post']->image);
-        
-        // echo '<br>';
-        // echo '$_FILES <br>';
-        // var_dump($_FILES);
-
-        
-        // echo '<br>';
-        // echo '$_FILES[IMAGE] <br>';
-        // var_dump($_FILES['image']);
-        
-        // die();
-        /***************************************/
-        /***************************************/
-        /***************************************/
-        
-        
-        
 
         // Validate data
         if(empty($data['title'])){
@@ -277,12 +217,12 @@
         if(empty($data['source_link'])){
           $data['source_link_err'] = 'Ajoutez le lien vers la source de votre article';
         }
-        if(!empty($data['source_link'])) {
-          if(preg_match('%\b(([\w-]+://?|www[.])[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]|/)))%s', $data['source_link'])) {
-            $data['source_link_err'] = "";
-          } else {
-            $data['source_link_err'] = "L'adresse url n'est pas correct. Veuillez réessayer à nouveau.";
-          } 
+        
+        // check if `http and/or www` is provided
+        if(isValidURL($data['source_link'])) {
+          $data['source_link_err'] = "";
+        } else {
+          $data['source_link_err'] = "L'adresse url n'est pas correct. Veuillez réessayer à nouveau.";
         }
 
         // Avoid Useless Request
