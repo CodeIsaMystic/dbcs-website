@@ -13,6 +13,7 @@
       $data = [
         'posts' => $posts
       ];
+
       // load the view with all Posts
       $this->view('posts/index', $data);
     }
@@ -37,9 +38,38 @@
           'image_err' => '',
         ];
 
-        // Validate The Data
+        
+        /***************************************/
+        /***************************************/
+        /***************************************/
+        // echo 'DATA';
+        // var_dump($data);
+        
+        // echo '<br>';
+        // echo 'IMAGE<br>';
+        // var_dump($data['image']);
+        
+
+        // echo '<br>';
+        // echo 'FILES <br>';
+        // var_dump($_FILES);
+
+        
+        // echo '<br>';
+        // echo 'FILES <br>';
+        // var_dump($_FILES['image']);
+        
+        // die();
+        /***************************************/
+        /***************************************/
+        /***************************************/
+
+        // validate the data
         if(empty($data['title'])){
           $data['title_err'] = 'Veuillez ajoutez un titre';
+        }
+        if(empty($_FILES['image']['tmp_name'])){
+          $data['image_err'] = 'Vous devez ajouter une image à votre article';
         }
         if(empty($data['body'])){
           $data['body_err'] = "Ajoutez le contenu de l'article";
@@ -47,11 +77,16 @@
         if(empty($data['source_link'])){
           $data['source_link_err'] = 'Ajoutez le lien vers la source de votre article';
         }
+        if(!empty($data['source_link'])) {
+          if(preg_match('%\b(([\w-]+://?|www[.])[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]|/)))%s', $data['source_link'])) {
+            $data['source_link_err'] = "";
+          } else {
+            $data['source_link_err'] = "L'adresse url n'est pas correct. Veuillez réessayer à nouveau.";
+          } 
+        }
+        
 
-      
-        
-        
-        if(!empty($data['image'])) {
+        if(!empty($_FILES['image']['tmp_name'])) {
             
           // get files data
           $file = $_FILES['image'];
@@ -71,36 +106,29 @@
           // build & move uploaded file & data
           if(in_array($fileExtension, $isAllowed)) 
           {
-            if($fileError !== 4) 
+            if($fileError === 0) 
             {
-              if($fileError === 0) 
+              if($fileSize < 3000000) 
               {
-                if($fileSize < 3000000) 
-                {
-                  $data['image'] = uniqid('', true) . "." . $fileExtension;
-      
-                  $fileDestination = UPLOADS_FOLDER . $data['image'];
-                  
-                  move_uploaded_file($fileTmpPath, $fileDestination);
-                }
-                else 
-                {
-                  $data['image_err'] = 'Désolé le fichier est trop lourd';
-                }  
+                $data['image'] = uniqid('', true) . "." . $fileExtension;
+    
+                $fileDestination = UPLOADS_FOLDER . $data['image'];
+                
+                move_uploaded_file($fileTmpPath, $fileDestination);
               }
               else 
               {
-                $data['image_err'] = 'Il y a eu une erreur. Essayez encore une fois.';
-              }
-            } 
+                $data['image_err'] = 'Désolé le fichier est trop lourd';
+              }  
+            }
             else 
             {
-              $data['image_err'] = 'Désolé cette extension n\'est pas autorisée';
+              $data['image_err'] = 'Il y a eu une erreur. Essayez encore une fois.';
             }
           } 
           else 
           {
-            $data['image_err'] = 'Vous devez ajouter une image à votre article';           
+            $data['image_err'] = 'Désolé cette extension n\'est pas autorisée';
           }
         }
             
@@ -113,7 +141,7 @@
             
             if($this->postModel->addPost($data)){
               flash('post_message', 'Votre article a bien été ajouté et publié');
-              redirect('pages/blog');
+              redirect('posts/list');
             } else {
               die('Something went wrong');
             }
@@ -146,6 +174,7 @@
         'post' => $post,
         'user' => $user
       ];
+      
       // Load The View Show A Post
       $this->view('posts/show', $data);
     }
@@ -175,10 +204,6 @@
       
       $data = [
         'post' => $post,
-        // 'title' => '',
-        // 'body' => '',
-        // 'source_link' => '',
-        'image' => '', 
         'title_err' => '',
         'body_err' => '',      
         'source_link_err' => '',
@@ -205,15 +230,60 @@
           'source_link_err' => '',
         ];
 
+        /***************************************/
+        /***************************************/
+        /***************************************/
+        // echo '$data';
+        // var_dump($data);
+        
+        // echo '<br>';
+        // echo '$data[IMAGE]<br>';
+        // var_dump($data['image']);
+        
+        // echo '<br>';
+        // echo '$data[POST]<br>';
+        // var_dump($data['post']);
+        
+        // echo '<br>';
+        // echo '$data[POST][IMAGE]<br>';
+        // var_dump($data['post']->image);
+        
+        // echo '<br>';
+        // echo '$_FILES <br>';
+        // var_dump($_FILES);
+
+        
+        // echo '<br>';
+        // echo '$_FILES[IMAGE] <br>';
+        // var_dump($_FILES['image']);
+        
+        // die();
+        /***************************************/
+        /***************************************/
+        /***************************************/
+        
+        
+        
+
         // Validate data
         if(empty($data['title'])){
           $data['title_err'] = 'Veuillez ajoutez un titre';
+        }
+        if($_FILES['image']['size'] === 0 && empty($data['post']->image) ){
+          $data['image_err'] = 'Vous devez ajouter une image à votre article';
         }
         if(empty($data['body'])){
           $data['body_err'] = "Ajoutez le contenu de l'article";
         }
         if(empty($data['source_link'])){
           $data['source_link_err'] = 'Ajoutez le lien vers la source de votre article';
+        }
+        if(!empty($data['source_link'])) {
+          if(preg_match('%\b(([\w-]+://?|www[.])[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]|/)))%s', $data['source_link'])) {
+            $data['source_link_err'] = "";
+          } else {
+            $data['source_link_err'] = "L'adresse url n'est pas correct. Veuillez réessayer à nouveau.";
+          } 
         }
 
         // Avoid Useless Request
@@ -228,7 +298,7 @@
         }
         
 
-        if(!empty($_FILES['image'])) {
+        if(($_FILES['image']['size'] > 0)) {
           
           // get files data
           $file = $_FILES['image']; 
@@ -245,26 +315,27 @@
   
           // build and move file & data
           if(in_array($fileExtension, $isAllowed)) {
-            if($fileError === 4) {
-              if($fileError === 0) {
-                if($fileSize < 3000000) {
-                  $data['image'] = uniqid('', true) . "." . $fileExtension;
-                  
-                  $fileDestination = UPLOADS_FOLDER . $data['image'];
-                  
-                  move_uploaded_file($fileTmpPath, $fileDestination);
-                }
-                else {
-                  $data['image_err'] = 'Désolé le fichier est trop lourd';
-                }  
+            if($fileError === 0) {
+              if($fileSize < 3000000) {
+                $data['image'] = uniqid('', true) . "." . $fileExtension;
+                
+                $fileDestination = UPLOADS_FOLDER . $data['image'];
+                
+                move_uploaded_file($fileTmpPath, $fileDestination);
               }
               else {
-                $data['image_err'] = 'Il y a eu une erreur. Essayez encore une fois.';
-              }
-            } else {
-              $data['image_err'] = 'Désolé cette extension n\'est pas autorisée';
+                $data['image_err'] = 'Désolé le fichier est trop lourd';
+              }  
             }
+            else {
+              $data['image_err'] = 'Il y a eu une erreur. Essayez encore une fois.';
+            }
+          } 
+          else {
+              $data['image_err'] = 'Désolé cette extension n\'est pas autorisée';
           }
+        } else {
+          $data['image'] = $data['post']->image;
         }
         
         
@@ -277,12 +348,16 @@
           empty($data['image_err']) && 
           empty($data['source_link_err']) ) {
           
+          
+          
           if($this->postModel->updatePost($data)){
-            if(!empty($data['post']->image)) {
+            if($_FILES['image']['size'] > 0 && $_FILES['image']['error'] === 0) {
+              
               $previous_image = UPLOADS_FOLDER . $data['post']->image;
-
-              unlink($previous_image);
+                unlink($previous_image);
             }
+              
+              
 
             flash('post_message', 'L\'article a bien été mis à jour');
             redirect("posts/list");
@@ -310,8 +385,6 @@
       // review the data set entirely
       $data = [
         'post' => $post,
-        // 'title' => '',
-        // 'body' => '',
         'source_link' => '',
         'title_err' => '',
         'body_err' => '',

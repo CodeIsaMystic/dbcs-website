@@ -1,8 +1,9 @@
 <?php
 
-/**
- * 
- */
+// Cleaning edited $data Array 
+// - removing 'post' & 'image' rows
+// - merging base, image & post data separately
+// - storing data within $new_data_array
 function sortData(array $data, array $new_data_array): array {
   
   // remove post & image, then store
@@ -24,3 +25,23 @@ function sortData(array $data, array $new_data_array): array {
 
   return $new_data_array;
 }
+
+
+// Clean out Array of data
+// function cleanOutDataArray(array $arr) {
+//   foreach ($arr as $key => $value) {
+//       if (empty($value)) {
+//         echo 'Clean new array';
+//         unset($arr[$key]);
+//       }
+//   }
+//   if (empty($arr)) {
+//     //empty array
+//   }
+// }
+
+
+// USE CASE: $data['post']->image = 'Array' as string
+// function emptyArrToString(array $arr) {
+//     return (count($arr) === 0) ? "" : $arr;
+// }

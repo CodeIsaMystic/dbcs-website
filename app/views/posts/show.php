@@ -1,6 +1,10 @@
 
 <!-- HEADER -->
-<?php require APP_ROOT . '/views/inc/header.php'; ?>
+<?php
+// require APP_ROOT . '/views/inc/header.php';
+  echo '$data';
+  var_dump($data);
+?>
 
 
 <!-- SIDE BUTTONS MENU --> 
@@ -13,9 +17,6 @@
 <section class="hero--fullW bg-white">
   <div>
     <picture>
-      <source srcset="<?php echo URL_ROOT; ?>/img/uploads/<?php echo $data['post']->image ?>" type="image/webp" />
-      <source srcset="<?php echo URL_ROOT; ?>/img/uploads/<?php echo $data['post']->image ?>" type="image/png" />
-
       <img src="<?php echo URL_ROOT; ?>/img/uploads/<?php echo $data['post']->image ?>" alt="close up of two hands doing massage"/>
     </picture>
   </div>
@@ -24,6 +25,20 @@
     <h1 class="heading-primary txt-dark-gray txt-center fontW500 font-garamond">
       <?php echo $data['post']->title; ?>
     </h1>
+
+    <p class="txt-content--xsmall mt-xs">
+      Article publié le
+      <span class="txt-blue">
+        <?php  echo getDateFormatted($data['post']->created_at); ?>
+      </span> 
+    </p>
+
+    <p class="txt-content--xsmall">
+      Depuis le site internet 
+      <span class="txt-blue">
+        <?php  echo getWebsiteLinkFormat($data['post']->source_link); ?>
+      </span>
+    </p>
   </div>
 </section>
 
@@ -48,7 +63,7 @@
       <a href="<?php echo $data['post']->source_link; ?>" target="_blank" class="link link-dark link--underline">
         <?php 
         if( $data['post']->source_link != null) {
-          echo getWebsiteSourceLinkFormatted($data['post']->source_link);  
+          echo getArticleLinkFormat($data['post']->source_link);  
         } else {
           echo '';
         }

@@ -1,5 +1,38 @@
 <!-- HEADER -->
-<?php require APP_ROOT . '/views/inc/header.php'; ?>
+<?php 
+require APP_ROOT . '/views/inc/header.php'; 
+  /***************************************/
+  /***************************************/
+  /***************************************/
+  // echo '$data';
+  // var_dump($data);
+  
+  // // echo '<br>';
+  // // echo '$data[IMAGE]<br>';
+  // // var_dump($data['image']);
+  
+  // echo '<br>';
+  // echo '$data[POST]<br>';
+  // var_dump($data['post']);
+  
+  // echo '<br>';
+  // echo '$data[POST][IMAGE]<br>';
+  // var_dump($data['post']->image);
+  
+  // echo '<br>';
+  // echo '$_FILES <br>';
+  // var_dump($_FILES);
+
+  
+  // echo '<br>';
+  // echo '$_FILES[IMAGE] <br>';
+  // var_dump($_FILES['image']);
+  
+  // die();
+  /***************************************/
+  /***************************************/
+  /***************************************/
+?>
 
 
 <!-- SECTION EDIT POST -->
@@ -78,18 +111,11 @@
           </div>
 
           <!-- PREVIEW IMAGE -->
-          <!-- Maybe checking out if 
-          empty($data['post']->image && $data['image']) 
-                    
-          empty($data['image'])
-          or
-          empty($_FILES)
-          ??????????????????????????????????
-          -->
           <div class="preview">
-            <?php $img_path = URL_ROOT . '/public/img/uploads/' . $data['post']->image; ?>  
+            <?php $img_path = URL_ROOT . '/public/img/uploads/' . $data['post']->image; ?> 
+             
             <?php if(!empty($data['post']->image)) : ?>  
-              <img src="<?php echo $img_path; ?>" alt="preview of selected upload image"/> 
+              <img src="<?php echo $img_path; ?>" alt="selected upload image's preview"/>
             <?php else : ?>
               <p class="txt-content--small mt-xxs">
                 Aucun fichier sélectionné pour le moment
@@ -143,7 +169,7 @@
           </div>
           
           <!-- INPUT SUBMIT -->
-          <div class="">
+          <div>
             <input type="submit" class="btn btn-hover btn-hover--dark btn25 mt-xs mb-xs" value="Publiez le Post">
           </div>
 
@@ -156,4 +182,3 @@
 
 <!-- FOOTER -->
 <?php require APP_ROOT . '/views/inc/footer.php'; ?>
-

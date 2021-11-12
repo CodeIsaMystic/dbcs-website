@@ -144,28 +144,23 @@
   width: 40%;
 }
 /*   links   */
-.link:link,
-.link-dark:link,
-.link:visited,
-.link-dark:visited,
-.link-light:link,
-.link-light:visited {
+.link,
+.link-dark,
+.link-light {
   display: inline-block;
   font-size: 1.6rem;
-  transition: all 0.5s;
+  transition: all 0.2s ease-in-out;
 }
 .link-light {
   color: #fff;
 }
-.link:hover,
-.link:active,
-.link-light:hover,
-.link-light:active {
-  color: #46a1c9;
-}
-.link-dark:hover,
-.link-dark:active {
+.link-dark {
   color: #232323;
+}
+.link:hover,
+.link-light:hover,
+.link-dark:hover {
+  color: #46a1c9;
 }
 .link--underline {
   border-bottom: 1px solid currentColor;

@@ -12,10 +12,10 @@ const parallaxEffect = () => {
 
     // create tween for the image
     gsap.to(image, {
-      yPercent: -20,
-      ease: "none",
+      // yPercent: 0,
+      // ease: "none",
       scrollTrigger: {
-        end: "bottom top",
+        // end: "bottom top",
         trigger: container,
         scrub: true,
         // markers: true,
@@ -24,13 +24,13 @@ const parallaxEffect = () => {
 
     // create tween for the box
     gsap.to(box, {
-      yPercent: -10,
-      ease: "none",
+      // yPercent: 0,
+      // ease: "none",
       scrollTrigger: {
         // y: 20,
         trigger: container,
         // start: "top bottom",
-        end: "bottom top",
+        // end: "bottom top",
         scrub: true,
         // markers: true,
       },

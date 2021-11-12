@@ -1,5 +1,7 @@
 <!-- HEADER -->
-<?php require APP_ROOT . '/views/inc/header.php'; ?>
+<?php 
+require APP_ROOT . '/views/inc/header.php'; 
+?>
 
 <!-- SECTION ADD-POST -->
 <section class="add-post pb-lg pt-lg">
@@ -73,24 +75,8 @@
           </div>
           
           <!-- PREVIEW IMAGE -->
-          <!-- Maybe checking out if 
-          empty($data['post']->image && $data['image'])
-          
-          empty($data['image'])
-          or
-          empty($_FILES)  => NOK
-          ??????????????????????????????????
-          -->
           <div class="preview">
-            <?php //$img_path = URL_ROOT . '/public/img/uploads/' . $_FILES['image']; ?> 
-        
-            <?php if(!empty($data['post']->image)) : ?> 
-              <img src="<?php echo $img_path; ?>" alt="preview of selected upload image"/> 
-            <?php else : ?>
-              <p class="txt-content--small mt-xxs">
-                Aucun fichier sélectionné pour le moment
-              </p>
-            <?php endif; ?>
+              <!-- <img src="#" alt="preview of selected upload image"/>  -->
           </div>
 
           <!-- BODY TEXT CONTENT -->

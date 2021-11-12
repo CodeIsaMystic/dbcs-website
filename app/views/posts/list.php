@@ -1,6 +1,10 @@
 <!-- HEADER --->
 <?php 
 require APP_ROOT . '/views/inc/header.php'; 
+
+// var_dump($data);
+// die();
+
 ?>
 
 <!-- FLASH  MESSAGES -->
@@ -36,19 +40,19 @@ require APP_ROOT . '/views/inc/header.php';
   
 <!-- SECTION POSTS-LIST -->
 <section>
-  <div class="container container--mb sm-md">
+  <div class="container container--mb">
     <h4 class="heading-secondary txt-center txt-dark mt-lg mb-sm">Détails</h4>
   </div>
 
-  <div class="container container--md">
-    <div class="grid--1-col mb-md">
+  <div class="container container--md grid--1-col">
+    <!-- <div class="grid--1-col mb-md"> -->
 
       <!-- TABLE -->
       <table id="myTable" class="hover box-shad1 mt mb-md pb-sm">
         <thead class="mb-xs">
-          <th class="heading-tertiary font-garamond fontW500 txt-dark pb-xs pt-xs">Titre</th>
-          <th class="heading-tertiary font-garamond fontW500 txt-dark pb-xs pt-xs">Date</th>
-          <th class="heading-tertiary font-garamond fontW500 txt-dark pb-xs pt-xs">Liens</th>
+          <th class="heading-tertiary txt-dark pb-xs pt-xs">Titre</th>
+          <th class="heading-tertiary txt-dark pb-xs pt-xs">Date</th>
+          <th class="heading-tertiary txt-dark pb-xs pt-xs">Liens</th>
         </thead>
 
 
@@ -56,24 +60,24 @@ require APP_ROOT . '/views/inc/header.php';
 
           <?php foreach($data['posts'] as $post) : ?>
           <tr>
-            <td class="">
+            <td class="cell cell--main">
               <a class="link link--underline mb-xs"
                 href="<?php echo URL_ROOT; ?>/posts/show/<?php echo $post->postId; ?>">
                 <?php echo getExcerpt($post->title, 30); ?>
               </a>
             </td> 
-            <td class="">
+            <td class="cell cell--date">
               <?php 
               echo getDateFormatted($post->postCreated); 
               ?>
             </td> 
-            <td class="td-links">
-              <a class="td-link-blue txt-center"
+            <td class="cell cell--btn">
+              <a class="btn-table btn-table--blue"
                 href="<?php echo URL_ROOT . '/posts/edit/' . $post->postId; ?>"> 
                 Editer
               </a>
               <form action="<?php echo URL_ROOT . '/posts/delete/' . $post->postId; ?>" method="POST">
-                <input type="submit" class="td-link-yellow txt-center" name="delete" value="Effacer"/>
+                <input type="submit" class="btn-table btn-table--yellow" name="delete" value="Effacer"/>
               </form>
             </td>          
           </tr>
@@ -81,7 +85,7 @@ require APP_ROOT . '/views/inc/header.php';
         </tbody>
       </table>
   
-    </div>
+    <!-- </div> -->
   </div>
 </section>
 

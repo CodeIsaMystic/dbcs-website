@@ -4,11 +4,11 @@
 function getExcerpt($content, $limit = 120) {
   if (mb_strlen($content) <= $limit) {
       return $content;
-    }
+  }
 
-    $lastSpace = mb_strpos($content, ' ', $limit);
+  $lastSpace = mb_strpos($content, ' ', $limit);
 
-    return mb_substr($content, 0, $lastSpace) . ' ...';
+  return mb_substr($content, 0, $lastSpace) . ' ...';
   
 } 
 
