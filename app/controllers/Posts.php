@@ -77,12 +77,11 @@
         if(empty($data['source_link'])){
           $data['source_link_err'] = 'Ajoutez le lien vers la source de votre article';
         }
-        if(!empty($data['source_link'])) {
-          if(preg_match('%\b(([\w-]+://?|www[.])[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]|/)))%s', $data['source_link'])) {
-            $data['source_link_err'] = "";
-          } else {
-            $data['source_link_err'] = "L'adresse url n'est pas correct. Veuillez réessayer à nouveau.";
-          } 
+        // check if `http and/or www` is provided
+        if(isValidURL($data['source_link'])) {
+          $data['source_link_err'] = "";
+        } else {
+          $data['source_link_err'] = "L'adresse url n'est pas correct. Veuillez réessayer à nouveau.";
         }
         
 

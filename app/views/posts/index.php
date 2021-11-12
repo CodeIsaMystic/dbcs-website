@@ -29,7 +29,7 @@
           <p class="txt-content--xsmall fontW500 mb-sm">
             Depuis le site internet 
             <span class="txt-blue">
-              <?php  echo getWebsiteLinkFormat($post->source_link); ?>
+              <?php  echo getLinkFormat($post->source_link); ?>
             </span>
           </p>
         </div>

@@ -1,9 +1,9 @@
 
 <!-- HEADER -->
 <?php
-// require APP_ROOT . '/views/inc/header.php';
-  echo '$data';
-  var_dump($data);
+require APP_ROOT . '/views/inc/header.php';
+  // echo '$data';
+  // var_dump($data);
 ?>
 
 
@@ -36,7 +36,7 @@
     <p class="txt-content--xsmall">
       Depuis le site internet 
       <span class="txt-blue">
-        <?php  echo getWebsiteLinkFormat($data['post']->source_link); ?>
+        <?php  echo getLinkFormat($data['post']->source_link); ?>
       </span>
     </p>
   </div>
@@ -63,7 +63,7 @@
       <a href="<?php echo $data['post']->source_link; ?>" target="_blank" class="link link-dark link--underline">
         <?php 
         if( $data['post']->source_link != null) {
-          echo getArticleLinkFormat($data['post']->source_link);  
+          echo getLinkFormat($data['post']->source_link);  
         } else {
           echo '';
         }
