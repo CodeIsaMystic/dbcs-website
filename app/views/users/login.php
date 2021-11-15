@@ -1,5 +1,7 @@
 <!-- HEADER --> 
-<?php require APP_ROOT . '/views/inc/header.php'; ?>
+<?php 
+// var_dump($data);
+require APP_ROOT . '/views/inc/header.php'; ?>
 
 <!-- FLASH  MESSAGES -->
 <?php require APP_ROOT . '/views/inc/flashmessages.php'; ?>

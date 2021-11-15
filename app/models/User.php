@@ -8,7 +8,7 @@
 
     // Regsiter user
     public function register($data){
-      $this->db->query('INSERT INTO users (name, email, password) VALUES(:name, :email, :password)');
+      $this->db->query('INSERT INTO users (user_name, user_email, user_password) VALUES(:name, :email, :password)');
       // Bind values
       $this->db->bind(':name', $data['name']);
       $this->db->bind(':email', $data['email']);
@@ -24,12 +24,12 @@
 
     // Login User
     public function login($email, $password){
-      $this->db->query('SELECT * FROM users WHERE email = :email');
+      $this->db->query('SELECT * FROM users WHERE user_email = :email');
       $this->db->bind(':email', $email);
 
       $row = $this->db->single();
 
-      $hashed_password = $row->password;
+      $hashed_password = $row->user_password;
       if(password_verify($password, $hashed_password)){
         return $row;
       } else {
@@ -39,7 +39,7 @@
 
     // Find user by email
     public function findUserByEmail($email){
-      $this->db->query('SELECT * FROM users WHERE email = :email');
+      $this->db->query('SELECT * FROM users WHERE user_email = :email');
       // Bind value
       $this->db->bind(':email', $email);
 
@@ -55,7 +55,7 @@
 
     // Get User by ID
     public function getUserById($id){
-      $this->db->query('SELECT * FROM users WHERE id = :id');
+      $this->db->query('SELECT * FROM users WHERE user_id = :id');
       // Bind value
       $this->db->bind(':id', $id);
 

@@ -65,7 +65,7 @@
           <?php if ($result === false) {
             echo "#"; 
           } else {
-            echo URL_ROOT . "/posts/edit/" . $data["post"]->id;  
+            echo URL_ROOT . "/posts/edit/" . $data["post"]->post_id;  
           }
           ?>' 
           class="link link02">
@@ -91,7 +91,7 @@
           <?php if ($result === false) {
             echo '#'; 
           } else {
-            echo URL_ROOT . '/posts/delete/' . $data['post']->id;  
+            echo URL_ROOT . '/posts/delete/' . $data['post']->post_id;  
           }?>" method="POST">
             <button type="submit">
               <ion-icon class="icon-xs" name="trash-outline"></ion-icon>

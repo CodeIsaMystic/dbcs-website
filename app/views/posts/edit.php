@@ -29,7 +29,7 @@ require APP_ROOT . '/views/inc/header.php';
         
         <!-- FORM EDIT POST -->
         <form 
-        action="<?php echo URL_ROOT; ?>/posts/edit/<?php echo ($data['post']->id); ?>" method="post" 
+        action="<?php echo URL_ROOT; ?>/posts/edit/<?php echo ($data['post']->post_id); ?>" method="post" 
         enctype="multipart/form-data">
 
           <!-- TITLE ARTICLE -->
@@ -44,7 +44,7 @@ require APP_ROOT . '/views/inc/header.php';
               type="text" 
               name="title" 
               class="bg-white mb-xxs" 
-              value="<?php echo ($data['post']->title); ?>">
+              value="<?php echo ($data['post']->post_title); ?>">
           </div>
           
           <!-- IMAGE ARTICLE -->
@@ -81,9 +81,9 @@ require APP_ROOT . '/views/inc/header.php';
 
           <!-- PREVIEW IMAGE -->
           <div class="preview">
-            <?php $img_path = URL_ROOT . '/public/img/uploads/' . $data['post']->image; ?> 
+            <?php $img_path = URL_ROOT . '/public/img/uploads/' . $data['post']->post_image; ?> 
              
-            <?php if(!empty($data['post']->image)) : ?>  
+            <?php if(!empty($data['post']->post_image)) : ?>  
               <img src="<?php echo $img_path; ?>" alt="selected upload image's preview"/>
             <?php else : ?>
               <p class="txt-content--small mt-xxs">
@@ -111,7 +111,7 @@ require APP_ROOT . '/views/inc/header.php';
             </span>
           
             <textarea id="editor" class="b-radius4 bg-white mb-xxs" type="text" name="body">
-              <?php  echo ($data['post']->body); ?>
+              <?php  echo ($data['post']->post_body); ?>
             </textarea>
           </div>
           
@@ -129,8 +129,8 @@ require APP_ROOT . '/views/inc/header.php';
             
             <input class="bg-white mb-xxs" type="text" name="source_link" value="
             <?php 
-             if($data['post']->source_link !== null) {
-              echo ($data['post']->source_link); 
+             if($data['post']->post_source_link !== null) {
+              echo ($data['post']->post_source_link); 
             } else {
               echo ('');
             }

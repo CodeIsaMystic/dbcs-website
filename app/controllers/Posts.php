@@ -112,6 +112,10 @@
             empty($data['image_err']) && 
             empty($data['source_link_err']) ) {
             
+            
+            // var_dump($data);
+            // die();
+              
             if($this->postModel->addPost($data)){
               flash('post_message', 'Votre article a bien été ajouté et publié');
               redirect('posts/list');
@@ -164,6 +168,8 @@
         'description' => "Vous trouverez ici la liste de tout vos articles...",
         'posts' => $posts
       ];
+      // var_dump($data);
+      // die();
       // Load The View Posts List
       $this->view('posts/list', $data);
     }
@@ -227,10 +233,10 @@
 
         // Avoid Useless Request
         if(
-          $data['title'] == $this->postModel->getPostById($id)->title && 
-          $data['source_link'] == $this->postModel->getPostById($id)->source_link && 
-          $data['image'] == $this->postModel->getPostById($id)->image && 
-          $data['body'] == $this->postModel->getPostById($id)->body) 
+          $data['title'] == $this->postModel->getPostById($id)->post_title && 
+          $data['source_link'] == $this->postModel->getPostById($id)->post_source_link && 
+          $data['image'] == $this->postModel->getPostById($id)->post_image && 
+          $data['body'] == $this->postModel->getPostById($id)->post_body) 
         {
 
           $data['title_err'] = "Vous devez au moins changer un des éléments suivants: titre, image, texte, lien.";
@@ -274,7 +280,7 @@
               $data['image_err'] = 'Désolé cette extension n\'est pas autorisée';
           }
         } else {
-          $data['image'] = $data['post']->image;
+          $data['image'] = $data['post']->post_image;
         }
         
         
@@ -292,7 +298,7 @@
           if($this->postModel->updatePost($data)){
             if($_FILES['image']['size'] > 0 && $_FILES['image']['error'] === 0) {
               
-              $previous_image = UPLOADS_FOLDER . $data['post']->image;
+              $previous_image = UPLOADS_FOLDER . $data['post']->post_image;
                 unlink($previous_image);
             }
               
@@ -336,8 +342,8 @@
         $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 
         if($this->postModel->deletePost($id)) {
-          if(!empty($data['post']->image)) {
-            $previous_image = UPLOADS_FOLDER . $data['post']->image;
+          if(!empty($data['post']->post_image)) {
+            $previous_image = UPLOADS_FOLDER . $data['post']->post_image;
             
             unlink($previous_image);
           }
@@ -349,5 +355,4 @@
       }
     }
   }
-
         

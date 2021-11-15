@@ -15,12 +15,12 @@ require APP_ROOT . '/views/inc/header.php';
 
 
 
- <!-- SECTION HERO POSTS LIST -->
+ <!-- SECTION HERO PROSPECTS LIST -->
 <section class="hero--fullW bg-white">
   <div>
     <picture>
-      <source srcset="<?php echo URL_ROOT; ?>/img/site/full-width/dumbbells.png" type="image/webp" />
-      <source srcset="<?php echo URL_ROOT; ?>/img/site/full-width/dumbbells.png" type="image/png" />
+      <!-- <source srcset="<?php //echo URL_ROOT; ?>/img/site/full-width/dumbbells.png" type="image/webp" />
+      <source srcset="<?php //echo URL_ROOT; ?>/img/site/full-width/dumbbells.png" type="image/png" /> -->
 
       <img src="<?php echo URL_ROOT; ?>/img/site/full-width/dumbbells.png" alt="Set of dumbbells in various colors"/>
     </picture>
@@ -30,13 +30,13 @@ require APP_ROOT . '/views/inc/header.php';
     <h1 class="heading-primary txt-dark-gray fontW500 font-garamond">
       <?= $data['title']; ?>
     </h1>
-    <p class="txt-content txt-dark mt-xs">
+    <p class="txt-content txt-dark mt-xxs">
       <?= $data['description']; ?>
     </p>
   </div>
 </section>
   
-<!-- SECTION POSTS-LIST -->
+<!-- SECTION PROSPECTS-LIST -->
 <section>
   <div class="container container--mb">
     <h4 class="heading-secondary txt-center txt-dark mt-lg mb-sm">Détails</h4>
@@ -48,7 +48,8 @@ require APP_ROOT . '/views/inc/header.php';
       <!-- TABLE -->
       <table id="myTable" class="hover box-shad1 mt mb-md pb-sm">
         <thead class="mb-xs">
-          <th class="heading-tertiary txt-dark pb-xs pt-xs">Titre</th>
+          <th class="heading-tertiary txt-dark pb-xs pt-xs">Nom</th>
+          <th class="heading-tertiary txt-dark pb-xs pt-xs">Email</th>
           <th class="heading-tertiary txt-dark pb-xs pt-xs">Date</th>
           <th class="heading-tertiary txt-dark pb-xs pt-xs">Liens</th>
         </thead>
@@ -56,25 +57,32 @@ require APP_ROOT . '/views/inc/header.php';
 
         <tbody>  
 
-          <?php foreach($data['posts'] as $post) : ?>
+          <?php foreach($data['prospects'] as $prospect) : ?>
           <tr>
             <td class="cell cell--main">
               <a class="link link--underline mb-xs"
-                href="<?php echo URL_ROOT; ?>/posts/show/<?php echo $post->postId; ?>">
-                <?php echo getExcerpt($post->post_title, 30); ?>
+                href="<?php echo URL_ROOT; ?>/prospects/show/<?php echo $prospect->prospect_id; ?>" target="_blank">
+                <?php echo getExcerpt($prospect->prospect_name, 30); ?>
+              </a>
+            </td> 
+            
+            <td class="cell cell--email">
+              <a class=" mb-xs"
+                href="#">
+                <?php echo $prospect->prospect_email; ?>
               </a>
             </td> 
             <td class="cell cell--date">
               <?php 
-              echo getDateFormatted($post->postCreated); 
+              echo getDateFormatted($prospect->prospect_created_at); 
               ?>
             </td> 
             <td class="cell cell--btn">
               <a class="btn-table btn-table--blue"
-                href="<?php echo URL_ROOT . '/posts/edit/' . $post->postId; ?>"> 
+                href="#"> 
                 Editer
               </a>
-              <form action="<?php echo URL_ROOT . '/posts/delete/' . $post->postId; ?>" method="POST">
+              <form action="#" method="POST">
                 <input type="submit" class="btn-table btn-table--yellow" name="delete" value="Effacer"/>
               </form>
             </td>          

@@ -8,23 +8,26 @@
 
     public function getPosts(){
       $this->db->query('SELECT *,
-                        posts.id as postId,
-                        users.id as userId,
-                        posts.created_at as postCreated,
-                        users.created_at as userCreated
-                        FROM posts
-                        INNER JOIN users
-                        ON posts.user_id = users.id
-                        ORDER BY posts.created_at DESC
-                        ');
+                              posts.post_id as postId,
+                              users.user_id as userId,
+                              posts.post_created_at as postCreated,
+                              users.user_created_at as userCreated
+                              FROM posts
+                              INNER JOIN users
+                              ON posts.user_id = users.user_id
+                              ORDER BY posts.post_created_at DESC
+                              ');
 
       $results = $this->db->resultSet();
+
+      // var_dump($results);
+      // die();
 
       return $results;
     }
 
     public function addPost($data){
-      $this->db->query('INSERT INTO posts (title, user_id, body, source_link, image) VALUES(:title, :user_id, :body, :source_link, :image)');
+      $this->db->query('INSERT INTO posts (post_title, user_id, post_body, post_source_link, post_image) VALUES(:title, :user_id, :body, :source_link, :image)');
       // Bind values
       $this->db->bind(':title', $data['title']);
       $this->db->bind(':user_id', $data['user_id']);
@@ -41,7 +44,7 @@
     }
 
     public function updatePost($data){
-      $this->db->query('UPDATE posts SET title = :title, body = :body, source_link = :source_link, image = :image WHERE id = :id');
+      $this->db->query('UPDATE posts SET post_title = :title, post_body = :body, post_source_link = :source_link, post_image = :image WHERE post_id = :id');
       // Bind values
       $this->db->bind(':id', $data['id']);
       $this->db->bind(':title', $data['title']);
@@ -59,7 +62,7 @@
     }
 
     public function getPostById($id){
-      $this->db->query('SELECT * FROM posts WHERE id = :id');
+      $this->db->query('SELECT * FROM posts WHERE post_id = :id');
       $this->db->bind(':id', $id);
 
       $row = $this->db->single();
@@ -68,7 +71,7 @@
     }
 
     public function deletePost($id){
-      $this->db->query('DELETE FROM posts WHERE id = :id');
+      $this->db->query('DELETE FROM posts WHERE post_id = :id');
       // Bind values
       $this->db->bind(':id', $id);
 

@@ -8,7 +8,7 @@
       <div class="img b-radius4 with-parallax">
         <img
           class="b-radius4"
-          src="<?= URL_ROOT . '/img/uploads/' . $post->image; ?>"
+          src="<?= URL_ROOT . '/img/uploads/' . $post->post_image; ?>"
           alt="Post thumb photo uploaded"
           srcset=""
         />
@@ -26,22 +26,22 @@
           <p class="txt-content--xsmall fontW500 mb-sm">
             Depuis le site internet 
             <span class="txt-blue">
-              <?php  echo getLinkFormat($post->source_link); ?>
+              <?php  echo getLinkFormat($post->post_source_link); ?>
             </span>
           </p>
         </div>
         
         <div class="post-content__article txt-dark mt-md">
-          <a class="" href="<?php echo URL_ROOT; ?>/posts/show/<?php echo $post->postId; ?>">
+          <a class="" href="<?php echo URL_ROOT; ?>/posts/show/<?php echo $post->post_id; ?>">
             <h3 class="heading-post txt-dark-gray font-garamond">
-              <?php echo $post->title; ?>
+              <?php echo $post->post_title; ?>
             </h3>
           </a>
           <p class="txt-content">
-            <?php  echo getExcerpt($post->body, 800); ?>
+            <?php  echo getExcerpt($post->post_body, 800); ?>
           </p>
           
-          <a href="<?php echo URL_ROOT; ?>/posts/show/<?php echo $post->postId; ?>" class="link link--underline mt-sm">
+          <a href="<?php echo URL_ROOT; ?>/posts/show/<?php echo $post->post_id; ?>" class="link link--underline mt-sm">
           Lire l'article &rarr;
           </a>
         </div>
