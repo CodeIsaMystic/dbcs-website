@@ -39,7 +39,7 @@ require APP_ROOT . '/views/inc/header.php';
 <!-- SECTION PROSPECTS-LIST -->
 <section>
   <div class="container container--mb">
-    <h4 class="heading-secondary txt-center txt-dark mt-lg mb-sm">Détails</h4>
+    <h4 class="heading-secondary txt-center txt-dark mt-lg mb-sm">Prospects Détails</h4>
   </div>
 
   <div class="container container--md grid--1-col">
@@ -62,7 +62,7 @@ require APP_ROOT . '/views/inc/header.php';
             <td class="cell cell--main">
               <a class="link link--underline mb-xs"
                 href="<?php echo URL_ROOT; ?>/prospects/show/<?php echo $prospect->prospect_id; ?>" target="_blank">
-                <?php echo getExcerpt($prospect->prospect_name, 30); ?>
+                <?php echo $prospect->prospect_name; ?>
               </a>
             </td> 
             
@@ -79,7 +79,7 @@ require APP_ROOT . '/views/inc/header.php';
             </td> 
             <td class="cell cell--btn">
               <a class="btn-table btn-table--blue"
-                href="#"> 
+                href="<?php echo URL_ROOT; ?>/prospects/edit/<?php echo $prospect->prospect_id; ?>"> 
                 Editer
               </a>
               <form action="#" method="POST">

@@ -224,7 +224,7 @@
           $data['source_link_err'] = 'Ajoutez le lien vers la source de votre article';
         }
         
-        // check if `http and/or www` is provided
+        // check if `http:// and/or www` is provided
         if(isValidURL($data['source_link'])) {
           $data['source_link_err'] = "";
         } else {
@@ -300,9 +300,7 @@
               
               $previous_image = UPLOADS_FOLDER . $data['post']->post_image;
                 unlink($previous_image);
-            }
-              
-              
+            } 
 
             flash('post_message', 'L\'article a bien été mis à jour');
             redirect("posts/list");

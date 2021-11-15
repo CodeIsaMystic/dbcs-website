@@ -20,12 +20,6 @@
               <?php  echo getDateFormatted($prospect->prospect_created_at); ?>
             </span> 
           </p>
-          <!-- <p class="txt-content--xsmall fontW500 mb-sm">
-            Depuis le site internet 
-            <span class="txt-blue">
-              <?php  //echo getLinkFormat($post->post_source_link); ?>
-            </span>
-          </p> -->
         </div>
         
         <div class="post-content__article txt-dark mt-md">
@@ -41,7 +35,7 @@
           <a href="#" class="link link--underline mt-sm">
           Voir fiche contact &rarr;
           </a>
-          <!-- <a href="<?php //echo URL_ROOT; ?>/posts/show/<?php// echo $post->post_id; ?>" class="link link--underline mt-sm">
+          <!-- <a href="<?php //echo URL_ROOT; ?>/prospects/show/<?php// echo $prospect->prospect_id; ?>" class="link link--underline mt-sm">
           Voir fiche contact &rarr;
           </a> -->
         </div>
