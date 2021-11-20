@@ -190,7 +190,7 @@
 
         if($this->prospectModel->deleteProspect($id)) {
           
-          flash('prospect_message', 'L\'article a bien été supprimé');
+          flash('prospect_message', 'Le prospect a bien été supprimé');
           redirect("prospects/list");
         } else {
           die('Something went wrong');

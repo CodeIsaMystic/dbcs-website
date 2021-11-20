@@ -1,6 +1,7 @@
 <!-- HEADER -->
 <?php
 // var_dump($data);
+// var_dump($_SERVER['QUERY_STRING']);
 require APP_ROOT . '/views/inc/header.php'; ?>
 
 <!-- FLASH  MESSAGES -->

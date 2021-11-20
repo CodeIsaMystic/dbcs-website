@@ -1,8 +1,6 @@
 <!-- HEADER --->
 <?php 
 require APP_ROOT . '/views/inc/header.php'; 
-// var_dump($data);
-// die();
 ?>
 
 <!-- FLASH  MESSAGES -->
@@ -19,8 +17,8 @@ require APP_ROOT . '/views/inc/header.php';
 <section class="hero--fullW bg-white">
   <div>
     <picture>
-      <source srcset="<?php echo URL_ROOT; ?>/img/site/full-width/dumbbells.png" type="image/webp" />
-      <source srcset="<?php echo URL_ROOT; ?>/img/site/full-width/dumbbells.png" type="image/png" />
+      <!-- <source srcset="<?php// echo URL_ROOT; ?>/img/site/full-width/dumbbells.png" type="image/webp" />
+      <source srcset="<?php //echo URL_ROOT; ?>/img/site/full-width/dumbbells.png" type="image/png" /> -->
 
       <img src="<?php echo URL_ROOT; ?>/img/site/full-width/dumbbells.png" alt="Set of dumbbells in various colors"/>
     </picture>
@@ -43,7 +41,6 @@ require APP_ROOT . '/views/inc/header.php';
   </div>
 
   <div class="container container--md grid--1-col">
-    <!-- <div class="grid--1-col mb-md"> -->
 
       <!-- TABLE -->
       <table id="myTable" class="hover box-shad1 mt mb-md pb-sm">
@@ -83,7 +80,6 @@ require APP_ROOT . '/views/inc/header.php';
         </tbody>
       </table>
   
-    <!-- </div> -->
   </div>
 </section>
 

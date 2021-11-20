@@ -1,8 +1,6 @@
 
 <!-- HEADER -->
-<?php
-require APP_ROOT . '/views/inc/header.php';
-?>
+<?php require APP_ROOT . '/views/inc/header.php'; ?>
 
 
 <!-- SIDE BUTTONS MENU --> 

@@ -1,16 +1,11 @@
 
 <!-- HEADER -->
-<?php
-require APP_ROOT . '/views/inc/header.php';
-// var_dump($data);
-// die();
-
-?>
+<?php require APP_ROOT . '/views/inc/header.php'; ?>
 
 
 <!-- SIDE BUTTONS MENU --> 
 <?php if(isset($_SESSION['user_id'])) : ?>
-  <?php //require APP_ROOT . '/views/inc/sidebuttonsmenu.php'; ?>
+  <?php require APP_ROOT . '/views/inc/sidebuttonsmenu.php'; ?>
 <?php endif; ?>
 
 

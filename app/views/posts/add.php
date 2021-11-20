@@ -1,7 +1,5 @@
 <!-- HEADER -->
-<?php 
-require APP_ROOT . '/views/inc/header.php'; 
-?>
+<?php require APP_ROOT . '/views/inc/header.php'; ?>
 
 <!-- SECTION ADD-POST -->
 <section class="add-post pb-lg pt-lg">

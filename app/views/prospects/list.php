@@ -1,9 +1,5 @@
 <!-- HEADER --->
-<?php 
-require APP_ROOT . '/views/inc/header.php'; 
-// var_dump($data);
-// die();
-?>
+<?php require APP_ROOT . '/views/inc/header.php'; ?>
 
 <!-- FLASH  MESSAGES -->
 <?php require APP_ROOT . '/views/inc/flashmessages.php'; ?>
@@ -43,7 +39,6 @@ require APP_ROOT . '/views/inc/header.php';
   </div>
 
   <div class="container container--md grid--1-col">
-    <!-- <div class="grid--1-col mb-md"> -->
 
       <!-- TABLE -->
       <table id="myTable" class="hover box-shad1 mt mb-md pb-sm">
@@ -91,7 +86,6 @@ require APP_ROOT . '/views/inc/header.php';
         </tbody>
       </table>
   
-    <!-- </div> -->
   </div>
 </section>
 
