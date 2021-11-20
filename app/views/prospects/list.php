@@ -61,7 +61,7 @@ require APP_ROOT . '/views/inc/header.php';
           <tr>
             <td class="cell cell--main">
               <a class="link link--underline mb-xs"
-                href="<?php echo URL_ROOT; ?>/prospects/show/<?php echo $prospect->prospect_id; ?>" target="_blank">
+                href="<?php echo URL_ROOT; ?>/prospects/show/<?php echo $prospect->prospect_id; ?>">
                 <?php echo $prospect->prospect_name; ?>
               </a>
             </td> 
@@ -82,7 +82,7 @@ require APP_ROOT . '/views/inc/header.php';
                 href="<?php echo URL_ROOT; ?>/prospects/edit/<?php echo $prospect->prospect_id; ?>"> 
                 Editer
               </a>
-              <form action="#" method="POST">
+              <form action="<?php echo URL_ROOT . '/prospects/delete/' . $prospect->prospect_id; ?>" method="POST">
                 <input type="submit" class="btn-table btn-table--yellow" name="delete" value="Effacer"/>
               </form>
             </td>          

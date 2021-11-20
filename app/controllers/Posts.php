@@ -283,6 +283,8 @@
           $data['image'] = $data['post']->post_image;
         }
         
+        var_dump($data);
+        die();
         
         
 

@@ -28,7 +28,6 @@
       // Load The View Show A Post
       $this->view('prospects/show', $data);
     }
-
         
     public function add(){
 
@@ -83,9 +82,7 @@
         $this->view('prospects/add', $data);        
       }
     }  
-
-    
-        
+   
     public function edit($id){
       if(!isLoggedIn()){
         redirect('users/login');
@@ -107,7 +104,7 @@
   
 
         $data = [
-          'id' => $id,
+          'prospect_id' => $id,
           'prospect' => $prospect,
           'prospect_name' => trim($_POST['prospect_name']),
           'prospect_email' => trim($_POST['prospect_email']),
@@ -151,8 +148,6 @@
         $this->view('prospects/edit', $data);        
       }
     }  
-        
-
     
     public function list(){
       if(!isLoggedIn()){
@@ -172,6 +167,35 @@
       // Load The View Posts List
       $this->view('prospects/list', $data);
     
+    }
+
+    public function delete($id) {
+      if(!isLoggedIn()){
+        redirect('users/login');
+      }
+         
+      $post = $this->prospectModel->getProspectById($id);
+
+      // review the data set entirely
+      $data = [
+        'prospect' => $prospect,           
+        'prospect_name_err' => '',
+        'prospect_email_err' => '',
+        ];
+      
+      
+      if($_SERVER['REQUEST_METHOD'] == 'POST'){
+        // Sanitize POST array
+        $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+
+        if($this->prospectModel->deleteProspect($id)) {
+          
+          flash('prospect_message', 'L\'article a bien été supprimé');
+          redirect("prospects/list");
+        } else {
+          die('Something went wrong');
+        }
+      }
     }
   }
 

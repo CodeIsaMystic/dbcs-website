@@ -8,7 +8,7 @@
 
 <!-- HEADER -->
 <?php 
-//require APP_ROOT . '/views/inc/header.php'; 
+require APP_ROOT . '/views/inc/header.php'; 
 ?>
 
 <!-- SECTION ADD-PROSPECT -->
