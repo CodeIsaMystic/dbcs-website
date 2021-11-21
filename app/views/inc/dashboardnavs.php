@@ -14,7 +14,7 @@
         </a>
       </li>      
       <li>
-        <a class="link txt-light" href="#">
+        <a class="link txt-light" href="<?php echo URL_ROOT; ?>/partners/list">
           <ion-icon class="icon-xs" name="list-circle-outline">
           </ion-icon>
           Partenaires

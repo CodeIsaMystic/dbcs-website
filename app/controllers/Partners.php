@@ -1,0 +1,99 @@
+<?php
+class Partners extends Controller {
+  public function __construct() {
+
+    $this->partnerModel = $this->model('Partner');
+
+  }
+
+  public function index() {
+    // get all partners
+    $partners = $this->partnerModel->getPartners();
+
+    $data = [
+      'partners' => $partners
+    ];
+
+    // load the view with all Partners
+    // $this->view('partners/index', $data);
+  }
+
+  public function list() {
+    if(!isLoggedIn()){
+        redirect('users/login');
+      }
+
+    // get all partners
+    $partners = $this->partnerModel->getPartners();
+
+    $data = [
+      'title' => 'Liste de vos partenaires',
+      'description' => "Vous trouverez ici tout les partenaires avec qui vous êtes en contact.",
+      'partners' => $partners
+    ];
+
+    // load the view with all Partners
+    $this->view('partners/list', $data);
+  }
+
+  public function show($id){
+    $partner = $this->partnerModel->getPartnerById($id);
+
+    $data = [
+      'partner' => $partner
+    ];
+    
+    // Load The View Show A Post
+    $this->view('partners/show', $data);
+  }
+
+
+  public function add() {
+    if($_SERVER['REQUEST_METHOD'] == 'POST') {
+      // Sanitizing tests for POST array
+      $_POST = filter_input_array(INPUT_POST);
+
+      $data = [
+        'partner_company_name' => trim($_POST['partner_company_name']),
+        'partner_email' => trim($_POST['partner_email']),
+        'partner_company_name_err' => '',
+        'partner_email_err' => ''
+      ];
+
+      // validate the data 
+      if(empty($data['partner_company_name'])) {
+        $data['partner_company_name_err'] = 'Veuillez ajoutez le nom du partenaire';
+      };
+      if(empty($data['partner_email'])) {
+        $data['partner_email_err'] = "Veuillez ajoutez l'email du partenaire";
+      }
+
+      // make sure there are no errors
+      if(empty($data['partner_email_err']) && empty($data['partner_company_name_err'])) {
+
+
+        // var_dump($data);
+        // die();
+
+        if($this->partnerModel->addPartner($data)) {
+          flash('partner_message', 'Votre partenaire a bien été ajouté à la liste.');
+          redirect('partners/list');
+        } else {
+          die('There was an error');
+        }
+      } else {
+        // load the view with errors
+        $this->view('partners/add', $data);
+      }
+    } else {
+      $data = [
+        'partner_company_name' => '',
+        'partner_email' => '',
+        'partner_company_name_err' => '',
+        'partner_email_err' => ''
+      ];
+      // load the view add partners
+      $this->view('partners/add', $data);
+    }
+  }
+}

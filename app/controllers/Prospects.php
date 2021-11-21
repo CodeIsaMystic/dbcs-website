@@ -14,7 +14,7 @@
         'prospects' => $prospects
       ];
       
-      // load the view with all Posts
+      // load the view with all Prospects
       // $this->view('prospects/index', $data);
     }
     
@@ -46,10 +46,10 @@
 
         // validate the data
         if(empty($data['prospect_name'])){
-          $data['prospect_name_err'] = 'Veuillez ajoutez votre nom';
+          $data['prospect_name_err'] = 'Veuillez ajoutez le nom du prospect';
         }
         if(empty($data['prospect_email'])){
-          $data['prospect_email_err'] = "Ajoutez votre Email";
+          $data['prospect_email_err'] = "Ajoutez l'email du prospect";
         }
            
         // make sure there are no errors
@@ -68,7 +68,7 @@
             die('Something went wrong');
           }
         } else {
-          //Load The View With Errors
+          // load the view with errors
           $this->view('prospects/add', $data);
         }
       } else {
@@ -78,7 +78,7 @@
           'prospect_name_err' => '',
           'prospect_email_err' => '',
         ];
-        // Load The View Add Post
+        // load the view add prospect
         $this->view('prospects/add', $data);        
       }
     }  
