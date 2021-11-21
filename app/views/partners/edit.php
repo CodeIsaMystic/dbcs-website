@@ -5,13 +5,13 @@ require APP_ROOT . '/views/inc/header.php';
 ?>
 
 
-<!-- SECTION EDIT PROSPECT -->
+<!-- SECTION EDIT PARTNER -->
 <section class="edit-post pb-lg pt-lg">
   <!-- BACK BTN -->
   <div class="container container--lg">
 
     <div class="txt-dark mb">
-      <a href="<?php echo URL_ROOT; ?>/prospects/list" class="link link-dark link--underline">
+      <a href="<?php echo URL_ROOT; ?>/partners/list" class="link link-dark link--underline">
         &larr;Retour
       </a>
     </div>
@@ -22,48 +22,48 @@ require APP_ROOT . '/views/inc/header.php';
     <div class="grid--1-col b-radius4 box-shad1">
       <div class="post-content txt-dark txt-content">
         <h3 class="heading-secondary txt-dark-gray font-garamond mt-xs mb-xs">
-          Modifier votre prospect
+          Modifier votre fiche partenaire
         </h3>
         <p class="txt-content--small mb">
-          Vous pouvez dans cette section modifier le prospect que vous aviez sélectionné.
+          Vous pouvez dans cette section modifier la fiche partenaire sélectionnée.
         </p> 
         
-        <!-- FORM EDIT PROSPECT -->
+        <!-- FORM EDIT PARTNER -->
         <form 
-        action="<?php echo URL_ROOT; ?>/prospects/edit/<?php echo ($data['prospect']->prospect_id); ?>" method="post">
+        action="<?php echo URL_ROOT; ?>/partners/edit/<?php echo ($data['partner']->partner_id); ?>" method="post">
 
-          <!-- NAME PROSPECT -->
+          <!-- NAME PARTNER -->
           <div>
-            <label class="fontW700 txt-blue mb-xxs" for="title">Nom de votre prospect</label>
+            <label class="fontW700 txt-blue mb-xxs" for="title">Nom de l'entreprise partenaire</label>
             
             <span class="b-radius4">
-              <p class="txt-content--xsmall txt-danger"><?php echo ($data['prospect_name_err']);?></p>
+              <p class="txt-content--xsmall txt-danger"><?php echo ($data['partner_company_name_err']);?></p>
             </span>
             
             <input 
               type="text" 
-              name="prospect_name" 
+              name="partner_company_name" 
               class="bg-white mb-xxs" 
-              value="<?php echo ($data['prospect']->prospect_name); ?>">
+              value="<?php echo ($data['partner']->partner_company_name); ?>">
           </div>
         
-          <!-- EMAIL PROSPECT -->
+          <!-- EMAIL PARTNER -->
           <div>
-            <label class="fontW700 txt-blue mt mb-xxs" for="body">Email de votre prospect</label>
+            <label class="fontW700 txt-blue mt mb-xxs" for="body">Email de votre partenaire</label>
 
             <p class="txt-content--xsmall">
-              Modifier l'email de votre prospect si vous avez fait une erreur. 
+              Modifier l'email de l'entreprise partenaire si vous avez fait une erreur. 
             </p>
 
             <span class="b-radius4">
-              <p class="txt-content--xsmall txt-danger"><?php echo ($data['prospect_email_err']); ?></p>
+              <p class="txt-content--xsmall txt-danger"><?php echo ($data['partner_email_err']); ?></p>
             </span>
           
             <input 
               type="email" 
-              name="prospect_email" 
+              name="partner_email" 
               class="bg-white mb-xxs" 
-              value="<?php echo ($data['prospect']->prospect_email); ?>">
+              value="<?php echo ($data['partner']->partner_email); ?>">
           </div>
           
           <!-- INPUT SUBMIT -->

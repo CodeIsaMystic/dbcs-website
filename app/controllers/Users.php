@@ -68,7 +68,7 @@
             flash('register_success', 'Vous pouvez maintenant vous connecter.');
             redirect('users/login');
           } else {
-            die('On a rencontré un problème!');
+            die('There was an error');
           }
 
         } else {
@@ -165,11 +165,8 @@
       $_SESSION['user_id'] = $user->user_id;
       $_SESSION['user_email'] = $user->user_email;
       $_SESSION['user_name'] = $user->user_name;
-      flash('login_success', 'Vous êtes maintenant connecté.');
-      
-      // var_dump($user);
-      // die();
 
+      flash('login_success', 'Vous êtes maintenant connecté.');
       redirect('pages/index');
     }
 

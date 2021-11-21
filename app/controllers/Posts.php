@@ -120,7 +120,7 @@
               flash('post_message', 'Votre article a bien été ajouté et publié');
               redirect('posts/list');
             } else {
-              die('Something went wrong');
+              die('There was an error');
             }
           } else {
             //Load The View With Errors
@@ -168,8 +168,7 @@
         'description' => "Vous trouverez ici la liste de tout vos articles...",
         'posts' => $posts
       ];
-      // var_dump($data);
-      // die();
+
       // Load The View Posts List
       $this->view('posts/list', $data);
     }
@@ -282,11 +281,6 @@
         } else {
           $data['image'] = $data['post']->post_image;
         }
-        
-        // var_dump($data);
-        // die();
-        
-        
 
         // Make Sure There are no errors
         if(
@@ -307,7 +301,7 @@
             flash('post_message', 'L\'article a bien été mis à jour');
             redirect("posts/list");
           } else {
-            die('Something went wrong');
+            die('There was an error');
           }
         } else {
           // Load View With Errors
@@ -350,7 +344,7 @@
           flash('post_message', 'L\'article a bien été supprimé');
           redirect("posts/list");
         } else {
-          die('Something went wrong');
+          die('There was an error');
         }
       }
     }

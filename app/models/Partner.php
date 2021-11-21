@@ -41,5 +41,34 @@ class Partner {
     return $row;
   }
 
+  public function updatePartner($data){
+    $this->db->query('UPDATE partners SET partner_company_name = :company_name, partner_email = :email WHERE partner_id = :id');
+    // Bind values
+    $this->db->bind(':id', $data['partner_id']);
+    $this->db->bind(':company_name', $data['partner_company_name']);
+    $this->db->bind(':email', $data['partner_email']);
+
+
+    // Execute
+    if($this->db->execute()){
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  public function deletePartner($id){
+    $this->db->query('DELETE FROM partners WHERE partner_id = :id');
+    // Bind values
+    $this->db->bind(':id', $id);
+
+    // Execute
+    if($this->db->execute()){
+      return true;
+    } else {
+      return false;
+    }
+  }
+
 
 }

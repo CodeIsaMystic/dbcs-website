@@ -43,7 +43,7 @@ class Partners extends Controller {
       'partner' => $partner
     ];
     
-    // Load The View Show A Post
+    // load the view show a partner card
     $this->view('partners/show', $data);
   }
 
@@ -71,10 +71,6 @@ class Partners extends Controller {
       // make sure there are no errors
       if(empty($data['partner_email_err']) && empty($data['partner_company_name_err'])) {
 
-
-        // var_dump($data);
-        // die();
-
         if($this->partnerModel->addPartner($data)) {
           flash('partner_message', 'Votre partenaire a bien été ajouté à la liste.');
           redirect('partners/list');
@@ -96,4 +92,96 @@ class Partners extends Controller {
       $this->view('partners/add', $data);
     }
   }
+
+  public function edit($id){
+    if(!isLoggedIn()){
+      redirect('users/login');
+    }
+
+    $partner = $this->partnerModel->getPartnerById($id);
+
+    
+    $data = [
+      'partner' => $partner,            
+      'partner_company_name_err' => '',
+      'partner_email_err' => '',
+    ];
+
+    if($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+      // Sanitizing Tests for POST array
+      $_POST = filter_input_array(INPUT_POST);
+
+
+      $data = [
+        'partner_id' => $id,
+        'partner' => $partner,
+        'partner_company_name' => trim($_POST['partner_company_name']),
+        'partner_email' => trim($_POST['partner_email']),
+        'partner_company_name_err' => '',
+        'partner_email_err' => ''
+      ];
+
+      // validate the data
+      if(empty($data['partner_company_name'])){
+        $data['partner_company_name_err'] = 'Veuillez ajoutez le nom de l\'entreprise';
+      }
+      if(empty($data['partner_email'])){
+        $data['partner_email_err'] = "Veuillez ajoutez l'email";
+      }
+
+      // avoid useless request
+      if(($data['partner_company_name'] == $this->partnerModel->getPartnerById($id)->partner_company_name)&&($data['partner_email'] == $this->partnerModel->getPartnerById($id)->partner_email)) {
+        $data['partner_company_name_err'] = "Vous devez au moins changer un des éléments suivants: nom, email...";
+      }
+
+      // make sure there are no errors
+      if((empty($data['partner_company_name_err'])) && (empty($data['partner_email_err']))) {
+          
+        if($this->partnerModel->updatePartner($data)){
+          flash('partner_message', 'Votre partenaire a bien été modifié et enregistré.');
+          redirect('partners/list');
+        } else {
+          die('There was an error');
+        }
+      } else {
+        // load the view with errors
+        $this->view('partners/edit', $data);
+      }
+    } else {
+
+      // load the view partner edit
+      $this->view('partners/edit', $data);        
+    }
+  }
+  
+  public function delete($id) {
+  if(!isLoggedIn()){
+    redirect('users/login');
+  }
+      
+  $partner = $this->partnerModel->getPartnerById($id);
+
+  // review the data set entirely
+  $data = [
+    'partner' => $partner,           
+    'partner_company_name_err' => '',
+    'partner_email_err' => '',
+    ];
+  
+  
+  if($_SERVER['REQUEST_METHOD'] == 'POST'){
+    // Sanitize POST array
+    $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+
+    if($this->partnerModel->deletePartner($id)) {
+      
+      flash('partner_message', 'La fiche partenaire a bien été supprimé');
+      redirect("partners/list");
+    } else {
+      die('There was an error');
+    }
+  }
+}
+
 }

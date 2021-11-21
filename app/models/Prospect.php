@@ -14,9 +14,6 @@ class Prospect {
 
       $results = $this->db->resultSet();
 
-      // var_dump($results);
-      // die();
-
       return $results;
   }
 
@@ -71,7 +68,7 @@ class Prospect {
       } else {
         return false;
       }
-    }
+  }
 
   
 }
