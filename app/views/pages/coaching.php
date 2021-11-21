@@ -14,10 +14,10 @@
 <section class="hero--fullW bg-white">
   <div>
     <picture>
-      <source srcset="<?php echo URL_ROOT; ?>/img/site/full-width/coaching.png" type="image/webp" />
-      <source srcset="<?php echo URL_ROOT; ?>/img/site/full-width/coaching.png" type="image/png" />
+      <!-- <source srcset="<?php echo URL_ROOT; ?>/img/site/full-width/coaching.png" type="image/webp" />
+      <source srcset="<?php echo URL_ROOT; ?>/img/site/full-width/coaching.png" type="image/png" /> -->
 
-      <img src="<?php echo URL_ROOT; ?>/img/site/full-width/coaching.png" alt="Two womens doing sport in a gym"/>
+      <img src="<?php echo URL_ROOT; ?>/img/site/full-width/coaching.jpg" alt="Two womens doing sport in a gym"/>
     </picture>
   </div>
   <div class="hero--fullW__heading hero--fullW__heading--left">

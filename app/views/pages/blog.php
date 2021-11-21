@@ -16,10 +16,10 @@ require APP_ROOT . '/views/inc/header.php'; ?>
 <section class="hero--fullW bg-white">
   <div>
     <picture>
-      <source srcset="<?php echo URL_ROOT; ?>/img/site/full-width/gym2.png" type="image/webp" />
-      <source srcset="<?php echo URL_ROOT; ?>/img/site/full-width/gym2.png" type="image/png" />
+      <!-- <source srcset="<?php echo URL_ROOT; ?>/img/site/full-width/gym2.png" type="image/webp" />
+      <source srcset="<?php echo URL_ROOT; ?>/img/site/full-width/gym2.png" type="image/png" /> -->
 
-      <img src="<?php echo URL_ROOT; ?>/img/site/full-width/gym2.png" alt="gym with people listening their coach"/>
+      <img src="<?php echo URL_ROOT; ?>/img/site/full-width/gym2.jpg" alt="gym with people listening their coach"/>
     </picture>
   </div>
   <div class="hero--fullW__heading hero--fullW__heading--left">

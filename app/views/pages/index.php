@@ -1,7 +1,5 @@
 <!-- HEADER -->
 <?php
-// var_dump($data);
-// var_dump($_SERVER['QUERY_STRING']);
 require APP_ROOT . '/views/inc/header.php'; ?>
 
 <!-- FLASH  MESSAGES -->
@@ -68,11 +66,11 @@ require APP_ROOT . '/views/inc/header.php'; ?>
     </div>
     <div class="hero--img img-80 pt mt-lg">
       <picture>
-        <source srcset="<?= URL_ROOT; ?>/img/site/mockups//mockups-hero/hero.png" type="image/webp" />
-        <source srcset="<?= URL_ROOT; ?>/img/site/mockups//mockups-hero/hero.png" type="image/png" />
+        <!-- <source srcset="<?= URL_ROOT; ?>/img/site/mockups//mockups-hero/hero.png" type="image/webp" />
+        <source srcset="<?= URL_ROOT; ?>/img/site/mockups//mockups-hero/hero.png" type="image/png" /> -->
 
         <img
-          src="<?= URL_ROOT; ?>/img/site/mockups/mockups-hero/hero.png"
+          src="<?= URL_ROOT; ?>/img/site/mockups/hero.png"
           alt="A mockup with 3 images about gym, fitness & sport with man and woman"
         />
       </picture>
@@ -139,7 +137,7 @@ require APP_ROOT . '/views/inc/header.php'; ?>
 
     <div class="img-box--step">
       <img
-        src="<?= URL_ROOT; ?>/img/site/mockups/mockups-step/mockup-contact.png"
+        src="<?= URL_ROOT; ?>/img/site/mockups/mockup-contact.png"
         class="step-img img-30"
         alt="iPhone with contact section on screen"
       />
@@ -148,7 +146,7 @@ require APP_ROOT . '/views/inc/header.php'; ?>
     <!-- STEP 02 -->
     <div class="img-box--step">
       <img
-        src="<?= URL_ROOT; ?>/img/site/mockups/mockups-step/mockup-call.png"
+        src="<?= URL_ROOT; ?>/img/site/mockups/mockup-call.png"
         class="step-img img-30"
         alt="iPhone with view when calling a client"
       />
@@ -179,7 +177,7 @@ require APP_ROOT . '/views/inc/header.php'; ?>
     </div>
     <div class="img-box--step">
       <img
-        src="<?= URL_ROOT; ?>/img/site/mockups/mockups-step/organisation-mockup.png"
+        src="<?= URL_ROOT; ?>/img/site/mockups/organisation-mockup.png"
         class="step-img img-38"
         alt="mockup of a note and a calendar scheduling tasks"
       />
@@ -260,73 +258,73 @@ require APP_ROOT . '/views/inc/header.php'; ?>
   <div class="gallery grid--gallery">
     <figure class="gallery-item">
       <img
-        src="<?= URL_ROOT; ?>/img/site/gallery/gallery-1.png"
+        src="<?= URL_ROOT; ?>/img/site/gallery/gallery-1.jpg"
         alt="Gallery photo of gym men and women doing sport"
       />
     </figure>
     <figure class="gallery-item">
       <img
-        src="<?= URL_ROOT; ?>/img/site/gallery/gallery-2.png"
+        src="<?= URL_ROOT; ?>/img/site/gallery/gallery-2.jpg"
         alt="Gallery photo of gym men and women doing sport"
       />
     </figure>
     <figure class="gallery-item">
       <img
-        src="<?= URL_ROOT; ?>/img/site/gallery/gallery-3.png"
+        src="<?= URL_ROOT; ?>/img/site/gallery/gallery-3.jpg"
         alt="Gallery photo of gym men and women doing sport"
       />
     </figure>
     <figure class="gallery-item">
       <img
-        src="<?= URL_ROOT; ?>/img/site/gallery/gallery-4.png"
+        src="<?= URL_ROOT; ?>/img/site/gallery/gallery-4.jpg"
         alt="Gallery photo of gym men and women doing sport"
       />
     </figure>
     <figure class="gallery-item">
       <img
-        src="<?= URL_ROOT; ?>/img/site/gallery/gallery-5.png"
+        src="<?= URL_ROOT; ?>/img/site/gallery/gallery-5.jpg"
         alt="Gallery photo of gym men and women doing sport"
       />
     </figure>
     <figure class="gallery-item">
       <img
-        src="<?= URL_ROOT; ?>/img/site/gallery/gallery-6.png"
+        src="<?= URL_ROOT; ?>/img/site/gallery/gallery-6.jpg"
         alt="Gallery photo of gym men and women doing sport"
       />
     </figure>
     <figure class="gallery-item">
       <img
-        src="<?= URL_ROOT; ?>/img/site/gallery/gallery-7.png"
+        src="<?= URL_ROOT; ?>/img/site/gallery/gallery-7.jpg"
         alt="Gallery photo of gym men and women doing sport"
       />
     </figure>
     <figure class="gallery-item">
       <img
-        src="<?= URL_ROOT; ?>/img/site/gallery/gallery-8.png"
+        src="<?= URL_ROOT; ?>/img/site/gallery/gallery-8.jpg"
         alt="Gallery photo of gym men and women doing sport"
       />
     </figure>
     <figure class="gallery-item">
       <img
-        src="<?= URL_ROOT; ?>/img/site/gallery/gallery-9.png"
+        src="<?= URL_ROOT; ?>/img/site/gallery/gallery-9.jpg"
         alt="Gallery photo of gym men and women doing sport"
       />
     </figure>
     <figure class="gallery-item">
       <img
-        src="<?= URL_ROOT; ?>/img/site/gallery/gallery-10.png"
+        src="<?= URL_ROOT; ?>/img/site/gallery/gallery-10.jpg"
         alt="Gallery photo of gym men and women doing sport"
       />
     </figure>
     <figure class="gallery-item">
       <img
-        src="<?= URL_ROOT; ?>/img/site/gallery/gallery-11.png"
+        src="<?= URL_ROOT; ?>/img/site/gallery/gallery-11.jpg"
         alt="Gallery photo of gym men and women doing sport"
       />
     </figure>
     <figure class="gallery-item">
       <img
-        src="<?= URL_ROOT; ?>/img/site/gallery/gallery-12.png"
+        src="<?= URL_ROOT; ?>/img/site/gallery/gallery-12.jpg"
         alt="Gallery photo of gym men and women doing sport"
       />
     </figure>

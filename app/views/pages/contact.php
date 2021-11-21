@@ -11,10 +11,10 @@
 <section class="hero--fullW bg-white">
   <div>
     <picture>
-      <source srcset="<?php echo URL_ROOT; ?>/img/site/full-width/contact.png" type="image/webp" />
-      <source srcset="<?php echo URL_ROOT; ?>/img/site/full-width/contact.png" type="image/png" />
+      <!-- <source srcset="<?php echo URL_ROOT; ?>/img/site/full-width/contact.png" type="image/webp" />
+      <source srcset="<?php echo URL_ROOT; ?>/img/site/full-width/contact.png" type="image/png" /> -->
 
-      <img src="<?php echo URL_ROOT; ?>/img/site/full-width/contact.png" alt="woman sitting on a car and boxing"/>
+      <img src="<?php echo URL_ROOT; ?>/img/site/full-width/contact.jpg" alt="woman sitting on a car and boxing"/>
     </picture>
   </div>
   <div class="hero--fullW__heading hero--fullW__heading--left">

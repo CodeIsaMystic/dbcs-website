@@ -20,7 +20,7 @@ require APP_ROOT . '/views/inc/header.php';
       <!-- <source srcset="<?php// echo URL_ROOT; ?>/img/site/full-width/idea.png" type="image/webp" />
       <source srcset="<?php //echo URL_ROOT; ?>/img/site/full-width/idea.png" type="image/png" /> -->
 
-      <img src="<?php echo URL_ROOT; ?>/img/site/full-width/idea.png" alt="Set of dumbbells in various colors"/>
+      <img src="<?php echo URL_ROOT; ?>/img/site/full-width/idea.jpg" alt="Set of dumbbells in various colors"/>
     </picture>
   </div>
   <div class="hero--fullW__heading hero--fullW__heading--left">

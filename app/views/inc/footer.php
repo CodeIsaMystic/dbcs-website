@@ -8,7 +8,7 @@
             <img
               class="logo--footer"
               alt="DBCS logo company"
-              src="<?= URL_ROOT; ?>/img/site/logos/logo-dbcs/logo-square-light-1200.png"
+              src="<?= URL_ROOT; ?>/img/site/logos/logo-dbcs/logo-square-light-500.png"
             />
           </span>
 
