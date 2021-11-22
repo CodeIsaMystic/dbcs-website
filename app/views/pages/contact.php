@@ -1,6 +1,9 @@
 <!-- HEADER -->
 <?php require APP_ROOT . '/views/inc/header.php'; ?>
 
+<!-- FLASH  MESSAGES -->
+<?php require APP_ROOT . '/views/inc/flashmessages.php'; ?>
+
 <!-- SIDE BUTTONS MENU --> 
 <?php if(isset($_SESSION['user_id'])) : ?>
   <?php require APP_ROOT . '/views/inc/sidebuttonsmenu.php'; ?>
@@ -11,9 +14,6 @@
 <section class="hero--fullW bg-white">
   <div>
     <picture>
-      <!-- <source srcset="<?php echo URL_ROOT; ?>/img/site/full-width/contact.png" type="image/webp" />
-      <source srcset="<?php echo URL_ROOT; ?>/img/site/full-width/contact.png" type="image/png" /> -->
-
       <img src="<?php echo URL_ROOT; ?>/img/site/full-width/contact.jpg" alt="woman sitting on a car and boxing"/>
     </picture>
   </div>
@@ -166,35 +166,39 @@
       </div>
       <div>
         
-        <form class="" name="sign-up">
+        <form action="<?php echo URL_ROOT; ?>/pages/contact" method="post">
           <div class="grid--form">
             <!-- name -->
             <div>
-              <label class="mb-xxs" for="full-name"
-                >Nom de l'entreprise</label
-              >
+              <label class="mb-xxs">Nom de l'entreprise</label>
+              
+              <span class="b-radius4">
+                <p class="txt-content--xsmall txt-danger"><?php echo $data['partner_company_name_err'];?></p>
+              </span>
+
               <input
                 class="b-radius4 bg-white"
-                id="full-name"
+                name="partner_company_name"
                 type="text"
                 placeholder="Nom..."
-                name="full-name"
-                required
+                value="<?php echo $data['partner_company_name']; ?>"
               />
             </div>
   
             <!-- email -->
-            <div class="">
-              <label class="mb-xxs" for="email"
-                >Adresse Mail</label
-              >
+            <div>
+              <label class="mb-xxs">Adresse Mail</label>
+
+              <span class="b-radius4">
+              <p class="txt-content--xsmall txt-danger"><?php  echo $data['partner_email_err']; ?></p>
+            </span>
+
               <input
                 class="b-radius4 bg-white"
-                id="email"
+                name="partner_email" 
                 type="email"
                 placeholder="Email..."
-                name="email"
-                required
+                value="<?php echo $data['partner_email']; ?>"
               />
             </div>
             
@@ -207,7 +211,6 @@
                 class="b-radius4 bg-white"
                 id="select-partnership"
                 name="select-partnership"
-                required
               >
                 <option value="">Choisir...</option>
                 <option value="blogging">Blogging</option>
@@ -221,10 +224,10 @@
 
           <!-- message -->
           <div>
-            <label class="mb-xxs mt-xs" for="message"
+            <label class="mb-xxs mt-xs"
             >Envoyez nous un message</label
             >
-            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+            <textarea name="message" cols="30" rows="10"></textarea>
           </div>
           
           <!-- submit -->

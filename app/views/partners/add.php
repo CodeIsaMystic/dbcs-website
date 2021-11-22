@@ -38,7 +38,7 @@ require APP_ROOT . '/views/inc/header.php';
         <form action="<?php echo URL_ROOT; ?>/partners/add" method="post">
           <!-- PARTNER COMPANY NAME -->
           <div>
-            <label class="fontW700 txt-blue mb-xxs" for="title">Nom de votre Partenaire</label>
+            <label class="fontW700 txt-blue mb-xxs">Nom de votre Partenaire</label>
             
             <span class="b-radius4">
               <p class="txt-content--xsmall txt-danger"><?php echo $data['partner_company_name_err'];?></p>
@@ -50,7 +50,7 @@ require APP_ROOT . '/views/inc/header.php';
 
           <!-- PARTNER EMAIL -->
           <div>
-            <label class="fontW700 txt-blue mt mb-xxs" for="body">Adresse email</label>
+            <label class="fontW700 txt-blue mt mb-xxs">Adresse email</label>
 
             <p class="txt-content--xsmall">
               <!-- Ajoutez l'email. -->
@@ -67,7 +67,7 @@ require APP_ROOT . '/views/inc/header.php';
           </div>
           
           <!-- INPUT SUBMIT -->
-          <div class="">
+          <div>
             <input type="submit" class="btn btn-hover btn-hover--dark btn25 mt-xs mb-xs" value="Enregistrez">
           </div>
 

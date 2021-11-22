@@ -1,6 +1,9 @@
 <!-- HEADER -->
 <?php
-require APP_ROOT . '/views/inc/header.php'; ?>
+require APP_ROOT . '/views/inc/header.php'; 
+// var_dump($data);
+// die();
+?>
 
 <!-- FLASH  MESSAGES -->
 <?php require APP_ROOT . '/views/inc/flashmessages.php'; ?>
@@ -658,43 +661,49 @@ require APP_ROOT . '/views/inc/header.php'; ?>
           page)
         </p>
 
-        <form class="grid--form" name="sign-up">
+        <form action="<?php echo URL_ROOT; ?>/pages/index" method="post" class="grid--form">
           <div>
-            <label class="fontW700 mb-xxs" for="full-name"
+            <label class="fontW700 mb-xxs"
               >Nom Complet</label
             >
+            
+            <span class="b-radius4">
+              <p class="txt-content--xsmall txt-danger"><?php echo $data['prospect_name_err'];?></p>
+            </span>
+
             <input
               class="b-radius4 bg-white"
-              id="full-name"
-              type="text"
+              type="text" value="<?php echo $data['prospect_name']; ?>"
               placeholder="Votre nom"
-              name="full-name"
+              name="prospect_name"
               required
             />
           </div>
 
           <div>
-            <label class="fontW700 mb-xxs" for="email"
-              >Adresse Mail</label
-            >
+            <label class="fontW700 mb-xxs">Adresse Mail</label>
+
+            <span class="b-radius4">
+              <p class="txt-content--xsmall txt-danger"><?php  echo $data['prospect_email_err']; ?></p>
+            </span>
+            
             <input
               class="b-radius4 bg-white"
-              id="email"
-              type="email"
-              placeholder="votreMail@example.com"
-              name="email"
+              type="email" value="<?php echo $data['prospect_email']; ?>"
+              placeholder="votre-email@example.com"
+              name="prospect_email"
               required
             />
           </div>
 
           <div>
-            <label class="fontW700 mb-xxs" for="freeCourse"
+            <label class="fontW700 mb-xxs"
               >Demandez votre essai gratuit</label
             >
-            <input class="b-radius4 bg-white" type="checkbox" id="freeCourse" name="freeCourse">
+            <input class="b-radius4 bg-white" type="checkbox" name="freeCourse">
           </div>
 
-          <button class="btn btn--baseline btn-hover btn-hover--blue">
+          <button type="submit" class="btn btn--baseline btn-hover btn-hover--blue">
             Essai gratuit
           </button>
         </form>

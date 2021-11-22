@@ -38,7 +38,7 @@ require APP_ROOT . '/views/inc/header.php';
         <form action="<?php echo URL_ROOT; ?>/prospects/add" method="post">
           <!-- PROSPECT NAME -->
           <div>
-            <label class="fontW700 txt-blue mb-xxs" for="title">Nom de votre Prospect</label>
+            <label class="fontW700 txt-blue mb-xxs">Nom de votre Prospect</label>
             
             <span class="b-radius4">
               <p class="txt-content--xsmall txt-danger"><?php echo $data['prospect_name_err'];?></p>
@@ -50,14 +50,7 @@ require APP_ROOT . '/views/inc/header.php';
 
           <!-- PROSPECT EMAIL -->
           <div>
-            <label class="fontW700 txt-blue mt mb-xxs" for="body">Adresse email</label>
-
-            <p class="txt-content--xsmall">
-              <!-- Ajoutez l'email. -->
-            </p>
-            <p class="txt-content--xsmall mb-xxs">
-              
-            </p>
+            <label class="fontW700 txt-blue mt mb-xxs">Adresse email</label>
 
             <span class="b-radius4">
               <p class="txt-content--xsmall txt-danger"><?php  echo $data['prospect_email_err']; ?></p>
@@ -67,7 +60,7 @@ require APP_ROOT . '/views/inc/header.php';
           </div>
           
           <!-- INPUT SUBMIT -->
-          <div class="">
+          <div>
             <input type="submit" class="btn btn-hover btn-hover--dark btn25 mt-xs mb-xs" value="Enregistrez">
           </div>
 
