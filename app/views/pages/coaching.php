@@ -191,7 +191,7 @@
 
     <div class="img-box--step">
       <img
-        src="<?= URL_ROOT; ?>/img/site/mockups/mockups-step/mockup-contact.png"
+        src="<?= URL_ROOT; ?>/img/site/mockups/mockup-contact.png"
         class="step-img img-30"
         alt="iPhone with contact section on screen"
       />
@@ -200,7 +200,7 @@
     <!-- STEP 02 -->
     <div class="img-box--step">
       <img
-        src="<?= URL_ROOT; ?>/img/site/mockups/mockups-step/mockup-call.png"
+        src="<?= URL_ROOT; ?>/img/site/mockups/mockup-call.png"
         class="step-img img-30"
         alt="iPhone with view when calling a client"
       />
@@ -231,7 +231,7 @@
     </div>
     <div class="img-box--step">
       <img
-        src="<?= URL_ROOT; ?>/img/site/mockups/mockups-step/organisation-mockup.png"
+        src="<?= URL_ROOT; ?>/img/site/mockups/organisation-mockup.png"
         class="step-img img-38"
         alt="mockup of a note and a calendar scheduling tasks"
       />
@@ -239,74 +239,6 @@
   </div>
 </section>
 
-
-<!-- SECTION CTA -->
-<section class="linear-grad-lightBlue pb-lg pt-lg">
-  <div class="container container--md with-parallax" id="cta">
-    <div class="cta grid--cta b-radius4 box-shad1 box-parallax">
-      <div class="cta-text-box txt-dark linear-grad-blue">
-        <h2 class="heading-secondary txt-dark-gray mb">
-          Contactez le coach
-        </h2>
-        <p class="txt-content--large mb">
-          Amateurs, Sportifs ou bien semi-professionnels, tentez votre
-          chance, le coach vous recontactera pour commencer à vous aider
-          dans vos objectifs. Il pourra alors, vous faire profiter de
-          votre premier cours gratuit. (pour établir un partenariat vous
-          pouvez nous contactez via la rubrique de
-          <a class="link link-dark" href="#">"partenariat"</a> en bas de
-          page)
-        </p>
-
-        <form class="grid--form" name="sign-up">
-          <div>
-            <label class="fontW700 mb-xxs" for="full-name"
-              >Nom Complet</label
-            >
-            <input
-              class="b-radius4 bg-white"
-              id="full-name"
-              type="text"
-              placeholder="Votre nom"
-              name="full-name"
-              required
-            />
-          </div>
-
-          <div>
-            <label class="fontW700 mb-xxs" for="email"
-              >Adresse Mail</label
-            >
-            <input
-              class="b-radius4 bg-white"
-              id="email"
-              type="email"
-              placeholder="votreMail@example.com"
-              name="email"
-              required
-            />
-          </div>
-
-          <div>
-            <label class="fontW700 mb-xxs" for="freeCourse"
-              >Demandez votre essai gratuit</label
-            >
-            <input class="b-radius4 bg-white" type="checkbox" id="freeCourse" name="freeCourse">
-          </div>
-
-          <button class="btn btn--baseline btn-hover btn-hover--blue">
-            Essai gratuit
-          </button>
-        </form>
-      </div>
-      <div
-        class="img-box--cta"
-        role="img"
-        aria-label="Bastien Desmet Coach Sportif"
-      ></div>
-    </div>
-  </div>
-</section>
 
 <!-- SECTION PRICING -->
 <section class="pricing-plan bg-white pt-lg pb-md">

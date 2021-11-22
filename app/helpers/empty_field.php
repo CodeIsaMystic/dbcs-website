@@ -100,132 +100,101 @@ function getNullValueMessage($array, $int, $msg) {
     } 
 }
 
-
-
-
-
-
-
-
-
-
-
- /* TODO: to remove */
-// function emptyField() {
-//   return 'Pas d\'informations pour le moment.';
-// }
-
-
-
-
-
-/**
- * 
- */
  function getArrPropVal($arr, $int) {
   return array_values($arr)[$int];
  }
 
-/**
- * 
- * 
- */
-function handlingData($arr) {
-  // convert input $data Arra obj 
-  $dataArr = convertDataObject($arr);
+// /**
+//  * 
+//  * 
+//  */
+// function handlingData($arr) {
+//   // convert input $data Arra obj 
+//   $dataArr = convertDataObject($arr);
 
 
 
-  // Extrtacting string value or null
-  $propsectID = getArrPropVal($dataArr, 0);
-  $propsectName = getArrPropVal($dataArr, 1);
-  $propsectEmail = getArrPropVal($dataArr, 2);
+//   // Extrtacting string value or null
+//   $propsectID = getArrPropVal($dataArr, 0);
+//   $propsectName = getArrPropVal($dataArr, 1);
+//   $propsectEmail = getArrPropVal($dataArr, 2);
 
-  $propsectPhone = getArrPropVal($dataArr, 7);
-  $propsectAddressNr = getArrPropVal($dataArr, 10);
-  $propsectAddressStr = getArrPropVal($dataArr, 9);
-  $propsectPostalCode = getArrPropVal($dataArr, 11);
-  $propsectCity = getArrPropVal($dataArr, 12);
+//   $propsectPhone = getArrPropVal($dataArr, 7);
+//   $propsectAddressNr = getArrPropVal($dataArr, 10);
+//   $propsectAddressStr = getArrPropVal($dataArr, 9);
+//   $propsectPostalCode = getArrPropVal($dataArr, 11);
+//   $propsectCity = getArrPropVal($dataArr, 12);
 
 
 
-  // filtering propValue by binding in various Use cases
-  function finalBuiltinPropValue($propValue) {
+//   // filtering propValue by binding in various Use cases
+//   function finalBuiltinPropValue($propValue) {
 
-    if($propValue == $propsectPhone) {
-      $strCase = 'Phone Case';
+//     if($propValue == $propsectPhone) {
+//       $strCase = 'Phone Case';
 
-      return $strCase;
+//       return $strCase;
 
-    } elseif (
-      $propValue == $propsectAddressNr ||
-      $propValue == $propsectAddressStr ||
-      $propValue == $propsectPostalCode ||
-      $propValue == $propsectCity 
-    ) {
-      $strCase = 'Address Case';
+//     } elseif (
+//       $propValue == $propsectAddressNr ||
+//       $propValue == $propsectAddressStr ||
+//       $propValue == $propsectPostalCode ||
+//       $propValue == $propsectCity 
+//     ) {
+//       $strCase = 'Address Case';
 
-      return $strCase;
-    }
+//       return $strCase;
+//     }
     
     
-    // checking if null then setting String Message
-    switch ($strCase) {
-    case 'phoneCase' :
-      if(is_null($propsectPhone)) {
+//     // checking if null then setting String Message
+//     switch ($strCase) {
+//     case 'phoneCase' :
+//       if(is_null($propsectPhone)) {
         
-        echo ' Pas de numéro de téléphone pour le moment';
-      }
-      break;
+//         echo ' Pas de numéro de téléphone pour le moment';
+//       }
+//       break;
       
-      case 'addressCase' :
-        if(
-          is_null($propsectAddressNr) ||
-          is_null($propsectAddressStr) ||
-          is_null($propsectPostalCode) ||
-          is_null($propsectCity) 
-          ) {
-            echo 'Pas d\'adresse pour le moment';
-          }
-          break;
-    }
+//       case 'addressCase' :
+//         if(
+//           is_null($propsectAddressNr) ||
+//           is_null($propsectAddressStr) ||
+//           is_null($propsectPostalCode) ||
+//           is_null($propsectCity) 
+//           ) {
+//             echo 'Pas d\'adresse pour le moment';
+//           }
+//           break;
+//     }
       
-  }
+//   }
 
-  //finalBuiltinPropValue($propValue); //??????????????
+//   //finalBuiltinPropValue($propValue); //??????????????
 
-}
+// }
 
-function bindingPropKey($dataArr) {
+// function bindingPropKey($dataArr) {
 
-  // convert input $data Arra obj 
-  $dataArr = convertDataObject($arr);
+//   // convert input $data Arra obj 
+//   $dataArr = convertDataObject($arr);
 
-  // Extrtacting string value or null
-  $propsectPhone = 
+//   // Extrtacting string value or null
+//   $propsectPhone = 
 
-  $data_set_addr = 
-  $propsectAddressNr = getArrPropVal($dataArr, 10);
-  $propsectAddressStr = getArrPropVal($dataArr, 9);
-  $propsectPostalCode = getArrPropVal($dataArr, 11);
-  $propsectCity = getArrPropVal($dataArr, 12);
+//   $data_set_addr = 
+//   $propsectAddressNr = getArrPropVal($dataArr, 10);
+//   $propsectAddressStr = getArrPropVal($dataArr, 9);
+//   $propsectPostalCode = getArrPropVal($dataArr, 11);
+//   $propsectCity = getArrPropVal($dataArr, 12);
 
-  function getswitchCaseAsStr($str) {
-    switch($str)  {
-      case $propsectPhone:
-        $value = getArrPropVal($dataArr, 7);
-      break;
-    }
-  }
-
-
-
-
-
-} 
-
-
-
-
+//   function getswitchCaseAsStr($str) {
+//     switch($str)  {
+//       case $propsectPhone:
+//         $value = getArrPropVal($dataArr, 7);
+//       break;
+//     }
+//   }
+// } 
 
 ?>
