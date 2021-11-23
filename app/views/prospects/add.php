@@ -27,39 +27,161 @@ require APP_ROOT . '/views/inc/header.php';
   <div class="container container--md">
     <div class="grid--1-col b-radius4 box-shad1">
       <div class="post-content txt-dark txt-content">
-        <h3 class="heading-secondary txt-dark-gray font-garamond mt-xs mb-xs">
+        <h2 class="heading-secondary txt-dark-gray font-garamond mt-xs mb-xs" tabindex="0">
           Ajoutez un prospect
-        </h3>
-        <p class="txt-content--small mb">
-          Ajoutez & enregistrez un prospect dans cette section.
+        </h2>
+        <p class="txt-content--small mb" tabindex="0">
+          <span class="fontW700">Enregistrez un prospect dans cette section</span>. Vous pouvez, à tout moment modifier et ajouter de nouvelles informations sur vos contacts. Pensez qu'il est une priorité que de <span class="fontW700">pouvoir stocker votre base d'emails</span>.
         </p>
-        
-        <!-- FORM ADD-PROSPECT -->
-        <form action="<?php echo URL_ROOT; ?>/prospects/add" method="post">
-          <!-- PROSPECT NAME -->
+
+        <!-- FORM-ADMIN-PROSPECT -->
+        <form class="form-admin-prospect" action="<?php echo URL_ROOT; ?>/prospects/add" method="post">
+          
+          <!-- SECTION BASE-INFO -->
           <div>
-            <label class="fontW700 txt-blue mb-xxs">Nom de votre Prospect</label>
+            <!-- heading -->
+            <h3 class="subheading txt-upp fontW700 mb-xs" tabindex="0"> 
+              Base d'information:
+              </h3>
+              
+              <p class="txt-content--small mb-xs" tabindex="0">
+                Entrez ici les informations nécessaires pour votre affaire. Une base pour fidéliser vos futurs clients et garder ainsi le contact. Il est important de <span class="fontW700">construire votre base emails</span>.
+              </p>
+              
+              <!-- name -->
+              <div class="form-admin-prospect--display base-info-name">
+              <label class="fontW700 txt-blue mb-xxs" tabindex="0">Nom complet</label>
+              
+              <input type="text" name="prospect_name" class="bg-white" value="<?php echo $data['prospect_name']; ?>">
+              
+              <span class="b-radius4">
+                <p class="txt-content--xsmall txt-danger"><?php echo $data['prospect_name_err'];?></p>
+              </span>
+            </div>
+            <!-- email -->
+            <div class="form-admin-prospect--display base-info-email mb-xs">
+              <label class="fontW700 txt-blue mt-xs mb-xxs" tabindex="0">Adresse email</label>
+              
+              <span class="b-radius4">
+                <p class="txt-content--xsmall txt-danger"><?php  echo $data['prospect_email_err']; ?></p>
+              </span>
+              
+              <input type="email" name="prospect_email" class="bg-white" value="<?php echo $data['prospect_email']; ?>">
+            </div>
+            <!-- phone -->
+            <div class="base-info-phone">
+              <label class="fontW700 txt-blue" tabindex="0">Numéro de téléphone</label>
+              
+              <p class="txt-content--small" tabindex="0">
+                Dès que vous pourrez, ajoutez ici le numéro de téléphone de votre prospect.
+              </p>
+              
+              <span class="b-radius4">
+                <p class="txt-content--xsmall txt-danger"><?php  //echo $data['prospect_phone_err']; ?></p>
+              </span>
+              
+              <input type="tel" name="prospect_phone" class="bg-white" value="<?php //echo $data['prospect_phone']; ?>">
+            </div>
+          </div>  
+          
+          
+          <!-- SECTION PHYSICAL ADDRESS -->
+          <div>
+            <!-- heading -->
+            <h3 class="subheading txt-upp fontW700 mt mb-xxs" tabindex="0"> 
+              Adresse Physique:
+            </h3>
+            
+            <p class="txt-content--small mb-xs" tabindex="0">
+              <span class="fontW700">Ajoutez ici l'adresse complète</span> de votre prospect. Notez que vous devez enregistrer l'adresse complète, <span class="fontW700">ou bien seulement la ville</span>.
+            </p>
             
             <span class="b-radius4">
-              <p class="txt-content--xsmall txt-danger"><?php echo $data['prospect_name_err'];?></p>
+              <p class="txt-content--xsmall txt-danger"><?php  //echo $data['prospect_email_err']; ?></p>
             </span>
             
-            <input type="text" name="prospect_name" class="bg-white mb-xxs" value="<?php echo $data['prospect_name']; ?>">
+            <div>
+              <div class="form-admin-prospect--display address-nr">
+                <label class="fontW700 txt-blue mb-xxs" tabindex="0">Numéro:</label>
+                <input type="number" name="prospect_address_nr" class="bg-white mb-xxs" value="<?php //echo $data['prospect_address_nr']; ?>">
+              </div>
+              
+              <div class="form-admin-prospect--display address-str">
+                <label class="fontW700 txt-blue mb-xxs" tabindex="0">Rue:</label>
+                <input type="text" name="prospect_address_str" class="bg-white mb-xxs" value="<?php //echo $data['prospect_address_str']; ?>">
+              </div>
+            </div>
+            
+            
+            <div>
+              <div class="form-admin-prospect--display location-code">
+                <label class="fontW700 txt-blue mb-xxs" tabindex="0">Code Postal:</label>
+                <input type="number" name="prospect_postal_code" class="bg-white mb-xxs" value="<?php //echo $data['prospect_postal_code']; ?>">
+              </div>
+              
+              <div class="form-admin-prospect--display location-city">
+                <label class="fontW700 txt-blue mb-xxs" tabindex="0">Ville:</label>
+                <input type="text" name="prospect_city" class="bg-white mb-xxs" value="<?php //echo $data['prospect_city']; ?>">
+              </div>
+            </div>
+            
           </div>
           
-
-          <!-- PROSPECT EMAIL -->
+          <!-- SECTION COACHING INFO -->
           <div>
-            <label class="fontW700 txt-blue mt mb-xxs">Adresse email</label>
-
+            <!-- heading -->
+            <h3 class="subheading txt-upp fontW700 mt mb-xxs" tabindex="0"> 
+              Coaching Informations:
+            </h3>
+            
+            <p class="txt-content--small mb-xs" tabindex="0">
+              <span class="fontW700"></span> de votre prospect. Notez que vous devez enregistrer l'adresse complète, <span class="fontW700"></span>.
+            </p>
+            
             <span class="b-radius4">
-              <p class="txt-content--xsmall txt-danger"><?php  echo $data['prospect_email_err']; ?></p>
+              <p class="txt-content--xsmall txt-danger"><?php  //echo $data['prospect_coaching_err']; ?></p>
             </span>
-          
-            <input type="email" name="prospect_email" class="bg-white mb-xxs" value="<?php echo $data['prospect_email']; ?>">
+            
+            <!-- type coaching -->
+            <div class="form-admin-prospect--display type-coaching">
+              <label class="fontW700 txt-blue mb-xxs" tabindex="0">
+                Coaching
+              </label>
+              <div>
+                <select name="" class="bg-white"> 
+                  <option value="default"></option>
+                  <option value="basic">Programme Basique</option>
+                  <option value="fit">Programme Fitness</option>
+                  <option value="weight-loss">Programme Régime</option>
+                  <option value="heart-beat">Programme Cardio</option>
+                  <option value="weight">Programme Muscle</option>
+                  <option value="sport">Programme Sport Prépa</option>
+                  <option value="health">Programme Santé</option>
+                  <option value="injury">Programme Reprise</option>
+                </select>
+              </div>
+            </div>
+            
+            <!-- is-customer -->
+            <div class="form-admin-prospect--display is-customer">
+              <div>
+                <input class="bg-white" name="" type="checkbox" value="is-customer">
+                <label tabindex="0">Client</label>
+              </div>
+            </div>
+            
+            <!-- had-free-course -->
+            <div class="form-admin-prospect--display free-course">
+              <div>
+                <input class="bg-white" name="" type="checkbox" value="free-course">
+                <label tabindex="0">Essai gratuit</label>
+              </div>
+            </div>
+            
           </div>
-          
-          <!-- INPUT SUBMIT -->
+
+
+          <!-- SECTION INPUT SUBMIT -->
           <div>
             <input type="submit" class="btn btn-hover btn-hover--dark btn25 mt-xs mb-xs" value="Enregistrez">
           </div>

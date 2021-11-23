@@ -24,6 +24,9 @@
       $data = [
         'prospect' => $prospect
       ];
+
+      // var_dump($data);
+      // die();
       
       // load the view show a prospect card
       $this->view('prospects/show', $data);
@@ -40,21 +43,38 @@
         $data = [
           'prospect_name' => trim($_POST['prospect_name']),
           'prospect_email' => trim($_POST['prospect_email']),
+          'prospect_phone' => trim($_POST['prospect_phone']),
+          'prospect_email_err' => '',
+          'prospect_email_err' => '',
+          'prospect_email_err' => '',
           'prospect_name_err' => '',
           'prospect_email_err' => '',
+          'prospect_phone_err' => '',
         ];
 
-        // validate the data
+        // validate the data if empty
         if(empty($data['prospect_name'])){
           $data['prospect_name_err'] = 'Veuillez ajoutez le nom du prospect';
         }
         if(empty($data['prospect_email'])){
           $data['prospect_email_err'] = "Ajoutez l'email du prospect";
         }
-           
+
+        // validate data if phone
+
+
+
+
+        // validate data if address
+
+        
+        
+
         // make sure there are no errors
         if(
           empty($data['prospect_name_err']) && 
+          // empty($data['prospect_phone_err']) && 
+          // empty($data['prospect_address_err']) && 
           empty($data['prospect_email_err'])) {
             
           if($this->prospectModel->addProspect($data)){
@@ -71,8 +91,10 @@
         $data = [
           'prospect_name' => '',
           'prospect_email' => '',
+          'prospect_phone' => '',
           'prospect_name_err' => '',
           'prospect_email_err' => '',
+          'prospect_phone_err' => '',
         ];
         // load the view add prospect
         $this->view('prospects/add', $data);        

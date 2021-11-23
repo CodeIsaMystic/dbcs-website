@@ -377,3 +377,88 @@ form .btn-table {
   padding: 4.8rem;
   background-color: rgba(255, 255, 255, 0.5);
 }
+
+/********************/
+/* LOGIN & REGISTER  */
+/******************/
+.register .register--text,
+.login .login--text {
+  padding: 0 3.2rem;
+}
+/***************/
+/*   FORMS    */
+/*************/
+/* form--contact */
+
+/* form-prospect */
+/* form-admin-partner */
+/* form-admin-prospect */
+.form-admin-prospect--display,
+.form-admin-partner--display {
+  display: inline-block;
+}
+.base-info-name,
+.base-info-email,
+.partner-company-name,
+.partner-email {
+  width: 40%;
+}
+.base-info-phone,
+.location-code,
+.location-city,
+.type-coaching,
+.type-partnership,
+.type-activity,
+.partner-city {
+  width: 28%;
+}
+.address-nr {
+  width: 100px;
+}
+.address-str {
+  width: 65%;
+}
+.base-info-name,
+.address-nr,
+.partner-company-name,
+.partner-city {
+  margin-right: 10px;
+}
+.is-customer,
+.free-course,
+.is-web-business,
+.have-deal {
+  width: 150px;
+}
+
+.is-customer,
+.is-web-business,
+.have-deal {
+  margin-left: 50px;
+}
+.is-customer input,
+.free-course input,
+.is-web-business input,
+.have-deal input {
+  box-shadow: none;
+  width: 20px;
+  align-self: center;
+}
+
+.is-customer div,
+.free-course div,
+.is-web-business div,
+.have-deal div,
+.type-activity div {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
+
+.is-customer label,
+.is-customer label,
+.is-web-business label,
+.have-deal label {
+  width: 130px;
+  align-self: center;
+}

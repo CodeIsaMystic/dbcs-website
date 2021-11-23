@@ -643,11 +643,12 @@ require APP_ROOT . '/views/inc/header.php';
   </div>
 </section>
 
-<!-- SECTION CTA -->
+<!-- SECTION FORM-PROPSECT -->
 <section class="linear-grad-lightBlue pb-lg pt-lg">
   <div class="container container--md with-parallax" id="cta">
-    <div class="cta grid--cta b-radius4 box-shad1 box-parallax">
-      <div class="cta-text-box txt-dark linear-grad-blue">
+
+    <div class="cta grid--cta b-radius4 box-shad1">
+      <div class="cta__text-box txt-dark linear-grad-blue">
         <h2 class="heading-secondary txt-dark-gray mb">
           Contactez le coach
         </h2>
@@ -661,6 +662,7 @@ require APP_ROOT . '/views/inc/header.php';
           page)
         </p>
 
+        <!-- form-prospect -->
         <form action="<?php echo URL_ROOT; ?>/pages/index" method="post" class="grid--form">
           <div>
             <label class="fontW700 mb-xxs"
@@ -696,11 +698,11 @@ require APP_ROOT . '/views/inc/header.php';
             />
           </div>
 
-          <div>
-            <label class="fontW700 mb-xxs"
-              >Demandez votre essai gratuit</label
-            >
-            <input class="b-radius4 bg-white" type="checkbox" name="freeCourse">
+          <div class="free-course mt-xs">
+            <div>
+              <input class="b-radius4 bg-white" type="checkbox" name="freeCourse">
+              <label class="fontW700">Essai gratuit</label>
+            </div>
           </div>
 
           <button type="submit" class="btn btn--baseline btn-hover btn-hover--blue">
@@ -709,7 +711,7 @@ require APP_ROOT . '/views/inc/header.php';
         </form>
       </div>
       <div
-        class="img-box--cta"
+        class="cta__img-box"
         role="img"
         aria-label="Bastien Desmet Coach Sportif"
       ></div>

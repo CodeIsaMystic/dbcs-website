@@ -281,37 +281,20 @@
 .contact-details .contact-details__div .col-nav li .link {
   font-size: 1.8rem;
 }
-
 /**********/
 /*  CTA  */
 /********/
 .cta {
   overflow: hidden;
 }
-.cta-text-box {
-  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+.cta__text-box {
+  padding: 3.2rem 4.8rem 4.8rem 4.8rem;
 }
-.img-box--cta {
+.cta__img-box {
   background-image: linear-gradient(to right bottom, #ffffff0d, #ffffff0d),
     url("../img/site/coach/coach-hbx-portrait.jpg");
   background-size: cover;
   background-position: center;
-}
-.cta *:focus {
-  outline: none;
-  box-shadow: 0 0 0 0.2rem #23232380;
-}
-.cta input[type="checkbox"] {
-  width: 14px;
-  margin: 0 auto 0 15px;
-  display: block;
-}
-/********************/
-/* LOGIN & REGISTER  */
-/******************/
-.register .register--text,
-.login .login--text {
-  padding: 0 3.2rem;
 }
 /***********/
 /* FOOTER */
@@ -326,11 +309,6 @@
 }
 .col-logo:first-child {
   display: block;
-}
-/* social-links */
-.social-links {
-  display: flex;
-  gap: 1.2rem;
 }
 /* copyright */
 .copyright {

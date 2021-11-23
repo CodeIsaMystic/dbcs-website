@@ -1,10 +1,7 @@
 <!-- HEADER -->
 <?php 
 require APP_ROOT . '/views/inc/header.php'; 
-// var_dump($data);
-// die();
 ?>
-
 
 <!-- SECTION EDIT POST -->
 <section class="edit-post pb-lg pt-lg">

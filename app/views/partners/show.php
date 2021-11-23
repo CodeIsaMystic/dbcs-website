@@ -13,7 +13,7 @@
 <section class="hero--fullW bg-white">
   <div>
     <picture>
-      <img src="<?php echo URL_ROOT; ?>/img/site/full-width/jogger.png" alt="Image of a jogger in the street"/>
+      <img src="<?php echo URL_ROOT; ?>/img/site/full-width/jogger.jpg" alt="Image of a jogger in the street"/>
     </picture>
   </div>
   <div class="hero--fullW__heading hero--fullW__heading--center">

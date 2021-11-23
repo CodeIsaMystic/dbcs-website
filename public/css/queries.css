@@ -526,10 +526,10 @@
   .cta {
     grid-template-columns: 1fr;
   }
-  .cta-text-box {
+  .cta__text-box {
     padding: 3.2rem;
   }
-  .img-box--cta {
+  .cta__img-box {
     height: 40rem;
     background-position: 50% 40%;
     grid-row: 1;
