@@ -349,46 +349,11 @@ form .btn-table {
   opacity: 0.85;
   color: #232323;
 }
-/****************/
-/****************/
-/****************/
-/****************/
-/****************/
-/****************/
-/****************/
-/****************/
-/****************/
-/***************/
-/* FORM SMALL */
-/*************/
-.form-small input[typ="submit"],
-.form-small button[type="submit"] {
-  margin: 0 auto;
-}
 
-/********************/
-/*   CONTACT FORM  */
-/******************/
-.contact-form div picture {
-}
-.contact-form div picture img {
-}
-.contact-form .container .contact-form__content {
-  padding: 4.8rem;
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
-/********************/
-/* LOGIN & REGISTER  */
-/******************/
-.register .register--text,
-.login .login--text {
-  padding: 0 3.2rem;
-}
 /***************/
 /*   FORMS    */
 /*************/
-/* form--contact */
+/* form-contact */
 
 /* form-prospect */
 /* form-admin-partner */
@@ -461,4 +426,37 @@ form .btn-table {
 .have-deal label {
   width: 130px;
   align-self: center;
+}
+
+/*  form-contact  */
+.contact-form .container .contact-form__content {
+  padding: 4.8rem;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+/* small form  */
+.form--small input[typ="submit"],
+.form--small button[type="submit"] {
+  margin: 0 auto;
+}
+
+/**********************/
+/* PATTERN X PADDING */
+/********************/
+/* padding: 0 3.2rem;
+cta text box
+cta
+show prospect / partners
+register / login
+add-post post-content 
+edit-post post-content
+header media queries
+grid--hero media queries
+hero
+container
+...
+*/
+/* login & register  */
+.register .register--text,
+.login .login--text {
+  padding: 0 3.2rem;
 }

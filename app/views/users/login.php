@@ -1,7 +1,5 @@
 <!-- HEADER --> 
-<?php 
-// var_dump($data);
-require APP_ROOT . '/views/inc/header.php'; ?>
+<?php require APP_ROOT . '/views/inc/header.php'; ?>
 
 <!-- FLASH  MESSAGES -->
 <?php require APP_ROOT . '/views/inc/flashmessages.php'; ?>
@@ -23,7 +21,7 @@ require APP_ROOT . '/views/inc/header.php'; ?>
           Connectez-vous à votre site (seul l'administrateur peut avoir
           accès).
         </p>
-        <form class="form-small" name="login" action="<?= URL_ROOT; ?>/users/login" method="post">
+        <form class="form--small" name="login" action="<?= URL_ROOT; ?>/users/login" method="post">
           <div>
             <label class="fontW700 mt-xxs" for="email"
               >Adresse mail</label

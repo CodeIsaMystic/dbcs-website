@@ -15,7 +15,7 @@
           Enregistrez vos informations pour pouvoir vous connecter à votre
           "Dashboard".
         </p>
-        <form class="form-small" name="register" action="<?= URL_ROOT; ?>/users/register" method="post">
+        <form class="form--small" name="register" action="<?= URL_ROOT; ?>/users/register" method="post">
           <div>
             <label class="fontW700 mt-xxs" for="name"
               >Nom complet</label
