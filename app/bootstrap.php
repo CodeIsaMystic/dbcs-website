@@ -8,11 +8,9 @@ require_once 'config/config.php';
  */
 require_once 'helpers/session_helper.php';
 require_once 'helpers/text.php';
+require_once 'helpers/url_helper.php';
 require_once 'helpers/date_format.php';
 
-require_once 'helpers/url_locations.php';
-require_once 'helpers/url_string.php';
-require_once 'helpers/url_links.php';
 
 
 
