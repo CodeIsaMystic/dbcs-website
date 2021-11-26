@@ -131,11 +131,7 @@
             
             <p class="txt-content--small mb-xs">
               <span class="fontW700"></span> de votre prospect. Notez que vous devez enregistrer l'adresse complète, <span class="fontW700"></span>.
-            </p>
-            
-            <span class="b-radius4">
-              <p class="txt-content--xsmall txt-danger"><?php  //echo $data['prospect_coaching_err']; ?></p>
-            </span>
+            </p>            
             
             <!-- type coaching -->
             <div class="form-admin-prospect--display type-coaching">
@@ -160,7 +156,7 @@
             <!-- is-customer -->
             <div class="form-admin-prospect--display is-customer">
               <div>
-                <input class="bg-white" name="isCustomer" type="checkbox" value="isCustomer">
+                <input class="bg-white" type="checkbox" name="prospect_is_customer" value="<?php echo $data['prospect_is_customer']; ?>">
                 <label>Client</label>
               </div>
             </div>
@@ -168,7 +164,7 @@
             <!-- had-free-course -->
             <div class="form-admin-prospect--display free-course">
               <div>
-                <input class="bg-white" name="freeCourse" type="checkbox" value="freeCourse">
+                <input class="bg-white" type="checkbox" name="had_free_course" value="<?php echo $data['had_free_course']; ?>">
                 <label>Essai gratuit</label>
               </div>
             </div>

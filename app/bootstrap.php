@@ -13,6 +13,7 @@ require_once 'helpers/date_format.php';
 
 require_once 'helpers/is_valid_phone.php';
 require_once 'helpers/address_handler.php';
+require_once 'helpers/checkbox_handler.php';
 
 
 

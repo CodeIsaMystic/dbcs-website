@@ -71,6 +71,8 @@
           'prospect_address_str' => trim($_POST['prospect_address_str']),
           'prospect_postal_code' => trim($_POST['prospect_postal_code']),
           'prospect_city' => trim($_POST['prospect_city']),
+          'had_free_course' => $_POST['had_free_course'],
+          'prospect_is_customer' => $_POST['prospect_is_customer'],
           'prospect_phone_err' => '',
           'prospect_name_err' => '',
           'prospect_email_err' => ''
@@ -90,7 +92,13 @@
         if(!isValidPhone($_POST['prospect_phone']))
         {
           $data['prospect_phone_err'] =  "Ce numéro de téléphone n'est pas correct.";
+          $data['prospect_phone'] = null;
+          
         }
+
+        // handle checkbox input if checked or not
+        $data['had_free_course'] = handleCheckboxValue($data['had_free_course']);
+        $data['prospect_is_customer'] = handleCheckboxValue($data['prospect_is_customer']);
 
 
         // make sure there are no errors before submit
@@ -119,6 +127,8 @@
           'prospect_address_str' => '',
           'prospect_postal_code' => '',
           'prospect_city' => '',
+          'had_free_course' => 0,
+          'prospect_is_customer' => 0,
           'prospect_name_err' => '',
           'prospect_email_err' => ''
         ];

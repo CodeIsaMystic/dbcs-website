@@ -137,49 +137,33 @@
           <h5 class="fontW500 mt-xs"> 
             Essai gratuit
           </h5>
-          <span class="txt-content--xsmall txt-danger">
-            <?= $data['prospect']->prospect_name . " a bénéficié de son essai gratuit."; ?>
-            <?php 
-              // if ($data['prospect']->had_free_course  === 1) 
-              // echo "$data['prospect']->prospect_name" . " a bénéficié de son essai gratuit.";
-              // else 
-              // echo "$data['prospect']->prospect_name" . " n\'a pas encore bénéficié de son essai.";
-            ?>
-          </span>
-
-
-          <!-- is-customer -->
-          <h5 class="txt-content--xsmall mt-xs"> 
-            
-          </h5>  
-          <span class="txt-content--xsmall txt-blue">
-            <?php //echo $data['prospect']->prospect_name; ?>
-          </span>    
-
-          <?php 
-            // if ($data['prospect']->prospect_is_customer) 
-            // $data['prospect']->prospect_is_customer = 1;
-            // echo               
-            // - Le contact 
-            // - est client
-            // - depuis "insert_time= now()" .
-            // - Il a bénéficié de son essai gratuit.
-            // else 
-            // $data['prospect']->prospect_is_customer = 0;
-
-
-            // if ($data['prospect']->had_free_course) 
-
-          ?>
-          
-          
-          <!-- coaching subject -->
+            <?php if($data['prospect']->had_free_course === "1") : ?>
+              <span class="txt-content--xsmall txt-blue">
+                <?= $data['prospect']->prospect_name . " a bénéficié de son essai gratuit."; ?>
+              </span>
+            <?php else : ?>
+              <span class="txt-content--xsmall txt-danger">
+                <?= $data['prospect']->prospect_name . " n'a pas bénéficié de son cours d'essai gratuit."; ?>
+              </span>
+            <?php endif; ?>
+             
+          <!-- is-customer / type_coaching -->
           <h5 class="fontW500 mt-xs"> 
-            Coaching objectifs
-          </h5>
+            Coaching
+          </h5>  
+          
+            <?php if($data['prospect']->prospect_is_customer === "1") : ?>
+              <span class="txt-content--xsmall txt-blue">
+                <?php echo $data['prospect']->prospect_name . " est client, ..."; ?>
+              </span>    
+            <?php else : ?>
+              <span class="txt-content--xsmall txt-danger">
+                <?php echo $data['prospect']->prospect_name . " n'est pas encore client, ..."; ?>
+              </span>
+            <?php endif; ?>
           
           <span class="txt-content--xsmall txt-blue">
-            <?= 'Programme "Régime minceur" le 30-11-21'; ?>
+            <?//= 'Programme "Régime minceur" le 30-11-21'; ?>
             <?php 
               // - Il a commencé son programme le "date_started_plan"
               //

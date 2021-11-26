@@ -140,6 +140,54 @@
             </div> 
           </div>
 
+          <!-- SECTION COACHING INFO -->
+          <div>
+            <!-- heading -->
+            <h3 class="subheading txt-upp fontW700 mt mb-xxs" tabindex="0"> 
+              Coaching Informations:
+            </h3>
+            
+            <p class="txt-content--small mb-xs">
+              <span class="fontW700"></span> de votre prospect. Notez que vous devez enregistrer l'adresse complète, <span class="fontW700"></span>.
+            </p>
+            
+            <!-- type coaching -->
+            <div class="form-admin-prospect--display type-coaching">
+              <label class="fontW700 txt-blue mb-xxs">
+                Coaching
+              </label>
+              <div>
+                <select name="" class="bg-white"> 
+                  <option value="default"></option>
+                  <option value="basic">Programme Basique</option>
+                  <option value="fit">Programme Fitness</option>
+                  <option value="weight-loss">Programme Régime</option>
+                  <option value="heart-beat">Programme Cardio</option>
+                  <option value="weight">Programme Muscle</option>
+                  <option value="sport">Programme Sport Prépa</option>
+                  <option value="health">Programme Santé</option>
+                  <option value="injury">Programme Reprise</option>
+                </select>
+              </div>
+            </div>
+            
+            <!-- is-customer -->
+            <div class="form-admin-prospect--display is-customer">
+              <div>
+                <input class="bg-white" name="isCustomer" type="checkbox" value="0">
+                <label>Client</label>
+              </div>
+            </div>
+            
+            <!-- had-free-course -->
+            <div class="form-admin-prospect--display free-course">
+              <div>
+                <input class="bg-white" name="freeCourse" type="checkbox" value="0">
+                <label>Essai gratuit</label>
+              </div>
+            </div>
+          </div>
+
             
           <!-- INPUT SUBMIT -->
           <div>
@@ -155,8 +203,5 @@
 
 <!-- FOOTER -->
 <?php 
-require APP_ROOT . '/views/inc/footer.php'; 
-
-var_dump($data);
-die();
+  require APP_ROOT . '/views/inc/footer.php'; 
 ?>

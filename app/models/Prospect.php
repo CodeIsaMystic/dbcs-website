@@ -18,7 +18,7 @@ class Prospect {
   }
 
   public function addProspect($data){
-    $this->db->query('INSERT INTO prospects (prospect_name, prospect_email, prospect_phone, prospect_address_nr, prospect_address_str, prospect_postal_code, prospect_city ) VALUES(:name, :email, :phone, :address_nr, :address_str, :postal_code, :city)');
+    $this->db->query('INSERT INTO prospects (prospect_name, prospect_email, prospect_phone, prospect_address_nr, prospect_address_str, prospect_postal_code, prospect_city, had_free_course, prospect_is_customer ) VALUES(:name, :email, :phone, :address_nr, :address_str, :postal_code, :city, :had_free_course, :is_customer)');
     // Bind values
     $this->db->bind(':name', $data['prospect_name']);
     $this->db->bind(':email', $data['prospect_email']);
@@ -27,6 +27,8 @@ class Prospect {
     $this->db->bind(':address_str', $data['prospect_address_str']);
     $this->db->bind(':postal_code', $data['prospect_postal_code']);
     $this->db->bind(':city', $data['prospect_city']);
+    $this->db->bind(':is_customer', $data['prospect_is_customer']);
+    $this->db->bind(':had_free_course', $data['had_free_course']);
 
     // Execute
     if($this->db->execute()){
