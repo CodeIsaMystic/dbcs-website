@@ -4,6 +4,7 @@
   require APP_ROOT . '/views/inc/header.php'; 
   // var_dump($data);
   // die();
+
   $phone_number = $data['partner']->partner_phone;
 ?>
 
@@ -112,8 +113,9 @@
           </h5>
           <span class="txt-content--xsmall txt-blue">
             <?php
-             if(isset($data['partner_city'])) {
-               echo $data['partner_city'] ;
+             if(isset($data['partner']->partner_city) && 
+             !empty($data['partner']->partner_city)) {
+               echo $data['partner']->partner_city ;
              } else {
                echo "Vous n'avez pas encore localisé le partenaire.";
              }

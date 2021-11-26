@@ -119,7 +119,7 @@
               <!-- city -->
               <div class="form-admin-partner--display partner-city">
                 <label class="fontW700 txt-blue mb-xxs" tabindex="0">Ville:</label>
-                <input type="text" name="partner_city" class="bg-white mb-xxs" value="<?php //echo $data['partner_city']; ?>">
+                <input type="text" name="partner_city" class="bg-white mb-xxs" value="<?php echo $data['partner']->partner_city; ?>">
               </div>
                     
               <!-- type activity -->

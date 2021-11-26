@@ -19,10 +19,9 @@ class Partners extends Controller {
   }
 
   public function list() {
-    if(!isLoggedIn()){
-        redirect('users/login');
-      }
+    redirectToLogin();
 
+    
     // get all partners
     $partners = $this->partnerModel->getPartners();
 
@@ -49,17 +48,20 @@ class Partners extends Controller {
 
 
   public function add() {
+    redirectToLogin();
+
+
     if($_SERVER['REQUEST_METHOD'] == 'POST') {
+
       // Sanitizing tests for POST array
-      $_POST = filter_input_array(INPUT_POST);
+      $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 
       $data = [
         'partner_company_name' => trim($_POST['partner_company_name']),
         'partner_email' => trim($_POST['partner_email']),
         'partner_phone' => trim($_POST['partner_phone']),
         'partner_city' => trim($_POST['partner_city']),
-        'date_started_partnership' => $_POST['date_started_partneship'],
-        'type_partnership' => $_POST['type_partnership'],
+        // 'type_partnership' => $_POST['type_partnership'],
         'have_deal' => 0,
         'is_web_business' => 0,
         'partner_company_name_err' => '',
@@ -67,7 +69,7 @@ class Partners extends Controller {
         'partner_phone_err' => ''
       ];
 
-      // validate the data 
+      // throw err message if empty 
       if(empty($data['partner_company_name'])) {
         $data['partner_company_name_err'] = 'Veuillez ajoutez le nom du partenaire';
       };
@@ -75,8 +77,17 @@ class Partners extends Controller {
         $data['partner_email_err'] = "Veuillez ajoutez l'email du partenaire";
       }
 
+      // throw err message if not valid
+      if(!isValidPhone($_POST['partner_phone']))
+      {
+        $data['partner_phone_err'] =  "Ce numéro de téléphone n'est pas correct.";
+      }
+
       // make sure there are no errors before submit
-      if(empty($data['partner_email_err']) && empty($data['partner_company_name_err'])) {
+      if(
+        empty($data['partner_email_err']) && 
+        empty($data['partner_company_name_err'])
+      ) {
 
         if($this->partnerModel->addPartner($data)) {
           flash('partner_message', 'Votre partenaire a bien été ajouté à la liste.');
@@ -94,10 +105,9 @@ class Partners extends Controller {
         'partner_email' => '',
         'partner_phone' => null,
         'partner_city' => null,
-        'is_web_business' => null,
-        'type_partnership' => null,
+        'is_web_business' => 0,
+        // 'type_partnership' => null,
         'have_deal' => 0,
-        'date_started_partnership' => null,
         'partner_company_name_err' => '',
         'partner_email_err' => '',
         'partner_phone_err' => ''
@@ -108,9 +118,7 @@ class Partners extends Controller {
   }
 
   public function edit($id){
-    if(!isLoggedIn()){
-      redirect('users/login');
-    }
+    redirectToLogin();
 
     $partner = $this->partnerModel->getPartnerById($id);
 
@@ -126,7 +134,7 @@ class Partners extends Controller {
     if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
       // Sanitizing Tests for POST array
-      $_POST = filter_input_array(INPUT_POST);
+      $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 
 
       $data = [
@@ -136,8 +144,7 @@ class Partners extends Controller {
         'partner_email' => trim($_POST['partner_email']),
         'partner_phone' => trim($_POST['partner_phone']),
         'partner_city' => trim($_POST['partner_city']),
-        'date_started_partnership' => $_POST['date_started_partneship'],
-        'type_partnership' => $_POST['type_partnership'],
+        // 'type_partnership' => $_POST['type_partnership'],
         'have_deal' => 0,
         'is_web_business' => 0,
         'partner_main_err' => '',
@@ -146,21 +153,42 @@ class Partners extends Controller {
         'partner_phone_err' => ''
       ];
 
-      // validate the data
+
+      // throw err message if data are empty
       if(empty($data['partner_company_name'])){
         $data['partner_company_name_err'] = 'Veuillez ajoutez le nom de l\'entreprise';
       }
       if(empty($data['partner_email'])){
         $data['partner_email_err'] = "Veuillez ajoutez l'email";
       }
+      // throw err message if phone is not valid
+      if(!isValidPhone($_POST['partner_phone']) && !empty($_POST['partner_phone']))
+      {
+        $data['partner_phone_err'] =  "Ce numéro de téléphone n'est pas correct.";
+      } 
+      if(empty($_POST['partner_phone'])) {
+        $data['partner_phone_err'] =  "Ce numéro de téléphone n'est pas correct.";
+
+      }
 
       // avoid useless request
-      if(($data['partner_company_name'] == $this->partnerModel->getPartnerById($id)->partner_company_name)&&($data['partner_email'] == $this->partnerModel->getPartnerById($id)->partner_email)) {
+      if(
+        ($data['partner_company_name'] == $this->partnerModel->getPartnerById($id)->partner_company_name) && 
+        ($data['partner_email'] == $this->partnerModel->getPartnerById($id)->partner_email) && 
+        ($data['partner_phone'] == $this->partnerModel->getPartnerById($id)->partner_phone) &&
+        ($data['partner_city'] == $this->partnerModel->getPartnerById($id)->partner_city) 
+      ) {
+
         $data['partner_main_err'] = "Vous devez au moins changer un des éléments suivants: nom, email...";
       }
 
-      // make sure there are no errors
-      if((empty($data['partner_company_name_err'])) && (empty($data['partner_email_err']))) {
+      // make sure there are no errors before to submit
+      if(
+        (empty($data['partner_main_err'])) && 
+        (isValidPhone($_POST['partner_phone'])) && 
+        (empty($data['partner_company_name_err'])) && 
+        (empty($data['partner_email_err']))
+      ) {
           
         if($this->partnerModel->updatePartner($data)){
           flash('partner_message', 'Votre partenaire a bien été modifié et enregistré.');
@@ -180,33 +208,33 @@ class Partners extends Controller {
   }
   
   public function delete($id) {
-  if(!isLoggedIn()){
-    redirect('users/login');
-  }
-      
-  $partner = $this->partnerModel->getPartnerById($id);
+    redirectToLogin();
 
-  // review the data set entirely
-  // remove err fields !!!??
-  $data = [
-    'partner' => $partner,           
-    'partner_company_name_err' => '',
-    'partner_email_err' => '',
-    ];
-  
-  
-  if($_SERVER['REQUEST_METHOD'] == 'POST'){
-    // Sanitize POST array
-    $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+        
+    $partner = $this->partnerModel->getPartnerById($id);
 
-    if($this->partnerModel->deletePartner($id)) {
-      
-      flash('partner_message', 'La fiche partenaire a bien été supprimé');
-      redirect("partners/list");
-    } else {
-      die('There was an error');
+    // review the data set entirely
+    // remove err fields !!!??
+    $data = [
+      'partner' => $partner,           
+      'partner_company_name_err' => '',
+      'partner_email_err' => '',
+      ];
+    
+    
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+      // Sanitize POST array
+      $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+
+      if($this->partnerModel->deletePartner($id)) {
+        
+        flash('partner_message', 'La fiche partenaire a bien été supprimé');
+        redirect("partners/list");
+      } else {
+        die('There was an error');
+      }
     }
   }
 }
 
-}
+?>

@@ -47,10 +47,9 @@ CREATE TABLE `partners` (
   `prospect_phone` varchar(50) NULL,
   `partner_created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `partner_city` varchar(100) NULL,
-  `is_web_business` boolean NULL,
+  `is_web_business` boolean NOT NULL DEFAULT false,
   `have_deal` boolean NOT NULL DEFAULT false,
-  `type_partnership` tinyint(1) NULL,
-  `date_started_partnership` datetime NULL
+  `type_partnership` tinyint(1) NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 

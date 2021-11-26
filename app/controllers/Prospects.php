@@ -17,6 +17,25 @@
       // load the view with all Prospects
       // $this->view('prospects/index', $data);
     }
+
+        
+    public function list(){
+      redirectToLogin();
+
+
+      // get all prospects
+      $prospects = $this->prospectModel->getProspects();
+      
+      $data = [
+        'title' => 'Liste de vos prospects',
+        'description' => "Vous trouverez ici tout vos contacts potentiellement clients.",
+        'prospects' => $prospects
+      ];
+
+      // load the view prospects list
+      $this->view('prospects/list', $data);
+    
+    }
     
     public function show($id){
       redirectToLogin();
@@ -41,7 +60,7 @@
       if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         // Sanitizing Tests for POST array
-        $_POST = filter_input_array(INPUT_POST);
+        $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
   
 
         $data = [
@@ -73,18 +92,6 @@
           $data['prospect_phone_err'] =  "Ce numéro de téléphone n'est pas correct.";
         }
 
-
-        // validate phone data => first try
-        // if(!is_null($data['prospect_phone'])){
-        //   if(preg_match('#(0|\+33)[1-9]( *[0-9]{2}){4}#', $_POST['prospect_phone'])) {
-        //     $data['prospect_phone'] = $_POST['prospect_phone'];
-        //   } else {
-        //     $data['prospect_phone'] = null;
-        //   }
-        // }
-
-        
-        
 
         // make sure there are no errors before submit
         if(
@@ -137,7 +144,7 @@
       if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         // Sanitizing Tests for POST array
-        $_POST = filter_input_array(INPUT_POST);
+        $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
   
 
         $data = [
@@ -173,19 +180,7 @@
 
         }
 
-
-        // throw warning message if phone is null
-        // if(is_null($data['prospect']->prospect_phone)) {
-        //   $data['prospect_phone_err'] =  "Aucun numéro de téléphone pour le moment.";
-        // }
-
-        // var_dump($data);
-        // die();
-
-
-
-
-        // Avoid Useless Request
+        // avoid useless request
         if(
           ($data['prospect_name'] == $this->prospectModel->getProspectById($id)->prospect_name) &&
           ($data['prospect_email'] == $this->prospectModel->getProspectById($id)->prospect_email) && 
@@ -200,9 +195,9 @@
 
         // make sure there are no errors before to submit
         if(
-          (empty($data['prospect_name_err'])) && 
           (empty($data['prospect_main_err'])) && 
           (isValidPhone($_POST['prospect_phone'])) && 
+          (empty($data['prospect_name_err'])) && 
           (empty($data['prospect_email_err'])) ) {
             
           if($this->prospectModel->updateProspect($data)){
@@ -221,30 +216,15 @@
         $this->view('prospects/edit', $data);        
       }
     }  
-    
-    public function list(){
-      redirectToLogin();
-
-
-      // get all prospects
-      $prospects = $this->prospectModel->getProspects();
-      
-      $data = [
-        'title' => 'Liste de vos prospects',
-        'description' => "Vous trouverez ici tout vos contacts potentiellement clients.",
-        'prospects' => $prospects
-      ];
-
-      // load the view prospects list
-      $this->view('prospects/list', $data);
-    
-    }
 
     public function delete($id) {
+      redirectToLogin();
+
          
       $prospect = $this->prospectModel->getProspectById($id);
 
       // review the data set entirely
+      // remove err fields !!!??
       $data = [
         'prospect' => $prospect,           
         'prospect_name_err' => '',
