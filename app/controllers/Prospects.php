@@ -28,7 +28,7 @@
         'prospect_final_address' => '',
       ];
 
-      $data['prospect_final_address'] = getFullAddress($data);
+      $data['prospect_final_address'] = addressHandler($data);
 
       // load the view show a prospect card
       $this->view('prospects/show', $data);

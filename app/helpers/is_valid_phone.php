@@ -3,9 +3,9 @@
 /**
  * Function validating phone data if true
  * => validating regex, length of 10
- *  & allows empty string
  * 
  * @param string phone string data to checkout
+ * 
  * @return bool 
  */
 function isValidPhone($phoneData): bool {

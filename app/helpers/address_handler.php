@@ -7,7 +7,7 @@
    * @return string get final string full address or message if not
    * 
   */
-  function getFullAddress(array $data) {
+  function addressHandler(array $data):string {
     // set & bind new variables
     $add_number = $data['prospect']->prospect_address_nr;
     $add_street = $data['prospect']->prospect_address_str;

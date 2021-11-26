@@ -1,10 +1,19 @@
 <?php
   session_start();
 
-  // Flash message helper
   // EXAMPLE - flash('register_success', 'You are now registered');
   // DISPLAY IN VIEW - echo flash('register_success');
-  function flash($name = '', $message = '', $class = 'txt-content alert alert-success'){
+
+  /**
+   * Function handle basic flash messages when login/register, add, edit or delete
+   * 
+   * @param string the name type of message set as string
+   * @param string the flash message to display in the HTML element set as string
+   * @param string the CSS class to add on the 'div' element
+   * 
+   * @return string the final html element to display flash messages (as string)
+   */
+  function flash(string $name = '',string $message = '',string $class = 'txt-content alert alert-success'): string {
     if(!empty($name)){
       if(!empty($message) && empty($_SESSION[$name])){
         if(!empty($_SESSION[$name])){
@@ -37,7 +46,12 @@
     }
   }
 
-  function isLoggedIn(){
+  /**
+   * Function if isLoggedIn, session is started
+   * 
+   * @return bool true if session start 
+   */
+  function isLoggedIn(): bool {
     if(isset($_SESSION['user_id'])){
       return true;
     } else {
@@ -45,6 +59,9 @@
     }
   }
 
+  /**
+   * Function redirect to login page if not logged in
+   */
   function redirectToLogin() {
     if(!isLoggedIn()){
         redirect('users/login');
