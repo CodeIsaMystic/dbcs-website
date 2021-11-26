@@ -130,7 +130,7 @@
               Type de partenariat
           </h5>
           <span class="txt-content--xsmall txt-blue">
-            <?= 'Programme "Régime minceur" le 30-11-21'; ?>
+            <?= "L'entreprise est active sur le Web, nous avons établi un partenariat de type 'Blogging'."; ?>
             <?php 
               // - Il a commencé son programme le "date_started_plan"
               //

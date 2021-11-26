@@ -11,9 +11,8 @@
    * @param string the flash message to display in the HTML element set as string
    * @param string the CSS class to add on the 'div' element
    * 
-   * @return string the final html element to display flash messages (as string)
    */
-  function flash(string $name = '',string $message = '',string $class = 'txt-content alert alert-success'): string {
+  function flash(string $name = '',string $message = '',string $class = 'txt-content alert alert-success') {
     if(!empty($name)){
       if(!empty($message) && empty($_SESSION[$name])){
         if(!empty($_SESSION[$name])){
