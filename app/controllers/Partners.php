@@ -56,8 +56,12 @@ class Partners extends Controller {
       $data = [
         'partner_company_name' => trim($_POST['partner_company_name']),
         'partner_email' => trim($_POST['partner_email']),
-        'prospect_city' => trim($_POST['prospect_city']),
-        'date_started_partnership' => '',
+        'partner_phone' => trim($_POST['partner_phone']),
+        'partner_city' => trim($_POST['partner_city']),
+        'date_started_partnership' => $_POST['date_started_partneship'],
+        'type_partnership' => $_POST['type_partnership'],
+        'have_deal' => 0,
+        'is_web_business' => 0,
         'partner_company_name_err' => '',
         'partner_email_err' => ''
       ];
@@ -87,8 +91,12 @@ class Partners extends Controller {
       $data = [
         'partner_company_name' => '',
         'partner_email' => '',
-        'prospect_city' => null,
-        'date_started_partnership' => '',
+        'partner_phone' => null,
+        'partner_city' => null,
+        'is_web_business' => null,
+        'type_partnership' => null,
+        'have_deal' => 0,
+        'date_started_partnership' => null,
         'partner_company_name_err' => '',
         'partner_email_err' => ''
       ];
@@ -122,6 +130,12 @@ class Partners extends Controller {
         'partner' => $partner,
         'partner_company_name' => trim($_POST['partner_company_name']),
         'partner_email' => trim($_POST['partner_email']),
+        'partner_phone' => trim($_POST['partner_phone']),
+        'partner_city' => trim($_POST['partner_city']),
+        'date_started_partnership' => $_POST['date_started_partneship'],
+        'type_partnership' => $_POST['type_partnership'],
+        'have_deal' => 0,
+        'is_web_business' => 0,
         'partner_company_name_err' => '',
         'partner_email_err' => ''
       ];

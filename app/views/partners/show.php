@@ -2,7 +2,8 @@
 <!-- HEADER -->
 <?php 
   require APP_ROOT . '/views/inc/header.php'; 
-
+  // var_dump($data);
+  // die();
   $phone_number = $data['partner']->partner_phone;
 ?>
 
@@ -155,11 +156,7 @@
             ?>
           </span>
         </div> 
-        
-
-
-
-
+     
           
         <!-- PARTNER BUSINESS INFOS ready to setup & test -->
         <!-- <div>

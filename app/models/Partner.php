@@ -18,11 +18,17 @@ class Partner {
   }
 
   public function addPartner($data) {
-    $this->db->query('INSERT INTO partners (partner_company_name, partner_email) VALUES (:company_name, :email)');
+    $this->db->query('INSERT INTO partners (partner_company_name, partner_email, partner_phone,, partner_city, is_web_business, type_partnership, have_deal, date_started_partnership) VALUES (:company_name, :email, :phone, :city, is_web_business, type_partnership, have_deal, :date_started_partnership)');
 
     // Bind values
     $this->db->bind(':company_name', $data['partner_company_name']);
     $this->db->bind(':email', $data['partner_email']);
+    $this->db->bind(':phone', $data['partner_phone']);
+    $this->db->bind(':city', $data['partner_city']);
+    $this->db->bind(':is_web_business', $data['is_web_business']);
+    $this->db->bind(':type_partnership', $data['type_partnership']);
+    $this->db->bind(':have_deal', $data['have_deal']);
+    $this->db->bind(':date_started_partnership', $data['date_started_partnership']);
 
     //execute
     if($this->db->execute()) {
@@ -42,11 +48,17 @@ class Partner {
   }
 
   public function updatePartner($data){
-    $this->db->query('UPDATE partners SET partner_company_name = :company_name, partner_email = :email WHERE partner_id = :id');
+    $this->db->query('UPDATE partners SET partner_company_name = :company_name, partner_email = :email, partner_phone = :phone, partner_city = :city, is_web_business = :is_web_business, type_partnership = :type_partnership, have_deal = :have_deal, date_started_partnership = :date_started_partnership WHERE partner_id = :id');
     // Bind values
     $this->db->bind(':id', $data['partner_id']);
     $this->db->bind(':company_name', $data['partner_company_name']);
     $this->db->bind(':email', $data['partner_email']);
+    $this->db->bind(':phone', $data['partner_phone']);
+    $this->db->bind(':city', $data['partner_city']);
+    $this->db->bind(':is_web_business', $data['is_web_business']);
+    $this->db->bind(':type_partnership', $data['type_partnership']);
+    $this->db->bind(':have_deal', $data['have_deal']);
+    $this->db->bind(':date_started_partnership', $data['date_started_partnership']);
 
 
     // Execute
