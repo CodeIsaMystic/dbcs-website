@@ -19,20 +19,24 @@
     }
     
     public function show($id){
+      redirectToLogin();
+
       $prospect = $this->prospectModel->getProspectById($id);
 
       $data = [
-        'prospect' => $prospect
+        'prospect' => $prospect,
+        'prospect_final_address' => '',
       ];
 
-      // var_dump($data);
-      // die();
-      
+      $data['prospect_final_address'] = getFullAddress($data);
+
       // load the view show a prospect card
       $this->view('prospects/show', $data);
     }
         
     public function add(){
+      redirectToLogin();
+
 
       if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
@@ -44,38 +48,50 @@
           'prospect_name' => trim($_POST['prospect_name']),
           'prospect_email' => trim($_POST['prospect_email']),
           'prospect_phone' => trim($_POST['prospect_phone']),
-          'prospect_email_err' => '',
-          'prospect_email_err' => '',
-          'prospect_email_err' => '',
-          'prospect_name_err' => '',
-          'prospect_email_err' => '',
+          'prospect_address_nr' => trim($_POST['prospect_address_nr']),
+          'prospect_address_str' => trim($_POST['prospect_address_str']),
+          'prospect_postal_code' => trim($_POST['prospect_postal_code']),
+          'prospect_city' => trim($_POST['prospect_city']),
           'prospect_phone_err' => '',
+          'prospect_name_err' => '',
+          'prospect_email_err' => ''
         ];
 
-        // validate the data if empty
+
+        // throw err message if empty
         if(empty($data['prospect_name'])){
           $data['prospect_name_err'] = 'Veuillez ajoutez le nom du prospect';
         }
         if(empty($data['prospect_email'])){
           $data['prospect_email_err'] = "Ajoutez l'email du prospect";
         }
+        
+        
+        // throw err message if not valid
+        if(!isValidPhone($_POST['prospect_phone']))
+        {
+          $data['prospect_phone_err'] =  "Ce numéro de téléphone n'est pas correct.";
+        }
 
-        // validate data if phone
 
-
-
-
-        // validate data if address
+        // validate phone data => first try
+        // if(!is_null($data['prospect_phone'])){
+        //   if(preg_match('#(0|\+33)[1-9]( *[0-9]{2}){4}#', $_POST['prospect_phone'])) {
+        //     $data['prospect_phone'] = $_POST['prospect_phone'];
+        //   } else {
+        //     $data['prospect_phone'] = null;
+        //   }
+        // }
 
         
         
 
-        // make sure there are no errors
+        // make sure there are no errors before submit
         if(
-          empty($data['prospect_name_err']) && 
-          // empty($data['prospect_phone_err']) && 
-          // empty($data['prospect_address_err']) && 
-          empty($data['prospect_email_err'])) {
+          empty($data['prospect_name_err']) &&
+          isValidPhone($_POST['prospect_phone']) &&  
+          empty($data['prospect_email_err'])
+        ) {
             
           if($this->prospectModel->addProspect($data)){
             flash('prospect_message', 'Votre prospect a bien été ajouté et enregistré.');
@@ -91,10 +107,13 @@
         $data = [
           'prospect_name' => '',
           'prospect_email' => '',
-          'prospect_phone' => '',
+          'prospect_phone' => null,
+          'prospect_address_nr' => '',
+          'prospect_address_str' => '',
+          'prospect_postal_code' => '',
+          'prospect_city' => '',
           'prospect_name_err' => '',
-          'prospect_email_err' => '',
-          'prospect_phone_err' => '',
+          'prospect_email_err' => ''
         ];
         // load the view add prospect
         $this->view('prospects/add', $data);        
@@ -102,17 +121,17 @@
     }  
    
     public function edit($id){
-      if(!isLoggedIn()){
-        redirect('users/login');
-      }
+      redirectToLogin();
 
       $prospect = $this->prospectModel->getProspectById($id);
 
       
       $data = [
         'prospect' => $prospect,            
+        'prospect_main_err' => '',
         'prospect_name_err' => '',
         'prospect_email_err' => '',
+        'prospect_phone_err' => ''
       ];
 
       if($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -126,25 +145,65 @@
           'prospect' => $prospect,
           'prospect_name' => trim($_POST['prospect_name']),
           'prospect_email' => trim($_POST['prospect_email']),
+          'prospect_phone' => trim($_POST['prospect_phone']),
+          'prospect_address_nr' => trim($_POST['prospect_address_nr']),
+          'prospect_address_str' => trim($_POST['prospect_address_str']),
+          'prospect_postal_code' => trim($_POST['prospect_postal_code']),
+          'prospect_city' => trim($_POST['prospect_city']),
+          'prospect_main_err' => '',
           'prospect_name_err' => '',
-          'prospect_email_err' => ''
+          'prospect_email_err' => '',
+          'prospect_phone_err' => ''
         ];
 
-        // validate the data
+        // throw err message if data are empty
         if(empty($data['prospect_name'])){
           $data['prospect_name_err'] = 'Veuillez ajoutez le nom du prospect';
         }
         if(empty($data['prospect_email'])){
           $data['prospect_email_err'] = "Veuillez ajoutez l'email du prospect";
         }
+        // throw err message if phone is not valid
+        if(!isValidPhone($_POST['prospect_phone']) && !empty($_POST['prospect_phone']))
+        {
+          $data['prospect_phone_err'] =  "Ce numéro de téléphone n'est pas correct.";
+        } 
+        if(empty($_POST['prospect_phone'])) {
+          $data['prospect_phone_err'] =  "Ce numéro de téléphone n'est pas correct.";
 
-        // Avoid Useless Request
-        if(($data['prospect_name'] == $this->prospectModel->getProspectById($id)->prospect_name)&&($data['prospect_email'] == $this->prospectModel->getProspectById($id)->prospect_email)) {
-          $data['prospect_name_err'] = "Vous devez au moins changer un des éléments suivants: nom, email...";
         }
 
-        // make sure there are no errors
-        if((empty($data['prospect_name_err'])) && (empty($data['prospect_email_err']))) {
+
+        // throw warning message if phone is null
+        // if(is_null($data['prospect']->prospect_phone)) {
+        //   $data['prospect_phone_err'] =  "Aucun numéro de téléphone pour le moment.";
+        // }
+
+        // var_dump($data);
+        // die();
+
+
+
+
+        // Avoid Useless Request
+        if(
+          ($data['prospect_name'] == $this->prospectModel->getProspectById($id)->prospect_name) &&
+          ($data['prospect_email'] == $this->prospectModel->getProspectById($id)->prospect_email) && 
+          ($data['prospect_phone'] == $this->prospectModel->getProspectById($id)->prospect_phone) &&
+          ($data['prospect_address_nr'] == $this->prospectModel->getProspectById($id)->prospect_address_nr) &&
+          ($data['prospect_address_str'] == $this->prospectModel->getProspectById($id)->prospect_address_str) &&
+          ($data['prospect_postal_code'] == $this->prospectModel->getProspectById($id)->prospect_postal_code) &&
+          ($data['prospect_city'] == $this->prospectModel->getProspectById($id)->prospect_city)
+        ) {
+          $data['prospect_main_err'] = "Vous devez au moins changer un des éléments suivants: nom, email, téléphone, adresse...";
+        }
+
+        // make sure there are no errors before to submit
+        if(
+          (empty($data['prospect_name_err'])) && 
+          (empty($data['prospect_main_err'])) && 
+          (isValidPhone($_POST['prospect_phone'])) && 
+          (empty($data['prospect_email_err'])) ) {
             
           if($this->prospectModel->updateProspect($data)){
             flash('prospect_message', 'Votre prospect a bien été modifié et enregistré.');
@@ -164,9 +223,8 @@
     }  
     
     public function list(){
-      if(!isLoggedIn()){
-        redirect('users/login');
-      }
+      redirectToLogin();
+
 
       // get all prospects
       $prospects = $this->prospectModel->getProspects();
@@ -183,9 +241,6 @@
     }
 
     public function delete($id) {
-      if(!isLoggedIn()){
-        redirect('users/login');
-      }
          
       $prospect = $this->prospectModel->getProspectById($id);
 

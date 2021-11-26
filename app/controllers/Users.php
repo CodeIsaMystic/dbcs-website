@@ -90,7 +90,7 @@
         ];
 
         // Load view
-        $this->view('users/register', $data);
+        // $this->view('users/register', $data);
       }
     }
 

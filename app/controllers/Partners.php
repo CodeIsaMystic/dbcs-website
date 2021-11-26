@@ -56,6 +56,8 @@ class Partners extends Controller {
       $data = [
         'partner_company_name' => trim($_POST['partner_company_name']),
         'partner_email' => trim($_POST['partner_email']),
+        'prospect_city' => trim($_POST['prospect_city']),
+        'date_started_partnership' => '',
         'partner_company_name_err' => '',
         'partner_email_err' => ''
       ];
@@ -68,7 +70,7 @@ class Partners extends Controller {
         $data['partner_email_err'] = "Veuillez ajoutez l'email du partenaire";
       }
 
-      // make sure there are no errors
+      // make sure there are no errors before submit
       if(empty($data['partner_email_err']) && empty($data['partner_company_name_err'])) {
 
         if($this->partnerModel->addPartner($data)) {
@@ -85,6 +87,8 @@ class Partners extends Controller {
       $data = [
         'partner_company_name' => '',
         'partner_email' => '',
+        'prospect_city' => null,
+        'date_started_partnership' => '',
         'partner_company_name_err' => '',
         'partner_email_err' => ''
       ];

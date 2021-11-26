@@ -75,7 +75,9 @@ require APP_ROOT . '/views/inc/header.php';
               type="file" 
               id="image" 
               name="image"
-              accept=".png, .jpg, .jpeg"/>
+              accept=".png, .jpg, .jpeg"
+              value="<?php echo ($data['post']->post_image); ?>"
+              />
           </div>
 
           <!-- PREVIEW IMAGE -->

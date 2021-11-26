@@ -1,45 +1,16 @@
 
 <!-- HEADER -->
 <?php 
-require APP_ROOT . '/views/inc/header.php';
+  require APP_ROOT . '/views/inc/header.php';
 
-$prospect_array = convertDataObject($data);
-// var_dump($prospect_array);
+  $phone_number = $data['prospect']->prospect_phone;
 
-
-
-
-
-
-
-
-
-
-// $email = $prospect_array['prospect_email'];
-// $name = $prospect_array['prospect_name'];
-// $phone = $prospect_array['prospect_phone'];
-
-// $address_str = $prospect_array['prospect_address_nr'] . $prospect_array['prospect_address_str'];
-
-// $postal_code = $prospect_array['prospect_postal_code'];
-// $city = $prospect_array['prospect_city'];
-
-// $full_address = $address_str . '<br>' . $postal_code . ' ' . $city;
-
-
-
-// echo '<hr>';
 // var_dump($data);
-// echo '<hr>';
-
-// echo $name . '<br>';
-// echo $email . '<br>';
-// echo $phone . '<hr>';
-
-// echo $address_str . '<hr>';
-// echo $full_address . '<br>';
 
 // die();
+// echo $data['prospect']->prospect_phone;
+// isValidPhone($data['prospect']->prospect_phone);
+
 ?>
 
 
@@ -72,7 +43,7 @@ $prospect_array = convertDataObject($data);
   </div>
 </section>
 
-<!-- SECTION PROSPECT PAGE CONTENT -->
+<!-- SECTION CONTENT PROSPECT PAGE -->
 <section class="post-page bg-white pb-md">
   <!-- BACK BTN -->
   <div class="container container--lg">
@@ -85,171 +56,146 @@ $prospect_array = convertDataObject($data);
 
   </div>
 
-  </div>
 
-  <!-- PROSPECT INFO PAGE CONTENT -->
-  <div class="container container--md">
+  <!-- PROSPECT PAGE INFO CONTENT -->
+  <div class="add-post container container--md">
     <div class="grid--1-col b-radius4 box-shad1">
       <div class="post-content txt-dark txt-content">
-        <h3 class="heading-secondary txt-dark-gray font-garamond mt-xs mb-xs">
+        <h2 class="heading-secondary txt-dark-gray font-garamond mt-xs mb-xs">
           Informations sur le prospect 
           <span class="txt-blue">
             <?= $data['prospect']->prospect_name ?>
           </span>.
-        </h3>
+        </h2>
         <p class="txt-content--small mb">
           Vous trouverez dans cette section, toutes les informations que vous avez sauvegardées sur ce prospect.
         </p> 
-        
 
-
-        <!-- NAME PROSPECT -->
+        <!-- basic information -->
         <div>
-          
           <h3 class="subheading txt-upp mt-sm">
             Informations basiques
           </h3>
-          <h5 class="fontW500">
+          <!-- name -->
+          <h5 class="fontW500 mt-xs">
             Nom:
           </h5>
           <span class="txt-content--xsmall txt-blue"> 
             <?= $data['prospect']->prospect_name; ?>
           </span>
         
-        <!-- EMAIL PROSPECT -->
-          <h5 class="fontW500">
+          <!-- email-->
+          <h5 class="fontW500 mt-xs">
             Email:
           </h5>
           <span class="txt-content--xsmall txt-blue"> 
             <?= $data['prospect']->prospect_email; ?>
           </span>
 
-        <!-- DATE CONTACT PROSPECT -->
-          <h5 class="fontW500">
+          <!-- date contact -->
+          <h5 class="fontW500 mt-xs">
             Date de prise de contact:
           </h5>
           <span class="txt-content--xsmall txt-blue"> 
             <?= getDateFormatted($data['prospect']->prospect_created_at); ?>
           </span>
           
-          <!-- PHONE -->
-          <h5 class="fontW500">
+          <!-- phone -->
+          <h5 class="fontW500 mt-xs">
             Numéro de téléphone: 
           </h5>
-          <span class="txt-content--xsmall">
             <?php 
-              if(is_null(array_values($prospect_array)[7])) {
-                echo ' Pas de numéro enregistré pour le moment.';
-              } else {
-                echo $data['prospect']->prospect_phone;
+              if(isValidPhone($phone_number)) {
+                echo '<span class="txt-content--xsmall txt-blue">' . $phone_number . '</span>';
+              } elseif(empty($phone_number)) {
+                echo '<span class="txt-content--xsmall txt-blue">Aucun numéro enregistré pour le moment.</span>';
+              } 
+              else {
+                echo '<span class="txt-content--xsmall txt-blue">Aucun numéro enregistré pour le moment.</span>';
               } 
             ?> 
+
+          <!-- address -->
+          <h5 class="fontW500 mt-xs">
+            Adresse
+          </h5>
+          <span class="txt-content--xsmall txt-blue">
+            <?php echo $data['prospect_final_address'] ;
+            ?> 
           </span>
-          <div>
-          
-          <!-- ADRESS PROSPECT -->
-          <div> 
-            <h3 class="subheading txt-upp mt">
-              Adresse
-            </h3>
-              <?php
-                if(
-                  is_null(array_values($prospect_array)[9]) ||
-                  is_null(array_values($prospect_array)[10]) ||
-                  is_null(array_values($prospect_array)[11]) ||
-                  is_null(array_values($prospect_array)[12])
-                  ) {
-                    echo '<span class="txt-content--xsmall txt-danger">Pas d\'adresse enregistré pour le moment.</span> ';
-                    
-                  } else {
-                    echo '<span class="txt-content--xsmall">' . $data['prospect']->prospect_address_nr . ' ' . $data['prospect']->prospect_address_str . ' ' . $data['prospect']->prospect_postal_code . ' ' . $data['prospect']->prospect_city . '</span>';
-                  } 
-              ?> 
+        </div>
+        
 
-            
-          </div>
+        <!-- additional info -->
+        <div class="mb"> 
+          <h3 class="subheading txt-upp mt">
+            Informations coaching
+          </h3>
 
           
-          <?php
-            // $dataArr = convertDataObject($data);
-            // var_dump($dataArr);
-            
-            // $data1 = getArrPropVal($dataArr, 1); 
-            // echo $data1;
-            // die();
-            ?>
-
-          <!-- ADDITIONAL INFO -->
-          <div class="mb-md"> 
-            <h3 class="subheading txt-upp mt">
-              Informations coaching
-            </h3>
-
-            
-            <!-- HAD FREE COURSE -->
-            <h5 class="fontW500"> 
-                  Essai gratuit
-            </h5>
-            <span class="txt-content--xsmall txt-danger">
-              <?= $data['prospect']->prospect_name . " a bénéficié de son essai gratuit."; ?>
-              <?php 
-                // if ($data['prospect']->had_free_course  === 1) 
-                // echo "$data['prospect']->prospect_name" . " a bénéficié de son essai gratuit.";
-                // else 
-                // echo "$data['prospect']->prospect_name" . " n\'a pas encore bénéficié de son essai.";
-              ?>
-            </span>
-
-
-            <!-- IS CUSTOMER -->
-            <h5 class="txt-content--xsmall mt-xs"> 
-              
-            </h5>  
-            <span class="txt-content--xsmall txt-blue">
-              <?php //echo $data['prospect']->prospect_name; ?>
-            </span>    
-
+          <!-- had-free-course -->
+          <h5 class="fontW500 mt-xs"> 
+            Essai gratuit
+          </h5>
+          <span class="txt-content--xsmall txt-danger">
+            <?= $data['prospect']->prospect_name . " a bénéficié de son essai gratuit."; ?>
             <?php 
-              // if ($data['prospect']->prospect_is_customer) 
-              // $data['prospect']->prospect_is_customer = 1;
-              // echo               
-              // - Le contact 
-              // - est client
-              // - depuis "insert_time= now()" .
-              // - Il a bénéficié de son essai gratuit.
+              // if ($data['prospect']->had_free_course  === 1) 
+              // echo "$data['prospect']->prospect_name" . " a bénéficié de son essai gratuit.";
               // else 
-              // $data['prospect']->prospect_is_customer = 0;
-
-
-              // if ($data['prospect']->had_free_course) 
-
+              // echo "$data['prospect']->prospect_name" . " n\'a pas encore bénéficié de son essai.";
             ?>
-            
-            
-            <!-- COACHING SUBJECT -->
-            <h5 class="fontW500 mt-xs"> 
-              Coaching objectifs
-            </h5>
-            
-            <span class="txt-content--xsmall txt-blue">
-              <?= 'Programme "Régime minceur" le 30-11-21'; ?>
-              <?php 
-                // - Il a commencé son programme le "date_started_plan"
-                //
-                // if(isset($data['prospect']->coaching_subject)) {
-                //   echo $data['prospect']->coaching_subject;
-                // } else {
-                //   echo 'Nous n\'avons pas encore défini d\'objectifs personnels en terme de coaching';
-                // }
-              ?>
-            </span>
+          </span>
 
 
+          <!-- is-customer -->
+          <h5 class="txt-content--xsmall mt-xs"> 
+            
+          </h5>  
+          <span class="txt-content--xsmall txt-blue">
+            <?php //echo $data['prospect']->prospect_name; ?>
+          </span>    
+
+          <?php 
+            // if ($data['prospect']->prospect_is_customer) 
+            // $data['prospect']->prospect_is_customer = 1;
+            // echo               
+            // - Le contact 
+            // - est client
+            // - depuis "insert_time= now()" .
+            // - Il a bénéficié de son essai gratuit.
+            // else 
+            // $data['prospect']->prospect_is_customer = 0;
+
+
+            // if ($data['prospect']->had_free_course) 
+
+          ?>
+          
+          
+          <!-- coaching subject -->
+          <h5 class="fontW500 mt-xs"> 
+            Coaching objectifs
+          </h5>
+          
+          <span class="txt-content--xsmall txt-blue">
+            <?= 'Programme "Régime minceur" le 30-11-21'; ?>
+            <?php 
+              // - Il a commencé son programme le "date_started_plan"
+              //
+              // if(isset($data['prospect']->coaching_subject)) {
+              //   echo $data['prospect']->coaching_subject;
+              // } else {
+              //   echo 'Nous n\'avons pas encore défini d\'objectifs personnels en terme de coaching';
+              // }
+            ?>
+          </span>
 
         </div>
-
+        
       </div>
     </div>
+  </div>
 
 
 

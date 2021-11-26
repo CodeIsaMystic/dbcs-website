@@ -44,3 +44,11 @@
       return false;
     }
   }
+
+  function redirectToLogin() {
+    if(!isLoggedIn()){
+        redirect('users/login');
+    }
+  }
+
+?>

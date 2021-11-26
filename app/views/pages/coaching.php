@@ -314,7 +314,7 @@
         </li>
       </ul>
       <div class="plan__btn txt-center">
-        <a href="#cta" class="btn btn-hover btn-hover--blue"
+        <a href="<?= URL_ROOT; ?>/pages/index.php#cta" class="btn btn-hover btn-hover--blue"
           >Commencer votre entrainement</a
         >
       </div>
@@ -389,7 +389,7 @@
         </li>
       </ul>
       <div class="plan__btn txt-center">
-        <a href="#cta" class="btn btn-hover btn-hover--blue"
+        <a href="<?= URL_ROOT; ?>/pages/index.php#cta" class="btn btn-hover btn-hover--blue"
           >Commencer votre entrainement</a
         >
       </div>
@@ -473,7 +473,7 @@
         </li>
       </ul>
       <div class="plan__btn txt-center">
-        <a href="#cta" class="btn btn-hover btn-hover--blue"
+        <a href="<?= URL_ROOT; ?>/pages/index.php#cta" class="btn btn-hover btn-hover--blue"
           >Commencer votre entrainement</a
         >
       </div>

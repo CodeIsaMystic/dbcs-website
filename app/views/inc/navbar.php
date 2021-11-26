@@ -113,7 +113,7 @@
               <a class="link" href="<?= URL_ROOT; ?>/pages/contact">Contact</a>
             </li>
             <li>
-              <a class="btn btn-hover btn-hover--blue" href="#">Essai gratuit</a>
+              <a class="btn btn-hover btn-hover--blue" href="<?= URL_ROOT; ?>/pages/index.php#cta">Essai gratuit</a>
             </li>
           </ul>
         </nav>

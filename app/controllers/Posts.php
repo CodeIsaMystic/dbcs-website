@@ -7,6 +7,8 @@
     }
 
     public function index(){
+      redirectToLogin();
+
       // get all Posts
       $posts = $this->postModel->getPosts();
       
@@ -15,10 +17,12 @@
       ];
 
       // load the view with all Posts
-      $this->view('posts/index', $data);
+      // $this->view('posts/index', $data);
     }
     
     public function add(){
+      redirectToLogin();
+
 
       if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
@@ -112,10 +116,6 @@
             empty($data['image_err']) && 
             empty($data['source_link_err']) ) {
             
-            
-            // var_dump($data);
-            // die();
-              
             if($this->postModel->addPost($data)){
               flash('post_message', 'Votre article a bien été ajouté et publié');
               redirect('posts/list');
@@ -157,9 +157,9 @@
     }
     
     public function list(){
-      if(!isLoggedIn()){
-        redirect('users/login');
-      }
+      redirectToLogin();
+
+
       // Get All Posts
       $posts = $this->postModel->getPosts();
       
@@ -174,9 +174,8 @@
     }
     
     public function edit($id) {
-      if(!isLoggedIn()){
-        redirect('users/login');
-      }
+      redirectToLogin();
+
       
       $post = $this->postModel->getPostById($id);
       
@@ -213,7 +212,7 @@
         if(empty($data['title'])){
           $data['title_err'] = 'Veuillez ajoutez un titre';
         }
-        if($_FILES['image']['size'] === 0 && empty($data['post']->image) ){
+        if($_FILES['image']['size'] === 0 && empty($data['post']->post_image) ){
           $data['image_err'] = 'Vous devez ajouter une image à votre article';
         }
         if(empty($data['body'])){
@@ -315,9 +314,6 @@
     }
 
     public function delete($id) {
-      if(!isLoggedIn()){
-        redirect('users/login');
-      }
          
       $post = $this->postModel->getPostById($id);
 

@@ -1,6 +1,10 @@
 
 <!-- HEADER -->
-<?php require APP_ROOT . '/views/inc/header.php'; ?>
+<?php 
+  require APP_ROOT . '/views/inc/header.php'; 
+
+  $phone_number = $data['partner']->partner_phone;
+?>
 
 
 <!-- SIDE BUTTONS MENU --> 
@@ -31,7 +35,7 @@
   </div>
 </section>
 
-<!-- SECTION PARTNER PAGE CONTENT -->
+<!-- SECTION CONTENT PARTNER PAGE -->
 <section class="post-page bg-white pb-md">
   <!-- BACK BTN -->
   <div class="container container--lg">
@@ -44,41 +48,118 @@
 
   </div>
 
-  </div>
-
-  <!-- PARTNER INFO PAGE CONTENT -->
-  <div class="container container--md">
+  <!-- PARTNER PAGE INFO CONTENT -->
+  <div class="add-post container container--md">
     <div class="grid--1-col b-radius4 box-shad1">
       <div class="post-content txt-dark txt-content">
-        <h3 class="heading-secondary txt-dark-gray font-garamond mt-xs mb-xs">
+        <h2 class="heading-secondary txt-dark-gray font-garamond mt-xs mb-xs">
           Informations sur le partenaire 
           <span class="txt-blue"><?= $data['partner']->partner_company_name ?></span>.
-        </h3>
+        </h2>
         <p class="txt-content--small mb">
           Vous trouverez dans cette section, toutes les informations que vous avez sauvegardées sur ce partenaire.
         </p> 
-        
 
-
-        <!-- COMPANY NAME PARTNER -->
+        <!-- basic information -->
         <div>
-          <p class="">
-            Nom de l'entreprise du Partenaire:
-          </p>
+          <h3 class="subheading txt-upp mt-sm">
+            Informations basiques
+          </h3>
+          <!-- name -->
+          <h5 class="fontW500 mt-xs">
+            Nom:
+          </h5>
           <span class="txt-content--xsmall txt-blue"> 
             <?= $data['partner']->partner_company_name; ?>
           </span>
-        </div>
         
-        <!-- EMAIL PARTNER -->
-        <div>
-          <p class="mt-sm">
-            Email du partenaire:
-          </p>
+        
+          <!-- email -->
+          <h5 class="fontW500 mt-xs">
+            Email:
+          </h5>
           <span class="txt-content--xsmall txt-blue"> 
             <?= $data['partner']->partner_email; ?>
           </span>
+
+          <!-- date contact -->
+          <h5 class="fontW500 mt-xs">
+            Date de prise de contact:
+          </h5>
+          <span class="txt-content--xsmall txt-blue"> 
+            <?= getDateFormatted($data['partner']->partner_created_at); ?>
+          </span>
+
+          <!-- phone -->
+          <h5 class="fontW500 mt-xs">
+            Numéro de téléphone: 
+          </h5>
+            <?php 
+              if(isValidPhone($phone_number)) {
+                echo '<span class="txt-content--xsmall txt-blue">' . $phone_number . '</span>';
+              } elseif(empty($phone_number)) {
+                echo '<span class="txt-content--xsmall txt-blue">Aucun numéro enregistré pour le moment.</span>';
+              } 
+              else {
+                echo '<span class="txt-content--xsmall txt-blue">Aucun numéro enregistré pour le moment.</span>';
+              } 
+            ?> 
+
+          <!-- city -->
+          <h5 class="fontW500 mt-xs">
+            Ville
+          </h5>
+          <span class="txt-content--xsmall txt-blue">
+            <?php
+             if(isset($data['partner_city'])) {
+               echo $data['partner_city'] ;
+             } else {
+               echo "Vous n'avez pas encore localisé le partenaire.";
+             }
+            ?> 
+          </span>
         </div>
+
+        <!-- business info -->
+        <div class="mb"> 
+          <h3 class="subheading txt-upp mt">
+            Informations business
+          </h3>
+          <h5 class="fontW500 mt-xs"> 
+              Type de partenariat
+          </h5>
+          <span class="txt-content--xsmall txt-blue">
+            <?= 'Programme "Régime minceur" le 30-11-21'; ?>
+            <?php 
+              // - Il a commencé son programme le "date_started_plan"
+              //
+              // if(isset($data['prospect']->coaching_subject)) {
+              //   echo $data['prospect']->coaching_subject;
+              // } else {
+              //   echo 'Nous n\'avons pas encore défini d\'objectifs personnels en terme de coaching';
+              // }
+            ?>
+          </span>
+
+          
+          <!-- coaching subject -->
+          <h5 class="fontW500 mt-xs"> 
+            Accord: 
+          </h5>
+          <span class="txt-content--xsmall txt-danger"> 
+            <?php if ($data['partner']->have_deal  === 1) {
+              echo "Nous avons établi un accord avec " . $data['partner']->partner_company_name . ", le " . $data['partner']->date_started_patnership;
+              } else {
+                echo "Nous n'avons pas encore établi d'accord avec " . $data['partner']->partner_company_name;
+              }
+            ?>
+          </span>
+        </div> 
+        
+
+
+
+
           
         <!-- PARTNER BUSINESS INFOS ready to setup & test -->
         <!-- <div>
@@ -94,55 +175,54 @@
             <?php //echo $data['partner']->partner_city; ?>
           </span>
         
-          <?php //if($data['partner']->is_web_business === 1) : ?>
-            <p class="txt-content--xsmall mt-sm">  
-              <span class="txt-blue">
-                <?//= $data['partner']->partner_company_name; ?>
-              </span> est principalement en activité sur le web.
-            </p> 
-          <?php //else : ?>
-            <p class="txt-content--xsmall mt-sm">  
-              <span class="txt-blue">
-                <?//= $data['partner']->partner_company_name; ?>
-              </span> a son activité partiellement sur le web et dans le réel!?.
-            </p> 
-          <?php //endif; ?>
-        </div> -->
-
+            <?php //if($data['partner']->is_web_business === 1) : ?>
+              <p class="txt-content--xsmall mt-sm">  
+                <span class="txt-blue">
+                  <?//= $data['partner']->partner_company_name; ?>
+                </span> est principalement en activité sur le web.
+              </p> 
+            <?php //else : ?>
+              <p class="txt-content--xsmall mt-sm">  
+                <span class="txt-blue">
+                  <?//= $data['partner']->partner_company_name; ?>
+                </span> a son activité partiellement sur le web et dans le réel!?.
+              </p> 
+            <?php //endif; ?>
+        -->
+        
 
         <!-- PARTNERSHIP  ready to setup & test-->
         <!-- <div>
-          <?php //if($data['partner']->have_deal === 1) : ?>
-            <p class="txt-content--xsmall mt-sm">  
-              <span class="txt-blue">
-                Vous avez établi un partenariat de type  
-                <?php //echo $data['partner']->type_partnership; ?>
-              </span>...
-            </p>  
-            <p class="mt-xs">
-              Date de début de ce partenariat:
-            </p>
-            <span class="txt-content--xsmall txt-blue"> 
-              <?//= getDateFormatted($data['partner']->date_started_partnership); ?>
-            </span>
-          <?php //else : ?>
-            <p class="mt-xs">
-              Il n'y a pas d'accord pour le moment.
-            </p>
-            <span class="txt-content--xsmall txt-blue"> 
-              <?php //echo getDateFormatted($data['partner']->date_started_partnership); ?>
-            </span>
-          <?php //endif; ?>
-        </div> -->
-
-
+              <?php //if($data['partner']->have_deal === 1) : ?>
+                <p class="txt-content--xsmall mt-sm">  
+                  <span class="txt-blue">
+                    Vous avez établi un partenariat de type  
+                    <?php //echo $data['partner']->type_partnership; ?>
+                  </span>...
+                </p>  
+                <p class="mt-xs">
+                  Date de début de ce partenariat:
+                </p>
+                <span class="txt-content--xsmall txt-blue"> 
+                  <?//= getDateFormatted($data['partner']->date_started_partnership); ?>
+                </span>
+              <?php //else : ?>
+                <p class="mt-xs">
+                  Il n'y a pas d'accord pour le moment.
+                </p>
+                <span class="txt-content--xsmall txt-blue"> 
+                  <?php //echo getDateFormatted($data['partner']->date_started_partnership); ?>
+                </span>
+                <?php //endif; ?>
+              </div> -->
+            
+            
+          </div>
+        </div>
       </div>
-    </div>
+      
+    </section>
 
-
-  </div>
-
-</section>
-
-<!-- FOOTER --> 
-<?php require APP_ROOT . '/views/inc/footer.php'; ?>
+    <!-- FOOTER --> 
+    <?php require APP_ROOT . '/views/inc/footer.php'; ?>
+    

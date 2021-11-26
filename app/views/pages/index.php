@@ -408,7 +408,7 @@ require APP_ROOT . '/views/inc/header.php';
         </li>
       </ul>
       <div class="plan__btn txt-center">
-        <a href="#cta" class="btn btn-hover btn-hover--blue"
+        <a href="<?= URL_ROOT; ?>/pages/index.php#cta" class="btn btn-hover btn-hover--blue"
           >Commencer votre entrainement</a
         >
       </div>
@@ -483,7 +483,7 @@ require APP_ROOT . '/views/inc/header.php';
         </li>
       </ul>
       <div class="plan__btn txt-center">
-        <a href="#cta" class="btn btn-hover btn-hover--blue"
+        <a href="<?= URL_ROOT; ?>/pages/index.php#cta" class="btn btn-hover btn-hover--blue"
           >Commencer votre entrainement</a
         >
       </div>
@@ -567,7 +567,7 @@ require APP_ROOT . '/views/inc/header.php';
         </li>
       </ul>
       <div class="plan__btn txt-center">
-        <a href="#cta" class="btn btn-hover btn-hover--blue"
+        <a href="<?= URL_ROOT; ?>/pages/index.php#cta" class="btn btn-hover btn-hover--blue"
           >Commencer votre entrainement</a
         >
       </div>
@@ -644,8 +644,8 @@ require APP_ROOT . '/views/inc/header.php';
 </section>
 
 <!-- SECTION FORM-PROPSECT -->
-<section class="linear-grad-lightBlue pb-lg pt-lg">
-  <div class="container container--md with-parallax" id="cta">
+<section class="linear-grad-lightBlue pb-lg pt-lg" id="cta">
+  <div class="container container--md with-parallax">
 
     <div class="cta grid--cta b-radius4 box-shad1">
       <div class="cta__text-box txt-dark linear-grad-blue">
@@ -676,7 +676,7 @@ require APP_ROOT . '/views/inc/header.php';
             <input
               class="b-radius4 bg-white"
               type="text" value="<?php echo $data['prospect_name']; ?>"
-              placeholder="Votre nom"
+              placeholder="votre nom"
               name="prospect_name"
               required
             />
@@ -692,7 +692,7 @@ require APP_ROOT . '/views/inc/header.php';
             <input
               class="b-radius4 bg-white"
               type="email" value="<?php echo $data['prospect_email']; ?>"
-              placeholder="votre-email@example.com"
+              placeholder="email@example.com"
               name="prospect_email"
               required
             />

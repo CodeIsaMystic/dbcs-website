@@ -15,9 +15,6 @@
 <section class="hero--fullW bg-white">
   <div>
     <picture>
-      <!-- <source srcset="<?php //echo URL_ROOT; ?>/img/site/full-width/customers.jpg" type="image/webp" />
-      <source srcset="<?php //echo URL_ROOT; ?>/img/site/full-width/customers.jpg" type="image/png" /> -->
-
       <img src="<?php echo URL_ROOT; ?>/img/site/full-width/customers.jpg" alt="Set of dumbbells in various colors"/>
     </picture>
   </div>
