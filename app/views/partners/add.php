@@ -1,14 +1,8 @@
-<?php 
-// echo 'PARTNER ADD PAGE';
-
-// var_dump($data);
-// die();
-
-?>
-
 <!-- HEADER -->
 <?php 
-require APP_ROOT . '/views/inc/header.php'; 
+  require APP_ROOT . '/views/inc/header.php'; 
+  // var_dump($data);
+  // die();
 ?>
 
 <!-- SECTION ADD-PARTNER -->
@@ -23,7 +17,7 @@ require APP_ROOT . '/views/inc/header.php';
     </div>
 
   </div>
-  <!-- FORM-ADMIN-PARTNER -->
+  <!-- ADD-PARTNER -->
   <div class="container container--md">
     <div class="grid--1-col b-radius4 box-shad1">
       <div class="post-content txt-dark txt-content">
@@ -31,16 +25,17 @@ require APP_ROOT . '/views/inc/header.php';
           Ajoutez un partenaire potentiel
         </h2>
         <p class="txt-content--small mb">
-          Un partenaire est un professionnel avec qui vous n'entrez pas en concurrence, qui, de par vos activités, vous pouvez potentiellement tirer bénéfices en débutant un type de collaboration pour laquelle vous devez être d'accord au préalable.
+          Un partenaire est un professionnel avec qui vous n'entrez pas en concurrence directe. Ainsi, de par vos activités, vous pouvez respectivement tirer des bénéfices moyennant une collaboration pour laquelle vous devez être en accord au préalable.
         </p>
         
-        <!-- FORM ADD-PARTNER -->
+        <!-- FORM ADDMIN-PARTNER -->
         <form class="form-admin-partner" action="<?php echo URL_ROOT; ?>/partners/add" method="post">
+
           <!-- SECTION BASE-INFO -->
           <div>
             <!-- heading -->
             <h3 class="subheading txt-upp fontW700 mt mb-xxs" tabindex="0"> 
-              Informations de base:
+              Base d'information:
             </h3>
             
             <p class="txt-content--small mb-xs" tabindex="0">
@@ -49,7 +44,7 @@ require APP_ROOT . '/views/inc/header.php';
 
             <!-- company-name -->
             <div class="form-admin-partner--display partner-company-name">
-              <label class="fontW700 txt-blue mb-xxs">Nom de l'entreprise</label>
+              <label class="fontW700 txt-blue mb-xxs">Nom de l'entreprise *</label>
               
               <input type="text" name="partner_company_name" class="bg-white" value="<?php echo $data['partner_company_name']; ?>">
               
@@ -59,14 +54,32 @@ require APP_ROOT . '/views/inc/header.php';
             </div>
 
             <!-- email -->
-            <div class="form-admin-partner--display partner-email mb-xs">
-              <label class="fontW700 txt-blue mt-xs mb-xxs">Email de l'entreprise</label>
+            <div class="form-admin-partner--display partner-email">
+              <label class="fontW700 txt-blue mt-xs mb-xxs">Email de l'entreprise *</label>
 
               <span class="b-radius4">
                 <p class="txt-content--xsmall txt-danger"><?php  echo $data['partner_email_err']; ?></p>
               </span>
             
               <input type="email" name="partner_email" class="bg-white" value="<?php echo $data['partner_email']; ?>">
+            </div>
+
+            <div class="txt-content--xsmall txt-blue mb-xs">
+              * Ces champs sont obligatoires.
+            </div>
+            <!-- phone -->
+            <div class="base-info-phone">
+              <label class="fontW700 txt-blue">Numéro de téléphone</label>
+              
+              <p class="txt-content--small">
+                Dès que vous pourrez, ajoutez ici le numéro de téléphone de votre partenaire.
+              </p>
+              
+              <!-- <span class="b-radius4">
+                <p class="txt-content--xsmall txt-danger"><?php //  echo $data['partner_phone_err']; ?></p>
+              </span> -->
+              
+              <input type="tel" name="partner_phone" class="bg-white" value="<?php echo $data['partner_phone']; ?>">
             </div>
           </div>
 
@@ -78,11 +91,10 @@ require APP_ROOT . '/views/inc/header.php';
             </h3>
             
             <p class="txt-content--small mb-xs" tabindex="0">
-              <span class="fontW700"></span> de votre prospect. Notez que vous devez enregistrer l'adresse complète, <span class="fontW700"></span>.
+              Ajoutez ici les <span class="fontW700">informations business</span> de votre partenaire.
             </p>
 
             <div>
-
               <!-- city -->
               <div class="form-admin-partner--display partner-city">
                 <label class="fontW700 txt-blue mb-xxs" tabindex="0">Ville:</label>
@@ -90,19 +102,19 @@ require APP_ROOT . '/views/inc/header.php';
               </div>
                     
               <!-- type activity -->
-              <div class="form-admin-prospect--display type-activity">
+              <div class="form-admin-partner--display type-activity">
                 <label class="fontW700 txt-blue mb-xxs" tabindex="0">
                   Activité principale
                 </label>
                 <div>
                   <select name="" class="bg-white"> 
                     <option value="default"></option>
-                    <option value="basic">Coaching / Prépa</option>
-                    <option value="fit">Blogging</option>
-                    <option value="weight-loss">Magasin</option>
-                    <option value="weight-loss">Evènement</option>
-                    <option value="weight-loss">Nutrition / Santé</option>
-                    <option value="weight-loss">Autre</option>
+                    <option value="coaching">Coaching / Prépa</option>
+                    <option value="blogging">Blogging</option>
+                    <option value="shop">Magasin</option>
+                    <option value="event">Evènement</option>
+                    <option value="health">Nutrition / Santé</option>
+                    <option value="other">Autre</option>
                   </select>
                 </div>
               </div>
@@ -114,10 +126,7 @@ require APP_ROOT . '/views/inc/header.php';
                   <label tabindex="0">Activité Web</label>
                 </div>
               </div>
-
             </div>
-
-
           </div>
 
           <!-- SECTION PARTNERSHIP INFO -->
@@ -128,7 +137,7 @@ require APP_ROOT . '/views/inc/header.php';
             </h3>
             
             <p class="txt-content--small mb-xs" tabindex="0">
-              <span class="fontW700"></span> de votre prospect. Notez que vous devez enregistrer l'adresse complète, <span class="fontW700"></span>.
+              Ajoutez ici les <span class="fontW700">informations de base sur le type de partenariat</span>. Notez que vous devez convenir avec l'entreprise partenaire et obtenir un accord avec celle-ci.
             </p>
 
             <!-- type partnership -->
@@ -139,10 +148,10 @@ require APP_ROOT . '/views/inc/header.php';
               <div>
                 <select name="" class="bg-white"> 
                   <option value="default"></option>
-                  <option value="basic">Pleine Collaboration</option>
-                  <option value="fit">Blog & SEO</option>
-                  <option value="weight-loss">Commercial</option>
-                  <option value="weight-loss">Evènement</option>
+                  <option value="collaboration">Collaboration</option>
+                  <option value="blogging">Blog & SEO</option>
+                  <option value="shop">Commercial</option>
+                  <option value="event">Evènement</option>
                 </select>
               </div>
             </div>
@@ -157,7 +166,7 @@ require APP_ROOT . '/views/inc/header.php';
             </div>
           </div>
 
-          <!-- INPUT SUBMIT -->
+          <!-- SECTION INPUT SUBMIT -->
           <div>
             <input type="submit" class="btn btn-hover btn-hover--dark btn25 mt-xs mb-xs" value="Enregistrez">
           </div>

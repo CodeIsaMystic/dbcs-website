@@ -63,7 +63,8 @@ class Partners extends Controller {
         'have_deal' => 0,
         'is_web_business' => 0,
         'partner_company_name_err' => '',
-        'partner_email_err' => ''
+        'partner_email_err' => '',
+        'partner_phone_err' => ''
       ];
 
       // validate the data 
@@ -98,7 +99,8 @@ class Partners extends Controller {
         'have_deal' => 0,
         'date_started_partnership' => null,
         'partner_company_name_err' => '',
-        'partner_email_err' => ''
+        'partner_email_err' => '',
+        'partner_phone_err' => ''
       ];
       // load the view add partners
       $this->view('partners/add', $data);
@@ -115,8 +117,10 @@ class Partners extends Controller {
     
     $data = [
       'partner' => $partner,            
+      'partner_main_err' => '',
       'partner_company_name_err' => '',
       'partner_email_err' => '',
+      'partner_phone_err' => ''
     ];
 
     if($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -136,8 +140,10 @@ class Partners extends Controller {
         'type_partnership' => $_POST['type_partnership'],
         'have_deal' => 0,
         'is_web_business' => 0,
+        'partner_main_err' => '',
         'partner_company_name_err' => '',
-        'partner_email_err' => ''
+        'partner_email_err' => '',
+        'partner_phone_err' => ''
       ];
 
       // validate the data
@@ -150,7 +156,7 @@ class Partners extends Controller {
 
       // avoid useless request
       if(($data['partner_company_name'] == $this->partnerModel->getPartnerById($id)->partner_company_name)&&($data['partner_email'] == $this->partnerModel->getPartnerById($id)->partner_email)) {
-        $data['partner_company_name_err'] = "Vous devez au moins changer un des éléments suivants: nom, email...";
+        $data['partner_main_err'] = "Vous devez au moins changer un des éléments suivants: nom, email...";
       }
 
       // make sure there are no errors
@@ -181,6 +187,7 @@ class Partners extends Controller {
   $partner = $this->partnerModel->getPartnerById($id);
 
   // review the data set entirely
+  // remove err fields !!!??
   $data = [
     'partner' => $partner,           
     'partner_company_name_err' => '',

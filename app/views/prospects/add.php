@@ -1,11 +1,8 @@
-<?php 
-// var_dump($data);
-// die();
-?>
-
 <!-- HEADER -->
 <?php 
-require APP_ROOT . '/views/inc/header.php'; 
+  require APP_ROOT . '/views/inc/header.php'; 
+  // var_dump($data);
+  // die();
 ?>
 
 <!-- SECTION ADD-PROSPECT -->
@@ -20,7 +17,7 @@ require APP_ROOT . '/views/inc/header.php';
     </div>
 
   </div>
-  <!-- ADD FORM -->
+  <!-- ADD-PROSPECT -->
   <div class="container container--md">
     <div class="grid--1-col b-radius4 box-shad1">
       <div class="post-content txt-dark txt-content">
@@ -75,7 +72,7 @@ require APP_ROOT . '/views/inc/header.php';
               </p>
               
               <!-- <span class="b-radius4">
-                <p class="txt-content--xsmall txt-danger"><?php  echo $data['prospect_phone_err']; ?></p>
+                <p class="txt-content--xsmall txt-danger"><?php  //echo $data['prospect_phone_err']; ?></p>
               </span> -->
               
               <input type="tel" name="prospect_phone" class="bg-white" value="<?php echo $data['prospect_phone']; ?>">
@@ -95,11 +92,13 @@ require APP_ROOT . '/views/inc/header.php';
             </p>
             
             <div>
+              <!-- address-number -->
               <div class="form-admin-prospect--display address-nr">
                 <label class="fontW700 txt-blue mb-xxs">Numéro:</label>
                 <input type="number" name="prospect_address_nr" class="bg-white mb-xxs" value="<?php echo $data['prospect_address_nr']; ?>">
               </div>
               
+              <!-- address-street -->
               <div class="form-admin-prospect--display address-str">
                 <label class="fontW700 txt-blue mb-xxs">Rue:</label>
                 <input type="text" name="prospect_address_str" class="bg-white mb-xxs" value="<?php echo $data['prospect_address_str']; ?>">
@@ -108,11 +107,13 @@ require APP_ROOT . '/views/inc/header.php';
             
             
             <div>
+              <!-- postal code -->
               <div class="form-admin-prospect--display location-code">
                 <label class="fontW700 txt-blue mb-xxs">Code Postal:</label>
                 <input type="number" name="prospect_postal_code" class="bg-white mb-xxs" value="<?php echo $data['prospect_postal_code']; ?>">
               </div>
               
+              <!-- city -->
               <div class="form-admin-prospect--display location-city">
                 <label class="fontW700 txt-blue mb-xxs">Ville:</label>
                 <input type="text" name="prospect_city" class="bg-white mb-xxs" value="<?php echo $data['prospect_city']; ?>">

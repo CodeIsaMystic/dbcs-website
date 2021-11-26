@@ -1,12 +1,11 @@
 
 <!-- HEADER -->
 <?php 
-require APP_ROOT . '/views/inc/header.php'; 
-
-// var_dump($data);
-// $phone_data = strlen($data['prospect']->prospect_phone);
-// echo $phone_data;
-// die();
+  require APP_ROOT . '/views/inc/header.php'; 
+  // var_dump($data);
+  // $phone_data = strlen($data['prospect']->prospect_phone);
+  // echo $phone_data;
+  // die();
 
 ?>
 
@@ -23,7 +22,7 @@ require APP_ROOT . '/views/inc/header.php';
     </div>
 
   </div>
-  <!-- EDIT FORM -->
+  <!-- EDIT PROSPECT -->
   <div class="container container--md">
     <div class="grid--1-col b-radius4 box-shad1">
       <div class="post-content txt-dark txt-content">
@@ -83,8 +82,6 @@ require APP_ROOT . '/views/inc/header.php';
                 value="<?php echo ($data['prospect']->prospect_email); ?>">
             </div>
 
-            
-            
             <!-- phone -->
             <div class="base-info-phone">
               <label class="fontW700 txt-blue">Numéro de téléphone</label>
