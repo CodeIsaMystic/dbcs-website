@@ -26,16 +26,16 @@ CREATE TABLE `prospects` (
   `prospect_id` int(11) NOT NULL,
   `prospect_name` varchar(255) NOT NULL,
   `prospect_email` varchar(255) NOT NULL,
+  `prospect_phone` varchar(50) NULL,
   `prospect_created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `prospect_is_customer` boolean NOT NULL DEFAULT false,
-  `had_free_course` boolean NOT NULL DEFAULT false,
-  `date_started_plan` datetime NULL,
-  `coahing_subject` varchar(100) NULL,
-  `prospect_phone` int(11) NULL,
-  `prospect_address_str` varchar(200) NULL,
   `prospect_address_nr` varchar(15) NULL,
+  `prospect_address_str` varchar(200) NULL,
   `prospect_postal_code` varchar(100) NULL,
-  `prospect_city` varchar(100) NULL
+  `prospect_city` varchar(100) NULL,
+  `coahing_subject` varchar(100) NULL,
+  `prospect_is_customer` boolean NOT NULL DEFAULT false,
+  `date_started_plan` datetime NULL,
+  `had_free_course` boolean NOT NULL DEFAULT false
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
@@ -44,13 +44,13 @@ CREATE TABLE `partners` (
   `partner_id` int(11) NOT NULL,
   `partner_company_name` varchar(255) NOT NULL,
   `partner_email` varchar(255) NOT NULL,
+  `prospect_phone` varchar(50) NULL,
   `partner_created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `have_deal` boolean NOT NULL DEFAULT false,
-  `date_started_partnership` datetime NULL,
-  `type_partnership` tinyint(1) NULL,
+  `partner_city` varchar(100) NULL,
   `is_web_business` boolean NULL,
-  `partner_logo` varchar(255) NULL,
-  `partner_city` varchar(100) NULL
+  `have_deal` boolean NOT NULL DEFAULT false,
+  `type_partnership` tinyint(1) NULL,
+  `date_started_partnership` datetime NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
