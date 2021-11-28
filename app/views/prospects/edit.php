@@ -11,7 +11,7 @@
 
 
 <!-- SECTION EDIT-PROSPECT -->
-<section class="edit-post pb-lg pt-lg">
+<section class="edit-pagespb-lg pt-lg">
   <!-- BACK BTN -->
   <div class="container container--lg pX">
 
@@ -25,7 +25,7 @@
   <!-- EDIT PROSPECT -->
   <div class="container container--md pX">
     <div class="grid--1-col b-radius4 box-shad">
-      <div class="post-content txt-dark txt-content pX">
+      <div class="article-content txt-dark txt-content pX">
         <h3 class="heading-secondary txt-dark-gray font-garamond mt-xs mb-xs">
           Modifier votre prospect
         </h3>

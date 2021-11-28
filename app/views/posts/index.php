@@ -2,9 +2,9 @@
 <!-- SECTION POSTS -->
 <?php foreach($data['posts'] as $post) : ?>
 
-<section class="posts bg-white pb-md">
+<section class="index-pages bg-white pb-md">
   <div class="container container--md pX">
-    <article class="post grid--1-col b-radius4 box-shad">
+    <article class="grid--1-col b-radius4 box-shad">
       <div class="img b-radius4 with-parallax">
         <img
           class="b-radius4"
@@ -13,9 +13,9 @@
         />
       </div>
 
-      <div class="post-content">
+      <div class="article-content">
 
-        <div class="post-content__details">
+        <div class="article-content__desc">
           <p class="txt-content--xsmall fontW500">
             Article publié le
             <span class="txt-blue">
@@ -30,7 +30,7 @@
           </p>
         </div>
         
-        <div class="post-content__article txt-dark mt-md">
+        <div class="article-content__basic-info txt-dark mt-md">
           <a href="<?php echo URL_ROOT; ?>/posts/show/<?php echo $post->post_id; ?>">
             <h3 class="heading-post txt-dark-gray font-garamond">
               <?php echo $post->post_title; ?>

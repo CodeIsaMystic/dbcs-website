@@ -41,7 +41,7 @@ require APP_ROOT . '/views/inc/header.php';
 </section>
 
 <!-- SECTION POST PAGE CONTENT -->
-<section class="post-page bg-white mt-md">
+<section class="show-pages bg-white mt-md">
   <!-- BACK BTN -->
   <div class="container container--lg pX">
 
@@ -53,11 +53,11 @@ require APP_ROOT . '/views/inc/header.php';
 
   </div>
   <div class="container container--lg pX">
-    <div class="post-content txt-dark mb-xs">
+    <div class="article-content txt-dark mb-xs">
       <?php echo $data['post']->post_body; ?>
     </div>
 
-    <div class="post-content txt-dark mb">
+    <div class="article-content txt-dark mb">
       <a href="<?php echo $data['post']->post_source_link; ?>" target="_blank" class="link link-dark link--underline">
         <?php 
         if( $data['post']->post_source_link != null) {

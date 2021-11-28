@@ -27,11 +27,7 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
 
     <!-- LINK CSS -->
-    <link rel="stylesheet" href="<?= URL_ROOT; ?>/css/general.css" />
-    <link rel="stylesheet" href="<?= URL_ROOT; ?>/css/modules.css" />
     <link rel="stylesheet" href="<?= URL_ROOT; ?>/css/style.css" />
-    <link rel="stylesheet" href="<?= URL_ROOT; ?>/css/style2.css" />
-    <link rel="stylesheet" href="<?= URL_ROOT; ?>/css/queries.css" />
 
     
     <!-- PAGE TITLE -->

@@ -2,7 +2,7 @@
 <?php require APP_ROOT . '/views/inc/header.php'; ?>
 
 <!-- SECTION ADD-POST -->
-<section class="add-post pb-lg pt-lg">
+<section class="add-pages pb-lg pt-lg">
   <!-- BACK BTN -->
   <div class="container container--lg pX">
 
@@ -16,7 +16,7 @@
   <!-- ADD FORM -->
   <div class="container container--md pX">
     <div class="grid--1-col b-radius4 box-shad">
-      <div class="post-content txt-dark txt-content pX">
+      <div class="article-content txt-dark txt-content pX">
         <h3 class="heading-secondary txt-dark-gray font-garamond mt-xs mb-xs">
           Ajoutez un article
         </h3>

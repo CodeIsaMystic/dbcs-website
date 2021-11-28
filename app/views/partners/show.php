@@ -38,7 +38,7 @@
 </section>
 
 <!-- SECTION CONTENT PARTNER PAGE -->
-<section class="post-page bg-white pb-md">
+<section class="show-pages bg-white pb-md">
   <!-- BACK BTN -->
   <div class="container container--lg pX">
 
@@ -51,9 +51,9 @@
   </div>
 
   <!-- PARTNER PAGE INFO CONTENT -->
-  <div class="add-post container container--md pX">
+  <div class="container container--md pX">
     <div class="grid--1-col b-radius4 box-shad">
-      <div class="post-content txt-dark txt-content pX">
+      <div class="article-content txt-dark txt-content pX">
         <h2 class="heading-secondary txt-dark-gray font-garamond mt-xs mb-xs">
           Informations sur le partenaire 
           <span class="txt-blue"><?= $data['partner']->partner_company_name ?></span>.

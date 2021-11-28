@@ -6,7 +6,7 @@
 ?>
 
 <!-- SECTION ADD-PROSPECT -->
-<section class="add-post pb-lg pt-lg">
+<section class="add-pages pb-lg pt-lg">
   <!-- BACK BTN -->
   <div class="container container--lg pX">
 
@@ -20,7 +20,7 @@
   <!-- ADD-PROSPECT -->
   <div class="container container--md pX">
     <div class="grid--1-col b-radius4 box-shad">
-      <div class="post-content txt-dark txt-content pX">
+      <div class="article-content txt-dark txt-content pX">
         <h2 class="heading-secondary txt-dark-gray font-garamond mt-xs mb-xs" tabindex="0">
           Ajoutez un prospect
         </h2>

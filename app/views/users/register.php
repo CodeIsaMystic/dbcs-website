@@ -5,7 +5,7 @@
 <section class="bg-white pb-md pt-lg">
 
   <div class="container container--xs pX">
-    <div class="grid--1-col b-radius4 linear-grad-lightBlue box-shadpt-xs">
+    <div class="grid--1-col b-radius4 linear-grad-lightBlue box-shad pt-xs">
       <h2 class="heading-secondary txt-center txt-dark mb-sm">
         Enregistrement
       </h2>
