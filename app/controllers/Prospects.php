@@ -15,7 +15,7 @@
       ];
       
       // load the view with all Prospects
-      // $this->view('prospects/index', $data);
+      $this->view('prospects/index', $data);
     }
 
         
@@ -44,7 +44,7 @@
 
       $data = [
         'prospect' => $prospect,
-        'prospect_final_address' => '',
+        'prospect_final_address' => ''
       ];
 
       $data['prospect_final_address'] = addressHandler($data);
@@ -71,8 +71,9 @@
           'prospect_address_str' => trim($_POST['prospect_address_str']),
           'prospect_postal_code' => trim($_POST['prospect_postal_code']),
           'prospect_city' => trim($_POST['prospect_city']),
-          'had_free_course' => $_POST['had_free_course'],
-          'prospect_is_customer' => $_POST['prospect_is_customer'],
+          'is_customer' => $_POST['is_customer'],
+          'free_course' => $_POST['free_course'],
+          'ask_free_course' => '',
           'prospect_phone_err' => '',
           'prospect_name_err' => '',
           'prospect_email_err' => ''
@@ -92,13 +93,12 @@
         if(!isValidPhone($_POST['prospect_phone']))
         {
           $data['prospect_phone_err'] =  "Ce numéro de téléphone n'est pas correct.";
-          $data['prospect_phone'] = null;
-          
+          $data['prospect_phone'] = null; 
         }
 
         // handle checkbox input if checked or not
-        $data['had_free_course'] = handleCheckboxValue($data['had_free_course']);
-        $data['prospect_is_customer'] = handleCheckboxValue($data['prospect_is_customer']);
+        $data['free_course'] = handleCheckboxValue($data['free_course']);
+        $data['is_customer'] = handleCheckboxValue($data['is_customer']);
 
 
         // make sure there are no errors before submit
@@ -127,8 +127,9 @@
           'prospect_address_str' => '',
           'prospect_postal_code' => '',
           'prospect_city' => '',
-          'had_free_course' => 0,
-          'prospect_is_customer' => 0,
+          'free_course' => 0,
+          'ask_free_course' => '',
+          'is_customer' => 0,
           'prospect_name_err' => '',
           'prospect_email_err' => ''
         ];
@@ -167,6 +168,9 @@
           'prospect_address_str' => trim($_POST['prospect_address_str']),
           'prospect_postal_code' => trim($_POST['prospect_postal_code']),
           'prospect_city' => trim($_POST['prospect_city']),
+          'is_customer' => $_POST['is_customer'],
+          'free_course' => $_POST['free_course'],
+          'ask_free_course' => '',
           'prospect_main_err' => '',
           'prospect_name_err' => '',
           'prospect_email_err' => '',

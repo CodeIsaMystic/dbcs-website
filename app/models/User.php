@@ -6,7 +6,6 @@
       $this->db = new Database;
     }
 
-    // Regsiter user
     public function register($data){
       $this->db->query('INSERT INTO users (user_name, user_email, user_password) VALUES(:name, :email, :password)');
       // Bind values
@@ -22,7 +21,6 @@
       }
     }
 
-    // Login User
     public function login($email, $password){
       $this->db->query('SELECT * FROM users WHERE user_email = :email');
       $this->db->bind(':email', $email);
@@ -37,7 +35,6 @@
       }
     }
 
-    // Find user by email
     public function findUserByEmail($email){
       $this->db->query('SELECT * FROM users WHERE user_email = :email');
       // Bind value
@@ -53,7 +50,6 @@
       }
     }
 
-    // Get User by ID
     public function getUserById($id){
       $this->db->query('SELECT * FROM users WHERE user_id = :id');
       // Bind value

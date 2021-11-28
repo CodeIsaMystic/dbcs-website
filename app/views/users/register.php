@@ -2,74 +2,70 @@
 <?php require APP_ROOT . '/views/inc/header.php'; ?>
   
 <!-- SECTION REGISTER -->
-<section class="register bg-white pb-md pt-lg">
+<section class="bg-white pb-md pt-lg">
 
-  <div class="container container--xs">
-    <div class="grid--1-col b-radius4 linear-grad-lightBlue box-shad1 pt-xs">
+  <div class="container container--xs pX">
+    <div class="grid--1-col b-radius4 linear-grad-lightBlue box-shadpt-xs">
       <h2 class="heading-secondary txt-center txt-dark mb-sm">
         Enregistrement
       </h2>
 
-      <div class="register--text txt-dark txt-content mb-xs">
+      <div class="txt-dark txt-content mb-xs pX">
         <p class="mb-xs">
           Enregistrez vos informations pour pouvoir vous connecter à votre
           "Dashboard".
         </p>
-        <form class="form--small" name="register" action="<?= URL_ROOT; ?>/users/register" method="post">
+        <form class="form-small" name="register" action="<?= URL_ROOT; ?>/users/register" method="post">
           <div>
-            <label class="fontW700 mt-xxs" for="name"
-              >Nom complet</label
-            >
+            <label class="fontW700 mt-xxs" for="name">Nom complet</label>
             <input
               class="b-radius4 bg-white"
+              id="name"
               type="text"
               name="name"
               value="<?= $data['name']; ?>"              
             />
             <span class="b-radius4">
-              <p class="txt-content--xsmall txt-danger"><?= $data['name_err']; ?></p>
+              <span class="txt-content--xsmall txt-danger"><?= $data['name_err']; ?></span>
             </span>
           </div>
           <div>
-            <label class="fontW700 mt-xxs" for="email"
-              >Adresse mail</label
-            >
+            <label class="fontW700 mt-xxs" for="email">Adresse mail</label>
             <input
               class="b-radius4 bg-white"
+              id="email"
               type="email"
               name="email"
               value="<?= $data['email']; ?>"            
             />
             <span class="b-radius4">
-              <p class="txt-content--xsmall txt-danger"><?= $data['email_err']; ?></p>
+              <span class="txt-content--xsmall txt-danger"><?= $data['email_err']; ?></span>
             </span>
           </div>
           <div>
-            <label class="fontW700 mt-xxs" for="password"
-              >Mot de passe</label
-            >
+            <label class="fontW700 mt-xxs" for="password">Mot de passe</label>
             <input
               class="b-radius4 bg-white"
+              id="password"
               type="password"
               name="password"
               value="<?= $data['password']; ?>"             
             />
             <span class="b-radius4">
-              <p class="txt-content--xsmall txt-danger"><?= $data['password_err']; ?></p>
+              <span class="txt-content--xsmall txt-danger"><?= $data['password_err']; ?></span>
             </span>
           </div>
           <div>
-            <label class="fontW700 mt-xxs" for="password"
-              >Confirmation mot de passe</label
-            >
+            <label class="fontW700 mt-xxs" for="confirmPassword">Confirmation mot de passe</label>
             <input
               class="b-radius4 bg-white"
+              id="confirmPassword"
               type="password"
               name="confirm_password"
               value="<?= $data['confirm_password']; ?>"           
             />
             <span class="b-radius4">
-              <p class="txt-content--xsmall txt-danger"><?= $data['confirm_password_err']; ?></p>
+              <span class="txt-content--xsmall txt-danger"><?= $data['confirm_password_err']; ?></span>
             </span>
           </div>
           <div class="txt-center mt-xs">

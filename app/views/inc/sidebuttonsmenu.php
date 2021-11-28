@@ -178,7 +178,7 @@
         <?php if(stringMatchURL($query_str, 'list') === 'list') : ?>
           <li class="move-ico ico05 move-ico--is-not-active">
             <form class="link link03" 
-                action="" 
+                action="#" 
                 method="POST">
                 <button type="submit">
                   <ion-icon class="icon-xs" name="trash-outline"></ion-icon>

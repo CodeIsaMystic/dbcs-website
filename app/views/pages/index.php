@@ -15,7 +15,7 @@ require APP_ROOT . '/views/inc/header.php';
 
 <!-- SECTION HERO -->
 <section class="bg-white pb-lg">
-  <div class="hero grid--hero container container--md">
+  <div class="hero grid--hero container container--md pX">
     <div class="hero--txt mt-lg">
       <h1 class="heading-primary txt-dark-gray fontW700 mb-sm">
         <?php echo $data['title']; ?>
@@ -29,7 +29,7 @@ require APP_ROOT . '/views/inc/header.php';
         >
       </div>
       <div class="customers-profiles mt">
-        <div class="customers-profiles-imgs">
+        <div class="customers-profiles__imgs">
           <img
             class="b-radius50"
             src="<?= URL_ROOT; ?>/img/site/customers/customer-1.jpg"
@@ -69,9 +69,6 @@ require APP_ROOT . '/views/inc/header.php';
     </div>
     <div class="hero--img img-80 pt mt-lg">
       <picture>
-        <!-- <source srcset="<?= URL_ROOT; ?>/img/site/mockups//mockups-hero/hero.png" type="image/webp" />
-        <source srcset="<?= URL_ROOT; ?>/img/site/mockups//mockups-hero/hero.png" type="image/png" /> -->
-
         <img
           src="<?= URL_ROOT; ?>/img/site/mockups/hero.png"
           alt="A mockup with 3 images about gym, fitness & sport with man and woman"
@@ -83,7 +80,7 @@ require APP_ROOT . '/views/inc/header.php';
 
 <!-- SECTION PARTNERS -->
 <section class="bg-white pt-md">
-  <div class="container container--lg">
+  <div class="container container--lg pX">
     <h2 class="subheading txt-upp txt-center fontW500 mb-sm">
       Nos partenaires
     </h2>
@@ -106,9 +103,9 @@ require APP_ROOT . '/views/inc/header.php';
   </div>
 </section>
 
-<!-- SECTION HOW IT WORKS -->
-<section class="bg-white pt-xl pb-lg">
-  <div class="container container--md">
+<!-- SECTION STEP HOW IT WORKS -->
+<section class="step bg-white mt-xl mb-lg pX">
+  <div class="container container--md pX">
     <h4 class="subheading fontW700 txt-upp txt-blue mb-xs">
       Comment ça marche
     </h4>
@@ -122,12 +119,12 @@ require APP_ROOT . '/views/inc/header.php';
       container container--sm
       grid grid--2-cols
       grid-gap--large
-      grid--center-v
+      grid--center-v pX
     "
   >
     <!-- STEP 01 -->
-    <div class="step-text-box">
-      <p class="step-number fontW700 mb-xxs">01</p>
+    <div>
+      <p class="step__number fontW700 mb-xxs">01</p>
       <h3 class="heading-tertiary txt-dark-gray mb-sm">
         Contactez le coach (et profitez du 1er essai gratuit)
       </h3>
@@ -138,24 +135,24 @@ require APP_ROOT . '/views/inc/header.php';
       </p>
     </div>
 
-    <div class="img-box--step">
+    <div class="step__img-box">
       <img
         src="<?= URL_ROOT; ?>/img/site/mockups/mockup-contact.png"
-        class="step-img img-30"
+        class=" img-30"
         alt="iPhone with contact section on screen"
       />
     </div>
 
     <!-- STEP 02 -->
-    <div class="img-box--step">
+    <div class="step__img-box">
       <img
         src="<?= URL_ROOT; ?>/img/site/mockups/mockup-call.png"
-        class="step-img img-30"
+        class=" img-30"
         alt="iPhone with view when calling a client"
       />
     </div>
     <div class="step-text-box">
-      <p class="step-number fontW700 mb-xxs">02</p>
+      <p class="step__number fontW700 mb-xxs">02</p>
       <h3 class="heading-tertiary txt-dark-gray mb-sm">
         Premier entretien: objectifs & programme
       </h3>
@@ -168,7 +165,7 @@ require APP_ROOT . '/views/inc/header.php';
 
     <!-- STEP 03 -->
     <div class="step-text-box">
-      <p class="step-number fontW700 mb-xxs">03</p>
+      <p class="step__number fontW700 mb-xxs">03</p>
       <h3 class="heading-tertiary txt-dark-gray mb-sm">
         Mettez en place tout votre programme
       </h3>
@@ -178,10 +175,10 @@ require APP_ROOT . '/views/inc/header.php';
         réaliser vos objectifs et de miser sur votre santé.
       </p>
     </div>
-    <div class="img-box--step">
+    <div class="step__img-box">
       <img
         src="<?= URL_ROOT; ?>/img/site/mockups/organisation-mockup.png"
-        class="step-img img-38"
+        class=" img-38"
         alt="mockup of a note and a calendar scheduling tasks"
       />
     </div>
@@ -190,7 +187,7 @@ require APP_ROOT . '/views/inc/header.php';
 
 <!-- SECTION TESTIMONIALS -->
 <section
-  class="grid--testimonial-section linear-grad-lightBlue pt-lg pb-lg"
+  class="grid--testimonial-section linear-grad-lightBlue mt-xl pb-lg"
 >
   <div class="testimonials">
     <h4 class="subheading fontW700 txt-upp txt-upp txt-blue mb-xs">
@@ -259,73 +256,73 @@ require APP_ROOT . '/views/inc/header.php';
   </div>
 
   <div class="gallery grid--gallery">
-    <figure class="gallery-item">
+    <figure class="gallery__item">
       <img
         src="<?= URL_ROOT; ?>/img/site/gallery/gallery-1.jpg"
         alt="Gallery photo of gym men and women doing sport"
       />
     </figure>
-    <figure class="gallery-item">
+    <figure class="gallery__item">
       <img
         src="<?= URL_ROOT; ?>/img/site/gallery/gallery-2.jpg"
         alt="Gallery photo of gym men and women doing sport"
       />
     </figure>
-    <figure class="gallery-item">
+    <figure class="gallery__item">
       <img
         src="<?= URL_ROOT; ?>/img/site/gallery/gallery-3.jpg"
         alt="Gallery photo of gym men and women doing sport"
       />
     </figure>
-    <figure class="gallery-item">
+    <figure class="gallery__item">
       <img
         src="<?= URL_ROOT; ?>/img/site/gallery/gallery-4.jpg"
         alt="Gallery photo of gym men and women doing sport"
       />
     </figure>
-    <figure class="gallery-item">
+    <figure class="gallery__item">
       <img
         src="<?= URL_ROOT; ?>/img/site/gallery/gallery-5.jpg"
         alt="Gallery photo of gym men and women doing sport"
       />
     </figure>
-    <figure class="gallery-item">
+    <figure class="gallery__item">
       <img
         src="<?= URL_ROOT; ?>/img/site/gallery/gallery-6.jpg"
         alt="Gallery photo of gym men and women doing sport"
       />
     </figure>
-    <figure class="gallery-item">
+    <figure class="gallery__item">
       <img
         src="<?= URL_ROOT; ?>/img/site/gallery/gallery-7.jpg"
         alt="Gallery photo of gym men and women doing sport"
       />
     </figure>
-    <figure class="gallery-item">
+    <figure class="gallery__item">
       <img
         src="<?= URL_ROOT; ?>/img/site/gallery/gallery-8.jpg"
         alt="Gallery photo of gym men and women doing sport"
       />
     </figure>
-    <figure class="gallery-item">
+    <figure class="gallery__item">
       <img
         src="<?= URL_ROOT; ?>/img/site/gallery/gallery-9.jpg"
         alt="Gallery photo of gym men and women doing sport"
       />
     </figure>
-    <figure class="gallery-item">
+    <figure class="gallery__item">
       <img
         src="<?= URL_ROOT; ?>/img/site/gallery/gallery-10.jpg"
         alt="Gallery photo of gym men and women doing sport"
       />
     </figure>
-    <figure class="gallery-item">
+    <figure class="gallery__item">
       <img
         src="<?= URL_ROOT; ?>/img/site/gallery/gallery-11.jpg"
         alt="Gallery photo of gym men and women doing sport"
       />
     </figure>
-    <figure class="gallery-item">
+    <figure class="gallery__item">
       <img
         src="<?= URL_ROOT; ?>/img/site/gallery/gallery-12.jpg"
         alt="Gallery photo of gym men and women doing sport"
@@ -336,7 +333,7 @@ require APP_ROOT . '/views/inc/header.php';
 
 <!-- SECTION PRICING -->
 <section class="pricing-plan bg-white pt-lg pb-md">
-  <div class="container container--md">
+  <div class="container container--md pX">
     <h4 class="subheading fontW700 txt-blue txt-upp mb-xs">
       Prix & Abonnements
     </h4>
@@ -346,9 +343,9 @@ require APP_ROOT . '/views/inc/header.php';
   </div>
 
   <div
-    class="container container--md grid grid--3-cols grid-gap--medium mb"
+    class="container container--md grid grid--3-cols grid-gap--medium mb pX"
   >
-    <div class="pricing-plan__card pricing-plan__card--starter plan b-radius4 box-shad1">
+    <div class="pricing-plan__card pricing-plan__card--starter plan b-radius4 box-shad">
       <header class="mb txt-center">
         <p class="plan__name mb-sm fontW700 txt-upp txt-blue">
           Cours <br />
@@ -415,7 +412,7 @@ require APP_ROOT . '/views/inc/header.php';
     </div>
 
     <div
-      class="pricing-plan__card pricing-plan__card--intermediate plan b-radius4 box-shad1"
+      class="pricing-plan__card pricing-plan__card--intermediate plan b-radius4 box-shad"
     >
       <header class="mb txt-center">
         <p class="plan__name mb-sm fontW700 txt-upp txt-blue">
@@ -493,7 +490,7 @@ require APP_ROOT . '/views/inc/header.php';
       class="
         pricing-plan__card pricing-plan__card--complete
         plan b-radius4
-        box-shad1
+        box-shad
         linear-grad-lightBlue
       "
     >
@@ -574,14 +571,14 @@ require APP_ROOT . '/views/inc/header.php';
     </div>
   </div>
 
-  <div class="container container--md grid grid-gap--large">
+  <div class="container container--md grid grid-gap--large pX">
     <aside class="txt-content txt-center">
       Nos prix comprennent la TVA & tout nos cours/abonnements inclus les
       services suivants:
     </aside>
   </div>
 
-  <div class="container container--md grid grid-gap--medium grid--4-cols">
+  <div class="container container--md grid grid-gap--medium grid--4-cols pX">
     <div class="feature">
       <ion-icon
         class="icon-blue icon-sm b-radius50 mb-sm"
@@ -636,19 +633,19 @@ require APP_ROOT . '/views/inc/header.php';
     </div>
   </div>
 
-  <div class="container container--md txt-center">
+  <div class="container container--md txt-center pX">
     <a href="<?= URL_ROOT; ?>/pages/coaching" class="link link--underline "
       >Rendez-vous à la page Coaching &rarr;</a
     >
   </div>
 </section>
 
-<!-- SECTION FORM-PROPSECT -->
+<!-- SECTION FORM-PROSPECT -->
 <section class="linear-grad-lightBlue pb-lg pt-lg" id="cta">
-  <div class="container container--md with-parallax">
+  <div class="container container--md with-parallax pX">
 
-    <div class="cta grid--cta b-radius4 box-shad1">
-      <div class="cta__text-box txt-dark linear-grad-blue">
+    <div class="form-prospect grid--form-prospect b-radius4 box-shad">
+      <div class="form-prospect__text-box txt-dark linear-grad-blue">
         <h2 class="heading-secondary txt-dark-gray mb">
           Contactez le coach
         </h2>
@@ -665,16 +662,15 @@ require APP_ROOT . '/views/inc/header.php';
         <!-- form-prospect -->
         <form action="<?php echo URL_ROOT; ?>/pages/index" method="post" class="grid--form">
           <div>
-            <label class="fontW700 mb-xxs"
-              >Nom Complet</label
-            >
+            <label class="fontW700 mb-xxs" for="prospectName">Nom Complet</label>
             
             <span class="b-radius4">
-              <p class="txt-content--xsmall txt-danger"><?php echo $data['prospect_name_err'];?></p>
+              <span class="txt-content--xsmall txt-danger"><?php echo $data['prospect_name_err'];?></span>
             </span>
 
             <input
               class="b-radius4 bg-white"
+              id="prospectName"
               type="text" value="<?php echo $data['prospect_name']; ?>"
               placeholder="votre nom"
               name="prospect_name"
@@ -683,14 +679,15 @@ require APP_ROOT . '/views/inc/header.php';
           </div>
 
           <div>
-            <label class="fontW700 mb-xxs">Adresse Mail</label>
+            <label class="fontW700 mb-xxs" for="prospectEmail" >Adresse Mail</label>
 
             <span class="b-radius4">
-              <p class="txt-content--xsmall txt-danger"><?php  echo $data['prospect_email_err']; ?></p>
+              <span class="txt-content--xsmall txt-danger"><?php  echo $data['prospect_email_err']; ?></span>
             </span>
             
             <input
               class="b-radius4 bg-white"
+              id="prospectEmail"
               type="email" value="<?php echo $data['prospect_email']; ?>"
               placeholder="email@example.com"
               name="prospect_email"
@@ -700,8 +697,8 @@ require APP_ROOT . '/views/inc/header.php';
 
           <div class="free-course mt-xs">
             <div>
-              <input class="b-radius4 bg-white" type="checkbox" name="freeCourse">
-              <label class="fontW700">Essai gratuit</label>
+              <input class="b-radius4 bg-white" id="askFreeCourse" type="checkbox" name="ask_free_course" value="<?php //echo $data['ask_free_course']; ?>">
+              <label class="fontW700" for="askFreeCourse" >Essai gratuit</label>
             </div>
           </div>
 
@@ -711,7 +708,7 @@ require APP_ROOT . '/views/inc/header.php';
         </form>
       </div>
       <div
-        class="cta__img-box"
+        class="form-prospect__img-box"
         role="img"
         aria-label="Bastien Desmet Coach Sportif"
       ></div>

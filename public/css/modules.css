@@ -3,7 +3,6 @@
 /***************/
 /*  container */
 .container {
-  padding: 0 3.2rem;
   margin: 0 auto;
 }
 .container--xs {
@@ -57,12 +56,6 @@
 }
 .icon-blue {
   color: #46a1c9;
-}
-.icon-darkGray {
-  color: #333;
-}
-.icon-dark {
-  color: #232323;
 }
 /*   images   */
 .img-30 {
@@ -143,6 +136,29 @@
 .btn40 {
   width: 40%;
 }
+.btn-table {
+  margin-bottom: 0.1rem;
+  cursor: pointer;
+  width: 60px;
+  font-size: 1.4rem;
+  padding: 0.4rem 0.2rem;
+  color: #232323c9;
+  text-align: center;
+}
+.btn-table--yellow {
+  background-color: #fffae0;
+}
+.btn-table--blue {
+  background-color: #46a1c9;
+}
+.btn-table--yellow:hover,
+.btn-table--yellow:focus,
+.btn-table--blue:hover,
+.btn-table--blue:focus {
+  opacity: 0.85;
+  color: #232323;
+}
+
 /*   links   */
 .link,
 .link-dark,
@@ -179,7 +195,6 @@
 .list-item {
   display: flex;
   align-items: center;
-  gap: 1.6rem;
   font-size: 1.6rem;
   line-height: 1.2;
 }
@@ -306,7 +321,6 @@
 .menu svg {
   overflow: hidden;
 }
-
 /* side-menu icons */
 .ico01 {
   background-color: #232323;
@@ -384,7 +398,6 @@
   left: 50%;
   transform: translate3d(-50%, -50%, 0);
 }
-
 .menu-object .ico01 ion-icon {
   position: absolute;
   top: 30%;
@@ -393,16 +406,13 @@
 .active .menu-object .ico01 ion-icon {
   transform: rotate(90deg);
 }
-
 .move-ico--is-not-active {
   background-color: rgba(0, 0, 0, 0.5);
 }
-
 .move-ico--is-not-active .link,
 .move-ico--is-not-active .link button {
   cursor: not-allowed;
 }
-
 .move-ico--is-not-active .link ion-icon,
 .move-ico--is-not-active .link button ion-icon {
   color: rgb(84, 84, 84);
@@ -422,9 +432,6 @@
 .alert p {
   text-indent: 2.4rem;
 }
-.alert-success {
-  color: #42ba96;
-}
 /*******************/
 /* FLASH MESSAGES */
 /*****************/
@@ -437,4 +444,37 @@
   left: 50%;
   transform: translateX(-50%);
   z-index: 3;
+}
+/***************/
+/*  CKEDITOR  */
+/*************/
+/*Textbox*/
+.ck-editor__editable {
+  min-height: 350px;
+  max-height: 350px;
+  min-width: 100%;
+  /* max-width: 450px;*/
+  max-width: 450px;
+  width: 100%;
+}
+/*Toolbar*/
+.ck-editor__top {
+  min-width: 100%;
+  max-width: 450px;
+  width: 100%;
+}
+/*Scrollbar*/
+.ck-editor ::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #fff;
+}
+.ck-editor ::-webkit-scrollbar {
+  width: 14px;
+  background-color: #fff;
+}
+.ck-editor ::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: rgb(115, 115, 115);
 }

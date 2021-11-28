@@ -42,7 +42,6 @@
 .hero {
   max-width: 130rem;
   margin: 0 auto;
-  padding: 0 3.2rem;
   align-items: center;
 }
 .hero .hero--txt .btn-wrapper {
@@ -56,28 +55,28 @@
   margin-right: auto;
   padding-top: 4.8rem;
 }
-/* hero fullW  */
-.hero--fullW {
+/* full-width  */
+.full-width {
   width: 100%;
   height: 90vh;
   position: relative;
   overflow: hidden;
 }
-.hero--fullW div picture img {
+.full-width div picture img {
   width: 100%;
 }
-.hero--fullW__heading {
+.full-width__heading {
   position: absolute;
   padding: 4.8rem;
   background-color: rgba(255, 255, 255, 0.85);
 }
-.hero--fullW__heading--center {
+.full-width__heading--center {
   top: 40%;
   left: 50%;
   width: 60%;
   transform: translateX(-50%);
 }
-.hero--fullW__heading--left {
+.full-width__heading--left {
   left: 10%;
   top: 30%;
   width: 75%;
@@ -89,16 +88,16 @@
   align-items: center;
   gap: 1.6rem;
 }
-.customers-profiles-imgs {
+.customers-profiles__imgs {
   display: flex;
 }
-.customers-profiles-imgs img {
+.customers-profiles__imgs img {
   height: 4.8rem;
   width: 4.8rem;
   margin-right: -1.6rem;
   border: 3px solid #e8f8ff;
 }
-.customers-profiles-imgs img:last-child {
+.customers-profiles__imgs img:last-child {
   margin: 0;
 }
 
@@ -118,21 +117,21 @@
 }
 
 /*********/
-/* STEP */
+/* HOW IT WORK STEP */
 /*******/
-.step-number {
+.step .step__number {
   font-size: 8.6rem;
   color: #888888a9;
 }
-.img-box--step {
+.step .step__img-box {
   position: relative;
 
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.img-box--step::before,
-.img-box--step::after {
+.step .step__img-box::before,
+.step .step__img-box::after {
   content: "";
   display: block;
   border-radius: 50%;
@@ -141,18 +140,18 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.img-box--step::before {
+.step .step__img-box::before {
   background-color: #99c7dbaf;
   width: 60%;
   /* 60% of parent's width */
   padding-bottom: 60%;
 }
-.img-box--step::after {
+.step .step__img-box::after {
   width: 45%;
   padding-bottom: 45%;
   background-color: #e8f8ff;
 }
-.img-box--step img {
+.step .step__img-box img {
   z-index: 1;
 }
 
@@ -172,14 +171,14 @@
 .gallery {
   padding: 1.8rem;
 }
-.gallery-item {
+.gallery__item {
   overflow: hidden;
 }
-.gallery-item img {
+.gallery__item img {
   display: block;
   transition: all 0.4s;
 }
-.gallery-item img:hover {
+.gallery__item img:hover {
   transform: scale(1.1);
 }
 
@@ -281,21 +280,172 @@
 .contact-details .contact-details__div .col-nav li .link {
   font-size: 1.8rem;
 }
-/**********/
-/*  CTA  */
-/********/
-.cta {
+
+/***************/
+/*   FORMS    */
+/*************/
+/* form-contact */
+.form-contact .container .form-contact__content {
+  padding: 4.8rem;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+/* form-prospect */
+.form-prospect {
   overflow: hidden;
 }
-.cta__text-box {
+.form-prospect__text-box {
   padding: 3.2rem 4.8rem 4.8rem 4.8rem;
 }
-.cta__img-box {
+.form-prospect__img-box {
   background-image: linear-gradient(to right bottom, #ffffff0d, #ffffff0d),
     url("../img/site/coach/coach-hbx-portrait.jpg");
   background-size: cover;
   background-position: center;
 }
+
+/* form-small  */
+.form-small input[typ="submit"],
+.form-small button[type="submit"] {
+  margin: 0 auto;
+}
+/* form-admin prospect & partner */
+.form-admin-prospect--display,
+.form-admin-partner--display {
+  display: inline-block;
+}
+.base-info-name,
+.base-info-email,
+.partner-company-name,
+.partner-email {
+  width: 40%;
+}
+.base-info-phone,
+.location-code,
+.location-city,
+.type-coaching,
+.type-partnership,
+.type-activity,
+.partner-city {
+  width: 28%;
+}
+.address-nr {
+  width: 100px;
+}
+.address-str {
+  width: 65%;
+}
+.base-info-name,
+.address-nr,
+.partner-company-name,
+.partner-city {
+  margin-right: 10px;
+}
+.is-customer,
+.free-course,
+.is-web-business,
+.have-deal {
+  width: 150px;
+}
+
+.is-customer,
+.is-web-business,
+.have-deal {
+  margin-left: 50px;
+}
+.is-customer input,
+.free-course input,
+.is-web-business input,
+.have-deal input {
+  box-shadow: none;
+  width: 20px;
+  align-self: center;
+}
+
+.is-customer div,
+.free-course div,
+.is-web-business div,
+.have-deal div,
+.type-activity div {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
+
+.is-customer label,
+.is-customer label,
+.is-web-business label,
+.have-deal label {
+  width: 130px;
+  align-self: center;
+}
+/****************/
+/*  DATATABLE  */
+/**************/
+.dataTables_length label,
+.dataTables_filter label {
+  font-size: 1.4rem;
+  line-height: 1.2;
+  margin-bottom: 1.2rem;
+}
+.dataTables_length label {
+  width: 65px;
+}
+.dataTables_paginate,
+.dataTables_info {
+  padding-bottom: 1.2rem;
+}
+.dataTables_info {
+  font-size: 1.4rem;
+  line-height: 1.2;
+}
+.dataTables_paginate {
+  font-size: 1.4rem;
+  line-height: 1.2;
+}
+#myTable_wrapper.dataTables_wrapper {
+  width: 93%;
+  margin: 0 auto;
+}
+/************/
+/*  TABLE  */
+/**********/
+/* table */
+#myTable th,
+table#myTable {
+  border-bottom-color: #23232366;
+}
+
+/* table cells */
+.cell {
+  transition: all 0.3s ease-in-out;
+}
+#myTable .cell--btn,
+#myTable .cell--date {
+  width: 20%;
+  text-align: center;
+}
+#myTable .cell--main {
+  width: 60%;
+  text-align: left;
+}
+.cell--date {
+  font-size: 1.4rem;
+}
+.btn-table {
+  margin-right: 2.4rem;
+}
+form .btn-table {
+  margin-right: 0;
+}
+.cell--btn a,
+.cell--btn form input {
+  border-bottom: 1px solid #232323;
+}
+.cell--btn a,
+.cell--btn form {
+  display: inline-block;
+}
+
 /***********/
 /* FOOTER */
 /*********/
@@ -325,7 +475,7 @@
   font-weight: 200;
   padding: 0.8rem 0;
 }
-/* admin */
+/* admin button */
 .col-nav button {
   border: none;
   background-color: transparent;

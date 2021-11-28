@@ -12,7 +12,7 @@
 <!-- SECTION EDIT PARTNER -->
 <section class="edit-post pb-lg pt-lg">
   <!-- BACK BTN -->
-  <div class="container container--lg">
+  <div class="container container--lg pX">
 
     <div class="txt-dark mb">
       <a href="<?php echo URL_ROOT; ?>/partners/list" class="link link-dark link--underline">
@@ -22,9 +22,9 @@
 
   </div>
   <!-- EDIT PARTNER -->
-  <div class="container container--md">
-    <div class="grid--1-col b-radius4 box-shad1">
-      <div class="post-content txt-dark txt-content">
+  <div class="container container--md pX">
+    <div class="grid--1-col b-radius4 box-shad">
+      <div class="post-content txt-dark txt-content pX">
         <h3 class="heading-secondary txt-dark-gray font-garamond mt-xs mb-xs">
           Modifier la fiche partenaire
         </h3>
@@ -39,7 +39,7 @@
           <!-- SECTION BASE-INFO -->
           <div>
             <span class="b-radius4">
-              <p class="txt-content--xsmall txt-center txt-danger mb-xxs"><?php echo ($data['partner_main_err']);?></p>
+              <span class="txt-content--xsmall txt-center txt-danger mb-xxs"><?php echo ($data['partner_main_err']);?></span>
             </span>
             <!-- heading -->
             <h3 class="subheading txt-upp fontW700 mb-xs" tabindex="0"> 
@@ -52,32 +52,34 @@
 
             <!-- company-name -->
             <div class="form-admin-partner--display partner-company-name">
-              <label class="fontW700 txt-blue mb-xxs" for="">Nom de l'entreprise partenaire *</label>
+              <label class="fontW700 txt-blue mb-xxs" for="partnerCompanyName">Nom de l'entreprise partenaire *</label>
               
               <input 
                 type="text" 
                 name="partner_company_name" 
                 class="bg-white mb-xxs" 
+                id="partnerCompanyName"
                 value="<?php echo ($data['partner']->partner_company_name); ?>">
 
               <span class="b-radius4">
-                <p class="txt-content--xsmall txt-danger"><?php echo ($data['partner_company_name_err']);?></p>
+                <span class="txt-content--xsmall txt-danger"><?php echo ($data['partner_company_name_err']);?></span>
               </span>
               
             </div>
           
             <!-- email -->
             <div class="form-admin-partner--display partner-email">
-              <label class="fontW700 txt-blue mt mb-xxs" for="">Email de votre partenaire *</label>
+              <label class="fontW700 txt-blue mt mb-xxs" for="partnerEmail">Email de votre partenaire *</label>
 
               <span class="b-radius4">
-                <p class="txt-content--xsmall txt-danger"><?php echo ($data['partner_email_err']); ?></p>
+                <span class="txt-content--xsmall txt-danger"><?php echo ($data['partner_email_err']); ?></span>
               </span>
             
               <input 
                 type="email" 
                 name="partner_email" 
                 class="bg-white mb-xxs" 
+                id="partnerEmail"
                 value="<?php echo ($data['partner']->partner_email); ?>">
             </div>
 
@@ -87,20 +89,21 @@
 
             <!-- phone -->
             <div class="base-info-phone">
-              <label class="fontW700 txt-blue">Numéro de téléphone</label>
+              <label class="fontW700 txt-blue" for="partnerPhone">Numéro de téléphone</label>
               <p class="txt-content--small mt-xs mb-xxs">
                 Le numéro de téléphone doit <span class="fontW700">impérativement commencer par "0"</span> et <span class="fontW700">contenir 10 chiffres</span>. Notez que vous pouvez laisser ce champs vide si vous le souhaitez.
               </p>
 
               
               <span class="b-radius4">
-                <p class="txt-content--xsmall txt-danger"><?php echo ($data['partner_phone_err']); ?></p>
+                <span class="txt-content--xsmall txt-danger"><?php echo ($data['partner_phone_err']); ?></span>
               </span>
             
               <input 
                 type="tel" 
                 name="partner_phone" 
                 class="bg-white" 
+                id="partnerPhone"
                 value="<?php echo $data['partner']->partner_phone; ?>">
             </div>
           </div>
@@ -118,18 +121,18 @@
             <div>
               <!-- city -->
               <div class="form-admin-partner--display partner-city">
-                <label class="fontW700 txt-blue mb-xxs" tabindex="0">Ville:</label>
-                <input type="text" name="partner_city" class="bg-white mb-xxs" value="<?php echo $data['partner']->partner_city; ?>">
+                <label class="fontW700 txt-blue mb-xxs" for="partnerCity" tabindex="0">Ville:</label>
+                <input type="text" name="partner_city" id="partnerCity" class="bg-white mb-xxs" value="<?php echo $data['partner']->partner_city; ?>">
               </div>
                     
               <!-- type activity -->
-              <div class="form-admin-partner--display type-activity">
-                <label class="fontW700 txt-blue mb-xxs" tabindex="0">
+              <!-- <div class="form-admin-partner--display type-activity">
+                <label class="fontW700 txt-blue mb-xxs" for="partnerTypeActivity" tabindex="0">
                   Activité principale
                 </label>
                 <div>
-                  <select name="" class="bg-white"> 
-                    <option value="default"></option>
+                  <select name="<?php //echo $data['partners']->type_activity ?>" class="bg-white" id="partnerTypeActivity"> 
+                    <option value="default">Choisir</option>
                     <option value="coaching">Coaching / Prépa</option>
                     <option value="blogging">Blogging</option>
                     <option value="shop">Magasin</option>
@@ -138,13 +141,13 @@
                     <option value="other">Autre</option>
                   </select>
                 </div>
-              </div>
+              </div> -->
   
               <!-- is-web-business -->
               <div class="form-admin-partner--display is-web-business">
                 <div>
-                  <input class="bg-white" name="" type="checkbox" value="is-web-business">
-                  <label tabindex="0">Activité Web</label>
+                  <input class="bg-white" name="<?php echo $data['partners']->is_web_business?>" type="checkbox" value="is-web-business" id="isWebBusiness">
+                  <label tabindex="0" for="isWebBusiness">Activité Web</label>
                 </div>
               </div>
             </div>
@@ -163,12 +166,12 @@
 
             <!-- type partnership -->
             <div class="form-admin-prospect--display type-partnership">
-              <label class="fontW700 txt-blue mb-xxs" tabindex="0">
+              <label class="fontW700 txt-blue mb-xxs" for="typePartnership" tabindex="0">
                 Type de partenariat
               </label>
               <div>
-                <select name="" class="bg-white"> 
-                  <option value="default"></option>
+                <select name="<?php echo $data['partners']->type_partnership ?>" class="bg-white" id="typePartnership"> 
+                  <option value="default">Choisir</option>
                   <option value="collaboration">Collaboration</option>
                   <option value="blogging">Blog & SEO</option>
                   <option value="shop">Commercial</option>
@@ -181,8 +184,8 @@
             <!-- have-a-deal -->
             <div class="form-admin-partner--display have-deal">
               <div>
-                <input class="bg-white" name="" type="checkbox" value="have-deal">
-                <label tabindex="0">Accord</label>
+                <input class="bg-white" id="haveDeal" name="<?php echo $data['partners']->have_deal ?>" type="checkbox" value="have-deal">
+                <label for="haveDeal" tabindex="0">Accord</label>
               </div>
             </div>
           </div>

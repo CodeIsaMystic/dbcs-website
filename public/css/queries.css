@@ -58,13 +58,13 @@
   }
 
   /* hero fullW */
-  .hero--fullW {
+  .full-width {
     height: 60vh;
   }
-  .hero--fullW__heading--center {
+  .full-width__heading--center {
     top: 35%;
   }
-  .hero--fullW__heading--left {
+  .full-width__heading--left {
     top: 25%;
   }
 
@@ -80,7 +80,7 @@
     height: 4.8rem;
   }
   /* testimonials */
-  .testimonials-container {
+  .testimonials {
     padding: 9.6rem 3.2rem;
   }
   /* gallery */
@@ -121,7 +121,7 @@
   /* post-page */
   .post-page {
     width: 100%;
-    // margin: 9.6rem auto 0;
+    /* margin: 9.6rem auto 0;*/
   }
 }
 
@@ -140,8 +140,8 @@
   .edit-post .post-content .source-link input {
     text-indent: -40px;
   }
-  /*  container */
-  .container {
+  /*  paddingX */
+  .pX {
     padding: 0 2.4rem;
   }
   /* grid */
@@ -234,31 +234,31 @@
     flex-direction: column;
   }
   /* hero fullW */
-  .hero--fullW {
+  .full-width {
     height: 50vh;
   }
-  .hero--fullW__heading--center {
+  .full-width__heading--center {
     top: 30%;
   }
-  .hero--fullW__heading--left {
+  .full-width__heading--left {
     width: 85%;
     left: 5%;
   }
 
   /* how */
-  .step-number {
+  .step__number {
     font-size: 7.4rem;
   }
   /* partners */
   .partners-logo {
     gap: 0;
   }
-  /* cta */
-  .cta {
+  /* form-prospect */
+  .form-prospect {
     /* 3/5 = 60% + 2/5 = 40% */
     grid-template-columns: 3fr 2fr;
   }
-  .cta-form {
+  .form-prospect-form {
     grid-template-columns: 1fr;
   }
   /*   menu-icon  */
@@ -324,8 +324,11 @@
   }
 
   /*  pricing-plan  */
+  .pricing-plan {
+    margin: 0 auto;
+  }
   .pricing-plan .pricing-plan__card {
-    width: 70%;
+    width: 50%;
     margin: 0 auto;
   }
   .pricing-plan .pricing-plan__card--starter,
@@ -436,8 +439,8 @@
   body {
     overflow-x: visible;
   }
-  /*  container */
-  .container {
+  /*  paddingX */
+  .pX {
     padding: 0 1.6rem;
   }
   /* grid */
@@ -486,17 +489,17 @@
     width: 50%;
   }
   /* hero fullW */
-  .hero--fullW {
+  .full-width {
     height: 44vh;
   }
-  .hero--fullW__heading {
+  .full-width__heading {
     top: 40%;
     padding: 1.6rem 0.8rem;
   }
   .her--fullW__heading--center {
     width: 75%;
   }
-  .hero--fullW__heading--left {
+  .full-width__heading--left {
     left: 50%;
     text-align: center;
     top: 25%;
@@ -522,14 +525,14 @@
   .dashboard--logged__list {
     gap: 1.6rem;
   }
-  /* cta */
-  .cta {
+  /* form-prospect */
+  .form-prospect {
     grid-template-columns: 1fr;
   }
-  .cta__text-box {
+  .form-prospect__text-box {
     padding: 3.2rem;
   }
-  .cta__img-box {
+  .form-prospect__img-box {
     height: 40rem;
     background-position: 50% 40%;
     grid-row: 1;
@@ -573,8 +576,8 @@
 /**************************/
 
 @media (max-width: 34em) {
-  /*  container */
-  .container {
+  /*  paddingX */
+  .pX {
     padding: 0 0.8rem;
   }
   /* grid */
@@ -594,24 +597,24 @@
     width: 80%;
   }
   /* hero fullW */
-  .hero--fullW {
+  .full-width {
     height: 38vh;
   }
-  .hero--fullW__heading--center {
+  .full-width__heading--center {
     top: 30%;
     width: 90%;
   }
-  .hero--fullW__heading--left {
+  .full-width__heading--left {
     top: 25%;
   }
   /* how */
-  .img-box--step:nth-child(2) {
+  .step__img-box:nth-child(2) {
     grid-row: 1;
   }
-  .img-box--step:nth-child(6) {
+  .step__img-box:nth-child(6) {
     grid-row: 5;
   }
-  .img-box--step {
+  .step__img-box {
     transform: translateY(2.4rem);
   }
   /* testimonials */
@@ -620,7 +623,7 @@
   }
   /* pricing-plan */
   .pricing-plan .pricing-plan__card {
-    width: 100%;
+    width: 80%;
   }
   .pricing-plan .pricing-plan__card--complete::after {
     top: 7%;
@@ -690,11 +693,16 @@
     width: 60%;
   }
   /* hero fullW */
-  .hero--fullW {
+  .full-width {
     height: 28vh;
   }
-  .hero--fullW__heading {
+  .full-width__heading {
     top: 40%;
+  }
+
+  /* pricing-plan */
+  .pricing-plan .pricing-plan__card {
+    width: 95%;
   }
 }
 
@@ -702,7 +710,7 @@
 /* Fixing Safari flexbox gap */
 /****************************/
 .no-flexbox-gap .list-item:not(:last-child) {
-  margin-bottom: 1.6rem;
+  margin-bottom: 0.8rem;
 }
 .no-flexbox-gap .list-item ion-icon:not(:last-child) {
   margin-right: 1.6rem;
@@ -721,6 +729,6 @@
 @media (max-width: 59em) {
   .no-flexbox-gap .primary-nav-list li:not(:last-child) {
     margin-right: 0;
-    margin-bottom: 4.8rem;
+    margin-bottom: 2.4rem;
   }
 }

@@ -1,16 +1,15 @@
 
-<!-- SECTION POSTS --->
+<!-- SECTION POSTS -->
 <?php foreach($data['posts'] as $post) : ?>
 
 <section class="posts bg-white pb-md">
-  <div class="container container--md">
-    <article class="post grid--1-col b-radius4 box-shad1">
+  <div class="container container--md pX">
+    <article class="post grid--1-col b-radius4 box-shad">
       <div class="img b-radius4 with-parallax">
         <img
           class="b-radius4"
           src="<?= URL_ROOT . '/img/uploads/' . $post->post_image; ?>"
           alt="Post thumb photo uploaded"
-          srcset=""
         />
       </div>
 
@@ -32,7 +31,7 @@
         </div>
         
         <div class="post-content__article txt-dark mt-md">
-          <a class="" href="<?php echo URL_ROOT; ?>/posts/show/<?php echo $post->post_id; ?>">
+          <a href="<?php echo URL_ROOT; ?>/posts/show/<?php echo $post->post_id; ?>">
             <h3 class="heading-post txt-dark-gray font-garamond">
               <?php echo $post->post_title; ?>
             </h3>

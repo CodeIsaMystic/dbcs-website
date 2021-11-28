@@ -1,4 +1,4 @@
-<!-- HEADER --->
+<!-- HEADER -->
 <?php require APP_ROOT . '/views/inc/header.php'; ?>
 
 <!-- FLASH  MESSAGES -->
@@ -11,16 +11,13 @@
 
 
  <!-- SECTION HERO PARTNERS LIST -->
-<section class="hero--fullW bg-white">
+<section class="full-width bg-white">
   <div>
     <picture>
-      <!-- <source srcset="<?php //echo URL_ROOT; ?>/img/site/full-width/ropes.jpg" type="image/webp" />
-      <source srcset="<?php //echo URL_ROOT; ?>/img/site/full-width/ropes.jpg" type="image/png" /> -->
-
       <img src="<?php echo URL_ROOT; ?>/img/site/full-width/ropes.jpg" alt="image of a man with a light in his hands"/>
     </picture>
   </div>
-  <div class="hero--fullW__heading hero--fullW__heading--left">
+  <div class="full-width__heading full-width__heading--left">
     <h4 class="subheading fontW700 txt-upp txt-blue">Listes</h4>
     <h1 class="heading-primary txt-dark-gray fontW500 font-garamond">
       <?= $data['title']; ?>
@@ -33,14 +30,14 @@
   
 <!-- SECTION PARTNERS-LIST -->
 <section>
-  <div class="container container--mb">
+  <div class="container container--mb pX">
     <h4 class="heading-secondary txt-center txt-dark mt-lg mb-sm">Partenaires Détails</h4>
   </div>
 
-  <div class="container container--md grid--1-col">
+  <div class="container container--md grid--1-col pX">
 
       <!-- TABLE -->
-      <table id="myTable" class="hover box-shad1 mt mb-md pb-sm">
+      <table id="myTable" class="hover box-shad mt mb-md pb-sm">
         <thead class="mb-xs">
           <th class="heading-tertiary txt-dark pb-xs pt-xs">Entreprise</th>
           <th class="heading-tertiary txt-dark pb-xs pt-xs">Email</th>
@@ -50,7 +47,6 @@
 
 
         <tbody>  
-
           <?php foreach($data['partners'] as $partner) : ?>
           <tr>
             <td class="cell cell--main">

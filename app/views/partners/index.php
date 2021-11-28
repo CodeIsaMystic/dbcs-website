@@ -1,15 +1,13 @@
-<?php
-// echo 'Partners page';
-// var_dump($data);
-// die();
-?>
+<!-- HEADER -->
+<?php require APP_ROOT . '/views/inc/header.php'; ?>
 
-<!-- SECTION PARTNERS --->
-<?php foreach($data['partners'] as $partner) : ?>
-
-<section class="posts bg-white pb-md">
-  <div class="container container--md">
-    <article class="post grid--1-col b-radius4 box-shad1">
+<!-- SECTION PARTNERS -->
+<section class="posts bg-white mt-lg pb-md">
+  <div class="container container--md pX">
+    <h2 class="heading-secondary txt-dark-gray fontW500 font-garamond mb">Tout les partenaires enregistrés</h2>
+    
+    <?php foreach($data['partners'] as $partner) : ?>
+    <article class="post grid--1-col b-radius4 box-shadmb-sm">
 
       <div class="post-content">
 
@@ -23,7 +21,7 @@
         </div>
         
         <div class="post-content__article txt-dark mt-md">
-          <a class="" href="<?php echo URL_ROOT; ?>/partners/show/<?php echo $partner->partner_id; ?>">
+          <a href="<?php echo URL_ROOT; ?>/partners/show/<?php echo $partner->partner_id; ?>">
             <h3 class="heading-post txt-dark-gray font-garamond">
               <?php echo $partner->partner_company_name; ?>
             </h3>
@@ -32,17 +30,18 @@
             <?php  echo $partner->partner_email; ?>
           </p>
           
-          <a href="#" class="link link--underline mt-sm">
+          <a href="<?php echo URL_ROOT; ?>/partners/show/<?php echo $partner->partner_id; ?>" class="link link--underline mt-sm">
           Voir fiche contact &rarr;
           </a>
-          <!-- <a href="<?php //echo URL_ROOT; ?>/artners/show/<?php// echo $partner->partner_id; ?>" class="link link--underline mt-sm">
-          Voir fiche contact &rarr;
-          </a> -->
         </div>
       </div>
     </article>
+    <?php endforeach; ?>
+
   </div>
 </section>
 
-<?php endforeach; ?>
+
+<!-- FOOTER -->
+<?php require APP_ROOT . '/views/inc/footer.php'; ?>
 

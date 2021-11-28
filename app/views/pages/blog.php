@@ -1,4 +1,4 @@
-<!-- HEADER --->
+<!-- HEADER -->
 <?php
 // var_dump($_SERVER['QUERY_STRING']); 
 
@@ -13,16 +13,13 @@ require APP_ROOT . '/views/inc/header.php'; ?>
 <?php endif; ?>
 
  <!-- SECTION HERO BLOG -->
-<section class="hero--fullW bg-white">
+<section class="full-width bg-white">
   <div>
     <picture>
-      <!-- <source srcset="<?php echo URL_ROOT; ?>/img/site/full-width/gym2.png" type="image/webp" />
-      <source srcset="<?php echo URL_ROOT; ?>/img/site/full-width/gym2.png" type="image/png" /> -->
-
       <img src="<?php echo URL_ROOT; ?>/img/site/full-width/gym2.jpg" alt="gym with people listening their coach"/>
     </picture>
   </div>
-  <div class="hero--fullW__heading hero--fullW__heading--left">
+  <div class="full-width__heading full-width__heading--left">
     <h4 class="subheading fontW700 txt-upp txt-blue pb-xxs">Article</h4>
     <h1 class="heading-primary txt-dark-gray fontW500 font-garamond pb-xs">
         <?= $data['title']; ?>
@@ -33,9 +30,9 @@ require APP_ROOT . '/views/inc/header.php'; ?>
   </div>
 </section>
 
-<!-- SECTION TITLE CENTER --->
+<!-- SECTION TITLE CENTER -->
 <section class="bg-white pb-md pt-md">
-  <div class="container container--md txt-center">
+  <div class="container container--md txt-center pX">
     <h2
     class="heading-secondary txt-dark-gray font-garamond fontW500 pb"
     >
@@ -53,7 +50,7 @@ require APP_ROOT . '/views/inc/header.php'; ?>
 
 <!-- SECTION PARTNERS -->
 <section class="bg-white mb-lg pt-lg">
-  <div class="container container--lg">
+  <div class="container container--lg pX">
     <h2 class="subheading txt-upp txt-center fontW500 mb-sm">
       Nos partenaires
     </h2>
@@ -76,5 +73,5 @@ require APP_ROOT . '/views/inc/header.php'; ?>
   </div>
 </section>
 
-<!-- FOOTER --->
+<!-- FOOTER -->
 <?php require APP_ROOT . '/views/inc/footer.php'; ?>

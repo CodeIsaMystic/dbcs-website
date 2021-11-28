@@ -11,16 +11,13 @@
 <?php endif; ?>
 
  <!-- SECTION HERO CONTACT -->
-<section class="hero--fullW bg-white">
+<section class="full-width bg-white">
   <div>
     <picture>
-      <!-- <source srcset="<?php echo URL_ROOT; ?>/img/site/full-width/coaching.png" type="image/webp" />
-      <source srcset="<?php echo URL_ROOT; ?>/img/site/full-width/coaching.png" type="image/png" /> -->
-
       <img src="<?php echo URL_ROOT; ?>/img/site/full-width/coaching.jpg" alt="Two womens doing sport in a gym"/>
     </picture>
   </div>
-  <div class="hero--fullW__heading hero--fullW__heading--left">
+  <div class="full-width__heading full-width__heading--left">
     <h4 class="subheading fontW700 txt-upp txt-blue pb-xxs">Coaching</h4>
     <h1 class="heading-primary txt-dark-gray fontW500 font-garamond pb-xs">
         <?= $data['title']; ?>
@@ -31,9 +28,9 @@
   </div>
 </section>
 
-<!-- SECTION TITLE CENTER --->
+<!-- SECTION TITLE CENTER -->
 <section class="bg-white pb-md pt-md">
-  <div class="container container--md txt-center">
+  <div class="container container--md txt-center pX">
     <h2
     class="heading-secondary txt-dark-gray font-garamond fontW500 pb"
     >
@@ -47,7 +44,7 @@
 
 <!-- SECTION PARTNERS -->
 <section class="bg-white pt-lg pb-lg">
-  <div class="container container--lg">
+  <div class="container container--lg pX">
     <h2 class="subheading txt-upp txt-center fontW500 mb-sm">
       Nos partenaires
     </h2>
@@ -72,7 +69,7 @@
 
 <!-- SECTION COACHING DETAILS -->
 <section class="coaching-details bg-white pt-md">
-  <div class="container container--md">
+  <div class="container container--md pX">
     <h4 class="subheading fontW700 txt-blue txt-upp mb-xs">
       Coaching
     </h4>
@@ -81,13 +78,13 @@
     </h2>
   </div>
 
-  <div class="container container--md">
-  <p class="txt-content txt-dark mb-md">
+  <div class="container container--md pX">
+  <p class="txt-content txt-dark mb-lg">
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam reprehenderit excepturi veritatis eligendi culpa quam, fugiat quia tenetur saepe explicabo rem, libero voluptatem id neque! Deleniti quasi soluta porro, vel facilis atque quaerat cumque ipsam tempora similique, ea exercitationem tenetur sed. Cumque nostrum, ipsum dolorum sit eos eveniet exercitationem? Eveniet asperiores minima eius nesciunt tempora eum tenetur.
   </p>
 </div>
   
-  <div class="container container--md grid grid-gap--medium grid--4-cols mt-md">
+  <div class="container container--md grid grid-gap--medium grid--4-cols mt-md pX">
     <div class="feature">
       <ion-icon
         class="icon-blue icon-sm b-radius50 mb-sm"
@@ -143,13 +140,13 @@
   </div>
 
   
-  <div class="container container--md">
-  <p class="txt-content txt-dark mt-md">
+  <div class="container container--md pX">
+  <p class="txt-content txt-dark mt-xl">
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam reprehenderit excepturi veritatis eligendi culpa quam, fugiat quia tenetur saepe explicabo rem, libero voluptatem id neque! Deleniti quasi soluta porro, vel facilis atque quaerat cumque ipsam tempora similique, ea exercitationem tenetur sed. Cumque nostrum, ipsum dolorum sit eos eveniet exercitationem? Eveniet asperiores minima eius nesciunt tempora eum tenetur.
   </p>
 </div>
 
-<div class="container container--md txt-center">
+<div class="container container--md txt-center pX">
   <a href="coaching.html" class="link link--underline mt-md mb-md"
     >En direct ou bien avec le formulaire ci-dessous, le coach vous contactera</a
   >
@@ -158,8 +155,8 @@
 </section>
 
 <!-- SECTION HOW IT WORKS -->
-<section class="bg-white pt-md pb-lg">
-  <div class="container container--md">
+<section class="step bg-white mt-xl pb-lg pX">
+  <div class="container container--md pX">
     <h4 class="subheading fontW700 txt-upp txt-blue mb-xs">
       Comment ça marche
     </h4>
@@ -170,15 +167,15 @@
 
   <div
     class="
-      container container--sm
+      container container--sm pX
       grid grid--2-cols
       grid-gap--large
       grid--center-v
     "
   >
     <!-- STEP 01 -->
-    <div class="step-text-box">
-      <p class="step-number fontW700 mb-xxs">01</p>
+    <div>
+      <p class="step__number fontW700 mb-xxs">01</p>
       <h3 class="heading-tertiary txt-dark-gray mb-sm">
         Contactez le coach (et profitez du 1er essai gratuit)
       </h3>
@@ -189,24 +186,24 @@
       </p>
     </div>
 
-    <div class="img-box--step">
+    <div class="step__img-box">
       <img
         src="<?= URL_ROOT; ?>/img/site/mockups/mockup-contact.png"
-        class="step-img img-30"
+        class=" img-30"
         alt="iPhone with contact section on screen"
       />
     </div>
 
     <!-- STEP 02 -->
-    <div class="img-box--step">
+    <div class="step__img-box">
       <img
         src="<?= URL_ROOT; ?>/img/site/mockups/mockup-call.png"
-        class="step-img img-30"
+        class=" img-30"
         alt="iPhone with view when calling a client"
       />
     </div>
-    <div class="step-text-box">
-      <p class="step-number fontW700 mb-xxs">02</p>
+    <div>
+      <p class="step__number fontW700 mb-xxs">02</p>
       <h3 class="heading-tertiary txt-dark-gray mb-sm">
         Premier entretien: objectifs & programme
       </h3>
@@ -218,8 +215,8 @@
     </div>
 
     <!-- STEP 03 -->
-    <div class="step-text-box">
-      <p class="step-number fontW700 mb-xxs">03</p>
+    <div>
+      <p class="step__number fontW700 mb-xxs">03</p>
       <h3 class="heading-tertiary txt-dark-gray mb-sm">
         Mettez en place tout votre programme
       </h3>
@@ -229,10 +226,10 @@
         réaliser vos objectifs et de miser sur votre santé.
       </p>
     </div>
-    <div class="img-box--step">
+    <div class="step__img-box">
       <img
         src="<?= URL_ROOT; ?>/img/site/mockups/organisation-mockup.png"
-        class="step-img img-38"
+        class=" img-38"
         alt="mockup of a note and a calendar scheduling tasks"
       />
     </div>
@@ -241,8 +238,8 @@
 
 
 <!-- SECTION PRICING -->
-<section class="pricing-plan bg-white pt-lg pb-md">
-  <div class="container container--md">
+<section class="pricing-plan bg-white pt-xl pb-md">
+  <div class="container container--md pX">
     <h4 class="subheading fontW700 txt-blue txt-upp mb-xs">
       Prix & Abonnements
     </h4>
@@ -252,9 +249,9 @@
   </div>
 
   <div
-    class="container container--md grid grid--3-cols grid-gap--medium mb"
+    class="container container--md grid grid--3-cols grid-gap--medium mb pX"
   >
-    <div class="pricing-plan__card pricing-plan__card--starter plan b-radius4 box-shad1">
+    <div class="pricing-plan__card pricing-plan__card--starter plan b-radius4 box-shad">
       <header class="mb txt-center">
         <p class="plan__name mb-sm fontW700 txt-upp txt-blue">
           Cours <br />
@@ -321,7 +318,7 @@
     </div>
 
     <div
-      class="pricing-plan__card pricing-plan__card--intermediate plan b-radius4 box-shad1"
+      class="pricing-plan__card pricing-plan__card--intermediate plan b-radius4 box-shad"
     >
       <header class="mb txt-center">
         <p class="plan__name mb-sm fontW700 txt-upp txt-blue">
@@ -399,7 +396,7 @@
       class="
         pricing-plan__card pricing-plan__card--complete
         plan b-radius4
-        box-shad1
+        box-shad
         linear-grad-lightBlue
       "
     >
@@ -480,7 +477,7 @@
     </div>
   </div>
 
-  <div class="container container--md grid grid-gap--large">
+  <div class="container container--md grid grid-gap--large pX">
     <aside class="txt-content txt-center">
       Nos prix comprennent la TVA & tout nos cours/abonnements inclus les
       services suivants:

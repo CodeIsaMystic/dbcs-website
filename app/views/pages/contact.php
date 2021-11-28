@@ -11,13 +11,13 @@
 
 
  <!-- SECTION HERO CONTACT -->
-<section class="hero--fullW bg-white">
+<section class="full-width bg-white">
   <div>
     <picture>
       <img src="<?php echo URL_ROOT; ?>/img/site/full-width/contact.jpg" alt="woman sitting on a car and boxing"/>
     </picture>
   </div>
-  <div class="hero--fullW__heading hero--fullW__heading--left">
+  <div class="full-width__heading full-width__heading--left">
     <h4 class="subheading fontW700 txt-upp txt-blue pb-xxs">Article</h4>
     <h1 class="heading-primary txt-dark-gray fontW500 font-garamond pb-xs">
         <?= $data['title']; ?>
@@ -30,12 +30,12 @@
 
 <!-- SECTION CONTACT-DETAILS  -->
 <section class="contact-details bg pt-lg">
-  <div class="container container--md">
+  <div class="container container--md pX">
     <h4 class="subheading fontW700 txt-upp txt-blue mb-sm">Détails</h4>
   </div>
 
   <div
-    class="container container--md grid grid--3-cols mb"
+    class="container container--md grid grid--3-cols pX mb"
   >
     <div class="contact-details__div">
       <div class="col-address">
@@ -129,7 +129,7 @@
 
 <!-- SECTION PARTNERS -->
 <section class="bg-white mt-xl">
-  <div class="container container--lg">
+  <div class="container container--lg pX">
     <h2 class="subheading txt-upp txt-center fontW500 mb-sm">
       Nos partenaires
     </h2>
@@ -152,10 +152,10 @@
   </div>
 </section>
 
-<!-- SECTION CONTACT FORM --->
-<section class="contact-form mt-xl mb-lg">
-  <div class="container container--md">
-    <div class="contact-form__content b-radius4 box-shad1">
+<!-- SECTION CONTACT FORM -->
+<section class="form-contact mt-xl mb-lg">
+  <div class="container container--md pX">
+    <div class="form-contact__content b-radius4 box-shad">
       <div class="txt-dark">
         <h2 class="heading-secondary font-garamond txt-dark-gray mb">
           Contactez-nous pour un partenariat
@@ -170,14 +170,15 @@
           <div class="grid--form">
             <!-- name -->
             <div>
-              <label class="mb-xxs">Nom de l'entreprise</label>
+              <label class="mb-xxs" for="partnerCompanyName" >Nom de l'entreprise</label>
               
               <span class="b-radius4">
-                <p class="txt-content--xsmall txt-danger"><?php echo $data['partner_company_name_err'];?></p>
+                <span class="txt-content--xsmall txt-danger"><?php echo $data['partner_company_name_err'];?></span>
               </span>
 
               <input
                 class="b-radius4 bg-white"
+                id="partnerCompanyName"
                 name="partner_company_name"
                 type="text"
                 placeholder="Nom..."
@@ -187,14 +188,15 @@
   
             <!-- email -->
             <div>
-              <label class="mb-xxs">Adresse Mail</label>
+              <label class="mb-xxs" for="partnerEmail" >Adresse Mail</label>
 
               <span class="b-radius4">
-              <p class="txt-content--xsmall txt-danger"><?php  echo $data['partner_email_err']; ?></p>
-            </span>
+                <span class="txt-content--xsmall txt-danger"><?php  echo $data['partner_email_err']; ?></span>
+              </span>
 
               <input
                 class="b-radius4 bg-white"
+                id="partnerEmail"
                 name="partner_email" 
                 type="email"
                 placeholder="Email..."
@@ -204,12 +206,12 @@
             
             <!-- partnership -->
             <div class="mt-xs">
-              <label class="mb-xxs" for="select-partnership"
+              <label class="mb-xxs" for="typePartnership"
                 >Type de partenariat?</label
               >
               <select
                 class="b-radius4 bg-white"
-                id="select-partnership"
+                id="typePartnership"
                 name="select-partnership"
               >
                 <option value="">Choisir...</option>
@@ -224,10 +226,10 @@
 
           <!-- message -->
           <div>
-            <label class="mb-xxs mt-xs"
+            <label class="mb-xxs mt-xs" for="partnerMessage"
             >Envoyez nous un message</label
             >
-            <textarea name="message" cols="30" rows="10"></textarea>
+            <textarea id="partnerMessage" name="message" cols="30" rows="10"></textarea>
           </div>
           
           <!-- submit -->

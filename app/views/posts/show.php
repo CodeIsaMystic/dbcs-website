@@ -12,13 +12,13 @@ require APP_ROOT . '/views/inc/header.php';
 
 
  <!-- SECTION HERO POST PAGE -->
-<section class="hero--fullW bg-white">
+<section class="full-width bg-white">
   <div>
     <picture>
       <img src="<?php echo URL_ROOT; ?>/img/uploads/<?php echo $data['post']->post_image ?>" alt="close up of two hands doing massage"/>
     </picture>
   </div>
-  <div class="hero--fullW__heading hero--fullW__heading--center">
+  <div class="full-width__heading full-width__heading--center">
     <h4 class="subheading fontW700 txt-upp txt-blue">Article</h4>
     <h1 class="heading-primary txt-dark-gray txt-center fontW500 font-garamond">
       <?php echo $data['post']->post_title; ?>
@@ -43,7 +43,7 @@ require APP_ROOT . '/views/inc/header.php';
 <!-- SECTION POST PAGE CONTENT -->
 <section class="post-page bg-white mt-md">
   <!-- BACK BTN -->
-  <div class="container container--lg">
+  <div class="container container--lg pX">
 
     <div class="txt-dark mb">
       <a href="<?php echo URL_ROOT; ?>/pages/blog" class="link link-dark link--underline">
@@ -52,7 +52,7 @@ require APP_ROOT . '/views/inc/header.php';
     </div>
 
   </div>
-  <div class="container container--lg">
+  <div class="container container--lg pX">
     <div class="post-content txt-dark mb-xs">
       <?php echo $data['post']->post_body; ?>
     </div>

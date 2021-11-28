@@ -31,7 +31,7 @@
         } else {
           // Check email
           if($this->userModel->findUserByEmail($data['email'])){
-            $data['email_err'] = 'Cet adresse mail est déjà enregistrée';
+            $data['email_err'] = 'Cet adresse mail est déjà enregistré. Veuillez réessayer à nouveau.';
           }
         }
 

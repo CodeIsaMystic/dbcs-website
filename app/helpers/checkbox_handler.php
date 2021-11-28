@@ -3,7 +3,6 @@
 
 /**
  * Function get value from input if checked
- * @param string the string data to checkout
  * 
  * @return integer 1 or 0 if checked or not
  */

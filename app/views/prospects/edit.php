@@ -13,7 +13,7 @@
 <!-- SECTION EDIT-PROSPECT -->
 <section class="edit-post pb-lg pt-lg">
   <!-- BACK BTN -->
-  <div class="container container--lg">
+  <div class="container container--lg pX">
 
     <div class="txt-dark mb">
       <a href="<?php echo URL_ROOT; ?>/prospects/list" class="link link-dark link--underline">
@@ -23,9 +23,9 @@
 
   </div>
   <!-- EDIT PROSPECT -->
-  <div class="container container--md">
-    <div class="grid--1-col b-radius4 box-shad1">
-      <div class="post-content txt-dark txt-content">
+  <div class="container container--md pX">
+    <div class="grid--1-col b-radius4 box-shad">
+      <div class="post-content txt-dark txt-content pX">
         <h3 class="heading-secondary txt-dark-gray font-garamond mt-xs mb-xs">
           Modifier votre prospect
         </h3>
@@ -41,7 +41,7 @@
           <!-- SECTION BASE-INFO -->
           <div>
             <span class="b-radius4">
-              <p class="txt-content--xsmall txt-center txt-danger mb-xxs"><?php echo ($data['prospect_main_err']);?></p>
+              <span class="txt-content--xsmall txt-center txt-danger mb-xxs"><?php echo ($data['prospect_main_err']);?></span>
             </span>
             <!-- heading -->
             <h3 class="subheading txt-upp fontW700 mb-xs" tabindex="0"> 
@@ -54,50 +54,53 @@
 
             <!-- name -->
             <div class="form-admin-prospect--display base-info-name">
-              <label class="fontW700 txt-blue mb-xxs">Nom de votre prospect</label>
+              <label class="fontW700 txt-blue mb-xxs" for="prospectName" >Nom de votre prospect</label>
               
               <span class="b-radius4">
-                <p class="txt-content--xsmall txt-danger"><?php echo ($data['prospect_name_err']);?></p>
+                <span class="txt-content--xsmall txt-danger"><?php echo ($data['prospect_name_err']);?></span>
               </span>
               
               <input 
                 type="text" 
                 name="prospect_name" 
                 class="bg-white mb-xxs" 
+                id="prospectName"
                 value="<?php echo ($data['prospect']->prospect_name); ?>">
             </div>
         
             <!-- email -->
             <div class="form-admin-prospect--display base-info-email mb-xxs">
-              <label class="fontW700 txt-blue mb-xxs">Email de votre prospect</label>
+              <label class="fontW700 txt-blue mb-xxs" for="prospectEmail" >Email de votre prospect</label>
 
               <span class="b-radius4">
-                <p class="txt-content--xsmall txt-danger"><?php echo ($data['prospect_email_err']); ?></p>
+                <span class="txt-content--xsmall txt-danger"><?php echo ($data['prospect_email_err']); ?></span>
               </span>
             
               <input 
                 type="email" 
                 name="prospect_email" 
-                class="bg-white mb-xxs" 
+                class="bg-white mb-xxs"
+                id="prospectEmail" 
                 value="<?php echo ($data['prospect']->prospect_email); ?>">
             </div>
 
             <!-- phone -->
             <div class="base-info-phone">
-              <label class="fontW700 txt-blue">Numéro de téléphone</label>
+              <label class="fontW700 txt-blue" for="prospectPhone" >Numéro de téléphone</label>
               <p class="txt-content--small mt-xs mb-xxs">
                 Le numéro de téléphone doit <span class="fontW700">impérativement commencer par "0"</span> et <span class="fontW700">contenir 10 chiffres</span>. Notez que vous pouvez laisser ce champs vide si vous le souhaitez.
               </p>
 
               
               <span class="b-radius4">
-                <p class="txt-content--xsmall txt-danger"><?php echo ($data['prospect_phone_err']); ?></p>
+                <span class="txt-content--xsmall txt-danger"><?php echo ($data['prospect_phone_err']); ?></span>
               </span>
             
               <input 
                 type="tel" 
                 name="prospect_phone" 
                 class="bg-white" 
+                id="prospectPhone"
                 value="<?php echo $data['prospect']->prospect_phone; ?>">
             </div>
           </div>
@@ -115,27 +118,31 @@
             </p>
             
             <div>
+              <!-- address nr -->
               <div class="form-admin-prospect--display address-nr">
-                <label class="fontW700 txt-blue mb-xxs" tabindex="0">Numéro:</label>
-                <input type="number" name="prospect_address_nr" class="bg-white mb-xxs" value="<?php echo $data['prospect']->prospect_address_nr; ?>">
+                <label class="fontW700 txt-blue mb-xxs" for="prospectAddressNr" tabindex="0">Numéro:</label>
+                <input type="number" id="prospectAddressNr" name="prospect_address_nr" class="bg-white mb-xxs" value="<?php echo $data['prospect']->prospect_address_nr; ?>">
               </div>
               
+              <!-- address str -->
               <div class="form-admin-prospect--display address-str">
-                <label class="fontW700 txt-blue mb-xxs" tabindex="0">Rue:</label>
-                <input type="text" name="prospect_address_str" class="bg-white mb-xxs" value="<?php echo $data['prospect']->prospect_address_str; ?>">
+                <label class="fontW700 txt-blue mb-xxs" for="prospectAddressStr"  tabindex="0">Rue:</label>
+                <input type="text" id="prospectAddressStr" name="prospect_address_str" class="bg-white mb-xxs" value="<?php echo $data['prospect']->prospect_address_str; ?>">
               </div>
             </div>
             
             
             <div>
+              <!-- postal code -->
               <div class="form-admin-prospect--display location-code">
-                <label class="fontW700 txt-blue mb-xxs" tabindex="0">Code Postal:</label>
-                <input type="number" name="prospect_postal_code" class="bg-white mb-xxs" value="<?php echo $data['prospect']->prospect_postal_code; ?>">
+                <label class="fontW700 txt-blue mb-xxs" for="prospectPostalCode" tabindex="0">Code Postal:</label>
+                <input type="number" id="prospectPostalCode" name="prospect_postal_code" class="bg-white mb-xxs" value="<?php echo $data['prospect']->prospect_postal_code; ?>">
               </div>
               
+              <!-- city -->
               <div class="form-admin-prospect--display location-city">
-                <label class="fontW700 txt-blue mb-xxs" tabindex="0">Ville:</label>
-                <input type="text" name="prospect_city" class="bg-white mb-xxs" value="<?php echo $data['prospect']->prospect_city; ?>">
+                <label class="fontW700 txt-blue mb-xxs" for="prospectCity" tabindex="0">Ville:</label>
+                <input type="text" id="prospectCity" name="prospect_city" class="bg-white mb-xxs" value="<?php echo $data['prospect']->prospect_city; ?>">
               </div>
             </div> 
           </div>
@@ -153,12 +160,12 @@
             
             <!-- type coaching -->
             <div class="form-admin-prospect--display type-coaching">
-              <label class="fontW700 txt-blue mb-xxs">
+              <label class="fontW700 txt-blue mb-xxs" for="coachingSubject" >
                 Coaching
               </label>
               <div>
-                <select name="" class="bg-white"> 
-                  <option value="default"></option>
+                <select name="coaching_subject" id="coachingSubject" class="bg-white"> 
+                  <option value="default">Choisir</option>
                   <option value="basic">Programme Basique</option>
                   <option value="fit">Programme Fitness</option>
                   <option value="weight-loss">Programme Régime</option>
@@ -174,16 +181,16 @@
             <!-- is-customer -->
             <div class="form-admin-prospect--display is-customer">
               <div>
-                <input class="bg-white" name="isCustomer" type="checkbox" value="0">
-                <label>Client</label>
+                <input class="bg-white" id="isCustomer" name="is_customer" type="checkbox" value="0">
+                <label for="isCustomer" >Client</label>
               </div>
             </div>
             
-            <!-- had-free-course -->
+            <!-- free-course -->
             <div class="form-admin-prospect--display free-course">
               <div>
-                <input class="bg-white" name="freeCourse" type="checkbox" value="0">
-                <label>Essai gratuit</label>
+                <input class="bg-white" id="freeCourse" name="free_course" type="checkbox" value="<?php echo $data['prospect']->free_course; ?>">
+                <label for="freeCourse" >Essai gratuit</label>
               </div>
             </div>
           </div>

@@ -2,7 +2,7 @@
 
     <!-- FOOTER -->
     <footer class="footer bg-dark">
-      <div class="container container--md grid grid--footer">
+      <div class="container container--md grid grid--footer pX">
         <div class="col-logo">
           <span>
             <img
@@ -11,6 +11,14 @@
               src="<?= URL_ROOT; ?>/img/site/logos/logo-dbcs/logo-square-light-500.png"
             />
           </span>
+
+          <p>
+            <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                <img style="border:0;width:88px;height:31px"
+                    src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+                    alt="CSS Valide !" />
+                </a>
+            </p>
 
 
           <p class="copyright txt-light txt-content--small mt-xs">

@@ -27,19 +27,47 @@ class Pages extends Controller {
         meilleur jour après jour.',
         'prospect_name' => trim($_POST['prospect_name']),
         'prospect_email' => trim($_POST['prospect_email']),
+        'prospect_phone' => null,
+        'free_course' => 0,
+        // 'ask_free_course' => $_POST['free_course'],
+        'prospect_address_nr' => '',
+        'prospect_address_str' => '',
+        'prospect_postal_code' => '',
+        'prospect_city' => '',
+        'is_customer' => 0,
         'prospect_name_err' => '',
         'prospect_email_err' => '',
       ];
       
-      // validate the data
+      // throw err message if empty
       if(empty($data['prospect_name'])){
         $data['prospect_name_err'] = 'Veuillez ajoutez le nom du prospect';
       }
       if(empty($data['prospect_email'])){
         $data['prospect_email_err'] = "Ajoutez l'email du prospect";
+      } else {
+        // Check email
+        if($this->prospectModel->getProspectByEmail($data['prospect_email'])){
+          // $data['email_err'] = 'Cet adresse mail est déjà enregistrée';
+          flash('email_err_message', 'Le formulaire n\'a pas pu être envoyé. <br> Cet email est déjà enregistré. Essayez à nouveau.', ' txt-danger' );
+          redirect('pages/index');
+        }
       }
-          
-      // make sure there are no errors
+
+      // handle checkbox input if checked or not
+      // if(handleCheckboxValue($data['ask_free_course']) === 1) {
+      //   $data['ask_free_course'] = 'Ce nouveau prospect demande un essai gratuit pour son premier cours. Contacté le: ' . date("d.m.y");
+      //   $data['free_course'] = 1;
+      // } else {
+      //   $data['ask_free_course'] = '';
+      //   $data['free_course'] = 0;        
+      // }
+      
+      // var_dump($data);
+      // die();
+      
+      
+      // make sure there are no errors before to submit
       if(
         empty($data['prospect_name_err']) && 
         empty($data['prospect_email_err'])) {
@@ -64,6 +92,14 @@ class Pages extends Controller {
         meilleur jour après jour.',
         'prospect_name' => '',
         'prospect_email' => '',
+        'prospect_phone' => null,
+        'free_course' => 0,
+        // 'ask_free_course' => '',
+        'is_customer' => 0,
+        'prospect_address_nr' => '',
+        'prospect_address_str' => '',
+        'prospect_postal_code' => '',
+        'prospect_city' => '',
         'prospect_name_err' => '',
         'prospect_email_err' => '',
       ];

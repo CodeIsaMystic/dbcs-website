@@ -1,75 +1,12 @@
-/****************/
-/****************/
-/****************/
-/****************/
-/****************/
-/****************/
-/****************/
-/****************/
-/****************/
-/******************/
-/* ADD EDIT POST */
-/****************/
-.add-post .post-content,
-.edit-post .post-content {
-  padding: 0 3.2rem;
-}
+/**********************/
+/* INPUT SOURCE LINK */
+/********************/
 /* input source_link indentation issue */
 .add-post .post-content .source-link input,
 .edit-post .post-content .source-link input {
   text-indent: -50px;
 }
-/****************/
-/****************/
-/****************/
-/****************/
-/****************/
-/****************/
-/****************/
-/****************/
-/****************/
-/***************/
-/*  CKEDITOR  */
-/*************/
-/*Textbox*/
-.ck-editor__editable {
-  min-height: 350px;
-  max-height: 350px;
-  min-width: 100%;
-  // max-width: 450px;
-  max-width: 450px;
-  width: 100%;
-}
-/*Toolbar*/
-.ck-editor__top {
-  min-width: 100%;
-  max-width: 450px;
-  width: 100%;
-}
-/*Scrollbar*/
-.ck-editor ::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  background-color: #fff;
-}
-.ck-editor ::-webkit-scrollbar {
-  width: 14px;
-  background-color: #fff;
-}
-.ck-editor ::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: rgb(115, 115, 115);
-}
-/****************/
-/****************/
-/****************/
-/****************/
-/****************/
-/****************/
-/****************/
-/****************/
-/****************/
+
 /****************/
 /* POSTS POST  */
 /**************/
@@ -78,8 +15,6 @@
   width: 100%;
 }
 /* blog posts img */
-.posts .post .img {
-}
 .posts .post .img img {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
@@ -139,24 +74,24 @@
 /* POST PAGE  */
 /*************/
 /* show post-page */
-.post-page-hero {
-  width: 100%;
-  height: 90vh;
-  position: relative;
-  overflow: hidden;
-}
-.post-page-hero div picture img {
-  width: 100%;
-}
-.post-page-hero__heading {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60%;
-  padding: 4.8rem;
-  background-color: rgba(255, 255, 255, 0.85);
-}
+// .post-page-hero {
+//   width: 100%;
+//   height: 90vh;
+//   position: relative;
+//   overflow: hidden;
+// }
+// .post-page-hero div picture img {
+//   width: 100%;
+// }
+// .post-page-hero__heading {
+//   position: absolute;
+//   top: 40%;
+//   left: 50%;
+//   transform: translateX(-50%);
+//   width: 60%;
+//   padding: 4.8rem;
+//   background-color: rgba(255, 255, 255, 0.85);
+// }
 .post-page {
   width: 75%;
   margin: 9.6rem auto 0;
@@ -259,204 +194,4 @@
 .posts .post .post-content__article ol li,
 .post-page .post-content ol li {
   list-style-type: decimal;
-}
-/****************/
-/*  DATATABLE  */
-/**************/
-.dataTables_length label,
-.dataTables_filter label {
-  font-size: 1.4rem;
-  line-height: 1.2;
-  margin-bottom: 1.2rem;
-}
-.dataTables_length label {
-  width: 65px;
-}
-.dataTables_paginate,
-.dataTables_info {
-  padding-bottom: 1.2rem;
-}
-.dataTables_info {
-  font-size: 1.4rem;
-  line-height: 1.2;
-}
-.dataTables_paginate {
-  font-size: 1.4rem;
-  line-height: 1.2;
-}
-#myTable_wrapper.dataTables_wrapper {
-  width: 93%;
-  margin: 0 auto;
-}
-/************/
-/*  TABLE  */
-/**********/
-/* table */
-#myTable th,
-table#myTable {
-  border-bottom-color: #23232366;
-}
-
-/* table cells */
-.cell {
-  transition: all 0.3s ease-in-out;
-}
-#myTable .cell--btn,
-#myTable .cell--date {
-  width: 20%;
-  text-align: center;
-}
-#myTable .cell--main {
-  width: 60%;
-  text-align: left;
-}
-.cell--date {
-  font-size: 1.4rem;
-}
-.btn-table {
-  margin-right: 2.4rem;
-}
-form .btn-table {
-  margin-right: 0;
-}
-.cell--btn a,
-.cell--btn form input {
-  border-bottom: 1px solid #232323;
-}
-.cell--btn a,
-.cell--btn form {
-  display: inline-block;
-}
-.btn-table {
-  margin-bottom: 0.1rem;
-  cursor: pointer;
-  width: 60px;
-  font-size: 1.4rem;
-  padding: 0.4rem 0.2rem;
-  color: #232323c9;
-  text-align: center;
-}
-.btn-table--yellow {
-  background-color: #fffae0;
-}
-.btn-table--blue {
-  background-color: #46a1c9;
-}
-.btn-table--yellow:hover,
-.btn-table--yellow:focus,
-.btn-table--blue:hover,
-.btn-table--blue:focus {
-  opacity: 0.85;
-  color: #232323;
-}
-
-/***************/
-/*   FORMS    */
-/*************/
-/* form-contact */
-
-/* form-prospect */
-/* form-admin-partner */
-/* form-admin-prospect */
-.form-admin-prospect--display,
-.form-admin-partner--display {
-  display: inline-block;
-}
-.base-info-name,
-.base-info-email,
-.partner-company-name,
-.partner-email {
-  width: 40%;
-}
-.base-info-phone,
-.location-code,
-.location-city,
-.type-coaching,
-.type-partnership,
-.type-activity,
-.partner-city {
-  width: 28%;
-}
-.address-nr {
-  width: 100px;
-}
-.address-str {
-  width: 65%;
-}
-.base-info-name,
-.address-nr,
-.partner-company-name,
-.partner-city {
-  margin-right: 10px;
-}
-.is-customer,
-.free-course,
-.is-web-business,
-.have-deal {
-  width: 150px;
-}
-
-.is-customer,
-.is-web-business,
-.have-deal {
-  margin-left: 50px;
-}
-.is-customer input,
-.free-course input,
-.is-web-business input,
-.have-deal input {
-  box-shadow: none;
-  width: 20px;
-  align-self: center;
-}
-
-.is-customer div,
-.free-course div,
-.is-web-business div,
-.have-deal div,
-.type-activity div {
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-}
-
-.is-customer label,
-.is-customer label,
-.is-web-business label,
-.have-deal label {
-  width: 130px;
-  align-self: center;
-}
-
-/*  form-contact  */
-.contact-form .container .contact-form__content {
-  padding: 4.8rem;
-  background-color: rgba(255, 255, 255, 0.5);
-}
-/* small form  */
-.form--small input[typ="submit"],
-.form--small button[type="submit"] {
-  margin: 0 auto;
-}
-
-/**********************/
-/* PATTERN X PADDING */
-/********************/
-/* padding: 0 3.2rem;
-cta text box
-cta
-show prospect / partners
-register / login
-add-post post-content 
-edit-post post-content
-header media queries
-grid--hero media queries
-hero
-container
-...
-*/
-/* login & register  */
-.register .register--text,
-.login .login--text {
-  padding: 0 3.2rem;
 }

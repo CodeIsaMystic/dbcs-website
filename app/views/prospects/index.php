@@ -1,15 +1,13 @@
-<?php
-// echo 'Prospect page';
-// var_dump($data);
-// die();
-?>
+<!-- HEADER -->
+<?php require APP_ROOT . '/views/inc/header.php'; ?>
 
-<!-- SECTION PROSPECTS --->
-<?php foreach($data['prospects'] as $prospect) : ?>
-
-<section class="posts bg-white pb-md">
-  <div class="container container--md">
-    <article class="post grid--1-col b-radius4 box-shad1">
+<!-- SECTION PROSPECTS -->
+<section class="posts bg-white mt-lg pb-md">
+  <div class="container container--md pX">
+    <h2 class="heading-secondary txt-dark-gray fontW500 font-garamond mb">Tout les prospects enregistrés</h2>
+    
+    <?php foreach($data['prospects'] as $prospect) : ?>
+    <article class="post grid--1-col b-radius4 box-shadmb-sm">
 
       <div class="post-content">
 
@@ -32,17 +30,19 @@
             <?php  echo $prospect->prospect_email; ?>
           </p>
           
-          <a href="#" class="link link--underline mt-sm">
+          <a href="<?php //echo URL_ROOT; ?>/prospects/show/<?php// echo $prospect->prospect_id; ?>" class="link link--underline mt-sm">
           Voir fiche contact &rarr;
           </a>
-          <!-- <a href="<?php //echo URL_ROOT; ?>/prospects/show/<?php// echo $prospect->prospect_id; ?>" class="link link--underline mt-sm">
-          Voir fiche contact &rarr;
-          </a> -->
         </div>
       </div>
     </article>
+    <?php endforeach; ?>
+
   </div>
 </section>
 
-<?php endforeach; ?>
+
+
+<!-- FOOTER -->
+<?php require APP_ROOT . '/views/inc/footer.php'; ?>
 

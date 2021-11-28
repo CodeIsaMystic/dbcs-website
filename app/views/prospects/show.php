@@ -22,13 +22,13 @@
 
 
  <!-- SECTION HERO PROSPECT PAGE -->
-<section class="hero--fullW bg-white">
+<section class="full-width bg-white">
   <div>
     <picture>
       <img src="<?php echo URL_ROOT; ?>/img/site/full-width/jogger.jpg" alt="Image of a jogger in the street"/>
     </picture>
   </div>
-  <div class="hero--fullW__heading hero--fullW__heading--center">
+  <div class="full-width__heading full-width__heading--center">
     <h4 class="subheading fontW700 txt-upp txt-blue">Prospect</h4>
     <h1 class="heading-primary txt-dark-gray txt-center fontW500 font-garamond">
       <?php echo $data['prospect']->prospect_name; ?>
@@ -46,7 +46,7 @@
 <!-- SECTION CONTENT PROSPECT PAGE -->
 <section class="post-page bg-white pb-md">
   <!-- BACK BTN -->
-  <div class="container container--lg">
+  <div class="container container--lg pX">
 
     <div class="txt-dark mb">
       <a href="<?php echo URL_ROOT; ?>/prospects/list" class="link link-dark link--underline">
@@ -58,9 +58,9 @@
 
 
   <!-- PROSPECT PAGE INFO CONTENT -->
-  <div class="add-post container container--md">
-    <div class="grid--1-col b-radius4 box-shad1">
-      <div class="post-content txt-dark txt-content">
+  <div class="add-post container container--md pX">
+    <div class="grid--1-col b-radius4 box-shad">
+      <div class="post-content txt-dark txt-content pX">
         <h2 class="heading-secondary txt-dark-gray font-garamond mt-xs mb-xs">
           Informations sur le prospect 
           <span class="txt-blue">
@@ -104,16 +104,16 @@
           <h5 class="fontW500 mt-xs">
             Numéro de téléphone: 
           </h5>
-            <?php 
-              if(isValidPhone($phone_number)) {
-                echo '<span class="txt-content--xsmall txt-blue">' . $phone_number . '</span>';
-              } elseif(empty($phone_number)) {
-                echo '<span class="txt-content--xsmall txt-blue">Aucun numéro enregistré pour le moment.</span>';
-              } 
-              else {
-                echo '<span class="txt-content--xsmall txt-blue">Aucun numéro enregistré pour le moment.</span>';
-              } 
-            ?> 
+          <?php 
+            if(isValidPhone($phone_number)) {
+              echo '<span class="txt-content--xsmall txt-blue">' . $phone_number . '</span>';
+            } elseif(empty($phone_number)) {
+              echo '<span class="txt-content--xsmall txt-blue">Aucun numéro enregistré pour le moment.</span>';
+            } 
+            else {
+              echo '<span class="txt-content--xsmall txt-blue">Aucun numéro enregistré pour le moment.</span>';
+            } 
+          ?> 
 
           <!-- address -->
           <h5 class="fontW500 mt-xs">
@@ -137,36 +137,34 @@
           <h5 class="fontW500 mt-xs"> 
             Essai gratuit
           </h5>
-            <?php if($data['prospect']->had_free_course === "1") : ?>
-              <span class="txt-content--xsmall txt-blue">
-                <?= $data['prospect']->prospect_name . " a bénéficié de son essai gratuit."; ?>
-              </span>
-            <?php else : ?>
-              <span class="txt-content--xsmall txt-danger">
-                <?= $data['prospect']->prospect_name . " n'a pas bénéficié de son cours d'essai gratuit."; ?>
-              </span>
-            <?php endif; ?>
+
+          <?php if($data['prospect']->free_course === "1") : ?>
+            <span class="txt-content--xsmall txt-blue">
+              <?= $data['prospect']->prospect_name . " a bénéficié de son essai gratuit."; ?>
+            </span>
+          <?php else : ?>
+            <span class="txt-content--xsmall txt-danger">
+              <?= $data['prospect']->prospect_name . " n'a pas bénéficié de son cours d'essai gratuit."; ?>
+            </span>
+          <?php endif; ?>
              
           <!-- is-customer / type_coaching -->
           <h5 class="fontW500 mt-xs"> 
             Coaching
           </h5>  
           
-            <?php if($data['prospect']->prospect_is_customer === "1") : ?>
-              <span class="txt-content--xsmall txt-blue">
-                <?php echo $data['prospect']->prospect_name . " est client, ..."; ?>
-              </span>    
-            <?php else : ?>
-              <span class="txt-content--xsmall txt-danger">
-                <?php echo $data['prospect']->prospect_name . " n'est pas encore client, ..."; ?>
-              </span>
-            <?php endif; ?>
+          <?php if($data['prospect']->is_customer === "1") : ?>
+            <span class="txt-content--xsmall txt-blue">
+              <?php echo $data['prospect']->prospect_name . " est client, ..."; ?>
+            </span>    
+          <?php else : ?>
+            <span class="txt-content--xsmall txt-danger">
+              <?php echo $data['prospect']->prospect_name . " n'est pas encore client, ..."; ?>
+            </span>
+          <?php endif; ?>
           
           <span class="txt-content--xsmall txt-blue">
-            <?//= 'Programme "Régime minceur" le 30-11-21'; ?>
             <?php 
-              // - Il a commencé son programme le "date_started_plan"
-              //
               // if(isset($data['prospect']->coaching_subject)) {
               //   echo $data['prospect']->coaching_subject;
               // } else {
@@ -183,7 +181,7 @@
 
 
 
-  </div>
+  <!-- </div> -->
 
 </section>
 

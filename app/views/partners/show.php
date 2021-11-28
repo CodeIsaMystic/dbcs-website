@@ -16,13 +16,13 @@
 
 
  <!-- SECTION HERO PARTNER PAGE -->
-<section class="hero--fullW bg-white">
+<section class="full-width bg-white">
   <div>
     <picture>
       <img src="<?php echo URL_ROOT; ?>/img/site/full-width/jogger.jpg" alt="Image of a jogger in the street"/>
     </picture>
   </div>
-  <div class="hero--fullW__heading hero--fullW__heading--center">
+  <div class="full-width__heading full-width__heading--center">
     <h4 class="subheading fontW700 txt-upp txt-blue">Partenaire</h4>
     <h1 class="heading-primary txt-dark-gray txt-center fontW500 font-garamond">
       <?php echo $data['partner']->partner_company_name; ?>
@@ -40,7 +40,7 @@
 <!-- SECTION CONTENT PARTNER PAGE -->
 <section class="post-page bg-white pb-md">
   <!-- BACK BTN -->
-  <div class="container container--lg">
+  <div class="container container--lg pX">
 
     <div class="txt-dark mb">
       <a href="<?php echo URL_ROOT; ?>/partners/list" class="link link-dark link--underline">
@@ -51,9 +51,9 @@
   </div>
 
   <!-- PARTNER PAGE INFO CONTENT -->
-  <div class="add-post container container--md">
-    <div class="grid--1-col b-radius4 box-shad1">
-      <div class="post-content txt-dark txt-content">
+  <div class="add-post container container--md pX">
+    <div class="grid--1-col b-radius4 box-shad">
+      <div class="post-content txt-dark txt-content pX">
         <h2 class="heading-secondary txt-dark-gray font-garamond mt-xs mb-xs">
           Informations sur le partenaire 
           <span class="txt-blue"><?= $data['partner']->partner_company_name ?></span>.

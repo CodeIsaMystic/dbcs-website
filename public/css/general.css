@@ -66,19 +66,11 @@ label {
   display: block;
   font-size: 1.6rem;
 }
+/*
 textarea {
   text-indent: -80px;
 }
-
-/************************************************/
-/************************************************/
-/************************************************/
-/************************************************/
-/************************************************/
-/************************************************/
-/************************************************/
-/************************************************/
-
+*/
 input,
 textarea,
 select {
@@ -91,7 +83,7 @@ select {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 input:focus {
-  border-radius: none !important;
+  border-radius: 0;
   border: 0.5px solid #333;
 }
 input::placeholder {
@@ -105,10 +97,6 @@ select:focus-visible {
   outline-style: auto;
   outline-width: 0.5px;
 }
-/************************************************/
-/************************************************/
-/************************************************/
-
 /* not allowed */
 .not-allowed {
   cursor: not-allowed !important;
@@ -172,13 +160,9 @@ select:focus-visible {
 .txt-danger {
   color: #f84f4f;
 }
-
-/*******************************************/
-/*******************************************/
-/*******************************************/
-/*******************************************/
-/*******************************************/
-/*******************************************/
+.txt-success {
+  color: #42ba96;
+}
 /* Linear-gradient  */
 .linear-grad-blue {
   background-image: linear-gradient(to right bottom, #5db8df73, #46a1c90d);
@@ -194,27 +178,6 @@ select:focus-visible {
 .bg-dark {
   background-color: #232323;
 }
-.bg-blue {
-  background-color: #46a1c9;
-}
-.bg-green1 {
-  background-color: #51cf66;
-}
-.bg-green2 {
-  background-color: #94d82d;
-}
-// .bg-danger {
-//   background-color: #f84f4f;
-// }
-
-/*******************************************/
-/*******************************************/
-/*******************************************/
-/*******************************************/
-/*******************************************/
-/*******************************************/
-/*******************************************/
-
 /**************/
 /*    GRID   */
 /************/
@@ -239,16 +202,7 @@ select:focus-visible {
 .grid--4-cols {
   grid-template-columns: repeat(4, 1fr);
 }
-
-/**************************/
-/**************************/
-/**************************/
-/**************************/
-/**************************/
 /*  grid gap  */
-.grid-gap--small {
-  column-gap: 0.8rem;
-}
 .grid-gap--medium {
   column-gap: 2.4rem;
 }
@@ -259,11 +213,6 @@ select:focus-visible {
 .grid--center-v {
   align-items: center;
 }
-/**************************/
-/**************************/
-/**************************/
-/**************************/
-
 /*  grid template  */
 .grid--hero {
   display: grid;
@@ -286,7 +235,7 @@ select:focus-visible {
   grid-template-columns: repeat(3, 1fr);
   gap: 0.3rem;
 }
-.grid--cta {
+.grid--form-prospect {
   display: grid;
   grid-template-columns: 2fr 1fr;
 }
@@ -315,7 +264,7 @@ select:focus-visible {
   border-radius: 50%;
 }
 /*  Box-shadow  */
-.box-shad1 {
+.box-shad {
   box-shadow: 0 2.4rem 4.8rem #23232326;
 }
 /*  marginY  */
@@ -363,6 +312,10 @@ select:focus-visible {
 }
 .mr-xs {
   margin-right: 1.6rem;
+}
+/* paddingX */
+.pX {
+  padding: 0 3.2rem;
 }
 /*  paddingY  */
 .pb-xxs {

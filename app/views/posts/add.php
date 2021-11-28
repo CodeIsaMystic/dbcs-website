@@ -4,7 +4,7 @@
 <!-- SECTION ADD-POST -->
 <section class="add-post pb-lg pt-lg">
   <!-- BACK BTN -->
-  <div class="container container--lg">
+  <div class="container container--lg pX">
 
     <div class="txt-dark mb">
       <a href="<?php echo URL_ROOT; ?>/posts/list" class="link link-dark link--underline">
@@ -14,9 +14,9 @@
 
   </div>
   <!-- ADD FORM -->
-  <div class="container container--md">
-    <div class="grid--1-col b-radius4 box-shad1">
-      <div class="post-content txt-dark txt-content">
+  <div class="container container--md pX">
+    <div class="grid--1-col b-radius4 box-shad">
+      <div class="post-content txt-dark txt-content pX">
         <h3 class="heading-secondary txt-dark-gray font-garamond mt-xs mb-xs">
           Ajoutez un article
         </h3>
@@ -30,19 +30,19 @@
         <form action="<?php echo URL_ROOT; ?>/posts/add" method="post" enctype="multipart/form-data">
           <!-- TITLE ARTICLE -->
           <div>
-            <label class="fontW700 txt-blue mb-xxs" for="title">Titre de l'article</label>
+            <label class="fontW700 txt-blue mb-xxs" for="postTitle">Titre de l'article</label>
             
             <span class="b-radius4">
-              <p class="txt-content--xsmall txt-danger"><?php echo $data['title_err'];?></p>
+              <span class="txt-content--xsmall txt-danger"><?php echo $data['title_err'];?></span>
             </span>
             
-            <input type="text" name="title" class="bg-white mb-xxs" value="<?php echo $data['title']; ?>">
+            <input type="text" name="title" class="bg-white mb-xxs" id="postTitle" value="<?php echo $data['title']; ?>">
           </div>
           
           <!-- IMAGE ARTICLE -->
           <div>
             <label class="fontW700 txt-blue mt mb-xxs" 
-            for="image">Sélectionnez une image à uploader (PNG, JPG)</label>
+            for="postImage">Sélectionnez une image à uploader (PNG, JPG)</label>
 
              <p class="txt-content--xsmall mb-xs">
               Essayez d'ajouter <span class="fontW700">une image aux dimensions adaptées</span> afin d'éviter les problèmes d'affichage. Pensez également à <span class="fontW700">la taille du fichier</span> qui à terme pourrait affecter le chargement de vos pages dès lors que vous aurez ajouté un certain nombre d'articles.
@@ -62,24 +62,19 @@
             </ul>
 
             <span class="b-radius4">
-              <p class="txt-content--xsmall txt-danger"><?php echo $data['image_err'];?></p>
+              <span class="txt-content--xsmall txt-danger"><?php echo $data['image_err'];?></span>
             </span>
 
             <input
               type="file" 
-              id="image" 
+              id="postImage" 
               name="image" 
               accept=".jpg, .jpeg, .png">
-          </div>
-          
-          <!-- PREVIEW IMAGE -->
-          <div class="preview">
-              <!-- <img src="#" alt="preview of selected upload image"/>  -->
           </div>
 
           <!-- BODY TEXT CONTENT -->
           <div>
-            <label class="fontW700 txt-blue mt mb-xxs" for="body">Textes & Paragraphes</label>
+            <label class="fontW700 txt-blue mt mb-xxs" for="editor">Textes & Paragraphes</label>
 
             <p class="txt-content--xsmall">
               Ajoutez le contenu dans la section "Textes
@@ -92,17 +87,17 @@
             </p>
 
             <span class="b-radius4">
-              <p class="txt-content--xsmall txt-danger"><?php  echo $data['body_err']; ?></p>
+              <span class="txt-content--xsmall txt-danger"><?php  echo $data['body_err']; ?></span>
             </span>
           
-            <textarea id="editor" class="b-radius4 bg-white mb-xxs" type="text" name="body">
+            <textarea id="editor" class="b-radius4 bg-white mb-xxs" name="body">
               <?php   echo htmlentities($data['body']); ?>
             </textarea>
           </div>
           
           <!-- SOURCE LINK ARTICLE -->
           <div class="source-link">
-            <label class="fontW700 txt-blue mt mb-xxs" for="source_link">Lien vers l'article</label>
+            <label class="fontW700 txt-blue mt mb-xxs" for="postSourceLink">Lien vers l'article</label>
             
             
             <p class="txt-content--xsmall">
@@ -114,10 +109,10 @@
             </p>
             
             <span class="b-radius4 mb-xxs">
-              <p class="txt-content--xsmall txt-danger"><?php echo $data['source_link_err'];?></p>
+              <span class="txt-content--xsmall txt-danger"><?php echo $data['source_link_err'];?></span>
             </span>
             
-            <input class="bg-white mb-xxs" type="text" name="source_link" value="
+            <input class="bg-white mb-xxs" id="postSourceLink" type="text" name="source_link" value="
             <?php  if($data['source_link'] !== null) {
               echo $data['source_link']; 
             } else {
@@ -127,7 +122,7 @@
           </div>
           
           <!-- INPUT SUBMIT -->
-          <div class="">
+          <div>
             <input type="submit" class="btn btn-hover btn-hover--dark btn25 mt-xs mb-xs" value="Publiez le Post">
           </div>
 

@@ -12,7 +12,7 @@
    * @param string the CSS class to add on the 'div' element
    * 
    */
-  function flash(string $name = '',string $message = '',string $class = 'txt-content alert alert-success') {
+  function flash(string $name = '',string $message = '',string $class = 'txt-content alert txt-success') {
     if(!empty($name)){
       if(!empty($message) && empty($_SESSION[$name])){
         if(!empty($_SESSION[$name])){

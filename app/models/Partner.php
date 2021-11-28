@@ -46,6 +46,21 @@ class Partner {
     return $row;
   }
 
+  public function getPartnerByEmail($email){
+    $this->db->query('SELECT * FROM partners WHERE partner_email = :email');
+    // Bind value
+    $this->db->bind(':email', $email);
+
+    $row = $this->db->single();
+
+    // Check row
+    if($this->db->rowCount() > 0){
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   public function updatePartner($data){
     $this->db->query('UPDATE partners SET partner_company_name = :company_name, partner_email = :email, partner_phone = :phone, partner_city = :city, is_web_business = :is_web_business, have_deal = :have_deal WHERE partner_id = :id');
     // Bind values
