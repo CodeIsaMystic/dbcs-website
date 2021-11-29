@@ -14,7 +14,7 @@
 <section class="full-width bg-white">
   <div>
     <picture>
-      <img src="<?php echo URL_ROOT; ?>/img/site/full-width/ropes.jpg" alt="image of a man with a light in his hands"/>
+      <img src="<?php echo URL_ROOT; ?>/img/site/hero/ropes.jpg" alt="image of a man with a light in his hands"/>
     </picture>
   </div>
   <div class="full-width__heading full-width__heading--left">

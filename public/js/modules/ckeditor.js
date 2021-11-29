@@ -35,12 +35,3 @@ ClassicEditor.create(document.querySelector("#editor"), {
 }).catch((error) => {
   console.log(error)
 })
-
-//   shouldNotGroupWhenFull: true
-// },
-// link: {
-// 	addTargetToExternalLinks: false
-// },
-// ui: {
-//   viewportOffset: { top: 10, right: 10, bottom: 10, left: 10 }
-// }

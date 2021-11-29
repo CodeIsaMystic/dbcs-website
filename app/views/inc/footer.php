@@ -38,7 +38,7 @@
             </p>
             <p>
               Mail: <br />
-              <a class="link-light" href="mailto:contact@dbcs.com"
+              <a class="link-light" href="#"
                 >contact@dbcs.com</a
               >
             </p>

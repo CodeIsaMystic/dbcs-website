@@ -14,7 +14,7 @@
 <section class="full-width bg-white">
   <div>
     <picture>
-      <img src="<?php echo URL_ROOT; ?>/img/site/full-width/coaching.jpg" alt="Two womens doing sport in a gym"/>
+      <img src="<?php echo URL_ROOT; ?>/img/site/hero/coaching.jpg" alt="Two womens doing sport in a gym"/>
     </picture>
   </div>
   <div class="full-width__heading full-width__heading--left">
@@ -147,7 +147,7 @@
 </div>
 
 <div class="container container--md txt-center pX">
-  <a href="coaching.html" class="link link--underline mt-md mb-md"
+  <a href="#" class="link link--underline mt-md mb-md"
     >En direct ou bien avec le formulaire ci-dessous, le coach vous contactera</a
   >
 </div>
@@ -480,7 +480,7 @@
   <div class="container container--md grid grid-gap--large pX">
     <aside class="txt-content txt-center">
       Nos prix comprennent la TVA & tout nos cours/abonnements inclus les
-      services suivants:
+      services cité ci-dessus.
     </aside>
   </div>
 </section>

@@ -14,7 +14,7 @@
 <section class="full-width bg-white">
   <div>
     <picture>
-      <img src="<?php echo URL_ROOT; ?>/img/site/full-width/contact.jpg" alt="woman sitting on a car and boxing"/>
+      <img src="<?php echo URL_ROOT; ?>/img/site/hero/contact.jpg" alt="woman sitting on a car and boxing"/>
     </picture>
   </div>
   <div class="full-width__heading full-width__heading--left">

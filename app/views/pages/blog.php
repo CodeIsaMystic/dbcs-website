@@ -16,7 +16,7 @@ require APP_ROOT . '/views/inc/header.php'; ?>
 <section class="full-width bg-white">
   <div>
     <picture>
-      <img src="<?php echo URL_ROOT; ?>/img/site/full-width/gym2.jpg" alt="gym with people listening their coach"/>
+      <img src="<?php echo URL_ROOT; ?>/img/site/hero/gym2.jpg" alt="gym with people listening their coach"/>
     </picture>
   </div>
   <div class="full-width__heading full-width__heading--left">

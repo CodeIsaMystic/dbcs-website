@@ -25,7 +25,7 @@
 <section class="full-width bg-white">
   <div>
     <picture>
-      <img src="<?php echo URL_ROOT; ?>/img/site/full-width/jogger.jpg" alt="Image of a jogger in the street"/>
+      <img src="<?php echo URL_ROOT; ?>/img/site/hero/jogger.jpg" alt="Image of a jogger in the street"/>
     </picture>
   </div>
   <div class="full-width__heading full-width__heading--center">
