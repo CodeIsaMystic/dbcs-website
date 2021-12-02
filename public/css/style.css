@@ -430,6 +430,8 @@ select:focus-visible {
 
 /*  buttons  */
 .btn,
+.btn:hover,
+.btn:focus,
 .btn:link,
 .btn:visited {
   display: block;
@@ -1024,9 +1026,9 @@ form .btn-table {
   opacity: 30%;
 }
 
-/*********/
+/*********************/
 /* HOW IT WORK STEP */
-/*******/
+/*******************/
 .step .step__number {
   font-size: 8.6rem;
   color: #888888a9;
@@ -1617,7 +1619,6 @@ article .article-content__desc {
   /* show-pages */
   .show-pages {
     width: 100%;
-    /* margin: 9.6rem auto 0;*/
   }
 }
 

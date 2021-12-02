@@ -9,6 +9,16 @@
   function redirect(string $page): string {
     header('location: ' . URL_ROOT . '/' . $page);
   }
+  
+  /**
+   * Function redirect to login page if not logged in
+   * 
+   */
+  function redirectToLogin() {
+    if(!isLoggedIn()){
+        redirect('users/login');
+    }
+  }
 
   
   /**

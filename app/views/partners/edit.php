@@ -2,20 +2,16 @@
 <!-- HEADER -->
 <?php 
   require APP_ROOT . '/views/inc/header.php'; 
-  // var_dump($data);
-  // $phone_data = strlen($data['prospect']->prospect_phone);
-  // echo $phone_data;
-  // die();
 ?>
 
 
 <!-- SECTION EDIT PARTNER -->
-<section class="edit-pagespb-lg pt-lg">
+<section class="edit-pagespb-lg pb-lg pt-lg">
   <!-- BACK BTN -->
   <div class="container container--lg pX">
 
     <div class="txt-dark mb">
-      <a href="<?php echo URL_ROOT; ?>/partners/list" class="link link-dark link--underline">
+      <a href="<?= URL_ROOT; ?>/partners/list" class="link link-dark link--underline">
         &larr;Retour
       </a>
     </div>
@@ -29,20 +25,20 @@
           Modifier la fiche partenaire
         </h3>
         <p class="txt-content--small mb">
-          Vous pouvez dans cette section modifier la fiche partenaire sélectionnée. Il peut être judicieux d'établir des partenariat afin d'optimiser votre acitvité. 
+          Vous pouvez dans cette section modifier la fiche partenaire sélectionnée. Il peut être judicieux d'établir des partenariat afin d'optimiser votre activité. 
         </p> 
         
         <!-- FORM-ADMIN-PARTNER -->
         <form 
-        action="<?php echo URL_ROOT; ?>/partners/edit/<?php echo ($data['partner']->partner_id); ?>" method="post">
+        action="<?= URL_ROOT; ?>/partners/edit/<?= ($data['partner']->partner_id); ?>" method="post">
 
           <!-- SECTION BASE-INFO -->
           <div>
             <span class="b-radius4">
-              <span class="txt-content--xsmall txt-center txt-danger mb-xxs"><?php echo ($data['partner_main_err']);?></span>
+              <span class="txt-content--xsmall txt-center txt-danger mb-xxs"><?= e($data['partner_main_err']);?></span>
             </span>
             <!-- heading -->
-            <h3 class="subheading txt-upp fontW700 mb-xs" tabindex="0"> 
+            <h3 class="subheading txt-upp fontW700 mb-xs"> 
             Base d'information:
             </h3>
               
@@ -59,10 +55,10 @@
                 name="partner_company_name" 
                 class="bg-white mb-xxs" 
                 id="partnerCompanyName"
-                value="<?php echo ($data['partner']->partner_company_name); ?>">
+                value="<?= e($data['partner']->partner_company_name); ?>">
 
               <span class="b-radius4">
-                <span class="txt-content--xsmall txt-danger"><?php echo ($data['partner_company_name_err']);?></span>
+                <span class="txt-content--xsmall txt-danger"><?= e($data['partner_company_name_err']);?></span>
               </span>
               
             </div>
@@ -72,7 +68,7 @@
               <label class="fontW700 txt-blue mt mb-xxs" for="partnerEmail">Email de votre partenaire *</label>
 
               <span class="b-radius4">
-                <span class="txt-content--xsmall txt-danger"><?php echo ($data['partner_email_err']); ?></span>
+                <span class="txt-content--xsmall txt-danger"><?= e($data['partner_email_err']); ?></span>
               </span>
             
               <input 
@@ -80,7 +76,7 @@
                 name="partner_email" 
                 class="bg-white mb-xxs" 
                 id="partnerEmail"
-                value="<?php echo ($data['partner']->partner_email); ?>">
+                value="<?= e($data['partner']->partner_email); ?>">
             </div>
 
             <div class="txt-content--xsmall txt-blue mb-xs">
@@ -96,7 +92,7 @@
 
               
               <span class="b-radius4">
-                <span class="txt-content--xsmall txt-danger"><?php echo ($data['partner_phone_err']); ?></span>
+                <span class="txt-content--xsmall txt-danger"><?= e($data['partner_phone_err']); ?></span>
               </span>
             
               <input 
@@ -104,7 +100,7 @@
                 name="partner_phone" 
                 class="bg-white" 
                 id="partnerPhone"
-                value="<?php echo $data['partner']->partner_phone; ?>">
+                value="<?= e($data['partner']->partner_phone); ?>">
             </div>
           </div>
           <!-- SECTION BUSINESS INFO -->
@@ -114,40 +110,27 @@
               Business informations:
             </h3>
 
-            <p class="txt-content--small mb-xs" tabindex="0">
+            <p class="txt-content--small mb-xs">
               Modifier ici les <span class="fontW700">informations business</span> de votre partenaire.
             </p>
 
             <div>
               <!-- city -->
               <div class="form-admin-partner--display partner-city">
-                <label class="fontW700 txt-blue mb-xxs" for="partnerCity" tabindex="0">Ville:</label>
-                <input type="text" name="partner_city" id="partnerCity" class="bg-white mb-xxs" value="<?php echo $data['partner']->partner_city; ?>">
+                <label class="fontW700 txt-blue mb-xxs" for="partnerCity">Ville:</label>
+                <input type="text" name="partner_city" id="partnerCity" class="bg-white mb-xxs" value="<?= e($data['partner']->partner_city); ?>">
               </div>
-                    
-              <!-- type activity -->
-              <!-- <div class="form-admin-partner--display type-activity">
-                <label class="fontW700 txt-blue mb-xxs" for="partnerTypeActivity" tabindex="0">
-                  Activité principale
-                </label>
-                <div>
-                  <select name="<?php //echo $data['partners']->type_activity ?>" class="bg-white" id="partnerTypeActivity"> 
-                    <option value="default">Choisir</option>
-                    <option value="coaching">Coaching / Prépa</option>
-                    <option value="blogging">Blogging</option>
-                    <option value="shop">Magasin</option>
-                    <option value="event">Evènement</option>
-                    <option value="health">Nutrition / Santé</option>
-                    <option value="other">Autre</option>
-                  </select>
-                </div>
-              </div> -->
   
               <!-- is-web-business -->
               <div class="form-admin-partner--display is-web-business">
                 <div>
-                  <input class="bg-white" name="<?php echo $data['partners']->is_web_business?>" type="checkbox" value="is-web-business" id="isWebBusiness">
-                  <label tabindex="0" for="isWebBusiness">Activité Web</label>
+                  <input 
+                    class="bg-white" 
+                    name="is_web_business" 
+                    type="checkbox" 
+                    value="<?= e($data['partner']->is_web_business) ?>" id="isWebBusiness" 
+                    <?= $data['partner']->is_web_business === '1'  ?  'checked' :  ''?>  >
+                  <label for="isWebBusiness">Activité Web</label>
                 </div>
               </div>
             </div>
@@ -156,26 +139,41 @@
           <!-- SECTION PARTNERSHIP INFO -->
           <div>
             <!-- heading -->
-            <h3 class="subheading txt-upp fontW700 mt mb-xxs" tabindex="0"> 
+            <h3 class="subheading txt-upp fontW700 mt mb-xxs"> 
               Partenariat informations:
             </h3>
             
-            <p class="txt-content--small mb-xs" tabindex="0">
+            <p class="txt-content--small mb-xs">
               Ajoutez ici les <span class="fontW700">informations de base sur le type de partenariat</span>. Notez que vous devez convenir avec l'entreprise partenaire et obtenir un accord avec celle-ci.
             </p>
 
             <!-- type partnership -->
             <div class="form-admin-prospect--display type-partnership">
-              <label class="fontW700 txt-blue mb-xxs" for="typePartnership" tabindex="0">
+              <label class="fontW700 txt-blue mb-xxs" for="typePartnership">
                 Type de partenariat
               </label>
               <div>
-                <select name="<?php echo $data['partners']->type_partnership ?>" class="bg-white" id="typePartnership"> 
-                  <option value="default">Choisir</option>
-                  <option value="collaboration">Collaboration</option>
-                  <option value="blogging">Blog & SEO</option>
-                  <option value="shop">Commercial</option>
-                  <option value="event">Evènement</option>
+                <select name="type_partnership" class="bg-white" id="typePartnership"> 
+                  <option value="default" 
+                    <?= applySelectedAttr($data['partner']->type_partnership) ?> >
+                      Choisir
+                  </option>
+                  <option value="collaboration" 
+                    <?= applySelectedAttr($data['partner']->type_partnership) ?> >
+                      Collaboration
+                  </option>
+                  <option value="blogging" 
+                    <?= applySelectedAttr($data['partner']->type_partnership) ?> >
+                      Blog & SEO
+                  </option>
+                  <option value="shop" 
+                    <?= applySelectedAttr($data['partner']->type_partnership) ?> >
+                      Commercial
+                  </option>
+                  <option value="event" 
+                    <?= applySelectedAttr($data['partner']->type_partnership) ?> >
+                      Evènement
+                  </option>
                 </select>
               </div>
             </div>
@@ -184,8 +182,14 @@
             <!-- have-a-deal -->
             <div class="form-admin-partner--display have-deal">
               <div>
-                <input class="bg-white" id="haveDeal" name="<?php echo $data['partners']->have_deal ?>" type="checkbox" value="have-deal">
-                <label for="haveDeal" tabindex="0">Accord</label>
+                <input 
+                  class="bg-white" 
+                  id="haveDeal" 
+                  name="have_deal" 
+                  type="checkbox" 
+                  value="<?= e($data['partner']->have_deal); ?>" 
+                  <?= $data['partner']->have_deal === '1'  ?  'checked' :  ''?> >
+                <label for="haveDeal">Accord</label>
               </div>
             </div>
           </div>

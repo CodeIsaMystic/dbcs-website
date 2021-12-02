@@ -1,8 +1,6 @@
 <!-- HEADER -->
 <?php
 require APP_ROOT . '/views/inc/header.php'; 
-// var_dump($data);
-// die();
 ?>
 
 <!-- FLASH  MESSAGES -->
@@ -18,10 +16,10 @@ require APP_ROOT . '/views/inc/header.php';
   <div class="hero grid--hero container container--md pX">
     <div class="hero--txt mt-lg">
       <h1 class="heading-primary txt-dark-gray fontW700 mb-sm">
-        <?php echo $data['title']; ?>
+        <?= e($data['title']); ?>
       </h1>
       <p class="txt-content txt-dark-gray mb">
-        <?php echo $data['description']; ?>
+        <?= e($data['description']); ?>
       </p>
       <div class="btn-wrapper">
         <a href="#cta" class="btn btn-hover btn-hover--blue txt-center mr"
@@ -660,18 +658,18 @@ require APP_ROOT . '/views/inc/header.php';
         </p>
 
         <!-- form-prospect -->
-        <form action="<?php echo URL_ROOT; ?>/pages/index" method="post" class="grid--form">
+        <form action="<?= URL_ROOT; ?>/pages/index" method="post" class="grid--form">
           <div>
             <label class="fontW700 mb-xxs" for="prospectName">Nom Complet</label>
             
             <span class="b-radius4">
-              <span class="txt-content--xsmall txt-danger"><?php echo $data['prospect_name_err'];?></span>
+              <span class="txt-content--xsmall txt-danger"><?= e($data['prospect_name_err']);?></span>
             </span>
 
             <input
               class="b-radius4 bg-white"
               id="prospectName"
-              type="text" value="<?php echo $data['prospect_name']; ?>"
+              type="text" value="<?= e($data['prospect_name']); ?>"
               placeholder="votre nom"
               name="prospect_name"
               required
@@ -682,13 +680,13 @@ require APP_ROOT . '/views/inc/header.php';
             <label class="fontW700 mb-xxs" for="prospectEmail" >Adresse Mail</label>
 
             <span class="b-radius4">
-              <span class="txt-content--xsmall txt-danger"><?php  echo $data['prospect_email_err']; ?></span>
+              <span class="txt-content--xsmall txt-danger"><?= e($data['prospect_email_err']); ?></span>
             </span>
             
             <input
               class="b-radius4 bg-white"
               id="prospectEmail"
-              type="email" value="<?php echo $data['prospect_email']; ?>"
+              type="email" value="<?= e($data['prospect_email']); ?>"
               placeholder="email@example.com"
               name="prospect_email"
               required
@@ -697,7 +695,7 @@ require APP_ROOT . '/views/inc/header.php';
 
           <div class="free-course mt-xs">
             <div>
-              <input class="b-radius4 bg-white" id="askFreeCourse" type="checkbox" name="ask_free_course" value="<?php //echo $data['ask_free_course']; ?>">
+              <input class="b-radius4 bg-white" id="askFreeCourse" type="checkbox" name="ask_free_course" value="<?= e($data['ask_free_course']); ?>">
               <label class="fontW700" for="askFreeCourse" >Essai gratuit</label>
             </div>
           </div>

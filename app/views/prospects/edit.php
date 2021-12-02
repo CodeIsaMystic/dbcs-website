@@ -2,21 +2,16 @@
 <!-- HEADER -->
 <?php 
   require APP_ROOT . '/views/inc/header.php'; 
-  // var_dump($data);
-  // $phone_data = strlen($data['prospect']->prospect_phone);
-  // echo $phone_data;
-  // die();
-
 ?>
 
 
 <!-- SECTION EDIT-PROSPECT -->
-<section class="edit-pagespb-lg pt-lg">
+<section class="edit-pages pb-lg pt-lg">
   <!-- BACK BTN -->
   <div class="container container--lg pX">
 
     <div class="txt-dark mb">
-      <a href="<?php echo URL_ROOT; ?>/prospects/list" class="link link-dark link--underline">
+      <a href="<?= URL_ROOT; ?>/prospects/list" class="link link-dark link--underline">
         &larr;Retour
       </a>
     </div>
@@ -36,15 +31,15 @@
         
         <!-- FORM-ADMIN-PROSPECT -->
         <form class="form-admin-prospect" 
-        action="<?php echo URL_ROOT; ?>/prospects/edit/<?php echo ($data['prospect']->prospect_id); ?>" method="post">
+        action="<?= URL_ROOT; ?>/prospects/edit/<?= ($data['prospect']->prospect_id); ?>" method="post">
 
           <!-- SECTION BASE-INFO -->
           <div>
             <span class="b-radius4">
-              <span class="txt-content--xsmall txt-center txt-danger mb-xxs"><?php echo ($data['prospect_main_err']);?></span>
+              <span class="txt-content--xsmall txt-center txt-danger mb-xxs"><?= e($data['prospect_main_err']);?></span>
             </span>
             <!-- heading -->
-            <h3 class="subheading txt-upp fontW700 mb-xs" tabindex="0"> 
+            <h3 class="subheading txt-upp fontW700 mb-xs"> 
               Base d'information:
             </h3>
             
@@ -57,7 +52,7 @@
               <label class="fontW700 txt-blue mb-xxs" for="prospectName" >Nom de votre prospect</label>
               
               <span class="b-radius4">
-                <span class="txt-content--xsmall txt-danger"><?php echo ($data['prospect_name_err']);?></span>
+                <span class="txt-content--xsmall txt-danger"><?= e($data['prospect_name_err']);?></span>
               </span>
               
               <input 
@@ -65,7 +60,7 @@
                 name="prospect_name" 
                 class="bg-white mb-xxs" 
                 id="prospectName"
-                value="<?php echo ($data['prospect']->prospect_name); ?>">
+                value="<?= e($data['prospect']->prospect_name); ?>">
             </div>
         
             <!-- email -->
@@ -73,7 +68,7 @@
               <label class="fontW700 txt-blue mb-xxs" for="prospectEmail" >Email de votre prospect</label>
 
               <span class="b-radius4">
-                <span class="txt-content--xsmall txt-danger"><?php echo ($data['prospect_email_err']); ?></span>
+                <span class="txt-content--xsmall txt-danger"><?= e($data['prospect_email_err']); ?></span>
               </span>
             
               <input 
@@ -81,7 +76,7 @@
                 name="prospect_email" 
                 class="bg-white mb-xxs"
                 id="prospectEmail" 
-                value="<?php echo ($data['prospect']->prospect_email); ?>">
+                value="<?= e($data['prospect']->prospect_email); ?>">
             </div>
 
             <!-- phone -->
@@ -93,7 +88,7 @@
 
               
               <span class="b-radius4">
-                <span class="txt-content--xsmall txt-danger"><?php echo ($data['prospect_phone_err']); ?></span>
+                <span class="txt-content--xsmall txt-danger"><?= e($data['prospect_phone_err']); ?></span>
               </span>
             
               <input 
@@ -101,7 +96,7 @@
                 name="prospect_phone" 
                 class="bg-white" 
                 id="prospectPhone"
-                value="<?php echo $data['prospect']->prospect_phone; ?>">
+                value="<?= $data['prospect']->prospect_phone; ?>">
             </div>
           </div>
 
@@ -109,25 +104,25 @@
           <!-- SECTION PHYSICAL ADDRESS -->
           <div>
             <!-- heading -->
-            <h3 class="subheading txt-upp fontW700 mt mb-xxs" tabindex="0"> 
+            <h3 class="subheading txt-upp fontW700 mt mb-xxs"> 
               Adresse Physique:
             </h3>
             
-            <p class="txt-content--small mb-xs" tabindex="0">
+            <p class="txt-content--small mb-xs">
               <span class="fontW700">Ajoutez ici l'adresse complète</span> de votre prospect. Notez que vous devez enregistrer l'adresse complète, <span class="fontW700">ou bien seulement la ville</span>.
             </p>
             
             <div>
               <!-- address nr -->
               <div class="form-admin-prospect--display address-nr">
-                <label class="fontW700 txt-blue mb-xxs" for="prospectAddressNr" tabindex="0">Numéro:</label>
-                <input type="number" id="prospectAddressNr" name="prospect_address_nr" class="bg-white mb-xxs" value="<?php echo $data['prospect']->prospect_address_nr; ?>">
+                <label class="fontW700 txt-blue mb-xxs" for="prospectAddressNr">Numéro:</label>
+                <input type="number" id="prospectAddressNr" name="prospect_address_nr" class="bg-white mb-xxs" value="<?= e($data['prospect']->prospect_address_nr); ?>">
               </div>
               
               <!-- address str -->
               <div class="form-admin-prospect--display address-str">
-                <label class="fontW700 txt-blue mb-xxs" for="prospectAddressStr"  tabindex="0">Rue:</label>
-                <input type="text" id="prospectAddressStr" name="prospect_address_str" class="bg-white mb-xxs" value="<?php echo $data['prospect']->prospect_address_str; ?>">
+                <label class="fontW700 txt-blue mb-xxs" for="prospectAddressStr" >Rue:</label>
+                <input type="text" id="prospectAddressStr" name="prospect_address_str" class="bg-white mb-xxs" value="<?= e($data['prospect']->prospect_address_str); ?>">
               </div>
             </div>
             
@@ -135,14 +130,14 @@
             <div>
               <!-- postal code -->
               <div class="form-admin-prospect--display location-code">
-                <label class="fontW700 txt-blue mb-xxs" for="prospectPostalCode" tabindex="0">Code Postal:</label>
-                <input type="number" id="prospectPostalCode" name="prospect_postal_code" class="bg-white mb-xxs" value="<?php echo $data['prospect']->prospect_postal_code; ?>">
+                <label class="fontW700 txt-blue mb-xxs" for="prospectPostalCode">Code Postal:</label>
+                <input type="number" id="prospectPostalCode" name="prospect_postal_code" class="bg-white mb-xxs" value="<?= e($data['prospect']->prospect_postal_code); ?>">
               </div>
               
               <!-- city -->
               <div class="form-admin-prospect--display location-city">
-                <label class="fontW700 txt-blue mb-xxs" for="prospectCity" tabindex="0">Ville:</label>
-                <input type="text" id="prospectCity" name="prospect_city" class="bg-white mb-xxs" value="<?php echo $data['prospect']->prospect_city; ?>">
+                <label class="fontW700 txt-blue mb-xxs" for="prospectCity">Ville:</label>
+                <input type="text" id="prospectCity" name="prospect_city" class="bg-white mb-xxs" value="<?= e($data['prospect']->prospect_city); ?>">
               </div>
             </div> 
           </div>
@@ -150,7 +145,7 @@
           <!-- SECTION COACHING INFO -->
           <div>
             <!-- heading -->
-            <h3 class="subheading txt-upp fontW700 mt mb-xxs" tabindex="0"> 
+            <h3 class="subheading txt-upp fontW700 mt mb-xxs"> 
               Coaching Informations:
             </h3>
             
@@ -165,15 +160,42 @@
               </label>
               <div>
                 <select name="coaching_subject" id="coachingSubject" class="bg-white"> 
-                  <option value="default">Choisir</option>
-                  <option value="basic">Programme Basique</option>
-                  <option value="fit">Programme Fitness</option>
-                  <option value="weight-loss">Programme Régime</option>
-                  <option value="heart-beat">Programme Cardio</option>
-                  <option value="weight">Programme Muscle</option>
-                  <option value="sport">Programme Sport Prépa</option>
-                  <option value="health">Programme Santé</option>
-                  <option value="injury">Programme Reprise</option>
+                  <option value="default"
+                    <?= applySelectedAttr($data['prospect']->coaching_subject) ?> >
+                      Choisir
+                  </option>
+                  <option value="basic" 
+                    <?= applySelectedAttr($data['prospect']->coaching_subject) ?> >
+                      Programme Basique
+                  </option>
+                  <option value="fit" 
+                    <?= applySelectedAttr($data['prospect']->coaching_subject) ?> >
+                      Programme Fitness
+                  </option>
+                  <option value="weight-loss" 
+                    <?= applySelectedAttr($data['prospect']->coaching_subject) ?> >
+                      Programme Régime
+                  </option>
+                  <option value="heart-beat" 
+                    <?= applySelectedAttr($data['prospect']->coaching_subject) ?> >
+                      Programme Cardio
+                  </option>
+                  <option value="weight" 
+                    <?= applySelectedAttr($data['prospect']->coaching_subject) ?> >
+                      Programme Muscle
+                  </option>
+                  <option value="sport" 
+                    <?= applySelectedAttr($data['prospect']->coaching_subject) ?> >
+                      Programme Sport Prépa
+                  </option>
+                  <option value="health" 
+                    <?= applySelectedAttr($data['prospect']->coaching_subject) ?> >
+                      Programme Santé
+                  </option>
+                  <option value="injury" 
+                    <?= applySelectedAttr($data['prospect']->coaching_subject) ?> >
+                      Programme Reprise
+                  </option>
                 </select>
               </div>
             </div>
@@ -181,7 +203,13 @@
             <!-- is-customer -->
             <div class="form-admin-prospect--display is-customer">
               <div>
-                <input class="bg-white" id="isCustomer" name="is_customer" type="checkbox" value="0">
+                <input 
+                  class="bg-white" 
+                  id="isCustomer" 
+                  name="is_customer" 
+                  type="checkbox" 
+                  value="<?= e($data['prospect']->is_customer); ?>" 
+                  <?= $data['prospect']->is_customer === '1'  ?  'checked' :  ''?>  >
                 <label for="isCustomer" >Client</label>
               </div>
             </div>
@@ -189,7 +217,13 @@
             <!-- free-course -->
             <div class="form-admin-prospect--display free-course">
               <div>
-                <input class="bg-white" id="freeCourse" name="free_course" type="checkbox" value="<?php echo $data['prospect']->free_course; ?>">
+                <input 
+                  class="bg-white" 
+                  id="freeCourse" 
+                  name="free_course" 
+                  type="checkbox" 
+                  value="<?= e($data['prospect']->free_course); ?>" 
+                  <?= $data['prospect']->free_course === '1'  ?  'checked' :  ''?> >
                 <label for="freeCourse" >Essai gratuit</label>
               </div>
             </div>

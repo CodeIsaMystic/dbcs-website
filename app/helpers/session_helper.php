@@ -58,13 +58,5 @@
     }
   }
 
-  /**
-   * Function redirect to login page if not logged in
-   */
-  function redirectToLogin() {
-    if(!isLoggedIn()){
-        redirect('users/login');
-    }
-  }
 
 ?>

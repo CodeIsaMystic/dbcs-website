@@ -15,22 +15,22 @@
           <p class="txt-content--xsmall fontW500">
             Vous êtes en contact avec ce partenaire depuis le
             <span class="txt-blue">
-              <?php  echo getDateFormatted($partner->partner_created_at); ?>
+              <?= getDateFormatted($partner->partner_created_at); ?>
             </span> 
           </p>
         </div>
         
         <div class="article-content__basic-info txt-dark mt-md">
-          <a href="<?php echo URL_ROOT; ?>/partners/show/<?php echo $partner->partner_id; ?>">
+          <a href="<?= URL_ROOT; ?>/partners/show/<?= e($partner->partner_id); ?>">
             <h3 class="heading-post txt-dark-gray font-garamond">
-              <?php echo $partner->partner_company_name; ?>
+              <?= e($partner->partner_company_name); ?>
             </h3>
           </a>
           <p class="txt-content">
-            <?php  echo $partner->partner_email; ?>
+            <?= e($partner->partner_email); ?>
           </p>
           
-          <a href="<?php echo URL_ROOT; ?>/partners/show/<?php echo $partner->partner_id; ?>" class="link link--underline mt-sm">
+          <a href="<?= URL_ROOT; ?>/partners/show/<?= e($partner->partner_id); ?>" class="link link--underline mt-sm">
           Voir fiche contact &rarr;
           </a>
         </div>

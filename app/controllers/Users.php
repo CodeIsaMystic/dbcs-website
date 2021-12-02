@@ -97,11 +97,9 @@
     public function login(){
       // Check for POST
       if($_SERVER['REQUEST_METHOD'] == 'POST'){
-        // Process form
         // Sanitize POST data
         $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
         
-        // Init data
         $data =[
           'email' => trim($_POST['email']),
           'password' => trim($_POST['password']),
@@ -109,12 +107,12 @@
           'password_err' => '',      
         ];
 
-        // Validate Email
+        // Validate Email if empty
         if(empty($data['email'])){
           $data['email_err'] = 'Le champs Email est vide';
         }
 
-        // Validate Password
+        // Validate Password if empty
         if(empty($data['password'])){
           $data['password_err'] = 'Le champs Mot de passe est vide';
         }
@@ -129,7 +127,7 @@
 
         // Make sure errors are empty
         if(empty($data['email_err']) && empty($data['password_err'])){
-          // Validated
+          
           // Check and set logged in user
           $loggedInUser = $this->userModel->login($data['email'], $data['password']);
 

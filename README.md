@@ -11,7 +11,7 @@
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
-- [Getting Started](#getting-started)
+- [Getting **Started**](#getting-started)
   - [Config constants to change](#config-constants-to-change)
   - [Change the .htaccess file](#change-the-htaccess-file)
 - [Structure](#structure)
@@ -22,7 +22,7 @@
     - [Javascript](#javascript)
   - [Backend](#backend)
 
-## Getting Started
+## Getting **Started**
 
 1. **Download the Zip folder** and extract it on your machine.
 2. **Put the folder on the `wamp64/www`** of your Wamp setup.
@@ -154,7 +154,9 @@ _In this section, I document to create your database, the models related to your
 
 A standard style guide is made on purpose to referr to it, the website will evolve, closed to the customer, and we will of course make some changes as long as we build that project.
 
-![DBCS Style Guide](./dbcs-style-guide.jpg)
+<div align="center">
+  <img src="./dbcs-style-guide.jpg" />
+</div>
 
 > **NOTICE:**
 >

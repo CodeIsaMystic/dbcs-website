@@ -14,16 +14,16 @@
 <section class="full-width bg-white">
   <div>
     <picture>
-      <img src="<?php echo URL_ROOT; ?>/img/site/hero/ropes.jpg" alt="image of a man with a light in his hands"/>
+      <img src="<?= URL_ROOT; ?>/img/site/hero/ropes.jpg" alt="image of a man with a light in his hands"/>
     </picture>
   </div>
   <div class="full-width__heading full-width__heading--left">
     <h4 class="subheading fontW700 txt-upp txt-blue">Listes</h4>
     <h1 class="heading-primary txt-dark-gray fontW500 font-garamond">
-      <?= $data['title']; ?>
+      <?= e($data['title']); ?>
     </h1>
     <p class="txt-content txt-dark mt-xxs">
-      <?= $data['description']; ?>
+      <?= e($data['description']); ?>
     </p>
   </div>
 </section>
@@ -51,15 +51,15 @@
           <tr>
             <td class="cell cell--main">
               <a class="link link--underline mb-xs"
-                href="<?php echo URL_ROOT; ?>/partners/show/<?php echo $partner->partner_id; ?>">
-                <?php echo $partner->partner_company_name; ?>
+                href="<?= URL_ROOT; ?>/partners/show/<?= $partner->partner_id; ?>">
+                <?= $partner->partner_company_name; ?>
               </a>
             </td> 
             
             <td class="cell cell--email">
               <a class=" mb-xs"
                 href="#">
-                <?php echo $partner->partner_email; ?>
+                <?= $partner->partner_email; ?>
               </a>
             </td> 
             <td class="cell cell--date">
@@ -69,10 +69,10 @@
             </td> 
             <td class="cell cell--btn">
               <a class="btn-table btn-table--blue"
-                href="<?php echo URL_ROOT; ?>/partners/edit/<?php echo $partner->partner_id; ?>"> 
+                href="<?= URL_ROOT; ?>/partners/edit/<?= $partner->partner_id; ?>"> 
                 Editer
               </a>
-              <form action="<?php echo URL_ROOT . '/partners/delete/' . $partner->partner_id; ?>" method="POST">
+              <form action="<?= URL_ROOT . '/partners/delete/' . $partner->partner_id; ?>" method="POST">
                 <input type="submit" class="btn-table btn-table--yellow" name="delete" value="Effacer"/>
               </form>
             </td>          

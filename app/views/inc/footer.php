@@ -81,7 +81,7 @@
               >
             </li>
             <li>
-              <button class="link-light <?php if(isset($_SESSION['user_id'])) {echo "not-allowed";} ?>" id="adminLink">Admin</button>
+              <button class="link-light <?= isset($_SESSION['user_id']) ? "not-allowed" : "" ?>" id="adminLink">Admin</button>
             </li>
           </ul>
         </nav>
@@ -108,14 +108,8 @@
     
   
   <!-- SCRIPTS CDN -->
-  <script
-    type="module"
-    src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
-  ></script>
-  <script
-    nomodule=""
-    src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
-  ></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>

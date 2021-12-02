@@ -1,8 +1,5 @@
 <!-- HEADER -->
-<?php
-// var_dump($_SERVER['QUERY_STRING']); 
-
-require APP_ROOT . '/views/inc/header.php'; ?>
+<?php require APP_ROOT . '/views/inc/header.php'; ?>
 
 <!-- FLASH  MESSAGES -->
 <?php require APP_ROOT . '/views/inc/flashmessages.php'; ?>
@@ -16,16 +13,16 @@ require APP_ROOT . '/views/inc/header.php'; ?>
 <section class="full-width bg-white">
   <div>
     <picture>
-      <img src="<?php echo URL_ROOT; ?>/img/site/hero/gym2.jpg" alt="gym with people listening their coach"/>
+      <img src="<?= URL_ROOT; ?>/img/site/hero/gym2.jpg" alt="gym with people listening their coach"/>
     </picture>
   </div>
   <div class="full-width__heading full-width__heading--left">
     <h4 class="subheading fontW700 txt-upp txt-blue pb-xxs">Article</h4>
     <h1 class="heading-primary txt-dark-gray fontW500 font-garamond pb-xs">
-        <?= $data['title']; ?>
+        <?= e($data['title']); ?>
     </h1>
     <p class="txt-content txt-dark">
-        <?= $data['description']; ?>
+        <?= e($data['description']); ?>
       </p>
   </div>
 </section>

@@ -14,16 +14,16 @@
 <section class="full-width bg-white">
   <div>
     <picture>
-      <img src="<?php echo URL_ROOT; ?>/img/site/hero/coaching.jpg" alt="Two womens doing sport in a gym"/>
+      <img src="<?= URL_ROOT; ?>/img/site/hero/coaching.jpg" alt="Two womens doing sport in a gym"/>
     </picture>
   </div>
   <div class="full-width__heading full-width__heading--left">
     <h4 class="subheading fontW700 txt-upp txt-blue pb-xxs">Coaching</h4>
     <h1 class="heading-primary txt-dark-gray fontW500 font-garamond pb-xs">
-        <?= $data['title']; ?>
+        <?= e($data['title']); ?>
     </h1>
     <p class="txt-content txt-dark">
-      <?= $data['description']; ?>
+      <?= e($data['description']); ?>
     </p>
   </div>
 </section>

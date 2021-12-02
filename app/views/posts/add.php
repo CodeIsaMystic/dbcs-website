@@ -7,7 +7,7 @@
   <div class="container container--lg pX">
 
     <div class="txt-dark mb">
-      <a href="<?php echo URL_ROOT; ?>/posts/list" class="link link-dark link--underline">
+      <a href="<?= URL_ROOT; ?>/posts/list" class="link link-dark link--underline">
         &larr;Retour
       </a>
     </div>
@@ -27,16 +27,16 @@
         </p>
         
         <!-- FORM ADD-POST -->
-        <form action="<?php echo URL_ROOT; ?>/posts/add" method="post" enctype="multipart/form-data">
+        <form action="<?= URL_ROOT; ?>/posts/add" method="post" enctype="multipart/form-data">
           <!-- TITLE ARTICLE -->
           <div>
             <label class="fontW700 txt-blue mb-xxs" for="postTitle">Titre de l'article</label>
             
             <span class="b-radius4">
-              <span class="txt-content--xsmall txt-danger"><?php echo $data['title_err'];?></span>
+              <span class="txt-content--xsmall txt-danger"><?= e($data['title_err']);?></span>
             </span>
             
-            <input type="text" name="title" class="bg-white mb-xxs" id="postTitle" value="<?php echo $data['title']; ?>">
+            <input type="text" name="title" class="bg-white mb-xxs" id="postTitle" value="<?= e($data['title']); ?>">
           </div>
           
           <!-- IMAGE ARTICLE -->
@@ -62,7 +62,7 @@
             </ul>
 
             <span class="b-radius4">
-              <span class="txt-content--xsmall txt-danger"><?php echo $data['image_err'];?></span>
+              <span class="txt-content--xsmall txt-danger"><?= e($data['image_err']);?></span>
             </span>
 
             <input
@@ -87,11 +87,11 @@
             </p>
 
             <span class="b-radius4">
-              <span class="txt-content--xsmall txt-danger"><?php  echo $data['body_err']; ?></span>
+              <span class="txt-content--xsmall txt-danger"><?= e($data['body_err']); ?></span>
             </span>
           
             <textarea id="editor" class="b-radius4 bg-white mb-xxs" name="body">
-              <?php   echo htmlentities($data['body']); ?>
+              <?= e($data['body']); ?>
             </textarea>
           </div>
           
@@ -109,12 +109,12 @@
             </p>
             
             <span class="b-radius4 mb-xxs">
-              <span class="txt-content--xsmall txt-danger"><?php echo $data['source_link_err'];?></span>
+              <span class="txt-content--xsmall txt-danger"><?= e($data['source_link_err']);?></span>
             </span>
             
             <input class="bg-white mb-xxs" id="postSourceLink" type="text" name="source_link" value="
             <?php  if($data['source_link'] !== null) {
-              echo $data['source_link']; 
+              echo e($data['source_link']); 
             } else {
               echo '';
             }

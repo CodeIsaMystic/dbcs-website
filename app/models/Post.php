@@ -20,9 +20,6 @@
 
       $results = $this->db->resultSet();
 
-      // var_dump($results);
-      // die();
-
       return $results;
     }
 

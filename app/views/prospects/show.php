@@ -2,15 +2,6 @@
 <!-- HEADER -->
 <?php 
   require APP_ROOT . '/views/inc/header.php';
-
-  $phone_number = $data['prospect']->prospect_phone;
-
-// var_dump($data);
-
-// die();
-// echo $data['prospect']->prospect_phone;
-// isValidPhone($data['prospect']->prospect_phone);
-
 ?>
 
 
@@ -25,19 +16,19 @@
 <section class="full-width bg-white">
   <div>
     <picture>
-      <img src="<?php echo URL_ROOT; ?>/img/site/hero/jogger.jpg" alt="Image of a jogger in the street"/>
+      <img src="<?= URL_ROOT; ?>/img/site/hero/jogger.jpg" alt="Image of a jogger in the street"/>
     </picture>
   </div>
   <div class="full-width__heading full-width__heading--center">
     <h4 class="subheading fontW700 txt-upp txt-blue">Prospect</h4>
     <h1 class="heading-primary txt-dark-gray txt-center fontW500 font-garamond">
-      <?php echo $data['prospect']->prospect_name; ?>
+      <?= e($data['prospect']->prospect_name); ?>
     </h1>
 
     <p class="txt-content--xsmall mt-xs">
       Ce prospect vous a contacté le 
       <span class="txt-blue">
-        <?php  echo getDateFormatted($data['prospect']->prospect_created_at); ?>
+        <?= getDateFormatted($data['prospect']->prospect_created_at); ?>
       </span> 
     </p>
   </div>
@@ -49,7 +40,7 @@
   <div class="container container--lg pX">
 
     <div class="txt-dark mb">
-      <a href="<?php echo URL_ROOT; ?>/prospects/list" class="link link-dark link--underline">
+      <a href="<?= URL_ROOT; ?>/prospects/list" class="link link-dark link--underline">
         &larr;Retour
       </a>
     </div>
@@ -64,7 +55,7 @@
         <h2 class="heading-secondary txt-dark-gray font-garamond mt-xs mb-xs">
           Informations sur le prospect 
           <span class="txt-blue">
-            <?= $data['prospect']->prospect_name ?>
+            <?= e($data['prospect']->prospect_name) ?>
           </span>.
         </h2>
         <p class="txt-content--small mb">
@@ -74,14 +65,14 @@
         <!-- basic information -->
         <div>
           <h3 class="subheading txt-upp mt-sm">
-            Informations basiques
+            Base d'informations
           </h3>
           <!-- name -->
           <h5 class="fontW500 mt-xs">
             Nom:
           </h5>
           <span class="txt-content--xsmall txt-blue"> 
-            <?= $data['prospect']->prospect_name; ?>
+            <?= e($data['prospect']->prospect_name); ?>
           </span>
         
           <!-- email-->
@@ -89,7 +80,7 @@
             Email:
           </h5>
           <span class="txt-content--xsmall txt-blue"> 
-            <?= $data['prospect']->prospect_email; ?>
+            <?= e($data['prospect']->prospect_email); ?>
           </span>
 
           <!-- date contact -->
@@ -104,23 +95,16 @@
           <h5 class="fontW500 mt-xs">
             Numéro de téléphone: 
           </h5>
-          <?php 
-            if(isValidPhone($phone_number)) {
-              echo '<span class="txt-content--xsmall txt-blue">' . $phone_number . '</span>';
-            } elseif(empty($phone_number)) {
-              echo '<span class="txt-content--xsmall txt-blue">Aucun numéro enregistré pour le moment.</span>';
-            } 
-            else {
-              echo '<span class="txt-content--xsmall txt-blue">Aucun numéro enregistré pour le moment.</span>';
-            } 
-          ?> 
+          <span class="txt-content--xsmall txt-blue">
+            <?= phoneHandler($data['prospect']->prospect_phone) ?>
+          </span>
 
           <!-- address -->
           <h5 class="fontW500 mt-xs">
             Adresse
           </h5>
           <span class="txt-content--xsmall txt-blue">
-            <?php echo $data['prospect_final_address'] ;
+            <?= e($data['prospect_final_address']) ;
             ?> 
           </span>
         </div>
@@ -133,55 +117,38 @@
           </h3>
 
           
-          <!-- had-free-course -->
+          <!-- free-course -->
           <h5 class="fontW500 mt-xs"> 
             Essai gratuit
           </h5>
+          <span class="txt-content--xsmall txt-blue">
+            <?= 'Le ' . date('d-m-y') . ', ' . $data['prospect']->prospect_name . askFreeCourseHandler($data['prospect']->ask_free_course); ?>
+          </span>
 
-          <?php if($data['prospect']->free_course === "1") : ?>
-            <span class="txt-content--xsmall txt-blue">
-              <?= $data['prospect']->prospect_name . " a bénéficié de son essai gratuit."; ?>
-            </span>
-          <?php else : ?>
-            <span class="txt-content--xsmall txt-danger">
-              <?= $data['prospect']->prospect_name . " n'a pas bénéficié de son cours d'essai gratuit."; ?>
-            </span>
-          <?php endif; ?>
+          <span class="txt-content--xsmall <?= $data['prospect']->free_course === "1" ?'txt-danger' : 'txt-blue'?> ">
+            <?= freeCourseHandler($data['prospect']->free_course) ; ?>
+          </span>
              
           <!-- is-customer / type_coaching -->
           <h5 class="fontW500 mt-xs"> 
             Coaching
           </h5>  
+
+          <span class="txt-content--xsmall <?= $data['prospect']->is_customer === "0" ?'txt-danger' : 'txt-blue'?> ">
+            <?= $data['prospect']->prospect_name .  isCustomerHandler($data['prospect']->is_customer) ; ?>
+          </span>
           
-          <?php if($data['prospect']->is_customer === "1") : ?>
-            <span class="txt-content--xsmall txt-blue">
-              <?php echo $data['prospect']->prospect_name . " est client, ..."; ?>
-            </span>    
-          <?php else : ?>
-            <span class="txt-content--xsmall txt-danger">
-              <?php echo $data['prospect']->prospect_name . " n'est pas encore client, ..."; ?>
-            </span>
-          <?php endif; ?>
           
           <span class="txt-content--xsmall txt-blue">
-            <?php 
-              // if(isset($data['prospect']->coaching_subject)) {
-              //   echo $data['prospect']->coaching_subject;
-              // } else {
-              //   echo 'Nous n\'avons pas encore défini d\'objectifs personnels en terme de coaching';
-              // }
-            ?>
+            <?= coachingSubjectHandler($data['prospect']->coaching_subject) ; ?>
           </span>
 
         </div>
-        
+
       </div>
     </div>
   </div>
 
-
-
-  <!-- </div> -->
 
 </section>
 

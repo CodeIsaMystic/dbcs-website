@@ -4,12 +4,12 @@ require APP_ROOT . '/views/inc/header.php';
 ?>
 
 <!-- SECTION EDIT POST -->
-<section class="edit-pagespb-lg pt-lg">
+<section class="edit-pages pb-lg pt-lg">
   <!-- BACK BTN -->
   <div class="container container--lg pX">
 
     <div class="txt-dark mb">
-      <a href="<?php echo URL_ROOT; ?>/posts/list" class="link link-dark link--underline">
+      <a href="<?= URL_ROOT; ?>/posts/list" class="link link-dark link--underline">
         &larr;Retour
       </a>
     </div>
@@ -28,7 +28,7 @@ require APP_ROOT . '/views/inc/header.php';
         
         <!-- FORM EDIT POST -->
         <form 
-        action="<?php echo URL_ROOT; ?>/posts/edit/<?php echo ($data['post']->post_id); ?>" method="post" 
+        action="<?= URL_ROOT; ?>/posts/edit/<?= ($data['post']->post_id); ?>" method="post" 
         enctype="multipart/form-data">
 
           <!-- TITLE ARTICLE -->
@@ -36,7 +36,7 @@ require APP_ROOT . '/views/inc/header.php';
             <label class="fontW700 txt-blue mb-xxs" for="postTitle">Titre de l'article</label>
             
             <span class="b-radius4">
-              <span class="txt-content--xsmall txt-danger"><?php echo ($data['title_err']);?></span>
+              <span class="txt-content--xsmall txt-danger"><?= e($data['title_err']);?></span>
             </span>
             
             <input 
@@ -44,7 +44,7 @@ require APP_ROOT . '/views/inc/header.php';
               name="title" 
               class="bg-white mb-xxs"
               id="postTitle" 
-              value="<?php echo ($data['post']->post_title); ?>">
+              value="<?= e($data['post']->post_title); ?>">
           </div>
           
           <!-- IMAGE ARTICLE -->
@@ -69,7 +69,7 @@ require APP_ROOT . '/views/inc/header.php';
             </ul>
             
             <span class="b-radius4">
-              <span class="txt-content--xsmall txt-danger"><?php echo $data['image_err'];?></span>
+              <span class="txt-content--xsmall txt-danger"><?= e($data['image_err']);?></span>
             </span>
 
             <input 
@@ -77,7 +77,7 @@ require APP_ROOT . '/views/inc/header.php';
               id="postImage" 
               name="image"
               accept=".png, .jpg, .jpeg"
-              value="<?php echo ($data['post']->post_image); ?>"
+              value="<?= e($data['post']->post_image); ?>"
               />
           </div>
 
@@ -86,7 +86,7 @@ require APP_ROOT . '/views/inc/header.php';
             <?php $img_path = URL_ROOT . '/public/img/uploads/' . $data['post']->post_image; ?> 
              
             <?php if(!empty($data['post']->post_image)) : ?>  
-              <img src="<?php echo $img_path; ?>" alt="selected upload image's preview"/>
+              <img src="<?= $img_path; ?>" alt="selected upload image's preview"/>
             <?php else : ?>
               <p class="txt-content--small mt-xxs">
                 Aucun fichier sélectionné pour le moment
@@ -109,11 +109,11 @@ require APP_ROOT . '/views/inc/header.php';
             </p>
 
             <span class="b-radius4">
-              <span class="txt-content--xsmall txt-danger"><?php echo ($data['body_err']); ?></span>
+              <span class="txt-content--xsmall txt-danger"><?= e($data['body_err']); ?></span>
             </span>
           
             <textarea id="editor" class="b-radius4 bg-white mb-xxs" name="body">
-              <?php  echo ($data['post']->post_body); ?>
+              <?= e($data['post']->post_body); ?>
             </textarea>
           </div>
           
@@ -132,7 +132,7 @@ require APP_ROOT . '/views/inc/header.php';
             <input class="bg-white mb-xxs" id="postSourceLink" type="text" name="source_link" value="
             <?php 
              if($data['post']->post_source_link !== null) {
-              echo ($data['post']->post_source_link); 
+              echo e($data['post']->post_source_link); 
             } else {
               echo ('');
             }

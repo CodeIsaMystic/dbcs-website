@@ -14,16 +14,16 @@
 <section class="full-width bg-white">
   <div>
     <picture>
-      <img src="<?php echo URL_ROOT; ?>/img/site/hero/contact.jpg" alt="woman sitting on a car and boxing"/>
+      <img src="<?= URL_ROOT; ?>/img/site/hero/contact.jpg" alt="woman sitting on a car and boxing"/>
     </picture>
   </div>
   <div class="full-width__heading full-width__heading--left">
     <h4 class="subheading fontW700 txt-upp txt-blue pb-xxs">Article</h4>
     <h1 class="heading-primary txt-dark-gray fontW500 font-garamond pb-xs">
-        <?= $data['title']; ?>
+        <?= e($data['title']); ?>
     </h1>
     <p class="txt-content txt-dark">
-        <?= $data['description']; ?>
+        <?= e($data['description']); ?>
       </p>
   </div>
 </section>
@@ -166,14 +166,14 @@
       </div>
       <div>
         
-        <form action="<?php echo URL_ROOT; ?>/pages/contact" method="post">
+        <form action="<?= URL_ROOT; ?>/pages/contact" method="post">
           <div class="grid--form">
             <!-- name -->
             <div>
               <label class="mb-xxs" for="partnerCompanyName" >Nom de l'entreprise</label>
               
               <span class="b-radius4">
-                <span class="txt-content--xsmall txt-danger"><?php echo $data['partner_company_name_err'];?></span>
+                <span class="txt-content--xsmall txt-danger"><?= e($data['partner_company_name_err']);?></span>
               </span>
 
               <input
@@ -182,7 +182,7 @@
                 name="partner_company_name"
                 type="text"
                 placeholder="Nom..."
-                value="<?php echo $data['partner_company_name']; ?>"
+                value="<?= e($data['partner_company_name']); ?>"
               />
             </div>
   
@@ -191,7 +191,7 @@
               <label class="mb-xxs" for="partnerEmail" >Adresse Mail</label>
 
               <span class="b-radius4">
-                <span class="txt-content--xsmall txt-danger"><?php  echo $data['partner_email_err']; ?></span>
+                <span class="txt-content--xsmall txt-danger"><?= e($data['partner_email_err']); ?></span>
               </span>
 
               <input
@@ -200,38 +200,37 @@
                 name="partner_email" 
                 type="email"
                 placeholder="Email..."
-                value="<?php echo $data['partner_email']; ?>"
+                value="<?= e($data['partner_email']); ?>"
               />
             </div>
             
             <!-- partnership -->
             <div class="mt-xs">
-              <label class="mb-xxs" for="typePartnership"
-                >Type de partenariat?</label
-              >
+              <label class="mb-xxs" for="typePartnership">
+                Type de partenariat
+              </label>
               <select
                 class="b-radius4 bg-white"
                 id="typePartnership"
-                name="select-partnership"
+                name="type_partnership"
               >
-                <option value="">Choisir...</option>
-                <option value="blogging">Blogging</option>
-                <option value="nutrition">Nutrition</option>
-                <option value="preps">Préparation physique</option>
-                <option value="entreprise">Entreprise</option>
-                <option value="internet">Internet</option>
+                <option value="default">Choisir...</option>
+                <option value="collaboration">Collaboration</option>
+                <option value="blogging">Blog & Internet</option>
+                <option value="shop">Commercial</option>
+                <option value="event">Evènement</option>
               </select>
             </div>            
           </div>
 
           <!-- message -->
           <div>
-            <label class="mb-xxs mt-xs" for="partnerMessage"
-            >Envoyez nous un message</label
-            >
-            <textarea id="partnerMessage" name="message" cols="30" rows="10"></textarea>
+            <label class="mb-xxs mt-xs" for="partnerMessage">
+              Envoyez nous un message
+            </label>
+            <textarea id="partnerMessage" name="contact_email_message" cols="30" rows="10"></textarea>
           </div>
-          
+
           <!-- submit -->
           <button type="submit" class="btn btn--baseline btn-hover btn-hover--blue mt-sm">
             Envoyez

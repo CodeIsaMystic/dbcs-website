@@ -17,16 +17,16 @@ require APP_ROOT . '/views/inc/header.php';
 <section class="full-width bg-white">
   <div>
     <picture>
-      <img src="<?php echo URL_ROOT; ?>/img/site/hero/idea.jpg" alt="Set of dumbbells in various colors"/>
+      <img src="<?= URL_ROOT; ?>/img/site/hero/idea.jpg" alt="Set of dumbbells in various colors"/>
     </picture>
   </div>
   <div class="full-width__heading full-width__heading--left">
     <h4 class="subheading fontW700 txt-upp txt-blue">Listes</h4>
     <h1 class="heading-primary txt-dark-gray fontW500 font-garamond">
-      <?= $data['title']; ?>
+      <?= e($data['title']); ?>
     </h1>
     <p class="txt-content txt-dark mt-xs">
-      <?= $data['description']; ?>
+      <?= e($data['description']); ?>
     </p>
   </div>
 </section>
@@ -54,21 +54,19 @@ require APP_ROOT . '/views/inc/header.php';
           <tr>
             <td class="cell cell--main">
               <a class="link link--underline mb-xs"
-                href="<?php echo URL_ROOT; ?>/posts/show/<?php echo $post->postId; ?>">
-                <?php echo getExcerpt($post->post_title, 30); ?>
+                href="<?= URL_ROOT; ?>/posts/show/<?= e($post->postId); ?>">
+                <?= getExcerpt($post->post_title, 30); ?>
               </a>
             </td> 
             <td class="cell cell--date">
-              <?php 
-              echo getDateFormatted($post->postCreated); 
-              ?>
+              <?= getDateFormatted($post->postCreated); ?>
             </td> 
             <td class="cell cell--btn">
               <a class="btn-table btn-table--blue"
-                href="<?php echo URL_ROOT . '/posts/edit/' . $post->postId; ?>"> 
+                href="<?= URL_ROOT . '/posts/edit/' . e($post->postId); ?>"> 
                 Editer
               </a>
-              <form action="<?php echo URL_ROOT . '/posts/delete/' . $post->postId; ?>" method="POST">
+              <form action="<?= URL_ROOT . '/posts/delete/' . $post->postId; ?>" method="POST">
                 <input type="submit" class="btn-table btn-table--yellow" name="delete" value="Effacer"/>
               </form>
             </td>          

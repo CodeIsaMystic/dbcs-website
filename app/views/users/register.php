@@ -23,10 +23,10 @@
               id="name"
               type="text"
               name="name"
-              value="<?= $data['name']; ?>"              
+              value="<?= e($data['name']); ?>"              
             />
             <span class="b-radius4">
-              <span class="txt-content--xsmall txt-danger"><?= $data['name_err']; ?></span>
+              <span class="txt-content--xsmall txt-danger"><?= e($data['name_err']); ?></span>
             </span>
           </div>
           <div>
@@ -36,10 +36,10 @@
               id="email"
               type="email"
               name="email"
-              value="<?= $data['email']; ?>"            
+              value="<?= e($data['email']); ?>"            
             />
             <span class="b-radius4">
-              <span class="txt-content--xsmall txt-danger"><?= $data['email_err']; ?></span>
+              <span class="txt-content--xsmall txt-danger"><?= e($data['email_err']); ?></span>
             </span>
           </div>
           <div>
@@ -49,10 +49,10 @@
               id="password"
               type="password"
               name="password"
-              value="<?= $data['password']; ?>"             
+              value="<?= e($data['password']); ?>"             
             />
             <span class="b-radius4">
-              <span class="txt-content--xsmall txt-danger"><?= $data['password_err']; ?></span>
+              <span class="txt-content--xsmall txt-danger"><?= e($data['password_err']); ?></span>
             </span>
           </div>
           <div>
@@ -62,10 +62,10 @@
               id="confirmPassword"
               type="password"
               name="confirm_password"
-              value="<?= $data['confirm_password']; ?>"           
+              value="<?= e($data['confirm_password']); ?>"           
             />
             <span class="b-radius4">
-              <span class="txt-content--xsmall txt-danger"><?= $data['confirm_password_err']; ?></span>
+              <span class="txt-content--xsmall txt-danger"><?= e($data['confirm_password_err']); ?></span>
             </span>
           </div>
           <div class="txt-center mt-xs">

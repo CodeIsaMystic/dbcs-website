@@ -15,7 +15,7 @@
       ];
       
       // load the view with all Prospects
-      $this->view('prospects/index', $data);
+      // $this->view('prospects/index', $data);
     }
 
         
@@ -71,12 +71,13 @@
           'prospect_address_str' => trim($_POST['prospect_address_str']),
           'prospect_postal_code' => trim($_POST['prospect_postal_code']),
           'prospect_city' => trim($_POST['prospect_city']),
-          'is_customer' => $_POST['is_customer'],
-          'free_course' => $_POST['free_course'],
-          'ask_free_course' => '',
-          'prospect_phone_err' => '',
+          'is_customer' => isset($_POST['is_customer']),
+          'free_course' => isset($_POST['free_course']),
+          'ask_free_course' => isset($_POST['ask_free_course']),
+          'coaching_subject' => isset($_POST['coaching_subject']),
           'prospect_name_err' => '',
-          'prospect_email_err' => ''
+          'prospect_email_err' => '',
+          'prospect_phone_err' => ''
         ];
 
 
@@ -88,18 +89,23 @@
           $data['prospect_email_err'] = "Ajoutez l'email du prospect";
         }
         
-        
         // throw err message if not valid
         if(!isValidPhone($_POST['prospect_phone']))
         {
           $data['prospect_phone_err'] =  "Ce numéro de téléphone n'est pas correct.";
-          $data['prospect_phone'] = null; 
         }
-
+        
+        
         // handle checkbox input if checked or not
-        $data['free_course'] = handleCheckboxValue($data['free_course']);
-        $data['is_customer'] = handleCheckboxValue($data['is_customer']);
-
+        if(handleCheckboxValue($data['free_course']) === 0) {
+          $data['free_course'] = 0;
+        }
+        if(handleCheckboxValue($data['is_customer']) === 0) {
+          $data['is_customer'] = 0;
+        }
+        if(isset($data['coaching_subject'])) {
+          $data['coaching_subject'] = $_POST['coaching_subject'];
+        }
 
         // make sure there are no errors before submit
         if(
@@ -122,15 +128,17 @@
         $data = [
           'prospect_name' => '',
           'prospect_email' => '',
-          'prospect_phone' => null,
+          'prospect_phone' => '',
           'prospect_address_nr' => '',
           'prospect_address_str' => '',
           'prospect_postal_code' => '',
+          'coaching_subject' => '',
           'prospect_city' => '',
           'free_course' => 0,
-          'ask_free_course' => '',
+          'ask_free_course' => 0,
           'is_customer' => 0,
           'prospect_name_err' => '',
+          'prospect_phone_err' => '',
           'prospect_email_err' => ''
         ];
         // load the view add prospect
@@ -168,9 +176,9 @@
           'prospect_address_str' => trim($_POST['prospect_address_str']),
           'prospect_postal_code' => trim($_POST['prospect_postal_code']),
           'prospect_city' => trim($_POST['prospect_city']),
-          'is_customer' => $_POST['is_customer'],
-          'free_course' => $_POST['free_course'],
-          'ask_free_course' => '',
+          'free_course' => isset($_POST['free_course']),
+          'is_customer' => isset($_POST['is_customer']),
+          'coaching_subject' => isset($_POST['coaching_subject']),
           'prospect_main_err' => '',
           'prospect_name_err' => '',
           'prospect_email_err' => '',
@@ -188,11 +196,18 @@
         if(!isValidPhone($_POST['prospect_phone']) && !empty($_POST['prospect_phone']))
         {
           $data['prospect_phone_err'] =  "Ce numéro de téléphone n'est pas correct.";
-        } 
-        if(empty($_POST['prospect_phone'])) {
-          $data['prospect_phone_err'] =  "Ce numéro de téléphone n'est pas correct.";
-
         }
+
+        if(handleCheckboxValue($data['free_course']) === 0) {
+          $data['free_course'] = 0;
+        }
+        if(handleCheckboxValue($data['is_customer']) === 0) {
+          $data['is_customer'] = 0;
+        }
+        if(isset($data['coaching_subject'])) {
+          $data['coaching_subject'] = $_POST['coaching_subject'];
+        }
+        
 
         // avoid useless request
         if(
@@ -202,7 +217,10 @@
           ($data['prospect_address_nr'] == $this->prospectModel->getProspectById($id)->prospect_address_nr) &&
           ($data['prospect_address_str'] == $this->prospectModel->getProspectById($id)->prospect_address_str) &&
           ($data['prospect_postal_code'] == $this->prospectModel->getProspectById($id)->prospect_postal_code) &&
-          ($data['prospect_city'] == $this->prospectModel->getProspectById($id)->prospect_city)
+          ($data['prospect_city'] == $this->prospectModel->getProspectById($id)->prospect_city) &&
+          ($data['is_customer'] == $this->prospectModel->getProspectById($id)->is_customer) &&
+          ($data['coaching_subject'] == $this->prospectModel->getProspectById($id)->coaching_subject) &&
+          ($data['free_course'] == $this->prospectModel->getProspectById($id)->free_course)
         ) {
           $data['prospect_main_err'] = "Vous devez au moins changer un des éléments suivants: nom, email, téléphone, adresse...";
         }
@@ -237,6 +255,7 @@
          
       $prospect = $this->prospectModel->getProspectById($id);
 
+      // TODO:
       // review the data set entirely
       // remove err fields !!!??
       $data = [

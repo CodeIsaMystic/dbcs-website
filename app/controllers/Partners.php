@@ -36,6 +36,9 @@ class Partners extends Controller {
   }
 
   public function show($id){
+    redirectToLogin();
+
+
     $partner = $this->partnerModel->getPartnerById($id);
 
     $data = [
@@ -61,9 +64,9 @@ class Partners extends Controller {
         'partner_email' => trim($_POST['partner_email']),
         'partner_phone' => trim($_POST['partner_phone']),
         'partner_city' => trim($_POST['partner_city']),
-        // 'type_partnership' => $_POST['type_partnership'],
-        'have_deal' => 0,
-        'is_web_business' => 0,
+        'type_partnership' => isset($_POST['type_partnership']),
+        'have_deal' => isset($_POST['have_deal']),
+        'is_web_business' => isset($_POST['is_web_business']),
         'partner_company_name_err' => '',
         'partner_email_err' => '',
         'partner_phone_err' => ''
@@ -82,10 +85,24 @@ class Partners extends Controller {
       {
         $data['partner_phone_err'] =  "Ce numéro de téléphone n'est pas correct.";
       }
+      
+        
+      // handle checkbox input if checked or not
+      if(handleCheckboxValue($data['have_deal']) === 0) {
+        $data['have_deal'] = 0;
+      }
+      if(handleCheckboxValue($data['is_web_business']) === 0) {
+        $data['is_web_business'] = 0;
+      }
+      if(isset($data['type_partnership'])) {
+        $data['type_partnership'] = $_POST['type_partnership'];
+      }
+
 
       // make sure there are no errors before submit
       if(
         empty($data['partner_email_err']) && 
+        isValidPhone($_POST['partner_phone']) &&  
         empty($data['partner_company_name_err'])
       ) {
 
@@ -103,10 +120,10 @@ class Partners extends Controller {
       $data = [
         'partner_company_name' => '',
         'partner_email' => '',
-        'partner_phone' => null,
-        'partner_city' => null,
+        'partner_phone' => '',
+        'partner_city' => '',
+        'type_partnership' => '',
         'is_web_business' => 0,
-        // 'type_partnership' => null,
         'have_deal' => 0,
         'partner_company_name_err' => '',
         'partner_email_err' => '',
@@ -144,9 +161,9 @@ class Partners extends Controller {
         'partner_email' => trim($_POST['partner_email']),
         'partner_phone' => trim($_POST['partner_phone']),
         'partner_city' => trim($_POST['partner_city']),
-        // 'type_partnership' => $_POST['type_partnership'],
-        'have_deal' => 0,
-        'is_web_business' => 0,
+        'type_partnership' => isset($_POST['type_partnership']),
+        'have_deal' => isset($_POST['have_deal']),
+        'is_web_business' => isset($_POST['is_web_business']),
         'partner_main_err' => '',
         'partner_company_name_err' => '',
         'partner_email_err' => '',
@@ -166,20 +183,30 @@ class Partners extends Controller {
       {
         $data['partner_phone_err'] =  "Ce numéro de téléphone n'est pas correct.";
       } 
-      if(empty($_POST['partner_phone'])) {
-        $data['partner_phone_err'] =  "Ce numéro de téléphone n'est pas correct.";
 
-      }
+      
+        if(handleCheckboxValue($data['have_deal']) === 0) {
+          $data['have_deal'] = 0;
+        }
+        if(handleCheckboxValue($data['is_web_business']) === 0) {
+          $data['is_web_business'] = 0;
+        }
+        if(isset($data['type_partnership'])) {
+          $data['type_partnership'] = $_POST['type_partnership'];
+        }
 
       // avoid useless request
       if(
         ($data['partner_company_name'] == $this->partnerModel->getPartnerById($id)->partner_company_name) && 
         ($data['partner_email'] == $this->partnerModel->getPartnerById($id)->partner_email) && 
         ($data['partner_phone'] == $this->partnerModel->getPartnerById($id)->partner_phone) &&
-        ($data['partner_city'] == $this->partnerModel->getPartnerById($id)->partner_city) 
+        ($data['partner_city'] == $this->partnerModel->getPartnerById($id)->partner_city) &&
+        ($data['have_deal'] == $this->partnerModel->getPartnerById($id)->have_deal) &&
+        ($data['is_web_business'] == $this->partnerModel->getPartnerById($id)->is_web_business) &&
+        ($data['type_partnership'] == $this->partnerModel->getPartnerById($id)->type_partnership) 
       ) {
 
-        $data['partner_main_err'] = "Vous devez au moins changer un des éléments suivants: nom, email...";
+        $data['partner_main_err'] = "Vous devez au moins changer un des éléments suivants: nom, email, téléphone, ville...";
       }
 
       // make sure there are no errors before to submit

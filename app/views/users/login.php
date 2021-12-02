@@ -27,10 +27,10 @@
               id="email"
               type="email"
               name="email"
-              value="<?= $data['email']; ?>"            
+              value="<?= e($data['email']); ?>"            
             />
             <span class="b-radius4">
-              <span class="txt-content--xsmall txt-danger"><?= $data['email_err']; ?></span>
+              <span class="txt-content--xsmall txt-danger"><?= e($data['email_err']); ?></span>
             </span>
           </div>
           <div>
@@ -40,10 +40,10 @@
               id="password"
               type="password"
               name="password"
-              value="<?= $data['password']; ?>"             
+              value="<?= e($data['password']); ?>"             
             />
             <span class="b-radius4">
-              <span class="txt-content--xsmall txt-danger"><?= $data['password_err']; ?></span>
+              <span class="txt-content--xsmall txt-danger"><?= e($data['password_err']); ?></span>
             </span>
           </div>
           <div class="txt-center mt-xs">

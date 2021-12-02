@@ -15,22 +15,22 @@
           <p class="txt-content--xsmall fontW500">
             Ce prospect est entré en contact avec vous le
             <span class="txt-blue">
-              <?php  echo getDateFormatted($prospect->prospect_created_at); ?>
+              <?= getDateFormatted($prospect->prospect_created_at); ?>
             </span> 
           </p>
         </div>
         
         <div class="article-content__basic-info txt-dark mt-md">
-          <a href="<?php echo URL_ROOT; ?>/posts/show/<?php echo $prospect->prospect_id; ?>">
+          <a href="<?= URL_ROOT; ?>/posts/show/<?= $prospect->prospect_id; ?>">
             <h3 class="heading-post txt-dark-gray font-garamond">
-              <?php echo $prospect->prospect_name; ?>
+              <?= e($prospect->prospect_name); ?>
             </h3>
           </a>
           <p class="txt-content">
-            <?php  echo $prospect->prospect_email; ?>
+            <?= e($prospect->prospect_email); ?>
           </p>
           
-          <a href="<?php //echo URL_ROOT; ?>/prospects/show/<?php// echo $prospect->prospect_id; ?>" class="link link--underline mt-sm">
+          <a href="<?//= URL_ROOT; ?>/prospects/show/<?//= $prospect->prospect_id; ?>" class="link link--underline mt-sm">
           Voir fiche contact &rarr;
           </a>
         </div>

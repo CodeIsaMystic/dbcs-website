@@ -19,28 +19,28 @@
           <p class="txt-content--xsmall fontW500">
             Article publié le
             <span class="txt-blue">
-              <?php  echo getDateFormatted($post->postCreated); ?>
+              <?= getDateFormatted($post->postCreated); ?>
             </span> 
           </p>
           <p class="txt-content--xsmall fontW500 mb-sm">
             Depuis le site internet 
             <span class="txt-blue">
-              <?php  echo getLinkFormat($post->post_source_link); ?>
+              <?= getLinkFormat(e($post->post_source_link)); ?>
             </span>
           </p>
         </div>
         
         <div class="article-content__basic-info txt-dark mt-md">
-          <a href="<?php echo URL_ROOT; ?>/posts/show/<?php echo $post->post_id; ?>">
+          <a href="<?= URL_ROOT; ?>/posts/show/<?= $post->post_id; ?>">
             <h3 class="heading-post txt-dark-gray font-garamond">
-              <?php echo $post->post_title; ?>
+              <?= e($post->post_title); ?>
             </h3>
           </a>
           <p class="txt-content">
-            <?php  echo getExcerpt($post->post_body, 800); ?>
+            <?= getExcerpt($post->post_body, 800); ?>
           </p>
           
-          <a href="<?php echo URL_ROOT; ?>/posts/show/<?php echo $post->post_id; ?>" class="link link--underline mt-sm">
+          <a href="<?= URL_ROOT; ?>/posts/show/<?= $post->post_id; ?>" class="link link--underline mt-sm">
           Lire l'article &rarr;
           </a>
         </div>

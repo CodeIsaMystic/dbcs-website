@@ -3,21 +3,16 @@
 
 /**
  * Function get value from input if checked
+ * @param string the data string to checkout
  * 
  * @return integer 1 or 0 if checked or not
  */
-function handleCheckboxValue($data_str): int {
-  if(!isset($data_str)) {
-    // $data_str = 0;
-    // return $data_str;
-
-    return 0;
+function handleCheckboxValue(string $data_str): int {
+  if(isset($data_str)) {
+    return 1;
 
   } else {
-    // $data_str = 1;
-    // return $data_str;
-
-    return 1;
+    return 0;
   }
 }
 

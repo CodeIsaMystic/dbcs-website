@@ -1,6 +1,4 @@
-<?php 
-  $query_str = getQueryStr(); 
-?>
+<?php $query_str = getQueryStr(); ?>
 
 
 <!-- FLOAT MENU WRAPPER -->
@@ -22,30 +20,28 @@
     width="0"
     height="0"
     >
-    <defs>
-      <filter id="goo">
-        <feGaussianBlur
-        in="SourceGraphic"
-        result="blur"
-        stdDeviation="12"
-        />
-        <feColorMatrix
-        in="blur"
-        mode="matrix"
-        values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
-        result="joint"
-        />
-      </filter>
-    </defs>
-  </svg>
+      <defs>
+        <filter id="goo">
+          <feGaussianBlur
+          in="SourceGraphic"
+          result="blur"
+          stdDeviation="12"
+          />
+          <feColorMatrix
+          in="blur"
+          mode="matrix"
+          values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
+          result="joint"
+          />
+        </filter>
+      </defs>
+    </svg>
   </div>
   <!--  MENU OBJECT  -->
   <div class="menu-object">
 
-    <?php if(
-              strpos($_SERVER['QUERY_STRING'], 'pages') || 
-              $_SERVER['QUERY_STRING'] == ''
-            ) : ?>
+    <?php if( strpos($_SERVER['QUERY_STRING'], 'pages') || 
+              $_SERVER['QUERY_STRING'] == '') : ?>
 
       <!-- FLOAT PAGES MENU -->
       <ul class="toggle">
@@ -53,26 +49,26 @@
           <ion-icon class="icon-xs" name="chevron-forward-outline"></ion-icon>
         </li>
         <li class="move-ico ico02">
-            <a href="<?php echo URL_ROOT; ?>/pages/index" class="link link01">
+            <a href="<?= URL_ROOT; ?>/pages/index" class="link link01">
               <ion-icon class="icon-xs" name="planet-outline"></ion-icon>
             </a>
           </li>
         <li class="move-ico ico03">    
-          <a href='<?php echo URL_ROOT . "/pages/coaching/"; ?>' 
+          <a href='<?= URL_ROOT . "/pages/coaching/"; ?>' 
             class="link link02">
             <ion-icon class="icon-xs" name="barbell-outline"></ion-icon>
           </a>
         </li> 
 
         <li class="move-ico ico04">
-          <a href="<?php echo URL_ROOT; ?>/pages/blog" class="link link03">
+          <a href="<?= URL_ROOT; ?>/pages/blog" class="link link03">
             <ion-icon class="icon-xs" name="book-outline"></ion-icon>
           </a>
         </li>
         
         
         <li class="move-ico ico05">
-          <a href="<?php echo URL_ROOT; ?>/pages/contact" class="link link03">
+          <a href="<?= URL_ROOT; ?>/pages/contact" class="link link03">
             <ion-icon class="icon-xs" name="people-outline"></ion-icon>
           </a>
         </li>
@@ -82,21 +78,21 @@
 
       <!-- FLOAT CRUD MENU -->
       <ul class="toggle">
-        <!-- add operation -->
         <li class="ico01">
           <ion-icon class="icon-xs" name="chevron-forward-outline"></ion-icon>
         </li>
+        <!-- add operation -->
         <li class="move-ico ico02">
           <?php if(stringMatchURL($query_str, 'posts') === 'posts') : ?> 
-            <a href="<?php echo URL_ROOT; ?>/posts/add" class="link link01">
+            <a href="<?= URL_ROOT; ?>/posts/add" class="link link01">
               <ion-icon class="icon-xs" name="add-outline"></ion-icon>
             </a>
           <?php elseif(stringMatchURL($query_str, 'prospects') === 'prospects') : ?>
-            <a href="<?php echo URL_ROOT; ?>/prospects/add" class="link link01">
+            <a href="<?= URL_ROOT; ?>/prospects/add" class="link link01">
               <ion-icon class="icon-xs" name="add-outline"></ion-icon>
             </a>          
           <?php else : ?>
-            <a href="<?php echo URL_ROOT; ?>/partners/add" class="link link01">
+            <a href="<?= URL_ROOT; ?>/partners/add" class="link link01">
               <ion-icon class="icon-xs" name="add-outline"></ion-icon>
             </a>
           <?php endif; ?>
@@ -114,7 +110,7 @@
         <?php elseif(stringMatchURL($query_str, 'prospects/show') === 'prospects/show') : ?>
             <li class="move-ico ico03">
               <a href="
-                <?php echo URL_ROOT . "/prospects/edit/" . $data["prospect"]->prospect_id; ?>" 
+                <?= URL_ROOT . "/prospects/edit/" . $data["prospect"]->prospect_id; ?>" 
                 class="link link02">
                 <ion-icon class="icon-xs" name="pencil-outline"></ion-icon>
               </a>  
@@ -123,21 +119,20 @@
         <?php elseif(stringMatchURL($query_str, 'partners/show') === 'partners/show') : ?>
           <li class="move-ico ico03">
             <a href="
-              <?php echo URL_ROOT . "/partners/edit/" . $data["partner"]->partner_id; ?>" 
+              <?= URL_ROOT . "/partners/edit/" . $data["partner"]->partner_id; ?>" 
               class="link link02">
               <ion-icon class="icon-xs" name="pencil-outline"></ion-icon>
             </a>  
-        </li> 
+          </li> 
 
         <?php else : ?>
             <li class="move-ico ico03">
               <a href="
-                <?php echo URL_ROOT . "/posts/edit/" . $data["post"]->post_id; ?>" 
+                <?= URL_ROOT . "/posts/edit/" . $data["post"]->post_id; ?>" 
                 class="link link02">
                 <ion-icon class="icon-xs" name="pencil-outline"></ion-icon>
               </a>  
           </li> 
-
         <?php endif; ?>
 
         <!-- list operation -->
@@ -150,7 +145,7 @@
 
         <?php elseif(stringMatchURL($query_str, 'prospects/show') === 'prospects/show') : ?>
           <li class="move-ico ico04">
-            <a href="<?php echo URL_ROOT . "/prospects/list"; ?>" 
+            <a href="<?= URL_ROOT . "/prospects/list"; ?>" 
               class="link link03">
               <ion-icon class="icon-xs" name="list-outline"></ion-icon>
             </a>
@@ -159,7 +154,7 @@
           
         <?php elseif(stringMatchURL($query_str, 'partners/show') === 'partners/show') : ?>
           <li class="move-ico ico04">
-            <a href="<?php echo URL_ROOT . "/partners/list"; ?>" 
+            <a href="<?= URL_ROOT . "/partners/list"; ?>" 
               class="link link03">
               <ion-icon class="icon-xs" name="list-outline"></ion-icon>
             </a>
@@ -167,7 +162,7 @@
         
         <?php else : ?>
           <li class="move-ico ico04">
-            <a href="<?php echo URL_ROOT . "/posts/list"; ?>" class="link link03">
+            <a href="<?= URL_ROOT . "/posts/list"; ?>" class="link link03">
               <ion-icon class="icon-xs" name="list-outline"></ion-icon>
             </a>
           </li>
@@ -189,7 +184,7 @@
         <?php elseif(stringMatchURL($query_str, 'prospects/show') === 'prospects/show') : ?>
           <li class="move-ico ico05">
             <form class="link link03" 
-                action="<?php echo URL_ROOT . '/prospects/delete/' . $data['prospect']->prospect_id; ?>" 
+                action="<?= URL_ROOT . '/prospects/delete/' . $data['prospect']->prospect_id; ?>" 
                 method="POST">
                 <button type="submit" name="delete">
                   <ion-icon class="icon-xs" name="trash-outline"></ion-icon>
@@ -197,37 +192,38 @@
             </form>
           </li>
 
-          <?php elseif(stringMatchURL($query_str, 'partners/show') === 'partners/show') : ?>
-            <li class="move-ico ico05">
-              <form class="link link03" 
-                  action="<?php echo URL_ROOT . '/partners/delete/' . $data['partner']->partner_id; ?>" 
-                  method="POST">
-                  <button type="submit" name="delete">
-                    <ion-icon class="icon-xs" name="trash-outline"></ion-icon>
-                  </button>
-              </form>
-            </li>
+        <?php elseif(stringMatchURL($query_str, 'partners/show') === 'partners/show') : ?>
+          <li class="move-ico ico05">
+            <form class="link link03" 
+                action="<?= URL_ROOT . '/partners/delete/' . $data['partner']->partner_id; ?>" 
+                method="POST">
+                <button type="submit" name="delete">
+                  <ion-icon class="icon-xs" name="trash-outline"></ion-icon>
+                </button>
+            </form>
+          </li>
+        
+        <?php else : ?>
+          <li class="move-ico ico05">
+            <form class="link link03" 
+                action="<?= URL_ROOT . '/posts/delete/' . $data['post']->post_id; ?>" 
+                method="POST">
+                <button type="submit" name="delete">
+                  <ion-icon class="icon-xs" name="trash-outline"></ion-icon>
+                </button>
+            </form>
+          </li>
           
-          <?php else : ?>
-            <li class="move-ico ico05">
-              <form class="link link03" 
-                  action="<?php echo URL_ROOT . '/posts/delete/' . $data['post']->post_id; ?>" 
-                  method="POST">
-                  <button type="submit" name="delete">
-                    <ion-icon class="icon-xs" name="trash-outline"></ion-icon>
-                  </button>
-              </form>
-            </li>
-            
-            
+        <?php endif; ?>  
 
-        <?php endif; ?>
       </ul>
-
+          
     <?php endif; ?>
 
   </div>
 
 </div>
+
+
 
 

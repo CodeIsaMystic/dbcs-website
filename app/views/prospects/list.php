@@ -15,16 +15,16 @@
 <section class="full-width bg-white">
   <div>
     <picture>
-      <img src="<?php echo URL_ROOT; ?>/img/site/hero/customers.jpg" alt="Set of dumbbells in various colors"/>
+      <img src="<?= URL_ROOT; ?>/img/site/hero/customers.jpg" alt="Set of dumbbells in various colors"/>
     </picture>
   </div>
   <div class="full-width__heading full-width__heading--left">
     <h4 class="subheading fontW700 txt-upp txt-blue">Listes</h4>
     <h1 class="heading-primary txt-dark-gray fontW500 font-garamond">
-      <?= $data['title']; ?>
+      <?= e($data['title']); ?>
     </h1>
     <p class="txt-content txt-dark mt-xxs">
-      <?= $data['description']; ?>
+      <?= e($data['description']); ?>
     </p>
   </div>
 </section>
@@ -53,28 +53,26 @@
           <tr>
             <td class="cell cell--main">
               <a class="link link--underline mb-xs"
-                href="<?php echo URL_ROOT; ?>/prospects/show/<?php echo $prospect->prospect_id; ?>">
-                <?php echo $prospect->prospect_name; ?>
+                href="<?= URL_ROOT; ?>/prospects/show/<?= $prospect->prospect_id; ?>">
+                <?= e($prospect->prospect_name); ?>
               </a>
             </td> 
             
             <td class="cell cell--email">
               <a class=" mb-xs"
                 href="#">
-                <?php echo $prospect->prospect_email; ?>
+                <?= e($prospect->prospect_email); ?>
               </a>
             </td> 
             <td class="cell cell--date">
-              <?php 
-              echo getDateFormatted($prospect->prospect_created_at); 
-              ?>
+              <?= getDateFormatted($prospect->prospect_created_at); ?>
             </td> 
             <td class="cell cell--btn">
               <a class="btn-table btn-table--blue"
-                href="<?php echo URL_ROOT; ?>/prospects/edit/<?php echo $prospect->prospect_id; ?>"> 
+                href="<?= URL_ROOT; ?>/prospects/edit/<?= $prospect->prospect_id; ?>"> 
                 Editer
               </a>
-              <form action="<?php echo URL_ROOT . '/prospects/delete/' . $prospect->prospect_id; ?>" method="POST">
+              <form action="<?= URL_ROOT . '/prospects/delete/' . $prospect->prospect_id; ?>" method="POST">
                 <input type="submit" class="btn-table btn-table--yellow" name="delete" value="Effacer"/>
               </form>
             </td>          
