@@ -25,7 +25,7 @@
           <p class="txt-content--xsmall fontW500 mb-sm">
             Depuis le site internet 
             <span class="txt-blue">
-              <?= getLinkFormat(e($post->post_source_link)); ?>
+              <?= !empty($data['post']->post_source_link) ? getLinkFormat(e($data['post']->post_source_link)) : 'non renseigné'; ?>
             </span>
           </p>
         </div>

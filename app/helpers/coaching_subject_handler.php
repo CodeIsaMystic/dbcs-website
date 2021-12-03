@@ -9,7 +9,7 @@
  * @return string the expected string message 
  */
 function coachingSubjectHandler($data_str) {
-  if($data_str === 'default' || is_null($data_str)) {
+  if($data_str === 'default' || is_null($data_str) || empty($data_str)) {
     return 'Nous n\'avons pas encore défini d\'objectifs personnels en terme de coaching.';
 
   } elseif($data_str === 'basic') {

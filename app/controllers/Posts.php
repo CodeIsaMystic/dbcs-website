@@ -28,7 +28,7 @@
 
         // Sanitizing Tests for POST array 
         // modify output text content in database !!??
-        $_POST = filter_input_array(INPUT_POST);
+        $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
   
 
         $data = [
@@ -192,7 +192,7 @@
       
       if($_SERVER['REQUEST_METHOD'] == 'POST'){
         // Sanitizing Tests for POST array
-        $_POST = filter_input_array(INPUT_POST);
+        $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 
         $data = [
           'id' => $id,

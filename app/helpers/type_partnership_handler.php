@@ -9,7 +9,7 @@
  * @return string the expected string message 
  */
 function typePartnershipHandler($data_str) {
-  if($data_str === 'default' || is_null($data_str)) {
+  if($data_str === 'default' || is_null($data_str) || empty($data_str)) {
     return 'Pas encore défini de partenariat pour le moment.';
 
   } elseif($data_str === 'collaboration') {

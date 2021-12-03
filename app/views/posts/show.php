@@ -1,7 +1,7 @@
 
 <!-- HEADER -->
 <?php 
-require APP_ROOT . '/views/inc/header.php'; 
+require APP_ROOT . '/views/inc/header.php';
 ?>
 
 
@@ -34,7 +34,7 @@ require APP_ROOT . '/views/inc/header.php';
     <p class="txt-content--xsmall">
       Depuis le site internet 
       <span class="txt-blue">
-        <?= getLinkFormat(e($data['post']->post_source_link)); ?>
+        <?= !empty($data['post']->post_source_link) ? getLinkFormat(e($data['post']->post_source_link)) : 'non renseigné'; ?>
       </span>
     </p>
   </div>
